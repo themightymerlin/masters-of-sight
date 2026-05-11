@@ -514,9 +514,107 @@
   .card:nth-child(6) { animation-delay: 0.3s; }
   .card:nth-child(7) { animation-delay: 0.35s; }
   .card:nth-child(8) { animation-delay: 0.4s; }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: zoom-out;
+  }
+
+  .lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 2px;
+    transform: scale(0.96);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+  }
+
+  .lightbox.active .lightbox-img {
+    transform: scale(1);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-size: 28px;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+  }
+
+  .lightbox-close:hover { color: var(--text); }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .lightbox-nav:hover {
+    background: rgba(255,255,255,0.16);
+    color: var(--text);
+  }
+
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+
+  .lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+  }
+
+  .profile-gallery img { cursor: zoom-in; }
 </style>
 </head>
 <body>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+</div>
 
 <nav>
   <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-style:italic; color:var(--accent)">of</em> Sight</a>
@@ -893,9 +991,11 @@ function showProfile(id) {
   `).join('');
 
   const gallery = document.getElementById('p-gallery');
-  gallery.innerHTML = person.galleryImages.map((src, i) =>
-    `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy">`
+  const imgs = person.galleryImages;
+  gallery.innerHTML = imgs.map((src, i) =>
+    `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`
   ).join('');
+  window._lightboxImages = imgs;
 
   const meta = document.getElementById('p-meta');
   meta.innerHTML = `
@@ -916,6 +1016,50 @@ function showGallery() {
   document.getElementById('view-gallery').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+// ── LIGHTBOX ──
+let _lbIndex = 0;
+
+function openLightbox(index) {
+  const images = window._lightboxImages || [];
+  if (!images.length) return;
+  _lbIndex = index;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightbox() {
+  const images = window._lightboxImages || [];
+  const img = document.getElementById('lightbox-img');
+  img.src = images[_lbIndex];
+  img.style.transform = 'scale(0.96)';
+  setTimeout(() => img.style.transform = '', 10);
+  document.getElementById('lightbox-counter').textContent = `${_lbIndex + 1} / ${images.length}`;
+  document.querySelector('.lightbox-prev').style.opacity = images.length > 1 ? '1' : '0';
+  document.querySelector('.lightbox-next').style.opacity = images.length > 1 ? '1' : '0';
+}
+
+function lightboxNav(dir) {
+  const images = window._lightboxImages || [];
+  _lbIndex = (_lbIndex + dir + images.length) % images.length;
+  updateLightbox();
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close')) return;
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lightboxNav(-1);
+  if (e.key === 'ArrowRight') lightboxNav(1);
+});
 
 buildGallery(PEOPLE);
 </script>
