@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masters of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f0f;
+    --bg-2: #161616;
+    --bg-3: #1e1e1e;
+    --text: #f0ece4;
+    --text-muted: #7a7570;
+    --text-dim: #4a4642;
+    --accent: #c8a96e;
+    --accent-dim: #7a6540;
+    --border: rgba(255,255,255,0.06);
+    --border-hover: rgba(255,255,255,0.14);
+    --tag-bg: rgba(200,169,110,0.12);
+    --tag-text: #c8a96e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    cursor: default;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    background: rgba(15,15,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--accent); }
+
+  .nav-tagline {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ── VIEWS ── */
+  #view-gallery, #view-profile {
+    transition: opacity 0.3s ease;
+  }
+
+  #view-profile { display: none; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 140px 48px 64px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 9vw, 130px);
+    line-height: 0.92;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  .hero-title em {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    max-width: 480px;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  /* ── FILTER BAR ── */
+  .filter-bar {
+    padding: 0 48px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: transparent;
+    border: 0.5px solid var(--border-hover);
+    border-radius: 2px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+    background: var(--tag-bg);
+  }
+
+  /* ── GRID ── */
+  .grid {
+    padding: 0 48px 120px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .card {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--bg-3);
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+    filter: grayscale(30%) brightness(0.85);
+  }
+
+  .card:hover .card-img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(0.95);
+  }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover .card-overlay { opacity: 1; }
+
+  .card-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px 20px 20px;
+  }
+
+  .card-discipline {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .card-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  .card-arrow {
+    position: absolute;
+    top: 18px; right: 18px;
+    width: 36px; height: 36px;
+    border: 0.5px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .card:hover .card-arrow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-3);
+  }
+
+  .card-placeholder-initials {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
+  /* ── PROFILE VIEW ── */
+  .profile-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .profile-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
+  .profile-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(15,15,15,0.2) 0%, rgba(15,15,15,0.5) 60%, var(--bg) 100%);
+  }
+
+  .profile-hero-content {
+    position: absolute;
+    bottom: 60px; left: 64px; right: 64px;
+  }
+
+  .profile-back {
+    position: absolute;
+    top: 84px; left: 48px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10;
+  }
+
+  .profile-back:hover { color: var(--accent); }
+
+  .profile-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .profile-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 8vw, 110px);
+    line-height: 0.9;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+
+  .profile-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tag-text);
+    background: var(--tag-bg);
+    border: 0.5px solid var(--accent-dim);
+    border-radius: 2px;
+    padding: 5px 12px;
+  }
+
+  /* ── PROFILE BODY ── */
+  .profile-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 64px 120px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 80px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .profile-body { grid-template-columns: 1fr; padding: 48px 32px 80px; }
+  }
+
+  .profile-bio {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 64px;
+  }
+
+  .profile-section {
+    margin-bottom: 52px;
+  }
+
+  .profile-section-label {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .profile-traits {
+    list-style: none;
+  }
+
+  .profile-traits li {
+    font-size: 15px;
+    color: var(--text-muted);
+    padding: 10px 0;
+    border-bottom: 0.5px solid var(--border);
+    line-height: 1.5;
+  }
+
+  .profile-traits li:last-child { border-bottom: none; }
+
+  .profile-philosophy {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--text);
+    font-style: italic;
+    padding: 24px 28px;
+    border-left: 2px solid var(--accent);
+    background: rgba(200,169,110,0.05);
+  }
+
+  .profile-works {
+    list-style: none;
+  }
+
+  .profile-works li {
+    padding: 18px 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .profile-works li:last-child { border-bottom: none; }
+
+  .work-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+  }
+
+  .work-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── SIDEBAR ── */
+  .profile-sidebar {}
+
+  .profile-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    margin-bottom: 48px;
+  }
+
+  .profile-gallery img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.3s, transform 0.4s;
+  }
+
+  .profile-gallery img:hover {
+    filter: brightness(1);
+    transform: scale(1.02);
+    z-index: 1;
+    position: relative;
+  }
+
+  .profile-gallery img:first-child {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  .sidebar-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 16px;
+    border-bottom: 0.5px solid var(--border);
+    font-size: 13px;
+  }
+
+  .meta-label {
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .meta-value {
+    color: var(--text);
+    font-weight: 400;
+    text-align: right;
+  }
+
+  .meta-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .meta-link:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 0.5px solid var(--border);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.1s; }
+  .card:nth-child(3) { animation-delay: 0.15s; }
+  .card:nth-child(4) { animation-delay: 0.2s; }
+  .card:nth-child(5) { animation-delay: 0.25s; }
+  .card:nth-child(6) { animation-delay: 0.3s; }
+  .card:nth-child(7) { animation-delay: 0.35s; }
+  .card:nth-child(8) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-style:italic; color:var(--accent)">of</em> Sight</a>
+  <span class="nav-tagline">The visual architects who shaped how we see</span>
+</nav>
+
+<!-- ═══════════════════════════════════════════ GALLERY VIEW -->
+<div id="view-gallery">
+
+  <div class="hero">
+    <p class="hero-eyebrow">A creative lineage</p>
+    <h1 class="hero-title">Masters<br><em>of Sight</em></h1>
+    <p class="hero-sub">The photographers, directors, and image-makers who rewired our retinas. The ones who came before. The ones who made us.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+    <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographer</button>
+    <button class="filter-btn" onclick="filterCards('Director', this)">Director</button>
+    <button class="filter-btn" onclick="filterCards('Designer', this)">Designer</button>
+    <button class="filter-btn" onclick="filterCards('Art Director', this)">Art Director</button>
+  </div>
+
+  <div class="grid" id="card-grid"></div>
+
+  <footer>
+    <span class="footer-logo">Masters of Sight</span>
+    <span class="footer-copy">A personal archive of visual influence</span>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════════════════════ PROFILE VIEW -->
+<div id="view-profile">
+  <a class="profile-back" onclick="showGallery(); return false;">
+    ← Back
+  </a>
+
+  <div class="profile-hero">
+    <img class="profile-hero-img" id="p-hero-img" src="" alt="">
+    <div class="profile-hero-gradient"></div>
+    <div class="profile-hero-content">
+      <p class="profile-eyebrow" id="p-discipline"></p>
+      <h1 class="profile-name" id="p-name"></h1>
+      <div class="profile-tags" id="p-tags"></div>
+    </div>
+  </div>
+
+  <div class="profile-body">
+    <div class="profile-main">
+      <p class="profile-bio" id="p-bio"></p>
+
+      <div class="profile-section">
+        <p class="profile-section-label">Signature Traits</p>
+        <ul class="profile-traits" id="p-traits"></ul>
+      </div>
+
+      <div class="profile-section">
+        <p class="profile-section-label">Philosophy</p>
+        <blockquote class="profile-philosophy" id="p-philosophy"></blockquote>
+      </div>
+
+      <div class="profile-section">
+        <p class="profile-section-label">Major Works</p>
+        <ul class="profile-works" id="p-works"></ul>
+      </div>
+    </div>
+
+    <div class="profile-sidebar">
+      <div class="profile-gallery" id="p-gallery"></div>
+      <div class="sidebar-meta" id="p-meta"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const PEOPLE = [
+  {
+    id: "annie-liebovitz",
+    name: "Annie Leibovitz",
+    discipline: "Photographer",
+    style: "Portrait",
+    born: "1949",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80",
+      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+    ],
+    url: "https://www.hauserwirth.com/artists/24984-annie-liebovitz/",
+    bio: "Annie Leibovitz is an American portrait photographer whose work has defined celebrity imagery for over five decades. Born in 1949, she rose to prominence in the 1970s as chief photographer for Rolling Stone, where she developed an intimate, narrative-driven approach to portraiture. Her work bridges intimacy and spectacle, often placing subjects inside carefully constructed worlds that feel both personal and epic.",
+    traits: [
+      "Cinematic staging. Elaborate sets. Narrative context.",
+      "Subjects positioned inside story rather than isolated from it.",
+      "Warm tonal palettes with painterly lighting.",
+      "Blending vulnerability with grandeur.",
+      "The environment becomes part of the psychology."
+    ],
+    philosophy: "A portrait can be collaboration and construction. Truth is not always found in minimalism. Sometimes it is found in amplification.",
+    works: [
+      { title: "Rolling Stone, 1980 — John Lennon & Yoko Ono", desc: "Lennon curled around Ono. Nude and clothed. Love and exposure in one frame." },
+      { title: "Vanity Fair, 1991 — Demi Moore", desc: "Pregnancy framed as power, not concealment. It shifted how maternity could be portrayed in mainstream culture." },
+      { title: "Portraits for Vogue", desc: "Actors as characters. Royals as cinematic figures. Musicians as archetypes." }
+    ]
+  },
+  {
+    id: "spike-jonze",
+    name: "Spike Jonze",
+    discipline: "Director",
+    style: "Narrative / Surreal",
+    born: "1969",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&q=80",
+      "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80",
+      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80",
+    ],
+    url: "https://en.wikipedia.org/wiki/Spike_Jonze",
+    bio: "Spike Jonze is a director who arrived from skateboarding videos and never forgot where he came from. His work across music videos, commercials, and feature films redefined what visual storytelling could be -- blurring sincerity with absurdism, always in service of genuine emotional impact. He makes the strange feel inevitable.",
+    traits: [
+      "Physical comedy deployed with emotional precision.",
+      "High-concept premises grounded in deeply human feeling.",
+      "Music and image treated as inseparable co-authors.",
+      "Sincerity as a radical act in ironic times.",
+      "The camera as a curious bystander, not a director."
+    ],
+    philosophy: "The best ideas feel like they couldn't have come from anywhere else. When something is truly specific, it becomes universal.",
+    works: [
+      { title: "Being John Malkovich (1999)", desc: "A portal into a celebrity's mind. Absurdism in service of genuine existential longing." },
+      { title: "Her (2013)", desc: "A love story between a man and an operating system. Tender, prescient, heartbreaking." },
+      { title: "Fatboy Slim — Weapon of Choice", desc: "Christopher Walken dancing alone in a hotel. Joyful, weird, and utterly perfect." }
+    ]
+  },
+  {
+    id: "david-lynch",
+    name: "David Lynch",
+    discipline: "Director",
+    style: "Surrealist / Noir",
+    born: "1946",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&q=80",
+      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80",
+    ],
+    url: "https://davidlynch.com",
+    bio: "David Lynch was a painter who accidentally became one of cinema's most singular voices. His work operates in the frequency just below conscious thought -- the place where dread and beauty become indistinguishable. He understood that the most unsettling images aren't violent. They're familiar things, slightly wrong.",
+    traits: [
+      "Industrial sound design as psychological warfare.",
+      "Suburban surfaces concealing bottomless darkness.",
+      "Images that bypass reason and go straight for the gut.",
+      "Slow burn dread over cheap shock.",
+      "Texture and grain as emotional registers."
+    ],
+    philosophy: "I don't think about meaning. I just want to go into a world and feel things. If you can make someone feel, you've done something.",
+    works: [
+      { title: "Blue Velvet (1986)", desc: "A severed ear in a field. The perfect door into Lynch's worldview -- beauty and rot, inseparable." },
+      { title: "Twin Peaks (1990)", desc: "Television reimagined as surrealist canvas. Changed what the medium thought it was allowed to do." },
+      { title: "Mulholland Drive (2001)", desc: "A dream about Hollywood's devouring machinery. Widely regarded as one of the finest films ever made." }
+    ]
+  },
+  {
+    id: "tim-walker",
+    name: "Tim Walker",
+    discipline: "Photographer",
+    style: "Fantasy / Fashion",
+    born: "1970",
+    nationality: "British",
+    coverImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80",
+    ],
+    url: "https://www.timwalkerphotography.com",
+    bio: "Tim Walker makes photographs that shouldn't exist. Enormous surrealist sets, characters from fairy tales nobody wrote, color so saturated it feels like memory rather than record. He is the most unapologetically maximalist photographer working today, and he pulls it off because every extravagance is in service of genuine wonder.",
+    traits: [
+      "Hand-built sets over digital fabrication -- always.",
+      "Color as narrative, not decoration.",
+      "Subjects treated as collaborators in shared fantasy.",
+      "Scale deployed for emotional not literal grandeur.",
+      "Whimsy with structural rigor underneath."
+    ],
+    philosophy: "I want people to look at a photograph and feel they've been somewhere. Transported. Not informed.",
+    works: [
+      { title: "Vogue Italia, multiple issues", desc: "Redefined the fashion spread as visual fiction." },
+      { title: "Story Teller (2012)", desc: "A retrospective that reads like a complete mythology." },
+      { title: "Wonder (2019)", desc: "V&A exhibition exploring the history of wonder in art. Walker in full command." }
+    ]
+  },
+  {
+    id: "david-lachapelle",
+    name: "David LaChapelle",
+    discipline: "Photographer",
+    style: "Hyperrealist / Pop",
+    born: "1963",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1501472312651-726afe119ff1?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=600&q=80",
+      "https://images.unsplash.com/photo-1501472312651-726afe119ff1?w=600&q=80",
+      "https://images.unsplash.com/photo-1526721940322-10fb6e3ae94a?w=600&q=80",
+    ],
+    url: "https://lachapellestudio.com",
+    bio: "David LaChapelle makes the loudest images in the room. Saturated beyond saturation, referencing everything from Renaissance painting to tabloid disaster simultaneously, he weaponized excess into critique. His work is about America -- its appetite, its delusions, its gorgeous catastrophic energy. Andy Warhol hired him at 17. That tells you everything.",
+    traits: [
+      "Color pushed past photographic convention into painting territory.",
+      "Celebrity as raw material, not subject matter.",
+      "Religious iconography remixed with pop culture without irony.",
+      "Chaos composed with precise internal logic.",
+      "Camp as a vehicle for genuine pathos."
+    ],
+    philosophy: "I don't photograph reality. I photograph what reality wishes it looked like -- and then I make it look like that.",
+    works: [
+      { title: "Elton John portraits", desc: "Maximalism meeting maximalism. Somehow neither blinks." },
+      { title: "Jesus is My Homeboy (2003)", desc: "Christ in contemporary America. Devotional and transgressive simultaneously." },
+      { title: "Deluge (2006)", desc: "New York flooded. Biblical disaster as consumer spectacle. His masterwork." }
+    ]
+  },
+  {
+    id: "nadav-kander",
+    name: "Nadav Kander",
+    discipline: "Photographer",
+    style: "Landscape / Portrait",
+    born: "1961",
+    nationality: "British-Israeli",
+    coverImage: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1494526585095-c41746359bc6?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=600&q=80",
+    ],
+    url: "https://nadavkander.com",
+    bio: "Nadav Kander makes stillness feel heavy. His landscapes and portraits share an unusual quality -- the sense that something irreversible has just happened or is about to. He photographs China's Yangtze River, Obama's cabinet, anonymous strangers, and treats all of them with the same quiet gravity. His work is about impermanence. Everything in it is already leaving.",
+    traits: [
+      "Muted palettes that amplify rather than diminish emotion.",
+      "Subjects made small against vast, indifferent space.",
+      "Time embedded in the image -- not the moment, but the era.",
+      "Restraint as an act of respect.",
+      "Silence used the way a composer uses it."
+    ],
+    philosophy: "A photograph is not about what you see. It's about what you withhold. The unspoken carries more weight than anything named.",
+    works: [
+      { title: "Yangtze -- The Long River (2006)", desc: "Prix Pictet winner. China's transformation compressed into a landscape elegy." },
+      { title: "Obama's People (2009)", desc: "New York Times Magazine. Power portrayed without theater -- which is more powerful." },
+      { title: "Dust (2014)", desc: "Former Soviet nuclear testing sites. Beauty and contamination, indistinguishable." }
+    ]
+  },
+  {
+    id: "paul-rand",
+    name: "Paul Rand",
+    discipline: "Designer",
+    style: "Modernist / Identity",
+    born: "1914",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+    ],
+    url: "https://en.wikipedia.org/wiki/Paul_Rand",
+    bio: "Paul Rand was the American designer who decided that commercial art was still art. He brought European modernism -- Bauhaus rigour, Constructivist energy -- into the boardroom, and in doing so created some of the most enduring marks in the visual history of capitalism. IBM. ABC. UPS. Each one a philosophy compressed to a symbol.",
+    traits: [
+      "Problem-solving and aesthetic pleasure as identical objectives.",
+      "Wit deployed with surgical precision.",
+      "Color and form reduced to irreducible essentials.",
+      "Typography treated as architecture.",
+      "Playfulness as intellectual seriousness."
+    ],
+    philosophy: "Design is the silent ambassador of your brand. Everything communicates. The question is whether it communicates what you intend.",
+    works: [
+      { title: "IBM Rebus poster (1981)", desc: "Eye. Bee. M. Modernism and wordplay fused. Still the most elegant logo presentation ever made." },
+      { title: "ABC logo (1962)", desc: "A circle, some letters. Fifty years of broadcast identity." },
+      { title: "Thoughts on Design (1947)", desc: "The manifesto. Still required reading for anyone who touches visual communication." }
+    ]
+  },
+  {
+    id: "richard-avedon",
+    name: "Richard Avedon",
+    discipline: "Photographer",
+    style: "Portrait / Fashion",
+    born: "1923",
+    nationality: "American",
+    coverImage: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+    ],
+    url: "https://www.avedonfoundation.org",
+    bio: "Richard Avedon stripped everything away. White backgrounds. Direct confrontation. No props, no sets, no narrative scaffolding -- just a face and a camera and whatever truth they could locate between them. He photographed Marilyn Monroe and migrant workers with identical intensity, because to him they were equally worth that attention. That moral equivalence is his most radical act.",
+    traits: [
+      "The white backdrop as radical democratic space.",
+      "Movement and gesture captured, never frozen artificially.",
+      "Eye contact as the primary subject of every portrait.",
+      "Fashion used to expose character, not conceal it.",
+      "Scale (enormous prints) as a statement about human presence."
+    ],
+    philosophy: "All photographs are accurate. None of them is the truth. What I'm after is not the surface but the interior -- the life of the subject.",
+    works: [
+      { title: "In the American West (1985)", desc: "Five years. 17,000 miles. Working-class Americans photographed with the rigor usually reserved for presidents." },
+      { title: "Marilyn Monroe, 1957", desc: "The definitive portrait of American celebrity -- gorgeous, exhausted, unknowable." },
+      { title: "The Family (1976)", desc: "Rolling Stone. The American power structure laid out in a single issue. Defining photojournalism." }
+    ]
+  }
+];
+
+function getInitials(name) {
+  return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
+
+function buildGallery(people) {
+  const grid = document.getElementById('card-grid');
+  grid.innerHTML = '';
+  people.forEach(person => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.discipline = person.discipline;
+    card.onclick = () => showProfile(person.id);
+    card.innerHTML = `
+      <img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
+      <div class="card-overlay"></div>
+      <div class="card-placeholder" style="display:none; position:absolute; inset:0;">
+        <span class="card-placeholder-initials">${getInitials(person.name)}</span>
+      </div>
+      <div class="card-info">
+        <p class="card-discipline">${person.discipline}</p>
+        <p class="card-name">${person.name}</p>
+      </div>
+      <div class="card-arrow">↗</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterCards(discipline, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filtered = discipline === 'all' ? PEOPLE : PEOPLE.filter(p => p.discipline === discipline);
+  buildGallery(filtered);
+}
+
+function showProfile(id) {
+  const person = PEOPLE.find(p => p.id === id);
+  if (!person) return;
+
+  document.getElementById('p-hero-img').src = person.coverImage;
+  document.getElementById('p-hero-img').alt = person.name;
+  document.getElementById('p-discipline').textContent = person.discipline;
+  document.getElementById('p-name').textContent = person.name;
+
+  const tags = document.getElementById('p-tags');
+  tags.innerHTML = [person.style, person.nationality, person.born + ' –'].map(t => `<span class="tag">${t}</span>`).join('');
+
+  document.getElementById('p-bio').textContent = person.bio;
+
+  const traits = document.getElementById('p-traits');
+  traits.innerHTML = person.traits.map(t => `<li>${t}</li>`).join('');
+
+  document.getElementById('p-philosophy').textContent = person.philosophy;
+
+  const works = document.getElementById('p-works');
+  works.innerHTML = person.works.map(w => `
+    <li>
+      <p class="work-title">${w.title}</p>
+      <p class="work-desc">${w.desc}</p>
+    </li>
+  `).join('');
+
+  const gallery = document.getElementById('p-gallery');
+  gallery.innerHTML = person.galleryImages.map((src, i) =>
+    `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy">`
+  ).join('');
+
+  const meta = document.getElementById('p-meta');
+  meta.innerHTML = `
+    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${person.discipline}</span></div>
+    <div class="meta-row"><span class="meta-label">Style</span><span class="meta-value">${person.style}</span></div>
+    <div class="meta-row"><span class="meta-label">Born</span><span class="meta-value">${person.born}</span></div>
+    <div class="meta-row"><span class="meta-label">Nationality</span><span class="meta-value">${person.nationality}</span></div>
+    ${person.url ? `<div class="meta-row"><span class="meta-label">Learn more</span><a class="meta-link" href="${person.url}" target="_blank">View profile →</a></div>` : ''}
+  `;
+
+  document.getElementById('view-gallery').style.display = 'none';
+  document.getElementById('view-profile').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showGallery() {
+  document.getElementById('view-profile').style.display = 'none';
+  document.getElementById('view-gallery').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+buildGallery(PEOPLE);
+</script>
+</body>
+</html>
