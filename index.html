@@ -537,7 +537,8 @@
     <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographer</button>
     <button class="filter-btn" onclick="filterCards('Director', this)">Director</button>
     <button class="filter-btn" onclick="filterCards('Designer', this)">Designer</button>
-    <button class="filter-btn" onclick="filterCards('Art Director', this)">Art Director</button>
+    <button class="filter-btn" onclick="filterCards('Commercial', this)">Commercial</button>
+    <button class="filter-btn" onclick="filterCards('Interactive', this)">Interactive</button>
   </div>
 
   <div class="grid" id="card-grid"></div>
@@ -868,7 +869,7 @@ function showProfile(id) {
   const person = PEOPLE.find(p => p.id === id);
   if (!person) return;
 
-  document.getElementById('p-hero-img').src = person.coverImage;
+  document.getElementById('p-hero-img').src = person.heroImage || person.coverImage;
   document.getElementById('p-hero-img').alt = person.name;
   document.getElementById('p-discipline').textContent = person.discipline;
   document.getElementById('p-name').textContent = person.name;
