@@ -101,9 +101,12 @@
   }
 
   .hero-title em {
-  font-family: 'Bebas Neue', sans-serif;
-  font-style: normal;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
   color: var(--accent);
+  }
+  .hero-title-sight {
+  color: #ffffff;
   }
 
   .hero-sub {
@@ -643,7 +646,7 @@
 
   <div class="hero">
     <p class="hero-eyebrow">A creative lineage</p>
-    <h1 class="hero-title">Masters<br><em>of Sight</em></h1>
+    <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
     <p class="hero-sub">The photographers, directors, and image-makers who rewired our retinas. The ones who came before. The ones who made us.</p>
   </div>
 
@@ -1921,10 +1924,4 @@ document.addEventListener('keydown', e => {
   if (!lb.classList.contains('active')) return;
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') lightboxNav(-1);
-  if (e.key === 'ArrowRight') lightboxNav(1);
-});
-
-buildGallery(PEOPLE);
-</script>
-</body>
-</html>
+  if (e.key ===
