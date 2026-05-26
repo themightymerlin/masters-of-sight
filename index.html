@@ -93,8 +93,8 @@
 
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(64px, 9vw, 130px);
-    line-height: 0.92;
+    font-size: clamp(63px, 9.8vw, 140px);
+    line-height: 0.78;
     letter-spacing: 0.03em;
     color: var(--text);
     margin-bottom: 28px;
@@ -1924,4 +1924,10 @@ document.addEventListener('keydown', e => {
   if (!lb.classList.contains('active')) return;
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') lightboxNav(-1);
-  if (e.key ===
+  if (e.key === 'ArrowRight') lightboxNav(1);
+});
+
+buildGallery(PEOPLE);
+</script>
+</body>
+</html>
