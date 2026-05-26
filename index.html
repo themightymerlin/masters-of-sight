@@ -473,6 +473,23 @@
 
   .meta-link:hover { text-decoration: underline; }
 
+  /* ── PLACEHOLDER HERO ── */
+  .profile-hero-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-3);
+  }
+
+  .profile-hero-placeholder-initials {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
   /* ── FOOTER ── */
   footer {
     border-top: 0.5px solid var(--border);
@@ -694,6 +711,7 @@
 
 <script>
 const PEOPLE = [
+  // ── ORIGINAL 9 ── (your existing entries, unchanged)
   {
     id: "annie-liebovitz",
     name: "Annie Leibovitz",
@@ -707,7 +725,7 @@ const PEOPLE = [
       "https://res.cloudinary.com/dx8kswwgb/image/upload/v1778523565/famous-black-women-shot-by-annie-leibovitz-vs-by-someone-v0-9fdybyj1r3if1.jpg_gvcpqn.webp",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/v1778523565/vogueMay22.jpg_wcyik7.webp",
     ],
-    url: "https://www.hauserwirth.com/artists/24984-annie-liebovitz/",
+    url: "https://www.hauserwirth.com/artists/24984-annie-leibovitz/",
     bio: "Annie Leibovitz is an American portrait photographer whose work has defined celebrity imagery for over five decades. Born in 1949, she rose to prominence in the 1970s as chief photographer for Rolling Stone, where she developed an intimate, narrative-driven approach to portraiture. Her work bridges intimacy and spectacle, often placing subjects inside carefully constructed worlds that feel both personal and epic.",
     traits: [
       "Cinematic staging. Elaborate sets. Narrative context.",
@@ -897,47 +915,35 @@ const PEOPLE = [
       { title: "Thoughts on Design (1947)", desc: "The manifesto. Still required reading for anyone who touches visual communication." }
     ]
   },
- {
-  "id": "guillermo-del-toro",
-  "name": "Guillermo del Toro",
-  "discipline": "Director",
-  "style": "Whimsical",
-  "born": "1964",
-  "nationality": "Mexican",
-  "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301769/elordi-creature_qlor0t.avif",
-  "heroImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301769/elordi-creature_qlor0t.avif",
-  "galleryImages": [
-    "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301767/0700_0050_VF_Fin_RD.jpg_knkio4.webp",
-    "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301761/000145024-ab860a37d81145318ec2cceb0680e2ef_h7lckl.jpg",
-    "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301763/Pacific-Rim-2013-poster_hejmwk.avif"
-  ],
-  "url": "https://guillermodeltorro.weebly.com",
-  "bio": "Guillermo del Toro is a Mexican filmmaker, screenwriter, and producer known for blending gothic horror, fairy tales, and historical drama into visually rich, emotionally human stories. His films center on outsiders, monsters, and fragile beauty within brutal worlds. With meticulous production design and practical creature effects, del Toro treats fantasy not as escapism, but as a lens to explore politics, innocence, trauma, and love.",
-  "traits": [
-    "Dark fairy tale realism",
-    "Catholic and mythological symbolism",
-    "Warm color palettes against cold brutality"
-  ],
-  "philosophy": "Guillermo del Toro’s philosophy centers on the glorification of the monstrous, the beauty of imperfection, and the necessity of art. He views monsters not as evil, but as marginalized \"oddities\" and symbols of truth, empathy, and resistance against societal conformity.",
-  "works": [
-    {
-      "title": "Pan’s Labyrinth",
-      "desc": "It established him as a global auteur."
-    },
-    {
-      "title": "The Shape of Water",
-      "desc": "Won Best Picture at the Academy Awards."
-    },
-    {
-      "title": "Crimson Peak",
-      "desc": "A masterclass in gothic production design."
-    },
-    {
-      "title": "Hellboy",
-      "desc": "Shows his comic-book-meets-myth sensibility."
-    }
-  ]
-},
+  {
+    id: "guillermo-del-toro",
+    name: "Guillermo del Toro",
+    discipline: "Director",
+    style: "Whimsical",
+    born: "1964",
+    nationality: "Mexican",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301769/elordi-creature_qlor0t.avif",
+    heroImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301769/elordi-creature_qlor0t.avif",
+    galleryImages: [
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301767/0700_0050_VF_Fin_RD.jpg_knkio4.webp",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301761/000145024-ab860a37d81145318ec2cceb0680e2ef_h7lckl.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779301763/Pacific-Rim-2013-poster_hejmwk.avif"
+    ],
+    url: "https://guillermodeltorro.weebly.com",
+    bio: "Guillermo del Toro is a Mexican filmmaker, screenwriter, and producer known for blending gothic horror, fairy tales, and historical drama into visually rich, emotionally human stories. His films center on outsiders, monsters, and fragile beauty within brutal worlds. With meticulous production design and practical creature effects, del Toro treats fantasy not as escapism, but as a lens to explore politics, innocence, trauma, and love.",
+    traits: [
+      "Dark fairy tale realism",
+      "Catholic and mythological symbolism",
+      "Warm color palettes against cold brutality"
+    ],
+    philosophy: "Guillermo del Toro's philosophy centers on the glorification of the monstrous, the beauty of imperfection, and the necessity of art. He views monsters not as evil, but as marginalized oddities and symbols of truth, empathy, and resistance against societal conformity.",
+    works: [
+      { title: "Pan's Labyrinth", desc: "It established him as a global auteur." },
+      { title: "The Shape of Water", desc: "Won Best Picture at the Academy Awards." },
+      { title: "Crimson Peak", desc: "A masterclass in gothic production design." },
+      { title: "Hellboy", desc: "Shows his comic-book-meets-myth sensibility." }
+    ]
+  },
   {
     id: "richard-avedon",
     name: "Richard Avedon",
@@ -966,6 +972,799 @@ const PEOPLE = [
       { title: "Marilyn Monroe, 1957", desc: "The definitive portrait of American celebrity -- gorgeous, exhausted, unknowable." },
       { title: "The Family (1976)", desc: "Rolling Stone. The American power structure laid out in a single issue. Defining photojournalism." }
     ]
+  },
+
+  // ── NEW ADDITIONS ──
+
+  // PHOTOGRAPHY
+  {
+    id: "dana-scruggs",
+    name: "Dana Scruggs",
+    discipline: "Photographer",
+    style: "Portrait / Documentary",
+    born: "1985",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.danascruggs.com",
+    bio: "Dana Scruggs is one of the most vital portrait photographers working today, known for images that center Black identity with extraordinary dignity and power. Self-taught and shooting primarily on film, she became the first Black woman to shoot a solo cover for Rolling Stone. Her work refuses the voyeuristic gaze that has historically framed Black subjects in photography, replacing it with sovereignty, intimacy, and unflinching presence.",
+    traits: [
+      "Film grain as a deliberate emotional texture.",
+      "Subjects photographed as authors of their own narrative.",
+      "Natural environments used as psychological mirrors.",
+      "Restraint in editing that trusts the image completely.",
+      "Political weight carried without polemic."
+    ],
+    philosophy: "I want people to see themselves as powerful, as beautiful, as worthy of this kind of attention. The camera is not neutral. I choose to use it as an act of love.",
+    works: [
+      { title: "Rolling Stone covers", desc: "Historic first -- a Black woman shooting solo covers for the magazine. LeBron James, Chadwick Boseman, among others." },
+      { title: "Zeal (2017)", desc: "Her debut monograph. A sustained meditation on Black American life, landscape, and resilience." },
+      { title: "BEYOND (2022)", desc: "A collaboration with Nike exploring Black athletes as mythological figures." }
+    ]
+  },
+  {
+    id: "hiroshi-sugimoto",
+    name: "Hiroshi Sugimoto",
+    discipline: "Photographer",
+    style: "Conceptual / Long Exposure",
+    born: "1948",
+    nationality: "Japanese",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.sugimotohiroshi.com",
+    bio: "Hiroshi Sugimoto photographs time itself. His Theaters series -- cinemas with exposures lasting the full length of a film -- collapses an entire narrative into a single blinding rectangle of light. His Seascapes divide the world into two bands of tone, horizon between sky and water, identical across every ocean on earth. He is a philosopher who chose a camera over a pen, and his work asks questions photography has never dared ask before.",
+    traits: [
+      "Duration as a photographic subject, not just a technical condition.",
+      "Reduction to elemental forms -- water, light, glass, bone.",
+      "Zen minimalism applied to the act of seeing.",
+      "Series as argument, each image a piece of evidence.",
+      "The archive and the diorama as found conceptual art."
+    ],
+    philosophy: "I photograph what cannot be seen in a single moment. I compress time. What you are looking at is not a moment -- it is an era.",
+    works: [
+      { title: "Theaters (1975–ongoing)", desc: "Full-length films collapsed into one exposure. The screen becomes pure light. Cinema becomes ghost." },
+      { title: "Seascapes (1980–ongoing)", desc: "Every ocean, identical horizon, shot over decades. The most serene argument about eternity ever made." },
+      { title: "Dioramas (1974)", desc: "Natural history museum taxidermy shot so precisely they appear alive. The simulacrum as truth." }
+    ]
+  },
+  {
+    id: "dewey-nicks",
+    name: "Dewey Nicks",
+    discipline: "Photographer",
+    style: "Commercial / Fashion",
+    born: "1963",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.deweynicks.com",
+    bio: "Dewey Nicks shaped the visual language of 1990s youth culture with a deceptively effortless aesthetic -- sun-drenched, tactile, perpetually on the cusp of something. His Abercrombie & Fitch campaigns became cultural artifacts, redefining how aspirational imagery could feel simultaneously wholesome and charged. His editorial work for magazines like Rolling Stone carried the same quality: candid precision, bodies in golden light, a world you want to step into.",
+    traits: [
+      "Golden-hour natural light as a signature atmosphere.",
+      "Youth as subject matter treated without condescension.",
+      "Effortless staging that conceals its own construction.",
+      "Skin, texture, and warmth as primary compositional elements.",
+      "Commercial work elevated to genuine art direction."
+    ],
+    philosophy: "The best photographs feel like they weren't taken. Like you just happened to be there when the light did that to that person.",
+    works: [
+      { title: "Abercrombie & Fitch campaigns (1990s)", desc: "Defined a decade of American youth aspiration. Controversial and iconic in equal measure." },
+      { title: "Rolling Stone editorial", desc: "Portraits and stories shot with documentary intimacy and commercial elegance." },
+      { title: "Slackers (2002)", desc: "Feature film directorial debut -- the visual sensibility intact on a bigger canvas." }
+    ]
+  },
+  {
+    id: "irving-penn",
+    name: "Irving Penn",
+    discipline: "Photographer",
+    style: "Portrait / Still Life",
+    born: "1917",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.irvingpenn.org",
+    bio: "Irving Penn was a perfectionist of the quiet kind. His portraits placed subjects in the corner of two walls -- a simple, slightly claustrophobic device that forced intimacy and removed distraction. His still lifes treated cigarette butts and human skulls with the same grave attention he gave to Picasso and Truman Capote. He spent six decades at Vogue and never once made a lazy image. Restraint, he believed, was where truth lived.",
+    traits: [
+      "The corner portrait -- compression as psychological device.",
+      "Still life as moral philosophy, not decoration.",
+      "Platinum-palladium printing for texture no digital process replicates.",
+      "Meticulous composition that appears entirely natural.",
+      "Subject and object treated with identical reverence."
+    ],
+    philosophy: "A good photograph is one that communicates a fact, touches the heart, and leaves the viewer a changed person. That is a lot to ask from a rectangle.",
+    works: [
+      { title: "Small Trades (1950–1951)", desc: "Tradespeople from Paris, London, New York photographed in their work clothes. Monumental and humane." },
+      { title: "Cigarettes (1972)", desc: "Discarded cigarette butts printed large as platinum prints. Garbage elevated to sculpture." },
+      { title: "Vogue covers (1943–2009)", desc: "Six decades. No one else comes close for longevity, consistency, or influence on fashion photography." }
+    ]
+  },
+  {
+    id: "helmut-newton",
+    name: "Helmut Newton",
+    discipline: "Photographer",
+    style: "Fashion / Erotic",
+    born: "1920",
+    nationality: "German-Australian",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.helmut-newton.com",
+    bio: "Helmut Newton made fashion photography dangerous again. His women were not decorative objects but agents -- powerful, knowing, often predatory, always in command of the frame. Working primarily in stark black and white, he brought a Berlin cabaret darkness into the glossy pages of Vogue and French Elle, creating images that scandalized and seduced in equal measure. His work remains a provocation about power, desire, and who holds the gaze.",
+    traits: [
+      "High contrast black and white as moral universe, not aesthetic choice.",
+      "Women photographed as architects of desire, not recipients.",
+      "Architecture, power, and sexuality fused into a single visual grammar.",
+      "Narrative tension in every frame -- something has just happened or is about to.",
+      "Luxury settings used to interrogate rather than celebrate privilege."
+    ],
+    philosophy: "I like to photograph women who look like they don't need me. Who have their own purpose in the frame. That tension is where interesting things happen.",
+    works: [
+      { title: "Big Nudes (1981)", desc: "Life-size prints of standing women. Scale as political statement. The viewer is always slightly diminished." },
+      { title: "Vogue Paris, French Elle (1960s–2000s)", desc: "Decades of covers and spreads that defined European fashion photography's psychological edge." },
+      { title: "SUMO (1999)", desc: "The largest photography book ever commercially published. A monument to his own mythology." }
+    ]
+  },
+  {
+    id: "guy-bourdin",
+    name: "Guy Bourdin",
+    discipline: "Photographer",
+    style: "Surrealist / Fashion",
+    born: "1928",
+    nationality: "French",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.guybourdin.com",
+    bio: "Guy Bourdin was the surrealist who hid inside fashion photography and detonated it from within. Working almost exclusively for Charles Jourdan shoes and French Vogue, he made images where shoes were practically irrelevant -- the frame was filled with crime scenes, sexual unease, absurdist comedy, and color so operatic it felt hallucinatory. He refused to publish books or grant interviews and remained almost invisible, which only amplified his mythological status among photographers who know.",
+    traits: [
+      "Saturated color -- reds, pinks, flesh tones -- used as emotional assault.",
+      "Narrative ambiguity: every image mid-story, beginning and end withheld.",
+      "The product rendered almost incidental to the world around it.",
+      "Cinematic cropping -- feet, legs, shadows -- the body as prop.",
+      "Surrealist unease deployed inside the conventions of commercial photography."
+    ],
+    philosophy: "I am not interested in selling shoes. I am interested in creating a feeling that attaches itself to shoes afterward, if you're lucky.",
+    works: [
+      { title: "Charles Jourdan campaigns (1967–1981)", desc: "The greatest advertising photographs ever made. Disturbing, beautiful, absolutely inexplicable." },
+      { title: "French Vogue (1955–1987)", desc: "Three decades of images that made editors simultaneously uncomfortable and unable to stop publishing them." },
+      { title: "A Message for You (2006)", desc: "Posthumous retrospective at Somerset House, London. His first major public exhibition." }
+    ]
+  },
+  {
+    id: "ansel-adams",
+    name: "Ansel Adams",
+    discipline: "Photographer",
+    style: "Landscape / Fine Art",
+    born: "1902",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.anseladams.com",
+    bio: "Ansel Adams turned the American landscape into a moral argument. His photographs of Yosemite, the Sierra Nevada, and the national parks are not scenic postcards -- they are manifestos about what deserves preservation and what we stand to lose. He developed the Zone System with Fred Archer, a technical framework that gave photographers precise control over tonal range, essentially inventing the grammar of darkroom craft. His images are technically perfect and emotionally overwhelming simultaneously.",
+    traits: [
+      "The Zone System -- previsualizing the final print before the shutter fires.",
+      "Large format cameras for tonal information no 35mm could capture.",
+      "Dramatic light exploited at its precise peak -- patience as technique.",
+      "The print treated as the finished artwork, not the negative.",
+      "Conservation as embedded subject matter, not afterthought."
+    ],
+    philosophy: "You don't take a photograph, you make it. The negative is the score. The print is the performance.",
+    works: [
+      { title: "Moonrise, Hernandez, New Mexico (1941)", desc: "Possibly the most reproduced fine-art photograph in history. Perfect exposure, perfect composition, unrepeatable light." },
+      { title: "Clearing Winter Storm, Yosemite (1944)", desc: "A valley emerging from clouds. Scale and drama that no digital processing has ever equaled." },
+      { title: "The Camera / The Negative / The Print (1980–1983)", desc: "His technical trilogy. Still the definitive photographic education in book form." }
+    ]
+  },
+
+  // FILM / DIRECTORS
+  {
+    id: "christopher-nolan",
+    name: "Christopher Nolan",
+    discipline: "Director",
+    style: "Cerebral / Epic",
+    born: "1970",
+    nationality: "British-American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Christopher_Nolan",
+    bio: "Christopher Nolan is the director who convinced Hollywood that audiences would pay to think. His films are architectural -- time folded, identity fractured, reality interrogated -- but always anchored in recognizable human stakes. He shoots on film when everyone else went digital, uses practical effects when CGI would be easier, and refuses to let spectacle swallow story. He made the blockbuster feel like literature without making it less entertaining.",
+    traits: [
+      "Non-linear narrative as emotional, not merely intellectual, device.",
+      "IMAX and 65mm film used as arguments against digital convenience.",
+      "Sound design as disorientation -- Hans Zimmer as co-author.",
+      "Memory and time as the true protagonists of every story.",
+      "Restraint in sentiment amplifying emotional impact."
+    ],
+    philosophy: "Film is the most powerful dream machine ever invented. My job is to control what the audience experiences while making them believe they're in control.",
+    works: [
+      { title: "Memento (2000)", desc: "Reverse chronology as empathy -- you experience the protagonist's amnesia, not just observe it." },
+      { title: "The Dark Knight (2008)", desc: "A superhero film that became a meditation on chaos, morality, and the cost of civilization." },
+      { title: "Oppenheimer (2023)", desc: "IMAX intimacy applied to the atomic age. Three hours of cinema that felt too short." }
+    ]
+  },
+  {
+    id: "wes-anderson",
+    name: "Wes Anderson",
+    discipline: "Director",
+    style: "Symmetrical / Whimsical",
+    born: "1969",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Wes_Anderson",
+    bio: "Wes Anderson built a universe so visually specific that a single frame is instantly identifiable as his. Centred compositions, lateral camera moves, pastel palettes, meticulous production design -- these are not affectations but a fully realised visual language that exists nowhere else in cinema. His films are about grief, abandonment, and the desperate construction of family, wrapped in a whimsy so precise it aches. The comedy and the sadness are inseparable.",
+    traits: [
+      "Perfect symmetry as a visual argument for order in a disordered world.",
+      "The lateral tracking shot as emotional punctuation.",
+      "Production design as character -- every object tells a story.",
+      "Deadpan delivery amplifying, not muting, genuine feeling.",
+      "Colour palettes so controlled they function as emotional keys."
+    ],
+    philosophy: "I make the world I want to live in. The symmetry, the order -- that's wishful thinking on a grand scale. And I think audiences feel that wish.",
+    works: [
+      { title: "The Royal Tenenbaums (2001)", desc: "His thesis statement. Dysfunction, genius, and failure wrapped in the most beautiful production design in American cinema." },
+      { title: "The Grand Budapest Hotel (2014)", desc: "A film about the death of a civilisation told as a comedy caper. Hilarious and devastating." },
+      { title: "Fantastic Mr. Fox (2009)", desc: "Stop-motion that proved the style wasn't just visual -- it was a complete worldview." }
+    ]
+  },
+  {
+    id: "sofia-coppola",
+    name: "Sofia Coppola",
+    discipline: "Director",
+    style: "Atmospheric / Introspective",
+    born: "1971",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Sofia_Coppola",
+    bio: "Sofia Coppola makes films about people adrift inside their own lives -- isolated by privilege, fame, adolescence, or simply the impossibility of being truly known by another person. She works in mood and atmosphere, letting scenes breathe long past the point most directors would cut, trusting the audience to sit inside discomfort alongside her characters. She made the interior life cinematic when cinema was still obsessed with event.",
+    traits: [
+      "Silence and stillness as primary dramatic tools.",
+      "The female gaze -- desire, interiority, and subjectivity without apology.",
+      "Music chosen like a co-director: shoegaze, dream-pop, My Bloody Valentine.",
+      "Luxury as cage, not reward -- beautiful settings as prisons.",
+      "Performance directed toward restraint rather than expression."
+    ],
+    philosophy: "I'm interested in what people are feeling when nothing is happening. That gap between inner life and outward existence -- that's where I want to live as a filmmaker.",
+    works: [
+      { title: "Lost in Translation (2003)", desc: "Two people not quite connecting in Tokyo. Loneliness made cinematically physical. Won the Oscar for screenplay." },
+      { title: "The Virgin Suicides (1999)", desc: "Female interiority observed through male incomprehension. A debut that announced a wholly original voice." },
+      { title: "Marie Antoinette (2006)", desc: "Versailles as a teenage prison. New Wave soundtrack against eighteenth century silk. Anachronism as emotional truth." }
+    ]
+  },
+  {
+    id: "hayao-miyazaki",
+    name: "Hayao Miyazaki",
+    discipline: "Director",
+    style: "Animated / Mythological",
+    born: "1941",
+    nationality: "Japanese",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.studioghibli.jp",
+    bio: "Hayao Miyazaki is the greatest animator who ever lived and arguably one of cinema's supreme visionaries regardless of medium. His films are hand-drawn worlds of extraordinary detail, populated by characters who earn their complexity through behaviour rather than exposition. Flight, ecology, pacifism, the moral ambiguity of progress -- vast themes carried by images so beautiful they bypass argument and go straight for something older. He makes children's films that contain more truth than most art cinema.",
+    traits: [
+      "Hand-drawn animation treated as a moral commitment, not nostalgia.",
+      "Female protagonists who act, choose, and fail without male rescue.",
+      "Environmental grief embedded in every frame involving nature.",
+      "Ambiguous morality -- no pure villains, no easy heroes.",
+      "The interval -- lingering on a landscape, a meal, a breath -- as cinematic value."
+    ],
+    philosophy: "I've become skeptical of the unwritten rule that just because a boy and a girl appear in the same feature, a romance must ensue. Rather, I want to portray a slightly different relationship, one where the two mutually inspire each other to live.",
+    works: [
+      { title: "Spirited Away (2001)", desc: "The highest-grossing Japanese film in history. A ten-year-old navigating a spirit economy. Perfect in every frame." },
+      { title: "Princess Mononoke (1997)", desc: "An ecological war with no villains. The most politically complex film ever made for a young audience." },
+      { title: "My Neighbor Totoro (1988)", desc: "The grammar of wonder. Every animator since has been influenced by this film whether they know it or not." }
+    ]
+  },
+  {
+    id: "jordan-peele",
+    name: "Jordan Peele",
+    discipline: "Director",
+    style: "Horror / Social",
+    born: "1979",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Jordan_Peele",
+    bio: "Jordan Peele arrived in film already fluent in genre and used that fluency to say things American cinema had been circling around for decades. His horror is sociological -- the monster is always structural racism, performed identity, or the violence of being unseen. He shoots with the precision of a visual scholar who has absorbed everything from Kubrick to Spielberg and distilled it into something entirely his own. He made genre cinema feel urgent again.",
+    traits: [
+      "Horror as a vehicle for sociological precision, not just fright.",
+      "Visual references worn openly as argument rather than pastiche.",
+      "The slow reveal -- unease built through wrongness, not shock.",
+      "Black American experience as the lens, not the subject.",
+      "Comedy timing applied to dread -- the two are structurally identical."
+    ],
+    philosophy: "The best horror doesn't just scare you -- it stays with you because it told you something true about the world you live in. That truth is the real terror.",
+    works: [
+      { title: "Get Out (2017)", desc: "A breakthrough in American cinema. Horror about liberal racism, shot with the precision of a documentary. Oscar for screenplay." },
+      { title: "Us (2019)", desc: "Doppelgangers as a metaphor for class and the American shadow self. Unresolved by design." },
+      { title: "Nope (2022)", desc: "A film about spectacle and the ethics of watching. The most visually ambitious of the three." }
+    ]
+  },
+  {
+    id: "ryan-coogler",
+    name: "Ryan Coogler",
+    discipline: "Director",
+    style: "Visceral / Cultural",
+    born: "1986",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Ryan_Coogler",
+    bio: "Ryan Coogler is one of the most assured directors of his generation -- someone who can move between intimate character studies and billion-dollar spectacles without losing his essential voice. He shoots close, physically, almost uncomfortably so, placing the camera in the body of the scene rather than observing from outside. His work is always about identity, belonging, and what we inherit from the people who came before us.",
+    traits: [
+      "Immersive cinematography -- the camera inside the action, not above it.",
+      "Cultural specificity as universal emotional access.",
+      "Grief as the engine underneath almost every story.",
+      "Practical locations used as psychological environments.",
+      "Performance over spectacle, even inside spectacle."
+    ],
+    philosophy: "I want audiences to feel like they're inside the film, not watching it. The moment you feel observed, you're outside the story. I want you in it.",
+    works: [
+      { title: "Fruitvale Station (2013)", desc: "One day in Oscar Grant's life. Restraint and proximity producing the most emotionally devastating debut in recent memory." },
+      { title: "Black Panther (2018)", desc: "A superhero film that became a cultural event. Afrofuturism as mainstream cinema. $1.3 billion worldwide." },
+      { title: "Creed (2015)", desc: "The Rocky sequel nobody needed that became the best film in the franchise. Character study as sports movie." }
+    ]
+  },
+  {
+    id: "peter-jackson",
+    name: "Peter Jackson",
+    discipline: "Director",
+    style: "Epic / World-Building",
+    born: "1961",
+    nationality: "New Zealander",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Peter_Jackson",
+    bio: "Peter Jackson built a world so convincing that tourists rerouted their travel plans to walk through it. Starting with New Zealand splatter horror, he spent two decades developing the technical and storytelling ambition to adapt the supposedly unfilmable Lord of the Rings -- and then actually filmed it. His achievement was not just cinematic but industrial: he proved that a single director's complete vision, given enough time and autonomy, could reshape global popular culture.",
+    traits: [
+      "Practical world-building at a scale previously impossible.",
+      "Weta Workshop as co-author -- creature design as narrative language.",
+      "New Zealand landscape as a mythological character in its own right.",
+      "Emotional momentum sustained across twelve hours of combined runtime.",
+      "Technical innovation in service of story rather than spectacle for its own sake."
+    ],
+    philosophy: "You have to make the audience forget they are watching a film. The world has to be so complete, so convincing, that disbelief becomes impossible. That is the only goal.",
+    works: [
+      { title: "The Lord of the Rings trilogy (2001–2003)", desc: "The most ambitious adaptation in cinema history. Seventeen Oscars. A new benchmark for world-building." },
+      { title: "Heavenly Creatures (1994)", desc: "The film that showed his range before Rings. Kate Winslet's debut. Disturbing, beautiful, operatic." },
+      { title: "They Shall Not Grow Old (2018)", desc: "WWI footage restored and colourised. Documentary filmmaking as time travel." }
+    ]
+  },
+  {
+    id: "david-fincher",
+    name: "David Fincher",
+    discipline: "Director",
+    style: "Precision / Dark",
+    born: "1962",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/David_Fincher",
+    bio: "David Fincher is the director who elevated control itself into an aesthetic. Former music video and commercial director who brought advertising's frame-perfectionism into narrative cinema and refused to let it go. He shoots scenes dozens of times not for performance but for physics -- the exact fall of a coffee cup, the precise angle of a shadow. His films are about systems that consume people: serial killers, corporations, social networks, investigative journalism. Cold on the surface, devastating underneath.",
+    traits: [
+      "Desaturated, cool colour grading as emotional temperature.",
+      "Hundreds of takes -- not for performance variation but physical precision.",
+      "Sound mix as disorientation: ambient noise elevated, dialogue slightly buried.",
+      "The procedural as tragedy -- the process of finding truth destroys the seeker.",
+      "Collaboration with Trent Reznor and Atticus Ross: score as dread infrastructure."
+    ],
+    philosophy: "There are no accidents in my films. If something is in the frame, I put it there. Every choice is a decision about what the audience should feel, even if they never consciously notice it.",
+    works: [
+      { title: "Se7en (1995)", desc: "The film that established his visual language. Rain, rot, and moral nihilism. The ending changed what Hollywood thought it was allowed to do." },
+      { title: "Fight Club (1999)", desc: "A misread film that turned out to have correctly read its audience. Masculinity crisis as anarchist comedy." },
+      { title: "The Social Network (2010)", desc: "The founding myth of our age told as Greek tragedy. Aaron Sorkin's best script, Fincher's most controlled direction." }
+    ]
+  },
+  {
+    id: "denis-villeneuve",
+    name: "Denis Villeneuve",
+    discipline: "Director",
+    style: "Sci-Fi / Contemplative",
+    born: "1967",
+    nationality: "Canadian",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Denis_Villeneuve",
+    bio: "Denis Villeneuve makes science fiction feel ancient. His films move at the pace of geology -- slow, monumental, inevitable. He is the director who understood that the genre's greatest power lies not in action but in awe: the confrontation with something so vast it recalibrates your sense of scale. Working with cinematographer Roger Deakins and composer Hans Zimmer, he built a visual and sonic language for the cosmic that no one else is currently attempting.",
+    traits: [
+      "Scale used to produce genuine awe, not spectacle.",
+      "Silence and negative space as primary storytelling tools.",
+      "Human figures made small against architectural or natural immensity.",
+      "Patience -- scenes allowed to arrive rather than be forced.",
+      "Practical sets combined with restrained digital extension."
+    ],
+    philosophy: "I want the audience to feel small. Not diminished, but calibrated -- to feel their actual size in relation to the universe. That feeling is not frightening to me. It is sacred.",
+    works: [
+      { title: "Arrival (2016)", desc: "A linguist and an alien language as a meditation on grief and time. Science fiction as emotional philosophy." },
+      { title: "Blade Runner 2049 (2017)", desc: "The impossible sequel that surpassed expectations. Deakins won his long-overdue Oscar. A masterwork of visual world-building." },
+      { title: "Dune (2021)", desc: "The unfilmable novel, filmed. Desert as cathedral. Scale as spiritual experience." }
+    ]
+  },
+  {
+    id: "spike-lee",
+    name: "Spike Lee",
+    discipline: "Director",
+    style: "Political / Visceral",
+    born: "1957",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Spike_Lee",
+    bio: "Spike Lee arrived in American cinema as a provocation and has never stopped provoking. His films are about race, power, identity, and the specific textures of Black American urban life, shot with a stylistic boldness that matches their political urgency. He invented the double dolly shot -- a camera move where the subject glides forward while the background recedes -- and used it to make walking feel like prophecy. His visual language is as distinctive as any director alive, and his refusal to soften his vision is a form of integrity that four decades have not dulled.",
+    traits: [
+      "The double dolly shot as signature -- floating subjects in charged space.",
+      "Direct address to camera -- characters who know they are being watched.",
+      "Brooklyn as a complete universe with its own physics and moral laws.",
+      "Jazz, hip-hop, and soul music as structural elements, not soundtrack.",
+      "Political urgency worn openly, without apology or dilution."
+    ],
+    philosophy: "I am not interested in making films that make everyone comfortable. Comfort is the enemy of change. I want to make films that disturb, that demand something from the audience.",
+    works: [
+      { title: "Do the Right Thing (1989)", desc: "One day, one Brooklyn block, one summer. The most important American film of the 1980s." },
+      { title: "Malcolm X (1992)", desc: "Denzel Washington's greatest performance. A three-hour biopic of total conviction." },
+      { title: "25th Hour (2002)", desc: "Post-9/11 New York through the lens of one man's last day of freedom. Elegiac and furious." }
+    ]
+  },
+
+  // DESIGN / TYPOGRAPHY
+  {
+    id: "herb-lubalin",
+    name: "Herb Lubalin",
+    discipline: "Designer",
+    style: "Typography / Editorial",
+    born: "1918",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Herb_Lubalin",
+    bio: "Herb Lubalin treated typography as architecture and emotion simultaneously. Working in New York through the 1960s and 70s, he transformed the typeface from a neutral carrier of language into a charged, expressive visual event. His magazine designs for Eros, Fact, and Avant Garde pushed typography to its conceptual limits, and the Avant Garde typeface he designed with Tom Carnase became one of the most recognisable and influential letterforms of the twentieth century.",
+    traits: [
+      "Letters treated as interlocking architectural forms.",
+      "Negative space between letterforms used as active compositional element.",
+      "Editorial design as manifesto -- every cover a statement.",
+      "Ligatures and custom letterfit pushed to their structural limits.",
+      "Typography and image fused rather than arranged alongside each other."
+    ],
+    philosophy: "Type is not just words. It is form. It has weight, texture, rhythm, tension. When I set type I am composing music, not just transcribing it.",
+    works: [
+      { title: "Avant Garde magazine (1968–1971)", desc: "The most visually adventurous magazine in American history. Every issue a typographic event." },
+      { title: "ITC Avant Garde Gothic (1970)", desc: "The typeface derived from the magazine's logo. Still everywhere, still electrifying when used correctly." },
+      { title: "Mother & Child logotype", desc: "Two words. Perfectly letterspaced. The infant tucked inside the ampersand. Still the most elegant piece of visual wordplay ever made." }
+    ]
+  },
+  {
+    id: "stefan-sagmeister",
+    name: "Stefan Sagmeister",
+    discipline: "Designer",
+    style: "Provocateur / Experiential",
+    born: "1962",
+    nationality: "Austrian",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://sagmeister.com",
+    bio: "Stefan Sagmeister is design's designated disruptor -- a Viennese-trained typographer who arrived in New York and immediately started doing things with his body that other designers were doing with their computers. He carved type into his own torso. He sent AIGA conference details painted on a live elephant. He took a year off every seven years to experiment without client obligation. His work is about whether design can make you feel something, and his answer is reliably: yes, but only if it takes a risk.",
+    traits: [
+      "The body as design material and canvas.",
+      "Risk-taking as a deliberate methodology, not accident.",
+      "Typography liberated from the grid and placed in the physical world.",
+      "Happiness and beauty as legitimate design objectives.",
+      "Collaboration as essential -- Jessica Walsh as a transformative creative partner."
+    ],
+    philosophy: "If I can make someone feel, even for a moment, that design is alive -- that it has a heartbeat -- then I have done something. Most design is politely invisible. I am interested in the impolite kind.",
+    works: [
+      { title: "AIGA Detroit poster (1999)", desc: "Conference details carved into his own skin and photographed. Still the most viscerally impactful design poster ever made." },
+      { title: "Things I Have Learned in My Life So Far (2008)", desc: "Typography installed in public spaces worldwide. Personal philosophy as street-level visual intervention." },
+      { title: "The Happy Film (2016)", desc: "A documentary about whether happiness can be designed. The experiment is the work." }
+    ]
+  },
+  {
+    id: "milton-glaser",
+    name: "Milton Glaser",
+    discipline: "Designer",
+    style: "Iconic / Humanist",
+    born: "1929",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.miltonglaser.com",
+    bio: "Milton Glaser made the most reproduced graphic image in history -- the I Love New York logo -- and barely profited from it, which tells you everything about why he made it. A co-founder of New York magazine and Push Pin Studios, he spent six decades demonstrating that commercial design and fine art were not separate pursuits. His work is warm, humanist, and formally inventive, driven by genuine affection for the people and places his images represent.",
+    traits: [
+      "The accessible image -- complex ideas reduced to their most communicable form.",
+      "Warmth as a design value, not a commercial concession.",
+      "Illustration, typography, and identity treated as a continuous practice.",
+      "New York as subject, muse, and audience simultaneously.",
+      "The public function of design taken seriously as a civic responsibility."
+    ],
+    philosophy: "There are three responses to a piece of design -- yes, no, and WOW. Wow is what I am after. Everything else is just typography.",
+    works: [
+      { title: "I Love New York (1977)", desc: "The most recognisable logo on earth. Designed for free as a public service. Copied forever." },
+      { title: "Bob Dylan poster (1966)", desc: "Psychedelic silhouette. A moment when graphic design became genuinely countercultural." },
+      { title: "New York magazine (1968)", desc: "Co-founded the publication that defined urban magazine design for a generation." }
+    ]
+  },
+  {
+    id: "susan-kare",
+    name: "Susan Kare",
+    discipline: "Designer",
+    style: "Interface / Iconographic",
+    born: "1954",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.kareprints.com",
+    bio: "Susan Kare designed the visual language of the personal computer at a moment when no such language existed. Hired by Steve Jobs to create the interface for the original Macintosh, she invented the icons, typefaces, and visual conventions that billions of people now use without thinking about them. The trash can. The paint bucket. The hand cursor. The concept of desktop metaphor made literal. She did it on a pixel grid so constrained it resembled medieval tapestry, and the results were immediately, enduringly legible.",
+    traits: [
+      "Pixel-level precision as craft, not limitation.",
+      "Metaphor made visual -- complex functions reduced to recognisable objects.",
+      "Clarity as the only objective -- every icon must communicate in one glance.",
+      "The grid as creative constraint rather than creative restriction.",
+      "Warmth embedded in functional design -- making computers feel approachable."
+    ],
+    philosophy: "I was designing for people who had never used a computer before. The icon had to be so clear, so immediate, that a child could understand it without being told. That was the only standard I was interested in.",
+    works: [
+      { title: "Macintosh desktop icons (1983)", desc: "The trash can, the folder, the clipboard. The visual vocabulary of computing, invented from scratch on a 32x32 pixel grid." },
+      { title: "Chicago and Cairo typefaces", desc: "System fonts that defined the Macintosh visual identity. Designed for legibility at sizes where letters have only a handful of pixels each." },
+      { title: "Playing cards for Macintosh", desc: "The game that came with every Mac. Proof that utility and delight are not separate design objectives." }
+    ]
+  },
+  {
+    id: "jony-ive",
+    name: "Jony Ive",
+    discipline: "Designer",
+    style: "Industrial / Minimalist",
+    born: "1967",
+    nationality: "British",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Jony_Ive",
+    bio: "Jony Ive is the designer who made hundreds of millions of people fall in love with objects. As Chief Design Officer at Apple for over two decades, he was the material intelligence behind the iMac, iPod, iPhone, iPad, and MacBook -- products that redefined not just consumer electronics but the entire relationship between humans and the things they carry. His inheritance from Dieter Rams was direct and acknowledged: less, but better. He made that credo global.",
+    traits: [
+      "Materials treated with the reverence of a sculptor -- aluminium, glass, and silicon as expressive media.",
+      "The removal of everything unnecessary as the primary design act.",
+      "Tactility and physical pleasure as legitimate design objectives.",
+      "Manufacturing process considered inseparable from design intent.",
+      "The product as complete thought -- packaging, unboxing, and use as a single designed experience."
+    ],
+    philosophy: "Our goal is simply to try to make better products. I think people's relationship to objects is important. When design is done well, an object can carry meaning.",
+    works: [
+      { title: "iMac G3 (1998)", desc: "Translucent colour on a computer. The moment Apple returned and announced it wasn't going to apologise for beauty." },
+      { title: "iPod (2001)", desc: "A thousand songs in your pocket. The click wheel as the most tactilely satisfying interface ever designed." },
+      { title: "iPhone (2007)", desc: "A single sheet of glass. The object that reorganised daily life for four billion people." }
+    ]
+  },
+
+  // ILLUSTRATION / CONCEPT
+  {
+    id: "nigel-perry",
+    name: "Nigel Perry",
+    discipline: "Photographer",
+    style: "Editorial / Fashion",
+    born: "1958",
+    nationality: "British",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Nigel_Perry_(photographer)",
+    bio: "Nigel Perry is a British fashion and portrait photographer whose editorial work across Vogue, The Face, and i-D helped define the visual language of 1980s and 90s British fashion photography. Working with a spare, directorial sensibility, he photographed models and musicians with an intimacy that felt candid but was rigorously constructed. His work sits in the lineage of British photographers who understood that fashion imagery could be culturally serious.",
+    traits: [
+      "Intimate framing that feels documentary despite total construction.",
+      "Collaboration with stylists treated as genuine creative partnership.",
+      "British understatement applied to inherently theatrical subject matter.",
+      "Black and white used to strip fashion back to gesture and form.",
+      "The face as the primary subject even when the clothes are the nominal one."
+    ],
+    philosophy: "Fashion photography at its best is portrait photography. The clothes are a costume and the person wearing them is always the real story.",
+    works: [
+      { title: "British Vogue editorial work (1980s–90s)", desc: "Defining the visual register of a decade of British fashion photography." },
+      { title: "The Face magazine", desc: "Work for the seminal British style magazine that shaped youth culture's visual identity." },
+      { title: "Portrait commissions", desc: "Musicians, actors, and cultural figures shot with his characteristic quiet intensity." }
+    ]
+  },
+  {
+    id: "moebius",
+    name: "Moebius (Jean Giraud)",
+    discipline: "Designer",
+    style: "Sci-Fi / Illustration",
+    born: "1938",
+    nationality: "French",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Moebius_(comics)",
+    bio: "Moebius is the source code of visual science fiction. Jean Giraud, working under that name from the 1970s onward, created comics of such hallucinatory visual richness that they rewired the imagination of every filmmaker, designer, and artist who encountered them. Ridley Scott hired him for Alien. Lucas consulted him. The visual language of Blade Runner, The Fifth Element, Dune, and virtually every significant sci-fi film of the past four decades flows directly from his line. He drew worlds that had never existed and made them feel like they had always been there.",
+    traits: [
+      "Line work of impossible precision and variation -- thin to thick in a single stroke.",
+      "Vast open landscapes that feel simultaneously alien and primordially familiar.",
+      "Colour used with the restraint of a master watercolourist.",
+      "Narrative that prioritises wonder over plot.",
+      "The page treated as a window, not a flat surface."
+    ],
+    philosophy: "I draw to find out what I don't know. The pencil moves and the world appears. I am not inventing -- I am discovering something that was always there, waiting.",
+    works: [
+      { title: "The Incal (1980–1988, with Jodorowsky)", desc: "The greatest science fiction comic ever made. A cosmological epic that influenced everything." },
+      { title: "Arzach (1975)", desc: "Wordless. Pure image. A pterodactyl and a silent rider in alien landscapes. Revolutionary." },
+      { title: "Alien, Tron, The Fifth Element (production design)", desc: "His fingerprints on the visual DNA of cinema's most influential sci-fi productions." }
+    ]
+  },
+  {
+    id: "syd-mead",
+    name: "Syd Mead",
+    discipline: "Designer",
+    style: "Futurist / Industrial",
+    born: "1933",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://sydmead.com",
+    bio: "Syd Mead was called a visual futurist, but that undersells it -- he was the person who decided what the future looked like, and then the future largely looked like that. His concept art for Blade Runner, TRON, Aliens, and Johnny Mnemonic did not predict the future so much as manufacture its aesthetic in advance. Trained as an industrial designer, he brought a rigorous understanding of materials, engineering, and ergonomics to images that were nonetheless visionary beyond any immediate practical application.",
+    traits: [
+      "Industrial design logic applied to entirely speculative objects.",
+      "Colour and surface rendered with gouache at a fidelity that predates digital visualisation.",
+      "Architecture and vehicle design treated as continuous disciplines.",
+      "Optimism -- his futures are generally ones worth inhabiting.",
+      "The horizon line as a recurring compositional anchor -- always something beyond the frame."
+    ],
+    philosophy: "I design things that don't exist yet. My job is to make them real enough that engineers can build them and audiences can believe in them. The gap between imagination and reality is where I live.",
+    works: [
+      { title: "Blade Runner (1982)", desc: "The Spinner police car, the Tyrell Corporation headquarters, the street-level cityscape. The visual template for cyberpunk." },
+      { title: "TRON (1982)", desc: "Light cycles and the digital grid. Concept work that shaped how we visualise virtual space." },
+      { title: "Aliens (1986)", desc: "Colonial Marines dropship, the APC, the landing bay. Military sci-fi's visual grammar, established here." }
+    ]
+  },
+
+  // GAMES
+  {
+    id: "hideo-kojima",
+    name: "Hideo Kojima",
+    discipline: "Director",
+    style: "Cinematic / Auteur",
+    born: "1963",
+    nationality: "Japanese",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.kojimaproductions.jp",
+    bio: "Hideo Kojima is cinema's restless cousin who chose interactive media as his canvas and has spent four decades proving it can bear the weight of genuine artistic ambition. Creator of Metal Gear Solid and Death Stranding, he makes games that are uncompromising in their length, philosophical density, and cinematic pretension -- and he has the audience to prove that uncompromising works. He is the game developer most comfortable being called a filmmaker, and the comparison is not entirely wrong.",
+    traits: [
+      "Cutscenes as directorial statements -- sometimes exceeding the gameplay in duration.",
+      "Film references worn openly as intellectual credentials.",
+      "Themes of nuclear anxiety, surveillance, and memetic identity explored across decades.",
+      "Collaboration with film actors (Mads Mikkelsen, Norman Reedus, Lea Seydoux) as creative strategy.",
+      "The auteur model applied to an industrial medium that resists it."
+    ],
+    philosophy: "I am always making films. The controller in the player's hand is just a different kind of camera. The story is the same. The emotion is the same.",
+    works: [
+      { title: "Metal Gear Solid (1998)", desc: "Cinematic game design at a scale nobody had attempted. Broke the fourth wall. Still studied in design schools." },
+      { title: "Metal Gear Solid 2: Sons of Liberty (2001)", desc: "A game about information warfare and the controllability of narrative. Released in 2001. Horrifyingly prescient." },
+      { title: "Death Stranding (2019)", desc: "A post-apocalyptic delivery game about human connection. Divisive. Singular. The most ambitious interactive work of the decade." }
+    ]
+  },
+  {
+    id: "shigeru-miyamoto",
+    name: "Shigeru Miyamoto",
+    discipline: "Designer",
+    style: "Interactive / Playful",
+    born: "1952",
+    nationality: "Japanese",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Shigeru_Miyamoto",
+    bio: "Shigeru Miyamoto is arguably the most influential game designer who ever lived and one of the most significant creative forces in twentieth century entertainment full stop. Creator of Mario, Zelda, Donkey Kong, and Pikmin, he built entire vocabularies of interactive play from scratch and did it with a consistent philosophy: games should feel like toys, and toys should feel like discoveries. Every mechanic in a Miyamoto game exists because it is joyful to perform, not because it is technically impressive.",
+    traits: [
+      "Play as the primary value -- mechanics that feel good before they mean anything.",
+      "The garden as creative origin -- his childhood exploration of rural Japan as design blueprint.",
+      "Iterative design: every element tested, discarded, rebuilt until the fun is indisputable.",
+      "Character design as pure emotion -- Mario's silhouette readable at the lowest resolution.",
+      "Accessibility without condescension -- depth that reveals itself gradually."
+    ],
+    philosophy: "A game is not finished until it is fun. And it is not fun until you cannot stop playing. Everything else -- story, graphics, technology -- is in service of that feeling.",
+    works: [
+      { title: "Donkey Kong (1981)", desc: "The game that introduced Mario. Jump as a game verb, invented here." },
+      { title: "Super Mario Bros. (1985)", desc: "The template for platform game design. Every subsequent platformer has been in dialogue with this one." },
+      { title: "The Legend of Zelda (1986)", desc: "Open-world exploration with a sense of genuine mystery. The direct ancestor of every open-world game ever made." }
+    ]
+  },
+
+  // ARCHITECTURE
+  {
+    id: "bjarke-ingels",
+    name: "Bjarke Ingels",
+    discipline: "Designer",
+    style: "Utopian / Pragmatic",
+    born: "1974",
+    nationality: "Danish",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://big.dk",
+    bio: "Bjarke Ingels makes architecture that argues with itself productively. His firm BIG operates on a philosophy he calls hedonistic sustainability -- the idea that environmental responsibility and human pleasure are not in opposition but can be designed into each other. His buildings in Copenhagen, New York, and beyond are formally inventive, publicly engaging, and technically serious. He has brought a comics-influenced communication style to the notoriously impenetrable world of architectural discourse, making him the most publicly legible architect of his generation.",
+    traits: [
+      "Hedonistic sustainability -- pleasure and responsibility as a single design objective.",
+      "Buildings conceived as responses to their urban context, not impositions upon it.",
+      "Section drawing and model-making as public communication tools.",
+      "Programme twisted into form -- use determines shape, shape determines experience.",
+      "The mountain, the spiral, the loop -- geometry as identity."
+    ],
+    philosophy: "Architecture is the art of making shelter. But it is also the art of making community, making delight, making the city more alive. If a building makes no one's life better, it has failed regardless of how beautiful it is.",
+    works: [
+      { title: "VM Houses, Copenhagen (2005)", desc: "Housing designed to maximise light and views for every apartment. Social ambition and formal invention fused." },
+      { title: "8 House, Copenhagen (2010)", desc: "A figure-eight building where a continuous path runs from street level to rooftop. Mixed-use as urban ecosystem." },
+      { title: "The Big U, New York (2014)", desc: "Flood protection for lower Manhattan designed as public park. Infrastructure as landscape architecture." }
+    ]
+  },
+
+  // CINEMATOGRAPHY
+  {
+    id: "emmanuel-lubezki",
+    name: "Emmanuel Lubezki",
+    discipline: "Photographer",
+    style: "Cinematography / Natural Light",
+    born: "1964",
+    nationality: "Mexican",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Emmanuel_Lubezki",
+    bio: "Emmanuel Lubezki, known as Chivo, won three consecutive Academy Awards for cinematography -- an achievement unprecedented in Oscar history -- and did it with a philosophy that most cinematographers consider professional masochism: no artificial light. Shooting with available natural sources, wide lenses, and camera movements that follow the physical logic of human bodies in space, he developed an aesthetic that feels less like cinema and more like memory. He is Terrence Malick's essential collaborator and Alejandro Gonzalez Inarritu's technical co-author.",
+    traits: [
+      "Available natural light as the only light source -- dawn, dusk, fire, and overcast sky.",
+      "Ultra-wide lenses placing the viewer inside the scene rather than before it.",
+      "The long take as philosophical statement -- time as continuous, unmanipulated.",
+      "The camera as a breathing, searching entity rather than a stable observer.",
+      "Magic hour extended -- the entire aesthetic built around light at its most fugitive."
+    ],
+    philosophy: "Light is not a tool. Light is the subject. I am not illuminating a scene -- I am photographing the light that happens to contain a scene inside it.",
+    works: [
+      { title: "The Tree of Life (2011)", desc: "Malick's cosmological film. Lubezki's camera found the sacred inside the domestic and the universal inside the biological." },
+      { title: "Gravity (2013)", desc: "Space filmed with natural-light logic applied to a digital environment. His first Oscar." },
+      { title: "The Revenant (2015)", desc: "A film shot entirely in natural light in winter. The suffering was real. So was the beauty. Third consecutive Oscar." }
+    ]
+  },
+  {
+    id: "roger-deakins",
+    name: "Roger Deakins",
+    discipline: "Photographer",
+    style: "Cinematography / Atmospheric",
+    born: "1949",
+    nationality: "British",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Roger_Deakins",
+    bio: "Roger Deakins is the cinematographer's cinematographer -- the person other people who shoot films cite when asked who they admire. Fourteen Oscar nominations before his first win for Blade Runner 2049 became a running industry joke about the inexplicability of awards. His work spans thirty years of Coen Brothers collaborations, Shawshank Redemption, Skyfall, and 1917 -- a range that demonstrates the defining quality of his talent: total stylistic subordination to the story. He has no signature look. He has a signature quality: every frame is exactly as it should be.",
+    traits: [
+      "Light that seems to have a natural source even when painstakingly artificial.",
+      "Wide shots used to establish emotional scale, not just physical geography.",
+      "Shadow and partial illumination preferred over full exposure.",
+      "Restraint -- the shot that does less and therefore communicates more.",
+      "Technical mastery completely invisible in the finished work."
+    ],
+    philosophy: "The best cinematography is the kind you don't notice. If you're thinking about how beautiful the image is, I've failed. You should be thinking about the character, the story, the feeling.",
+    works: [
+      { title: "The Shawshank Redemption (1994)", desc: "The prison as both literal and metaphorical space, photographed so that both registers are simultaneously present." },
+      { title: "No Country for Old Men (2007)", desc: "West Texas as a moral landscape. The landscape is the film's most important character." },
+      { title: "1917 (2019)", desc: "A film designed to appear as one continuous shot. The plan is invisible. The immersion is total." }
+    ]
+  },
+
+  // INDUSTRIAL DESIGN
+  {
+    id: "dieter-rams",
+    name: "Dieter Rams",
+    discipline: "Designer",
+    style: "Functionalist / Minimalist",
+    born: "1932",
+    nationality: "German",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://www.vitsoe.com/gb/about/dieter-rams",
+    bio: "Dieter Rams asked a question that has been answered a thousand times since but was genuinely radical when he posed it in 1976: is my design good design? His response was the Ten Principles -- a manifesto for functional beauty that influenced every serious product designer who followed and most who never heard of him. As head of design at Braun for three decades, he made radios, razors, calculators, and speakers that looked like they had been discovered rather than designed. Jony Ive acknowledged him directly. Apple's hardware is an extended conversation with his work.",
+    traits: [
+      "Less, but better -- the operating principle applied without exception.",
+      "Honest materials: what something is made of should be legible in its appearance.",
+      "Long-lasting design -- objects built to remain relevant across decades.",
+      "Unobtrusive -- good design is as little design as possible.",
+      "The grid and the right angle as moral commitments, not aesthetic preferences."
+    ],
+    philosophy: "Good design is as little design as possible. Less, but better -- because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.",
+    works: [
+      { title: "Braun T3 transistor radio (1958)", desc: "The direct visual ancestor of the iPod. Geometry, function, and material honesty in one object." },
+      { title: "606 Universal Shelving System (1960)", desc: "Still in production. Still correct. The shelving system as a statement about permanence in design." },
+      { title: "Ten Principles of Good Design (1976)", desc: "The manifesto. Required reading for anyone who makes or uses objects, which is everyone." }
+    ]
   }
 ];
 
@@ -973,28 +1772,36 @@ function getInitials(name) {
   return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
 
+function buildCard(person) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.discipline = person.discipline;
+  card.onclick = () => showProfile(person.id);
+
+  const hasImage = person.coverImage && person.coverImage.trim() !== '';
+
+  card.innerHTML = `
+    ${hasImage
+      ? `<img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
+         <div class="card-overlay"></div>`
+      : `<div class="card-overlay" style="display:none;"></div>`
+    }
+    <div class="card-placeholder" style="display:${hasImage ? 'none' : 'flex'}; position:absolute; inset:0;">
+      <span class="card-placeholder-initials">${getInitials(person.name)}</span>
+    </div>
+    <div class="card-info">
+      <p class="card-discipline">${person.discipline}</p>
+      <p class="card-name">${person.name}</p>
+    </div>
+    <div class="card-arrow">↗</div>
+  `;
+  return card;
+}
+
 function buildGallery(people) {
   const grid = document.getElementById('card-grid');
   grid.innerHTML = '';
-  people.forEach(person => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.dataset.discipline = person.discipline;
-    card.onclick = () => showProfile(person.id);
-    card.innerHTML = `
-      <img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
-      <div class="card-overlay"></div>
-      <div class="card-placeholder" style="display:none; position:absolute; inset:0;">
-        <span class="card-placeholder-initials">${getInitials(person.name)}</span>
-      </div>
-      <div class="card-info">
-        <p class="card-discipline">${person.discipline}</p>
-        <p class="card-name">${person.name}</p>
-      </div>
-      <div class="card-arrow">↗</div>
-    `;
-    grid.appendChild(card);
-  });
+  people.forEach(person => grid.appendChild(buildCard(person)));
 }
 
 function filterCards(discipline, btn) {
@@ -1008,13 +1815,23 @@ function showProfile(id) {
   const person = PEOPLE.find(p => p.id === id);
   if (!person) return;
 
-  document.getElementById('p-hero-img').src = person.heroImage || person.coverImage;
-  document.getElementById('p-hero-img').alt = person.name;
+  const heroImg = document.getElementById('p-hero-img');
+  const hasHeroImage = (person.heroImage || person.coverImage || '').trim() !== '';
+
+  if (hasHeroImage) {
+    heroImg.src = person.heroImage || person.coverImage;
+    heroImg.style.display = 'block';
+  } else {
+    heroImg.src = '';
+    heroImg.style.display = 'none';
+  }
+  heroImg.alt = person.name;
+
   document.getElementById('p-discipline').textContent = person.discipline;
   document.getElementById('p-name').textContent = person.name;
 
   const tags = document.getElementById('p-tags');
-  tags.innerHTML = [person.style, person.nationality, person.born + ' –'].map(t => `<span class="tag">${t}</span>`).join('');
+  tags.innerHTML = [person.style, person.nationality, person.born + ' \u2013'].map(t => `<span class="tag">${t}</span>`).join('');
 
   document.getElementById('p-bio').textContent = person.bio;
 
@@ -1032,10 +1849,16 @@ function showProfile(id) {
   `).join('');
 
   const gallery = document.getElementById('p-gallery');
-  const imgs = person.galleryImages;
-  gallery.innerHTML = imgs.map((src, i) =>
-    `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`
-  ).join('');
+  const imgs = (person.galleryImages || []).filter(src => src && src.trim() !== '');
+  if (imgs.length > 0) {
+    gallery.innerHTML = imgs.map((src, i) =>
+      `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`
+    ).join('');
+    gallery.style.display = 'grid';
+  } else {
+    gallery.innerHTML = '';
+    gallery.style.display = 'none';
+  }
   window._lightboxImages = imgs;
 
   const meta = document.getElementById('p-meta');
@@ -1044,7 +1867,7 @@ function showProfile(id) {
     <div class="meta-row"><span class="meta-label">Style</span><span class="meta-value">${person.style}</span></div>
     <div class="meta-row"><span class="meta-label">Born</span><span class="meta-value">${person.born}</span></div>
     <div class="meta-row"><span class="meta-label">Nationality</span><span class="meta-value">${person.nationality}</span></div>
-    ${person.url ? `<div class="meta-row"><span class="meta-label">Learn more</span><a class="meta-link" href="${person.url}" target="_blank">View profile →</a></div>` : ''}
+    ${person.url ? `<div class="meta-row"><span class="meta-label">Learn more</span><a class="meta-link" href="${person.url}" target="_blank">View profile \u2192</a></div>` : ''}
   `;
 
   document.getElementById('view-gallery').style.display = 'none';
@@ -1057,7 +1880,6 @@ function showGallery() {
   document.getElementById('view-gallery').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 
 // ── LIGHTBOX ──
 let _lbIndex = 0;
