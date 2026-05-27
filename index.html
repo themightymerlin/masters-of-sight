@@ -1771,6 +1771,11 @@ const PEOPLE = [
   }
 ];
 
+PEOPLE.sort((a, b) => {
+  const lastName = name => name.trim().split(' ').slice(-1)[0];
+  return lastName(a.name).localeCompare(lastName(b.name));
+});
+
 function getInitials(name) {
   return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
