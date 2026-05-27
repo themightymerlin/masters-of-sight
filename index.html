@@ -6,7 +6,7 @@
 <title>Masters of Sight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -101,8 +101,9 @@
   }
 
   .hero-title em {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
+  font-weight: 700;
   color: var(--accent);
   }
   .hero-title-sight {
@@ -637,7 +638,7 @@
 </div>
 
 <nav>
-  <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-style:italic; color:var(--accent)">of</em> Sight</a>
+  <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:var(--accent)">of</em> Sight</a>
 </nav>
 
 <!-- ═══════════════════════════════════════════ GALLERY VIEW -->
@@ -1086,8 +1087,8 @@ const PEOPLE = [
     style: "Fashion / Erotic",
     born: "1920",
     nationality: "German-Australian",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888070/image_ilfsjx.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888084/image_jbdn0u.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888090/image_egl1e5.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888106/image_hh3uuj.jpg"],
     url: "https://www.helmut-newton.com",
     bio: "Helmut Newton made fashion photography dangerous again. His women were not decorative objects but agents -- powerful, knowing, often predatory, always in command of the frame. Working primarily in stark black and white, he brought a Berlin cabaret darkness into the glossy pages of Vogue and French Elle, creating images that scandalized and seduced in equal measure. His work remains a provocation about power, desire, and who holds the gaze.",
     traits: [
