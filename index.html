@@ -442,6 +442,203 @@
     aspect-ratio: 16/9;
   }
 
+  /* ── VIDEO BOOKEND ── */
+  #p-video-bookend {
+    margin-top: 3px;
+    margin-bottom: 40px;
+  }
+
+  .video-bookend {
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video-bookend-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .video-bookend-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+    transition: filter 0.35s ease, transform 0.45s ease;
+  }
+
+  .video-bookend:hover .video-bookend-thumb img {
+    filter: brightness(0.9);
+    transform: scale(1.02);
+  }
+
+  .video-bookend-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .video-bookend-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    transition: background 0.25s, transform 0.25s;
+  }
+
+  .video-bookend:hover .video-bookend-play {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.1);
+  }
+
+  .video-bookend-play svg {
+    width: 22px;
+    height: 22px;
+    margin-left: 3px;
+  }
+
+  .video-bookend-caption {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  /* ── VIDEO LIGHTBOX ── */
+  .lightbox-video-wrap {
+    position: relative;
+    width: 90vw;
+    max-width: 1080px;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  }
+
+  .lightbox-video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .lightbox-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── HYBRID MEDIA GALLERY ── */
+  .gallery-video-thumb {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: #000;
+  }
+
+  .gallery-video-thumb:first-child {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  .gallery-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: filter 0.3s, transform 0.4s;
+  }
+
+  .gallery-video-thumb:hover img {
+    filter: brightness(0.9);
+    transform: scale(1.03);
+  }
+
+  .gallery-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.2s;
+    pointer-events: none;
+  }
+
+  .gallery-video-thumb:hover .gallery-play-btn {
+    background: rgba(255,255,255,0.25);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    pointer-events: none;
+  }
+
+  .gallery-gif {
+    cursor: zoom-in;
+  }
+
+  /* ── LIGHTBOX VIDEO ── */
+  .lightbox-iframe-wrap {
+    width: 90vw;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+  }
+
+  .lightbox-iframe-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
   .sidebar-meta {
     display: flex;
     flex-direction: column;
@@ -627,6 +824,9 @@
 </style>
 </head>
 <body>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
 
 <!-- ── LIGHTBOX ── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
@@ -1112,8 +1312,8 @@ const PEOPLE = [
     style: "Surrealist / Fashion",
     born: "1928",
     nationality: "French",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779975924/image_wkjop7.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1779975935/image_pujvy5.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976008/image_zb4ze7.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976019/image_ly6rr6.png"],
     url: "https://www.guybourdin.com",
     bio: "Guy Bourdin was the surrealist who hid inside fashion photography and detonated it from within. Working almost exclusively for Charles Jourdan shoes and French Vogue, he made images where shoes were practically irrelevant -- the frame was filled with crime scenes, sexual unease, absurdist comedy, and color so operatic it felt hallucinatory. He refused to publish books or grant interviews and remained almost invisible, which only amplified his mythological status among photographers who know.",
     traits: [
@@ -1137,8 +1337,8 @@ const PEOPLE = [
     style: "Landscape / Fine Art",
     born: "1902",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888737/image_pnqckf.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888695/image_kimkhn.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888719/image_rvbdin.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779888710/image_swqg0y.jpg"],
     url: "https://www.anseladams.com",
     bio: "Ansel Adams turned the American landscape into a moral argument. His photographs of Yosemite, the Sierra Nevada, and the national parks are not scenic postcards -- they are manifestos about what deserves preservation and what we stand to lose. He developed the Zone System with Fred Archer, a technical framework that gave photographers precise control over tonal range, essentially inventing the grammar of darkroom craft. His images are technically perfect and emotionally overwhelming simultaneously.",
     traits: [
@@ -1189,8 +1389,13 @@ const PEOPLE = [
     style: "Symmetrical / Whimsical",
     born: "1969",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972513/image_drh1u3.png",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972527/image_llbjo0.png", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972559/image_c9dzj6.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972588/image_bntbar.jpg", caption: "" },
+      { type: "video", youtubeId: "1Fg5iWmQjwk", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779975616/image_yr0wtk.jpg", caption: "" }
+    ],
     url: "https://en.wikipedia.org/wiki/Wes_Anderson",
     bio: "Wes Anderson built a universe so visually specific that a single frame is instantly identifiable as his. Centred compositions, lateral camera moves, pastel palettes, meticulous production design -- these are not affectations but a fully realised visual language that exists nowhere else in cinema. His films are about grief, abandonment, and the desperate construction of family, wrapped in a whimsy so precise it aches. The comedy and the sadness are inseparable.",
     traits: [
@@ -1289,8 +1494,13 @@ const PEOPLE = [
     style: "Visceral / Cultural",
     born: "1986",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976195/image_bdc3zu.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976246/image_m7ft9t.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976294/image_auzyrk.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976223/image_ptuz1h.jpg", caption: "" },
+      { type: "video", youtubeId: "_Z3QKkl1WyM", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976699/image_e4fjuf.jpg", caption: "" }
+    ],
     url: "https://en.wikipedia.org/wiki/Ryan_Coogler",
     bio: "Ryan Coogler is one of the most assured directors of his generation -- someone who can move between intimate character studies and billion-dollar spectacles without losing his essential voice. He shoots close, physically, almost uncomfortably so, placing the camera in the body of the scene rather than observing from outside. His work is always about identity, belonging, and what we inherit from the people who came before us.",
     traits: [
@@ -1857,17 +2067,66 @@ function showProfile(id) {
   `).join('');
 
   const gallery = document.getElementById('p-gallery');
-  const imgs = (person.galleryImages || []).filter(src => src && src.trim() !== '');
-  if (imgs.length > 0) {
-    gallery.innerHTML = imgs.map((src, i) =>
-      `<img src="${src}" alt="${person.name} work ${i+1}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`
-    ).join('');
-    gallery.style.display = 'grid';
+
+  // Support both legacy galleryImages (string array) and new galleryMedia (object array)
+  let mediaItems = [];
+  if (person.galleryMedia && person.galleryMedia.length) {
+    mediaItems = person.galleryMedia.filter(m => {
+      if (m.type === 'image' || m.type === 'gif') return m.src && m.src.trim() !== '';
+      if (m.type === 'video') return m.youtubeId && m.youtubeId.trim() !== '';
+      return false;
+    });
   } else {
-    gallery.innerHTML = '';
-    gallery.style.display = 'none';
+    const imgs = (person.galleryImages || []).filter(src => src && src.trim() !== '');
+    mediaItems = imgs.map(src => ({ type: 'image', src }));
   }
-  window._lightboxImages = imgs;
+
+  // Separate stills from videos
+  const stillItems = mediaItems.filter(m => m.type === 'image' || m.type === 'gif');
+  const videoItems = mediaItems.filter(m => m.type === 'video');
+
+  let galleryHTML = '';
+
+  if (stillItems.length > 0) {
+    galleryHTML += stillItems.map((item, i) => {
+      if (item.type === 'gif') {
+        return `<img class="gallery-gif" src="${item.src}" alt="${item.caption || person.name}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`;
+      } else {
+        return `<img src="${item.src}" alt="${item.caption || person.name + ' work ' + (i+1)}" loading="lazy" onclick="openLightbox(${i})" data-index="${i}">`;
+      }
+    }).join('');
+  }
+
+  gallery.innerHTML = galleryHTML;
+  gallery.style.display = stillItems.length > 0 ? 'grid' : 'none';
+
+  // Render video bookends BELOW the gallery grid, in a separate container
+  const existingVideoWrap = document.getElementById('p-video-bookend');
+  if (existingVideoWrap) existingVideoWrap.remove();
+
+  if (videoItems.length > 0) {
+    const videoWrap = document.createElement('div');
+    videoWrap.id = 'p-video-bookend';
+    videoWrap.innerHTML = videoItems.map(item => `
+      <div class="video-bookend" onclick="openVideoLightbox('${item.youtubeId}')">
+        <div class="video-bookend-thumb">
+          <img src="${item.thumb}" alt="${item.caption || person.name + ' video'}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg'">
+          <div class="video-bookend-overlay">
+            <div class="video-bookend-play">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            ${item.caption ? `<div class="video-bookend-caption">${item.caption}</div>` : ''}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    gallery.parentNode.insertBefore(videoWrap, gallery.nextSibling);
+  }
+
+  window._lightboxMedia = mediaItems;
 
   const meta = document.getElementById('p-meta');
   meta.innerHTML = `
@@ -1892,9 +2151,26 @@ function showGallery() {
 // ── LIGHTBOX ──
 let _lbIndex = 0;
 
+function openVideoLightbox(youtubeId) {
+  const overlay = document.getElementById('lightbox-overlay');
+  overlay.style.display = 'flex';
+  overlay.innerHTML = `
+    <div class="lightbox-video-wrap" onclick="event.stopPropagation()">
+      <iframe
+        src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+      <button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>
+    </div>
+  `;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); }, { once: true });
+}
+
 function openLightbox(index) {
-  const images = window._lightboxImages || [];
-  if (!images.length) return;
+  const media = window._lightboxMedia || [];
+  if (!media.length) return;
   _lbIndex = index;
   updateLightbox();
   document.getElementById('lightbox').classList.add('active');
@@ -1902,25 +2178,53 @@ function openLightbox(index) {
 }
 
 function updateLightbox() {
-  const images = window._lightboxImages || [];
-  const img = document.getElementById('lightbox-img');
-  img.src = images[_lbIndex];
-  img.style.transform = 'scale(0.96)';
-  setTimeout(() => img.style.transform = '', 10);
-  document.getElementById('lightbox-counter').textContent = `${_lbIndex + 1} / ${images.length}`;
-  document.querySelector('.lightbox-prev').style.opacity = images.length > 1 ? '1' : '0';
-  document.querySelector('.lightbox-next').style.opacity = images.length > 1 ? '1' : '0';
+  const media = window._lightboxMedia || [];
+  const item = media[_lbIndex];
+  const lb = document.getElementById('lightbox');
+
+  // Clear previous content
+  const existing = lb.querySelector('.lightbox-img, .lightbox-iframe-wrap');
+  if (existing) existing.remove();
+
+  const closeBtn = lb.querySelector('.lightbox-close');
+
+  if (item.type === 'video') {
+    const wrap = document.createElement('div');
+    wrap.className = 'lightbox-iframe-wrap';
+    wrap.innerHTML = `<iframe
+      src="https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>`;
+    closeBtn.after(wrap);
+  } else {
+    const img = document.createElement('img');
+    img.className = 'lightbox-img';
+    img.id = 'lightbox-img';
+    img.src = item.src;
+    img.style.transform = 'scale(0.96)';
+    setTimeout(() => img.style.transform = '', 10);
+    closeBtn.after(img);
+  }
+
+  document.getElementById('lightbox-counter').textContent = `${_lbIndex + 1} / ${media.length}`;
+  document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
+  document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
 }
 
 function lightboxNav(dir) {
-  const images = window._lightboxImages || [];
-  _lbIndex = (_lbIndex + dir + images.length) % images.length;
+  const media = window._lightboxMedia || [];
+  _lbIndex = (_lbIndex + dir + media.length) % media.length;
   updateLightbox();
 }
 
 function closeLightbox(e) {
-  if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close')) return;
+  if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close') && !e.target.classList.contains('lightbox-close-btn')) return;
   document.getElementById('lightbox').classList.remove('active');
+  const overlay = document.getElementById('lightbox-overlay');
+  overlay.style.display = 'none';
+  overlay.innerHTML = '';
   document.body.style.overflow = '';
 }
 
