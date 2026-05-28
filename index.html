@@ -6,7 +6,7 @@
 <title>Masters of Sight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,7 +38,7 @@
   }
 
   /* ── NAV ── */
-  nav {
+  .site-nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
@@ -821,6 +821,299 @@
   }
 
   .profile-gallery img { cursor: zoom-in; }
+
+  /* ─── TRIGGER ───────────────────────────────────────────── */
+  .mos-trigger {
+    position: fixed;
+    top: 28px;
+    right: 32px;
+    z-index: 300;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+  }
+
+  .mos-trigger-line {
+    display: block;
+    height: 1px;
+    background: #e8e0d0;
+    transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    transform-origin: right center;
+  }
+
+  .mos-trigger-line:nth-child(1) { width: 28px; }
+  .mos-trigger-line:nth-child(2) { width: 20px; }
+  .mos-trigger-line:nth-child(3) { width: 24px; }
+
+  .mos-trigger:hover .mos-trigger-line:nth-child(1) { width: 24px; }
+  .mos-trigger:hover .mos-trigger-line:nth-child(2) { width: 28px; }
+  .mos-trigger:hover .mos-trigger-line:nth-child(3) { width: 20px; }
+
+  .mos-trigger.is-open .mos-trigger-line:nth-child(1) {
+    width: 26px;
+    transform: rotate(-45deg) translateY(4.5px);
+  }
+  .mos-trigger.is-open .mos-trigger-line:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+  .mos-trigger.is-open .mos-trigger-line:nth-child(3) {
+    width: 26px;
+    transform: rotate(45deg) translateY(-4.5px);
+  }
+
+  /* ─── OVERLAY ───────────────────────────────────────────── */
+ .mos-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.mos-overlay.is-visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mos-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 3, 2, 0.97);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.mos-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  width: 90vw;
+  max-width: 960px;
+}
+
+  /* ─── LEFT: NAV ─────────────────────────────────────────── */
+  .mos-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 64px 0 0;
+  }
+
+  .mos-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.07);
+    align-self: stretch;
+  }
+
+  .mos-nav-item {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    text-align: left;
+    cursor: pointer;
+    padding: 26px 0;
+    position: relative;
+
+    transform: translateX(-16px);
+    opacity: 0;
+    transition:
+      transform 0.55s cubic-bezier(0.76, 0, 0.24, 1),
+      opacity   0.55s cubic-bezier(0.76, 0, 0.24, 1),
+      border-color 0.3s ease;
+  }
+
+  .mos-nav-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+
+  /* stagger-in */
+  .mos-overlay.is-visible .mos-nav-item:nth-child(1) { transform: translateX(0); opacity: 1; transition-delay: 0.12s; }
+  .mos-overlay.is-visible .mos-nav-item:nth-child(2) { transform: translateX(0); opacity: 1; transition-delay: 0.20s; }
+  .mos-overlay.is-visible .mos-nav-item:nth-child(3) { transform: translateX(0); opacity: 1; transition-delay: 0.28s; }
+  .mos-overlay.is-visible .mos-nav-item:nth-child(4) { transform: translateX(0); opacity: 1; transition-delay: 0.36s; }
+
+  .mos-nav-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 2.6vw, 38px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.025em;
+    line-height: 1;
+    display: block;
+    transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .mos-nav-arrow {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    opacity: 0;
+    font-size: 16px;
+    color: #c9a96e;
+    transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .mos-nav-item:hover .mos-nav-label,
+  .mos-nav-item.is-active .mos-nav-label {
+    color: #e8e0d0;
+    letter-spacing: 0.045em;
+  }
+
+  .mos-nav-item.is-active .mos-nav-label { font-style: italic; }
+
+  .mos-nav-item:hover .mos-nav-arrow,
+  .mos-nav-item.is-active .mos-nav-arrow {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  /* ─── RIGHT: CONTENT ────────────────────────────────────── */
+  .mos-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 64px;
+    min-height: 360px;
+  }
+
+  .mos-content-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    display: none;
+  }
+
+  .mos-content-inner.fade-in  { display: block; }
+  .mos-content-inner.is-visible { opacity: 1; transform: translateY(0); }
+
+  .mos-content-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 3vw, 42px);
+    font-weight: 300;
+    font-style: italic;
+    color: #e8e0d0;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: 0.01em;
+  }
+
+  .mos-content-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 1.4vw, 19px);
+    font-weight: 300;
+    color: rgba(232, 224, 208, 0.5);
+    line-height: 1.8;
+    max-width: 420px;
+  }
+
+  .mos-content-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #c9a96e;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .mos-content-link:hover {
+    color: #e8e0d0;
+    border-color: rgba(232, 224, 208, 0.35);
+    gap: 14px;
+  }
+
+  .mos-content-link span { transition: transform 0.3s ease; display: inline-block; }
+  .mos-content-link:hover span { transform: translateX(3px); }
+
+  /* placeholder */
+  .mos-placeholder {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .mos-overlay.is-visible .mos-placeholder {
+    opacity: 1;
+    transition-delay: 0.45s;
+  }
+
+  .mos-placeholder-wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.2vw, 16px);
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.07);
+  }
+
+  .mos-placeholder-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.1);
+    margin-top: 14px;
+  }
+
+  /* ─── WORDMARK FOOTER ───────────────────────────────────── */
+  .mos-wordmark {
+    position: absolute;
+    bottom: -56px;
+    left: 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: rgba(255,255,255,0.08);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.5s;
+  }
+
+  .mos-overlay.is-visible .mos-wordmark { opacity: 1; }
+
+  /* ─── MOBILE ─────────────────────────────────────────────── */
+  @media (max-width: 700px) {
+    .mos-panel {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      width: 90vw;
+    }
+
+    .mos-divider { display: none; }
+
+    .mos-nav {
+      padding: 0 0 40px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .mos-content {
+      padding: 36px 0 0 0;
+      min-height: auto;
+    }
+
+    .mos-wordmark { bottom: -44px; }
+  }
 </style>
 </head>
 <body>
@@ -837,7 +1130,7 @@
   <span class="lightbox-counter" id="lightbox-counter"></span>
 </div>
 
-<nav>
+<nav class="site-nav"> 
   <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:var(--accent)">of</em> Sight</a>
 </nav>
 
@@ -2296,5 +2589,171 @@ document.addEventListener('keydown', e => {
 
 buildGallery(PEOPLE);
 </script>
+
+<!-- ─── TRIGGER ──────────────────────────────────────────── -->
+<button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<!-- ─── OVERLAY ─────────────────────────────────────────── -->
+<div class="mos-overlay" id="mosOverlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+
+  <div class="mos-backdrop" id="mosBackdrop"></div>
+
+  <div class="mos-panel">
+
+    <!-- LEFT: NAV -->
+    <nav class="mos-nav" aria-label="Site navigation">
+      <button class="mos-nav-item" data-target="about" aria-expanded="false">
+        <span class="mos-nav-label">About Masters of Sight</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="why" aria-expanded="false">
+        <span class="mos-nav-label">Why This Was Created</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="contact" aria-expanded="false">
+        <span class="mos-nav-label">Get in Touch</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="instagram" aria-expanded="false">
+        <span class="mos-nav-label">Instagram</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+    </nav>
+
+    <!-- VERTICAL DIVIDER -->
+    <div class="mos-divider" aria-hidden="true"></div>
+
+    <!-- RIGHT: CONTENT -->
+    <div class="mos-content">
+
+      <div class="mos-placeholder" id="mosPlaceholder">
+        <p class="mos-placeholder-wordmark">Masters of Sight</p>
+        <p class="mos-placeholder-hint">← Select a section</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-about">
+        <h2 class="mos-content-heading">About Masters of Sight</h2>
+        <p class="mos-content-body">Masters of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and advertising dissolves into something rarer — work that actually moves people. This is not a portfolio. This is a point of view.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-why">
+        <h2 class="mos-content-heading">Why This Was Created</h2>
+        <p class="mos-content-body">Because the world is drowning in content and starving for vision. Masters of Sight exists as a counterweight — a space built to celebrate the rare individuals who see differently, who treat every visual decision as a choice worth making. This was created for the ones who can't look away from great work. You know who you are.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-contact">
+        <h2 class="mos-content-heading">Get in Touch</h2>
+        <p class="mos-content-body">Have a project worth making? A collaboration worth exploring? A piece of work you think belongs here? We want to hear from you.</p>
+        <a href="mailto:hello@mastersofsight.com" class="mos-content-link">
+          hello@mastersofsight.com <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-instagram">
+        <h2 class="mos-content-heading">Instagram</h2>
+        <p class="mos-content-body">The daily feed. Visual dispatches, discoveries, and fragments from the ongoing obsession.</p>
+        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+          @mastersofsight <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <span class="mos-wordmark">Masters of Sight</span>
+
+  </div>
+</div>
+
+<script>
+  (function () {
+    const trigger     = document.getElementById('mosTrigger');
+    const overlay     = document.getElementById('mosOverlay');
+    const backdrop    = document.getElementById('mosBackdrop');
+    const placeholder = document.getElementById('mosPlaceholder');
+    const navItems    = document.querySelectorAll('.mos-nav-item');
+    const panels      = document.querySelectorAll('.mos-content-inner');
+
+    let isOpen      = false;
+    let activePanel = null;
+    let fadeTimer   = null;
+
+    function openMenu() {
+      isOpen = true;
+      trigger.classList.add('is-open');
+      trigger.setAttribute('aria-label', 'Close menu');
+      trigger.setAttribute('aria-expanded', 'true');
+      overlay.classList.add('is-visible');
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      trigger.classList.remove('is-open');
+      trigger.setAttribute('aria-label', 'Open menu');
+      trigger.setAttribute('aria-expanded', 'false');
+      overlay.classList.remove('is-visible');
+      clearActivePanel();
+    }
+
+    function clearActivePanel() {
+      clearTimeout(fadeTimer);
+      panels.forEach(p => p.classList.remove('is-visible', 'fade-in'));
+      navItems.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-expanded', 'false');
+      });
+      placeholder.style.opacity = '';
+      placeholder.style.pointerEvents = '';
+      activePanel = null;
+    }
+
+    function showPanel(id) {
+      clearTimeout(fadeTimer);
+      panels.forEach(p => p.classList.remove('is-visible', 'fade-in'));
+      navItems.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-expanded', 'false');
+      });
+
+      placeholder.style.opacity = '0';
+      placeholder.style.pointerEvents = 'none';
+
+      const panel = document.getElementById('panel-' + id);
+      const btn   = document.querySelector('[data-target="' + id + '"]');
+      if (!panel) return;
+
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-expanded', 'true');
+      activePanel = id;
+
+      panel.classList.add('fade-in');
+      panel.getBoundingClientRect();
+      fadeTimer = setTimeout(() => panel.classList.add('is-visible'), 20);
+    }
+
+    trigger.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+
+    navItems.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        if (activePanel === target) {
+          clearActivePanel();
+        } else {
+          showPanel(target);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && isOpen) closeMenu();
+    });
+
+  })();
+</script>
+
 </body>
 </html>
