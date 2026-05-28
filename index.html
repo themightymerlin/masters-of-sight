@@ -854,6 +854,7 @@
     <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
     <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographer</button>
     <button class="filter-btn" onclick="filterCards('Director', this)">Director</button>
+    <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographer</button>
     <button class="filter-btn" onclick="filterCards('Designer', this)">Designer</button>
     <button class="filter-btn" onclick="filterCards('Commercial', this)">Commercial</button>
     <button class="filter-btn" onclick="filterCards('Interactive', this)">Interactive</button>
@@ -1419,8 +1420,13 @@ const PEOPLE = [
     style: "Atmospheric / Introspective",
     born: "1971",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976962/image_ueihbi.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779977051/image_unspko.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779977033/image_zmarvo.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976989/image_qugstj.jpg", caption: "" },
+      { type: "video", youtubeId: "DBWk6BohVXk", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976989/image_qugstj.jpg", caption: "" }
+    ],
     url: "https://en.wikipedia.org/wiki/Sofia_Coppola",
     bio: "Sofia Coppola makes films about people adrift inside their own lives -- isolated by privilege, fame, adolescence, or simply the impossibility of being truly known by another person. She works in mood and atmosphere, letting scenes breathe long past the point most directors would cut, trusting the audience to sit inside discomfort alongside her characters. She made the interior life cinematic when cinema was still obsessed with event.",
     traits: [
@@ -1494,7 +1500,7 @@ const PEOPLE = [
     style: "Visceral / Cultural",
     born: "1986",
     nationality: "American",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976195/image_bdc3zu.jpg",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779977275/image_uqivt1.jpg",
     galleryMedia: [
       { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976246/image_m7ft9t.jpg", caption: "" },
       { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779976294/image_auzyrk.jpg", caption: "" },
@@ -1549,8 +1555,13 @@ const PEOPLE = [
     style: "Precision / Dark",
     born: "1962",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978660/image_nnhrxz.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978535/image_fcug9j.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978586/image_pjnoox.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978556/image_h2qkfi.jpg", caption: "" },
+      { type: "video", youtubeId: "dfeUzm6KF4g", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978858/image_ru2jiy.jpg", caption: "" }
+    ],
     url: "https://en.wikipedia.org/wiki/David_Fincher",
     bio: "David Fincher is the director who elevated control itself into an aesthetic. Former music video and commercial director who brought advertising's frame-perfectionism into narrative cinema and refused to let it go. He shoots scenes dozens of times not for performance but for physics -- the exact fall of a coffee cup, the precise angle of a shadow. His films are about systems that consume people: serial killers, corporations, social networks, investigative journalism. Cold on the surface, devastating underneath.",
     traits: [
@@ -1930,12 +1941,12 @@ const PEOPLE = [
   {
     id: "roger-deakins",
     name: "Roger Deakins",
-    discipline: "Photographer",
+    discipline: "Cinematographer",
     style: "Cinematography / Atmospheric",
     born: "1949",
     nationality: "British",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978169/image_gjfk2c.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978217/image_d0wlun.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978186/image_zkmvcq.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779978414/image_tr0k8h.jpg"],
     url: "https://en.wikipedia.org/wiki/Roger_Deakins",
     bio: "Roger Deakins is the cinematographer's cinematographer -- the person other people who shoot films cite when asked who they admire. Fourteen Oscar nominations before his first win for Blade Runner 2049 became a running industry joke about the inexplicability of awards. His work spans thirty years of Coen Brothers collaborations, Shawshank Redemption, Skyfall, and 1917 -- a range that demonstrates the defining quality of his talent: total stylistic subordination to the story. He has no signature look. He has a signature quality: every frame is exactly as it should be.",
     traits: [
