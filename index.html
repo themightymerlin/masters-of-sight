@@ -274,7 +274,7 @@
   }
 
   .profile-back {
-    position: absolute;
+    position: fixed;
     top: 84px; left: 48px;
     font-size: 11px;
     letter-spacing: 0.16em;
@@ -286,7 +286,7 @@
     gap: 8px;
     cursor: pointer;
     transition: color 0.2s;
-    z-index: 10;
+    z-index: 150;
   }
 
   .profile-back:hover { color: var(--accent); }
@@ -1149,7 +1149,7 @@
     <button class="filter-btn" onclick="filterCards('Director', this)">Director</button>
     <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographer</button>
     <button class="filter-btn" onclick="filterCards('Designer', this)">Designer</button>
-    <button class="filter-btn" onclick="filterCards('Interactive', this)">Interactive</button>
+    <button class="filter-btn" onclick="filterCards('World Builders', this)">World Builders</button>
   </div>
 
   <div class="grid" id="card-grid"></div>
@@ -1657,8 +1657,13 @@ const PEOPLE = [
     style: "Cerebral / Epic",
     born: "1970",
     nationality: "British-American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067735/image_hgidoy.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067808/image_giczqi.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067922/image_xs3nuq.png" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067710/image_s3p68a.jpg" },
+      { type: "video", youtubeId: "0vxOhd4qlnA", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068169/image_oopgrw.jpg" }
+    ],
     url: "https://en.wikipedia.org/wiki/Christopher_Nolan",
     bio: "Christopher Nolan is the director who convinced Hollywood that audiences would pay to think. His films are architectural -- time folded, identity fractured, reality interrogated -- but always anchored in recognizable human stakes. He shoots on film when everyone else went digital, uses practical effects when CGI would be easier, and refuses to let spectacle swallow story. He made the blockbuster feel like literature without making it less entertaining.",
     traits: [
@@ -1742,8 +1747,13 @@ const PEOPLE = [
     style: "Animated / Mythological",
     born: "1941",
     nationality: "Japanese",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067249/image_snatmg.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067302/image_eqbvry.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067348/image_yc1sk8.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067325/image_ufq4g1.jpg" },
+      { type: "video", youtubeId: "ByXuk9QqQkk", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067541/image_zxotxs.jpg" }
+    ],
     url: "https://www.studioghibli.jp",
     bio: "Hayao Miyazaki is the greatest animator who ever lived and arguably one of cinema's supreme visionaries regardless of medium. His films are hand-drawn worlds of extraordinary detail, populated by characters who earn their complexity through behaviour rather than exposition. Flight, ecology, pacifism, the moral ambiguity of progress -- vast themes carried by images so beautiful they bypass argument and go straight for something older. He makes children's films that contain more truth than most art cinema.",
     traits: [
@@ -1767,8 +1777,13 @@ const PEOPLE = [
     style: "Horror / Social",
     born: "1979",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068295/image_zjkajf.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068322/image_qebpro.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068348/image_gblnkj.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068386/image_f8vunl.jpg" },
+      { type: "video", youtubeId: "kYkErSYlheI", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068581/image_q4kqly.jpg" }
+    ],
     url: "https://en.wikipedia.org/wiki/Jordan_Peele",
     bio: "Jordan Peele arrived in film already fluent in genre and used that fluency to say things American cinema had been circling around for decades. His horror is sociological -- the monster is always structural racism, performed identity, or the violence of being unseen. He shoots with the precision of a visual scholar who has absorbed everything from Kubrick to Spielberg and distilled it into something entirely his own. He made genre cinema feel urgent again.",
     traits: [
@@ -1822,8 +1837,13 @@ const PEOPLE = [
     style: "Epic / World-Building",
     born: "1961",
     nationality: "New Zealander",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780062720/image_upwoif.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780062705/image_g6jcc2.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780062861/image_ojxx4e.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780062759/image_y9wjeh.jpg" },
+      { type: "video", youtubeId: "_nZdmwHrcnw", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063205/image_nvun7p.jpg" }
+    ],
     url: "https://en.wikipedia.org/wiki/Peter_Jackson",
     bio: "Peter Jackson built a world so convincing that tourists rerouted their travel plans to walk through it. Starting with New Zealand splatter horror, he spent two decades developing the technical and storytelling ambition to adapt the supposedly unfilmable Lord of the Rings -- and then actually filmed it. His achievement was not just cinematic but industrial: he proved that a single director's complete vision, given enough time and autonomy, could reshape global popular culture.",
     traits: [
@@ -1877,8 +1897,13 @@ const PEOPLE = [
     style: "Sci-Fi / Contemplative",
     born: "1967",
     nationality: "Canadian",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070103/image_l0iy47.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070138/image_dnz3mv.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070199/image_xo3i1o.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070234/image_vo4tzg.jpg" },
+      { type: "video", youtubeId: "n9xhJrPXop4", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070372/image_bpvjmb.jpg" }
+    ],
     url: "https://en.wikipedia.org/wiki/Denis_Villeneuve",
     bio: "Denis Villeneuve makes science fiction feel ancient. His films move at the pace of geology -- slow, monumental, inevitable. He is the director who understood that the genre's greatest power lies not in action but in awe: the confrontation with something so vast it recalibrates your sense of scale. Working with cinematographer Roger Deakins and composer Hans Zimmer, he built a visual and sonic language for the cosmic that no one else is currently attempting.",
     traits: [
@@ -1902,8 +1927,13 @@ const PEOPLE = [
     style: "Political / Visceral",
     born: "1957",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064619/image_m50h1f.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064644/image_a8lyrm.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064630/image_lexls0.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064729/image_kqbwc6.jpg" },
+      { type: "video", youtubeId: "yVAD4fYRcvA", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065065/image_tfjmth.jpg" }
+    ],
     url: "https://en.wikipedia.org/wiki/Spike_Lee",
     bio: "Spike Lee arrived in American cinema as a provocation and has never stopped provoking. His films are about race, power, identity, and the specific textures of Black American urban life, shot with a stylistic boldness that matches their political urgency. He invented the double dolly shot -- a camera move where the subject glides forward while the background recedes -- and used it to make walking feel like prophecy. His visual language is as distinctive as any director alive, and his refusal to soften his vision is a form of integrity that four decades have not dulled.",
     traits: [
@@ -1920,6 +1950,31 @@ const PEOPLE = [
       { title: "25th Hour (2002)", desc: "Post-9/11 New York through the lens of one man's last day of freedom. Elegiac and furious." }
     ]
   },
+  {
+    id: "ken-levine",
+    name: "Ken Levine",
+    discipline: "World Builders",
+    style: "Narrative / Political",
+    born: "1966",
+    nationality: "American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Ken_Levine_(video_game_developer)",
+    bio: "Ken Levine builds worlds that have something to say. Where most game designers ask what a world looks like, Levine asks what it believes — and then constructs every corridor, every piece of signage, every ambient conversation around that ideology until the architecture itself becomes argument. BioShock placed Ayn Rand's objectivism at the bottom of the ocean and let it rot beautifully. BioShock Infinite put American exceptionalism in the clouds and set it on fire. He is the rare game maker who treats political philosophy not as backdrop but as primary material, and who trusts players to engage with ideas as seriously as they engage with mechanics. His worlds don't just look lived in. They look believed in.",
+    traits: [
+      "Architecture as ideology -- every environment a physical manifestation of a belief system pushed to its breaking point.",
+      "The twist as thesis -- narrative revelations that reframe everything preceding them as argument, not just surprise.",
+      "Political philosophy as world-building material -- objectivism, American exceptionalism, and religious fundamentalism examined from the inside.",
+      "The unreliable player -- questioning who is in control, who is being manipulated, and whether choice is ever truly free.",
+      "Environmental detail as storytelling -- audio diaries, signage, and decay doing as much narrative work as dialogue."
+    ],
+    philosophy: "I want to put the player inside an idea. Not explain the idea to them, not illustrate it -- inhabit it. Walk its streets. Buy into it. And then watch it fail. That's when it becomes real.",
+    works: [
+      { title: "System Shock 2 (1999)", desc: "Co-designed the game that invented the template BioShock would later perfect. Atmospheric horror and narrative depth that was a decade ahead of its time." },
+      { title: "BioShock (2007)", desc: "Rapture. An underwater city built on libertarian philosophy, consumed by its own contradictions. The most fully realized ideological world ever constructed in a game. Would you kindly." },
+      { title: "BioShock Infinite (2013)", desc: "Columbia. A city in the clouds built on American nationalism and religious fervor. Audacious, flawed, and more intellectually ambitious than anything else released that year in any medium." }
+    ]
+  },
 
   // DESIGN / TYPOGRAPHY
   {
@@ -1929,8 +1984,8 @@ const PEOPLE = [
     style: "Typography / Editorial",
     born: "1918",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065247/image_dj6bow.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065220/image_xzng2p.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065205/image_rjngze.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065191/image_lg6izc.jpg"],
     url: "https://en.wikipedia.org/wiki/Herb_Lubalin",
     bio: "Herb Lubalin treated typography as architecture and emotion simultaneously. Working in New York through the 1960s and 70s, he transformed the typeface from a neutral carrier of language into a charged, expressive visual event. His magazine designs for Eros, Fact, and Avant Garde pushed typography to its conceptual limits, and the Avant Garde typeface he designed with Tom Carnase became one of the most recognisable and influential letterforms of the twentieth century.",
     traits: [
@@ -1954,8 +2009,8 @@ const PEOPLE = [
     style: "Provocateur / Experiential",
     born: "1962",
     nationality: "Austrian",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069593/image_ru492q.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069492/image_ligrxy.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069523/image_v2gpfc.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069437/image_cvwzzf.jpg"],
     url: "https://sagmeister.com",
     bio: "Stefan Sagmeister is design's designated disruptor -- a Viennese-trained typographer who arrived in New York and immediately started doing things with his body that other designers were doing with their computers. He carved type into his own torso. He sent AIGA conference details painted on a live elephant. He took a year off every seven years to experiment without client obligation. His work is about whether design can make you feel something, and his answer is reliably: yes, but only if it takes a risk.",
     traits: [
@@ -2004,8 +2059,8 @@ const PEOPLE = [
     style: "Interface / Iconographic",
     born: "1954",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063469/image_te8bce.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063486/image_fo8pyw.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063389/image_kbjzot.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063493/image_sdjyyb.jpg"],
     url: "https://www.kareprints.com",
     bio: "Susan Kare designed the visual language of the personal computer at a moment when no such language existed. Hired by Steve Jobs to create the interface for the original Macintosh, she invented the icons, typefaces, and visual conventions that billions of people now use without thinking about them. The trash can. The paint bucket. The hand cursor. The concept of desktop metaphor made literal. She did it on a pixel grid so constrained it resembled medieval tapestry, and the results were immediately, enduringly legible.",
     traits: [
@@ -2056,8 +2111,8 @@ const PEOPLE = [
     style: "Editorial / Fashion",
     born: "1958",
     nationality: "British",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068731/image_fq64dn.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068703/image_ud8ebm.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068802/image_pmqwf8.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780068773/image_youmcl.jpg"],
     url: "https://en.wikipedia.org/wiki/Nigel_Perry_(photographer)",
     bio: "Nigel Perry is a British fashion and portrait photographer whose editorial work across Vogue, The Face, and i-D helped define the visual language of 1980s and 90s British fashion photography. Working with a spare, directorial sensibility, he photographed models and musicians with an intimacy that felt candid but was rigorously constructed. His work sits in the lineage of British photographers who understood that fashion imagery could be culturally serious.",
     traits: [
@@ -2106,8 +2161,8 @@ const PEOPLE = [
     style: "Futurist / Industrial",
     born: "1933",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066247/image_fop03i.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066353/image_c5nz2j.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066373/image_ihfxgb.png", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066286/image_tsqntp.png"],
     url: "https://sydmead.com",
     bio: "Syd Mead was called a visual futurist, but that undersells it -- he was the person who decided what the future looked like, and then the future largely looked like that. His concept art for Blade Runner, TRON, Aliens, and Johnny Mnemonic did not predict the future so much as manufacture its aesthetic in advance. Trained as an industrial designer, he brought a rigorous understanding of materials, engineering, and ergonomics to images that were nonetheless visionary beyond any immediate practical application.",
     traits: [
@@ -2129,12 +2184,17 @@ const PEOPLE = [
   {
     id: "hideo-kojima",
     name: "Hideo Kojima",
-    discipline: "Director",
+    discipline: "World Builders",
     style: "Cinematic / Auteur",
     born: "1963",
     nationality: "Japanese",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063926/image_rveqbp.png",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780063876/image_fy52kz.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064094/image_xcftma.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064143/image_abslxj.jpg" },
+      { type: "video", youtubeId: "etOOO9Sq7u8", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780064438/image_r7qcut.jpg" }
+    ],
     url: "https://www.kojimaproductions.jp",
     bio: "Hideo Kojima is cinema's restless cousin who chose interactive media as his canvas and has spent four decades proving it can bear the weight of genuine artistic ambition. Creator of Metal Gear Solid and Death Stranding, he makes games that are uncompromising in their length, philosophical density, and cinematic pretension -- and he has the audience to prove that uncompromising works. He is the game developer most comfortable being called a filmmaker, and the comparison is not entirely wrong.",
     traits: [
@@ -2154,12 +2214,17 @@ const PEOPLE = [
   {
     id: "shigeru-miyamoto",
     name: "Shigeru Miyamoto",
-    discipline: "Designer",
+    discipline: "World Builders",
     style: "Interactive / Playful",
     born: "1952",
     nationality: "Japanese",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066642/image_cnpjih.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066749/image_sedbel.png" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066859/image_pekgqj.png" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066801/image_wexavi.jpg" },
+      { type: "video", youtubeId: "_NElFLzgdUs", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780067075/image_hmixwe.png" }
+    ],
     url: "https://en.wikipedia.org/wiki/Shigeru_Miyamoto",
     bio: "Shigeru Miyamoto is arguably the most influential game designer who ever lived and one of the most significant creative forces in twentieth century entertainment full stop. Creator of Mario, Zelda, Donkey Kong, and Pikmin, he built entire vocabularies of interactive play from scratch and did it with a consistent philosophy: games should feel like toys, and toys should feel like discoveries. Every mechanic in a Miyamoto game exists because it is joyful to perform, not because it is technically impressive.",
     traits: [
@@ -2176,33 +2241,33 @@ const PEOPLE = [
       { title: "The Legend of Zelda (1986)", desc: "Open-world exploration with a sense of genuine mystery. The direct ancestor of every open-world game ever made." }
     ]
   },
-
-  // CINEMATOGRAPHY
   {
-    id: "emmanuel-lubezki",
-    name: "Emmanuel Lubezki",
-    discipline: "Photographer",
-    style: "Cinematography / Natural Light",
-    born: "1964",
-    nationality: "Mexican",
+    id: "hidetaka-miyazaki",
+    name: "Hidetaka Miyazaki",
+    discipline: "World Builders",
+    style: "Dark / Mythological",
+    born: "1974",
+    nationality: "Japanese",
     coverImage: "",
     galleryImages: ["", "", ""],
-    url: "https://en.wikipedia.org/wiki/Emmanuel_Lubezki",
-    bio: "Emmanuel Lubezki, known as Chivo, won three consecutive Academy Awards for cinematography -- an achievement unprecedented in Oscar history -- and did it with a philosophy that most cinematographers consider professional masochism: no artificial light. Shooting with available natural sources, wide lenses, and camera movements that follow the physical logic of human bodies in space, he developed an aesthetic that feels less like cinema and more like memory. He is Terrence Malick's essential collaborator and Alejandro Gonzalez Inarritu's technical co-author.",
+    url: "https://en.wikipedia.org/wiki/Hidetaka_Miyazaki",
+    bio: "Hidetaka Miyazaki didn't invent the action RPG. He just made everyone who came before him look like they were merely sketching the idea. As president of FromSoftware and creator of Demon's Souls, Dark Souls, Bloodborne, and Elden Ring, he built a new grammar for interactive storytelling — one where the world itself is the narrator, where death is a teaching tool rather than a punishment, and where lore is buried so deep in item descriptions and environmental detail that players have spent years excavating it. His games don't tell you what to feel. They construct a world so coherent, so oppressively beautiful, that feeling becomes involuntary.",
     traits: [
-      "Available natural light as the only light source -- dawn, dusk, fire, and overcast sky.",
-      "Ultra-wide lenses placing the viewer inside the scene rather than before it.",
-      "The long take as philosophical statement -- time as continuous, unmanipulated.",
-      "The camera as a breathing, searching entity rather than a stable observer.",
-      "Magic hour extended -- the entire aesthetic built around light at its most fugitive."
+      "Environmental storytelling -- architecture, lighting, and enemy placement as narrative language.",
+      "Deliberate obscurity -- lore withheld, fragmented, buried, forcing the player to become an archaeologist.",
+      "Death as design -- failure reframed as progression, suffering reframed as mastery.",
+      "World cohesion over world explanation -- every corner of every map feels inhabited by a history you never fully learn.",
+      "Boss design as emotional climax -- each encounter a concentrated expression of the world's themes."
     ],
-    philosophy: "Light is not a tool. Light is the subject. I am not illuminating a scene -- I am photographing the light that happens to contain a scene inside it.",
+    philosophy: "I want to create experiences that make the player feel a sense of achievement that they themselves have earned. The difficulty is not cruelty. It is respect. I believe players are capable of more than most games ask of them.",
     works: [
-      { title: "The Tree of Life (2011)", desc: "Malick's cosmological film. Lubezki's camera found the sacred inside the domestic and the universal inside the biological." },
-      { title: "Gravity (2013)", desc: "Space filmed with natural-light logic applied to a digital environment. His first Oscar." },
-      { title: "The Revenant (2015)", desc: "A film shot entirely in natural light in winter. The suffering was real. So was the beauty. Third consecutive Oscar." }
+      { title: "Dark Souls (2011)", desc: "The one that rewired expectations for an entire generation of game makers and players. A dying world held together by fire, faith, and the stubbornness of the undead. Its influence on everything that followed is immeasurable." },
+      { title: "Bloodborne (2015)", desc: "Victorian gothic horror meets Lovecraftian cosmic dread. Faster, more aggressive, more terrifying. The most purely atmospheric world he has ever built." },
+      { title: "Elden Ring (2022)", desc: "An open world designed by a man who understands that discovery is its own reward. Co-created with George R.R. Martin. Won Game of the Year. Sold 25 million copies. The mainstream finally caught up." }
     ]
   },
+
+  // CINEMATOGRAPHY
   {
     id: "roger-deakins",
     name: "Roger Deakins",
@@ -2229,14 +2294,39 @@ const PEOPLE = [
     ]
   },
   {
+    id: "neil-druckmann",
+    name: "Neil Druckmann",
+    discipline: "World Builders",
+    style: "Cinematic / Emotional",
+    born: "1978",
+    nationality: "Israeli-American",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Neil_Druckmann",
+    bio: "Neil Druckmann is the person who finally made Hollywood take games seriously — not by making games more like films, but by making them more fully themselves. As creative director at Naughty Dog and the architect of The Last of Us, he proved that interactive storytelling could carry emotional weight that passive media simply cannot replicate. When you are the one pulling the trigger, when you are the one keeping Joel and Ellie alive through fourteen hours of a dying world, the grief that follows hits differently than anything a film can manufacture. Druckmann understood that complicity is the most powerful narrative tool the medium has. He built an entire masterwork around it.",
+    traits: [
+      "Complicity as narrative device -- the player's own actions making the emotional stakes personal and irreversible.",
+      "Character above spectacle -- every set piece in service of relationship, never the reverse.",
+      "Moral ambiguity without resolution -- no clean answers, no absolution, no hero's vindication.",
+      "Performance direction elevated to cinematic standard -- motion capture as genuine acting.",
+      "The sequel as deconstruction -- The Last of Us Part II systematically dismantles everything the first game made you love, on purpose."
+    ],
+    philosophy: "The thing that makes games unique is that you are doing it. You are making these choices. When something terrible happens and your hands did it, that feeling lives in you differently than watching it happen to someone else. That's what I'm chasing.",
+    works: [
+      { title: "The Last of Us (2013)", desc: "A fungal apocalypse as the backdrop for the most emotionally precise father-daughter story ever told in any medium. Changed the conversation about what games could be permanently." },
+      { title: "The Last of Us Part II (2020)", desc: "One of the most divisive and courageously constructed sequels ever made. Deliberately devastating. Refuses every comfort the first game offered. A masterwork that demands something from its audience." },
+      { title: "The Last of Us — HBO Series (2023)", desc: "Executive produced and co-written by Druckmann. Proved the source material was strong enough to anchor prestige television without losing what made it extraordinary." }
+    ]
+  },
+  {
     id: "emmanuel-lubezki",
     name: "Emmanuel Lubezki",
     discipline: "Cinematographer",
     style: "Naturalistic / Unbroken",
     born: "1964",
     nationality: "Mexican",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065907/image_ynlpa8.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065964/image_cq0jlt.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066037/image_h4uas8.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066059/image_dk0hsl.jpg"],
     url: "https://en.wikipedia.org/wiki/Emmanuel_Lubezki",
     bio: "Emmanuel Lubezki — Chivo to everyone who's worked with him — rewired what a camera could do inside a narrative film. Three consecutive Oscars. But the statues miss the point. What Lubezki actually did was convince Hollywood that natural light wasn't a limitation, it was the whole argument. He shot Gravity in a lightbox. He shot The Revenant in dying daylight with no artificial sources. He convinced Terrence Malick that the camera should move like a living thing, not an observer. Cinema before and after Chivo are measurably different.",
     traits: [
@@ -2260,8 +2350,8 @@ const PEOPLE = [
     style: "Painterly / Symbolic",
     born: "1940",
     nationality: "Italian",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069862/image_s0fnjn.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069921/image_hzoxka.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069963/image_qyfbdv.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069823/image_e3gyvi.jpg"],
     url: "https://en.wikipedia.org/wiki/Vittorio_Storaro",
     bio: "Vittorio Storaro doesn't light films. He writes them in colour. Working from a deeply studied philosophy rooted in Jung, Goethe, and the Italian Renaissance, Storaro treats every hue as a psychological instrument — warm against cold, shadow against revelation, chaos against order. Three Oscars across three decades with three different directors. His collaboration with Bernardo Bertolucci produced some of the most visually orchestrated cinema ever committed to celluloid. He called his work 'writing with light' before that phrase became a cliché.",
     traits: [
@@ -2279,14 +2369,39 @@ const PEOPLE = [
     ]
   },
   {
+    id: "fumito-ueda",
+    name: "Fumito Ueda",
+    discipline: "World Builders",
+    style: "Minimalist / Melancholic",
+    born: "1970",
+    nationality: "Japanese",
+    coverImage: "",
+    galleryImages: ["", "", ""],
+    url: "https://en.wikipedia.org/wiki/Fumito_Ueda",
+    bio: "Fumito Ueda makes games the way Tarkovsky made films — slowly, deliberately, and with an absolute refusal to explain himself. His trilogy of works, Ico, Shadow of the Colossus, and The Last Guardian, form the most coherent artistic statement in the history of interactive media. He strips away everything — dialogue, exposition, UI, hand-holding — until only the essential remains. What's left is loneliness, wonder, and a bond between two creatures trying to survive a world that dwarfs them completely. No one working in any medium has made silence feel more inhabited.",
+    traits: [
+      "Radical reduction -- every unnecessary element stripped until only emotional truth remains.",
+      "Scale as a psychological instrument -- colossi, cathedrals, and creatures that make the player feel genuinely small.",
+      "Wordless storytelling -- narrative communicated entirely through environment, gesture, and music.",
+      "The bond as the game -- relationship between two beings as the entire dramatic engine.",
+      "Melancholy as a design philosophy -- beauty and grief treated as inseparable forces."
+    ],
+    philosophy: "I want players to feel things that can't be described in words. If you can explain what a game made you feel, I haven't done my job. The experience should live somewhere language can't reach.",
+    works: [
+      { title: "Ico (2001)", desc: "A boy and a girl escape a castle together. Hand-holding as a game mechanic. One of the most quietly devastating things ever made." },
+      { title: "Shadow of the Colossus (2005)", desc: "Sixteen bosses. No other enemies. A vast empty world and a question the game never answers: are you the hero or the villain? Widely regarded as the definitive argument for games as art." },
+      { title: "The Last Guardian (2016)", desc: "A boy and a giant feathered creature navigate ruins together. Eleven years in development. Worth every one of them." }
+    ]
+  },
+  {
     id: "gordon-willis",
     name: "Gordon Willis",
     discipline: "Cinematographer",
     style: "Shadow / Minimalist",
     born: "1931",
     nationality: "American",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070534/image_lxuefs.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070571/image_ztvngp.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070649/image_sldan0.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780070613/image_jply4c.jpg"],
     url: "https://en.wikipedia.org/wiki/Gordon_Willis",
     bio: "Gordon Willis was called the Prince of Darkness and he wore it like a crown. In an era when Hollywood cinematography meant bright, legible, safe, Willis did the opposite: he buried Marlon Brando's eyes in shadow, underexposed entire scenes, let faces disappear into black. The studios hated it. Audiences were transfixed. His work with Francis Ford Coppola on The Godfather trilogy and with Woody Allen across a decade of New York films produced two completely distinct visual languages — both masterclasses. He was nominated for an Oscar exactly once in his career. The Academy corrected that omission with an honorary award in 2010, thirty years too late.",
     traits: [
@@ -2312,8 +2427,8 @@ const PEOPLE = [
     style: "Functionalist / Minimalist",
     born: "1932",
     nationality: "German",
-    coverImage: "",
-    galleryImages: ["", "", ""],
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069048/image_vqb4xb.png",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069109/image_bfyac7.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069139/image_dkxpl8.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069079/image_eq23io.jpg"],
     url: "https://www.vitsoe.com/gb/about/dieter-rams",
     bio: "Dieter Rams asked a question that has been answered a thousand times since but was genuinely radical when he posed it in 1976: is my design good design? His response was the Ten Principles -- a manifesto for functional beauty that influenced every serious product designer who followed and most who never heard of him. As head of design at Braun for three decades, he made radios, razors, calculators, and speakers that looked like they had been discovered rather than designed. Jony Ive acknowledged him directly. Apple's hardware is an extended conversation with his work.",
     traits: [
@@ -2637,12 +2752,12 @@ buildGallery(PEOPLE);
 
       <div class="mos-content-inner" id="panel-about">
         <h2 class="mos-content-heading">About Masters of Sight</h2>
-        <p class="mos-content-body">Masters of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and advertising dissolves into something rarer — work that actually moves people. This is not a portfolio. This is a point of view.</p>
+        <p class="mos-content-body">Masters of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and entertainment ceases to exist. This is not a portfolio. This is a resource for those who demand better.</p>
       </div>
 
       <div class="mos-content-inner" id="panel-why">
         <h2 class="mos-content-heading">Why This Was Created</h2>
-        <p class="mos-content-body">Because the world is drowning in content and starving for vision. Masters of Sight exists as a counterweight — a space built to celebrate the rare individuals who see differently, who treat every visual decision as a choice worth making. This was created for the ones who can't look away from great work. You know who you are.</p>
+        <p class="mos-content-body">I built this because the world is drowning in content and forgetting what vision actually looks like. Consider this a reminder. For the ones who can't look away from great work. You know who you are.</p>
       </div>
 
       <div class="mos-content-inner" id="panel-contact">
