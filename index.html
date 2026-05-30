@@ -223,13 +223,20 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 22px;
-    line-height: 0.80;
+    line-height: 0.90;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     display: inline-block;
     transform: scaleX(1.30);
     transform-origin: left center;
     color: var(--text);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .card-name { font-size: 17px; }
   }
 
   .card-arrow {
@@ -2601,11 +2608,19 @@ function buildCard(person) {
     </div>
     <div class="card-info">
       <p class="card-discipline">${person.discipline}</p>
-      <p class="card-name">${person.name}</p>
+      <p class="card-name">${formatCardName(person.name)}</p>
     </div>
     <div class="card-arrow">↗</div>
   `;
   return card;
+}
+
+function formatCardName(name) {
+  const parts = name.trim().split(' ');
+  if (parts.length === 1) return name;
+  const last = parts[parts.length - 1];
+  const first = parts.slice(0, -1).join(' ');
+  return `${first}<br>${last}`;
 }
 
 function buildGallery(people) {
