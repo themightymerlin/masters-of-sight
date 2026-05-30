@@ -6,7 +6,7 @@
 <title>Masters of Sight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -30,9 +30,10 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
-    line-height: 1.6;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
     min-height: 100vh;
     cursor: default;
   }
@@ -53,14 +54,19 @@
   }
 
   .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.12em;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
+    white-space: nowrap;
     color: var(--text);
     text-decoration: none;
   }
-
-  .nav-logo span { color: var(--accent); }
 
   .nav-tagline {
     font-size: 11px;
@@ -92,28 +98,35 @@
   }
 
   .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: clamp(63px, 9.8vw, 140px);
-    line-height: 0.78;
-    letter-spacing: 0.03em;
+    line-height: 0.80;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text);
-    margin-bottom: 28px;
+    margin-bottom: 14px;
   }
 
   .hero-title em {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 700;
-  color: var(--accent);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #ffffff;
   }
   .hero-title-sight {
-  color: #ffffff;
+    color: #ffffff;
   }
 
   .hero-sub {
-    max-width: 480px;
-    font-size: 14.25px;
-    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: normal;
     line-height: 1.75;
   }
 
@@ -128,9 +141,10 @@
   }
 
   .filter-btn {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-muted);
     background: transparent;
@@ -206,9 +220,15 @@
   }
 
   .card-name {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: 22px;
-    line-height: 1.1;
+    line-height: 0.80;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text);
   }
 
@@ -241,9 +261,14 @@
   }
 
   .card-placeholder-initials {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: 56px;
-    letter-spacing: 0.08em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text-dim);
   }
 
@@ -300,10 +325,15 @@
   }
 
   .profile-name {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: clamp(56px, 8vw, 110px);
-    line-height: 0.9;
-    letter-spacing: 0.03em;
+    line-height: 0.80;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text);
   }
 
@@ -377,9 +407,11 @@
   .profile-traits li:last-child { border-bottom: none; }
 
   .profile-philosophy {
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    line-height: 1.65;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
     color: var(--text);
     font-style: italic;
     padding: 24px 28px;
@@ -685,9 +717,14 @@
   }
 
   .profile-hero-placeholder-initials {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: 120px;
-    letter-spacing: 0.08em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text-dim);
   }
 
@@ -702,9 +739,14 @@
   }
 
   .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: 16px;
-    letter-spacing: 0.12em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: var(--text-dim);
   }
 
@@ -950,12 +992,12 @@
   .mos-overlay.is-visible .mos-nav-item:nth-child(4) { transform: translateX(0); opacity: 1; transition-delay: 0.36s; }
 
   .mos-nav-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 2.6vw, 38px);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(20px, 2.2vw, 32px);
     font-weight: 300;
+    letter-spacing: 0.01em;
     color: rgba(255,255,255,0.35);
-    letter-spacing: 0.025em;
-    line-height: 1;
+    line-height: 1.8;
     display: block;
     transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
   }
@@ -1005,20 +1047,24 @@
   .mos-content-inner.is-visible { opacity: 1; transform: translateY(0); }
 
   .mos-content-heading {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: clamp(26px, 3vw, 42px);
-    font-weight: 300;
-    font-style: italic;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
+    line-height: 0.80;
+    letter-spacing: -0.02em;
     color: #e8e0d0;
-    line-height: 1.15;
     margin-bottom: 24px;
-    letter-spacing: 0.01em;
   }
 
   .mos-content-body {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 1.4vw, 19px);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 1.2vw, 16px);
     font-weight: 300;
+    letter-spacing: 0.01em;
     color: rgba(232, 224, 208, 0.5);
     line-height: 1.8;
     max-width: 420px;
@@ -1029,9 +1075,10 @@
     align-items: center;
     gap: 10px;
     margin-top: 28px;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
     color: #c9a96e;
     text-decoration: none;
     border-bottom: 1px solid rgba(201, 169, 110, 0.3);
@@ -1060,18 +1107,22 @@
   }
 
   .mos-placeholder-wordmark {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
     font-size: clamp(13px, 1.2vw, 16px);
-    font-weight: 300;
-    letter-spacing: 0.4em;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
     color: rgba(255,255,255,0.07);
   }
 
   .mos-placeholder-hint {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     font-size: 10px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     color: rgba(255,255,255,0.1);
     margin-top: 14px;
   }
@@ -1081,9 +1132,10 @@
     position: absolute;
     bottom: -56px;
     left: 0;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     font-size: 9px;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.18em;
     color: rgba(255,255,255,0.08);
     text-transform: uppercase;
     opacity: 0;
@@ -1131,7 +1183,7 @@
 </div>
 
 <nav class="site-nav"> 
-  <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters <em style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:var(--accent)">of</em> Sight</a>
+  <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters of Sight</a>
 </nav>
 
 <!-- ═══════════════════════════════════════════ GALLERY VIEW -->
@@ -1139,7 +1191,7 @@
 
   <div class="hero">
     <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
-    <p class="hero-sub">The photographers, directors, and image-makers who rewired our retinas.</p>
+    <p class="hero-sub">A living archive of the artists who taught us how to see.</p>
   </div>
 
   <div class="filter-bar">
@@ -2808,7 +2860,7 @@ buildGallery(PEOPLE);
         <span class="mos-nav-arrow">→</span>
       </button>
       <button class="mos-nav-item" data-target="instagram" aria-expanded="false">
-        <span class="mos-nav-label">Instagram</span>
+        <span class="mos-nav-label">Social</span>
         <span class="mos-nav-arrow">→</span>
       </button>
     </nav>
@@ -2843,9 +2895,8 @@ buildGallery(PEOPLE);
       </div>
 
       <div class="mos-content-inner" id="panel-instagram">
-        <h2 class="mos-content-heading">Instagram</h2>
-        <p class="mos-content-body">The daily feed. Visual dispatches, discoveries, and fragments from the ongoing obsession.</p>
-        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+        <p class="mos-content-body">Instagram / Threads</p>
+        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
           @mastersofsight <span>→</span>
         </a>
       </div>
