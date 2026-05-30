@@ -173,6 +173,7 @@
 
   @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .grid { grid-template-columns: repeat(2, 1fr); padding: 0; gap: 0; } }
 
   .card {
     position: relative;
@@ -342,6 +343,15 @@
     transform: scaleX(1.30);
     transform-origin: left center;
     color: var(--text);
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  @media (max-width: 600px) {
+    .profile-name {
+      font-size: clamp(36px, 10vw, 56px);
+      transform: scaleX(1.15);
+    }
   }
 
   .profile-tags {
