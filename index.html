@@ -1456,6 +1456,7 @@ const PEOPLE = [
     born: "1963",
     nationality: "American",
     coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779300375/david-lachapelle-the-house-at-the-end-of-the-world-los-angeles-2005-courtesy-of-visu-contemporary_swyke4.jpg",
+    coverImagePosition: "calc(50% + 120px) top",
     galleryImages: [
       "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779300374/David-LaChapelle-Do-You-Realize-Still-Montage-32_ifqfpb.jpg",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779300372/dlc-5_zaajuh.jpg",
@@ -2191,6 +2192,7 @@ const PEOPLE = [
     born: "1966",
     nationality: "American",
     coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780076298/image_rugzr6.jpg",
+    coverImagePosition: "calc(50% - 90px) top",
     galleryMedia: [
       { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780076387/image_aadwpp.png" },
       { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780076344/image_oebbwt.png" },
@@ -2744,7 +2746,7 @@ function buildCard(person) {
 
   card.innerHTML = `
     ${hasImage
-      ? `<img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
+      ? `<img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" style="object-position: ${person.coverImagePosition || 'center center'}" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
          <div class="card-overlay"></div>`
       : `<div class="card-overlay" style="display:none;"></div>`
     }
@@ -2796,6 +2798,7 @@ function showProfile(id, pushHistory = true) {
     heroImg.src = '';
     heroImg.style.display = 'none';
   }
+  heroImg.style.objectPosition = person.coverImagePosition || 'center center';
   heroImg.alt = person.name;
 
   document.getElementById('p-discipline').textContent = person.discipline;
