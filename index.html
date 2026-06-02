@@ -1545,6 +1545,7 @@ const PEOPLE = [
   {
     id: "guillermo-del-toro",
     name: "Guillermo del Toro",
+    cardName: "Guillermo<br>del Toro",
     discipline: "Director",
     style: "Whimsical",
     born: "1964",
@@ -2791,7 +2792,7 @@ function buildCard(person) {
     </div>
     <div class="card-info">
       <p class="card-discipline">${person.discipline}</p>
-      <p class="card-name">${formatCardName(person.name)}</p>
+      <p class="card-name">${person.cardName || formatCardName(person.name)}</p>
     </div>
     <div class="card-arrow">↗</div>
   `;
