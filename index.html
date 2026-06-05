@@ -533,6 +533,7 @@
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+    border: 1px solid var(--accent-dim);
   }
 
   .video-bookend-thumb {
@@ -2469,6 +2470,36 @@ const PEOPLE = [
     ]
   },
   {
+    id: "jimmy-chin",
+    name: "Jimmy Chin",
+    discipline: ["Photographer", "Director"],
+    style: "Adventure / Documentary",
+    born: "1973",
+    nationality: "American",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780668463/image_hpmrsu.png",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780668678/image_goqhnm.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780668778/image_llx7oc.png" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780668552/image_tze4hz.jpg" },
+      { type: "video", youtubeId: "urRVZ4SW7WU", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780668975/image_v0jn68.jpg" }
+    ],
+    url: "https://www.jimmychin.com",
+    bio: "Jimmy Chin goes where cameras are not supposed to go, and then he shoots. A professional climber, skier, and mountaineer before he was ever a photographer, he built his visual practice on a foundation most image-makers will never stand on: genuine physical access to the extreme edge. His films and photographs don't simulate danger or dress it up with telephoto distance. He is in it, roped in or not, at altitude, in weather, with the same exposure as his subjects. That proximity is the whole argument. When you watch Free Solo, the reason your palms sweat is because Chin and his crew were on that wall too. The camera was not safe. That changes everything about what the image feels like.",
+    traits: [
+      "Physical participation as the prerequisite for authentic access -- he earns the frame before he frames it.",
+      "Restraint in the edit -- letting the environment do the dramatic work instead of forcing it.",
+      "Documentary honesty held in tension with the compositional instincts of a fine art photographer.",
+      "Light found at altitude: thin, directional, unforgiving, and completely irreplaceable.",
+      "The human figure made small inside vast natural architecture, never diminished by it."
+    ],
+    philosophy: "You can't fake where the camera was. Either you were there or you weren't. The image knows the difference and so does the audience.",
+    works: [
+      { title: "Free Solo (2018)", desc: "Co-directed with Elizabeth Chai Vasarhelyi. Won the Oscar for Best Documentary. Alex Honnold. El Capitan. No ropes. The most viscerally terrifying film ever made about human will." },
+      { title: "Meru (2015)", desc: "Co-directed documentary about the first ascent of the Shark's Fin on Mount Meru. Personal, brutal, and visually staggering. The film he had to survive to make." },
+      { title: "National Geographic editorial work", desc: "Decades of expedition photography from places most photographers could not physically reach. The benchmark for adventure imagery." }
+    ]
+  },
+  {
     id: "moebius",
     name: "Moebius (Jean Giraud)",
     discipline: "Dream Makers",
@@ -2884,7 +2915,7 @@ function buildCard(person) {
       <span class="card-placeholder-initials">${getInitials(person.name)}</span>
     </div>
     <div class="card-info">
-      <p class="card-discipline">${person.discipline}</p>
+      <p class="card-discipline">${Array.isArray(person.discipline) ? person.discipline[0] : person.discipline}</p>
       <p class="card-name">${person.cardName || formatCardName(person.name)}</p>
     </div>
     <div class="card-arrow">↗</div>
@@ -2909,7 +2940,12 @@ function buildGallery(people) {
 function filterCards(discipline, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const filtered = discipline === 'all' ? PEOPLE : PEOPLE.filter(p => p.discipline === discipline);
+  const filtered = discipline === 'all'
+    ? PEOPLE
+    : PEOPLE.filter(p => {
+        const d = p.discipline;
+        return Array.isArray(d) ? d.includes(discipline) : d === discipline;
+      });
   buildGallery(filtered);
 }
 
@@ -2931,7 +2967,7 @@ function showProfile(id, pushHistory = true) {
   heroImg.style.objectPosition = person.coverImagePosition || 'center center';
   heroImg.alt = person.name;
 
-  document.getElementById('p-discipline').textContent = person.discipline;
+  document.getElementById('p-discipline').textContent = Array.isArray(person.discipline) ? person.discipline.join(' / ') : person.discipline;
   document.getElementById('p-name').textContent = person.name;
 
   const tags = document.getElementById('p-tags');
@@ -3016,7 +3052,7 @@ function showProfile(id, pushHistory = true) {
 
   const meta = document.getElementById('p-meta');
   meta.innerHTML = `
-    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${person.discipline}</span></div>
+    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${Array.isArray(person.discipline) ? person.discipline.join(' / ') : person.discipline}</span></div>
     <div class="meta-row"><span class="meta-label">Style</span><span class="meta-value">${person.style}</span></div>
     <div class="meta-row"><span class="meta-label">Born</span><span class="meta-value">${person.born}</span></div>
     <div class="meta-row"><span class="meta-label">Nationality</span><span class="meta-value">${person.nationality}</span></div>
