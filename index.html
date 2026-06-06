@@ -90,7 +90,7 @@
 
   /* ── HERO ── */
   .hero {
-    padding: 140px 48px 20px;
+    padding: 100px 48px 14px;
     max-width: 1400px;
     margin: 0 auto;
   }
@@ -139,7 +139,7 @@
 
   /* ── FILTER BAR ── */
   .filter-bar {
-    padding: 0 48px 40px;
+    padding: 0 48px 20px;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
@@ -172,7 +172,7 @@
   .grid {
     padding: 0 48px 120px;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: -10px auto 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
@@ -1220,6 +1220,82 @@
 
     .mos-wordmark { bottom: -44px; }
   }
+
+  .search-bar {
+    padding: 0 48px 2px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .search-input-wrap {
+    position: relative;
+    width: 320px;
+    flex: none;
+  }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--text-muted);
+    pointer-events: none;
+    line-height: 1;
+  }
+  .search-input {
+    width: 100%;
+    background: var(--bg-2);
+    border: 0.5px solid var(--border-hover);
+    border-radius: 2px;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    padding: 10px 36px 10px 38px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .search-input::placeholder { color: var(--text-dim); }
+  .search-input:focus { border-color: var(--accent-dim); }
+  .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .search-clear.visible { opacity: 1; pointer-events: all; }
+  .search-clear:hover { color: var(--text); }
+  .search-count {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 90px 20px 20px; }
+    .hero-sub { margin-bottom: 20px; }
+    .filter-bar { padding: 0 20px 20px; }
+    .search-bar { padding: 0 20px 12px; }
+    .search-input-wrap { width: 280px; max-width: calc(100vw - 40px); }
+    .grid { margin-top: 8px; }
+  }
+
+  @media (min-width: 601px) {
+    .search-bar { padding: 0 48px 32px; }
+  }
 </style>
 </head>
 <body>
@@ -1256,6 +1332,22 @@
     <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographer</button>
     <button class="filter-btn" onclick="filterCards('Provocateur', this)">Provocateur</button>
     <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
+  </div>
+
+  <div class="search-bar" id="search-bar">
+    <div class="search-input-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search name, discipline, style…"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <span class="search-count" id="search-count"></span>
   </div>
 
   <div class="grid" id="card-grid"></div>
@@ -1312,6 +1404,9 @@
 </div>
 
 <script>
+let _activeSearch = '';
+let _activeDiscipline = 'all';
+
 const PEOPLE = [
   // ── ORIGINAL 9 ── (your existing entries, unchanged)
   {
@@ -2940,13 +3035,8 @@ function buildGallery(people) {
 function filterCards(discipline, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const filtered = discipline === 'all'
-    ? PEOPLE
-    : PEOPLE.filter(p => {
-        const d = p.discipline;
-        return Array.isArray(d) ? d.includes(discipline) : d === discipline;
-      });
-  buildGallery(filtered);
+  _activeDiscipline = discipline;
+  runFilter();
 }
 
 function showProfile(id, pushHistory = true) {
@@ -3159,7 +3249,46 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') lightboxNav(1);
 });
 
+function runFilter() {
+  const q = _activeSearch.toLowerCase().trim();
+  const d = _activeDiscipline;
+  const filtered = PEOPLE.filter(p => {
+    const disciplineMatch = d === 'all' || (Array.isArray(p.discipline) ? p.discipline.includes(d) : p.discipline === d);
+    if (!disciplineMatch) return false;
+    if (!q) return true;
+    return (
+      p.name.toLowerCase().includes(q) ||
+      (Array.isArray(p.discipline) ? p.discipline.join(' ').toLowerCase() : p.discipline.toLowerCase()).includes(q) ||
+      (p.style || '').toLowerCase().includes(q) ||
+      (p.bio || '').toLowerCase().includes(q) ||
+      (p.nationality || '').toLowerCase().includes(q)
+    );
+  });
+  buildGallery(filtered);
+  const countEl = document.getElementById('search-count');
+  if (countEl) countEl.textContent = q ? `${filtered.length} result${filtered.length !== 1 ? 's' : ''}` : '';
+}
+
+function clearSearch() {
+  const input = document.getElementById('search-input');
+  if (input) input.value = '';
+  _activeSearch = '';
+  document.getElementById('search-clear').classList.remove('visible');
+  document.getElementById('search-count').textContent = '';
+  runFilter();
+}
+
 buildGallery(PEOPLE);
+
+const searchInput = document.getElementById('search-input');
+if (searchInput) {
+  searchInput.addEventListener('input', e => {
+    _activeSearch = e.target.value;
+    const clearBtn = document.getElementById('search-clear');
+    if (clearBtn) clearBtn.classList.toggle('visible', _activeSearch.length > 0);
+    runFilter();
+  });
+}
 
 history.replaceState({ view: 'gallery' }, '', window.location.pathname);
 
