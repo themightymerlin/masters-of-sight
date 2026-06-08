@@ -884,10 +884,11 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.08);
-    border: 0.5px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.55);
+    border: 1px solid var(--accent-dim);
     border-radius: 50%;
-    color: rgba(255,255,255,0.6);
+    color: var(--accent);
+    opacity: 1;
     cursor: pointer;
     font-size: 20px;
     width: 48px;
@@ -3283,6 +3284,20 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') lightboxNav(-1);
   if (e.key === 'ArrowRight') lightboxNav(1);
 });
+
+(function () {
+  let _touchStartX = 0;
+  const lb = document.getElementById('lightbox');
+  lb.addEventListener('touchstart', e => {
+    _touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (!lb.classList.contains('active')) return;
+    const delta = e.changedTouches[0].clientX - _touchStartX;
+    if (delta > 50) lightboxNav(-1);
+    else if (delta < -50) lightboxNav(1);
+  }, { passive: true });
+})();
 
 function runFilter() {
   const q = _activeSearch.toLowerCase().trim();
