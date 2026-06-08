@@ -191,6 +191,7 @@
   }
 
   .card-img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1044,6 +1045,7 @@
   .mos-overlay.is-visible .mos-nav-item:nth-child(2) { transform: translateX(0); opacity: 1; transition-delay: 0.20s; }
   .mos-overlay.is-visible .mos-nav-item:nth-child(3) { transform: translateX(0); opacity: 1; transition-delay: 0.28s; }
   .mos-overlay.is-visible .mos-nav-item:nth-child(4) { transform: translateX(0); opacity: 1; transition-delay: 0.36s; }
+  .mos-overlay.is-visible .mos-nav-item:nth-child(5) { transform: translateX(0); opacity: 1; transition-delay: 0.44s; }
 
   .mos-nav-label {
     font-family: 'Inter', sans-serif;
@@ -2411,6 +2413,38 @@ const PEOPLE = [
     ]
   },
 
+  {
+    id: "ridley-scott",
+    name: "Ridley Scott",
+    discipline: "Director",
+    style: "Visceral / World-Building",
+    born: "1937",
+    nationality: "British",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780937335/XYYUV925_xxug2f.jpg",
+    coverImagePosition: "70% center",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780937297/35RY07Q4_fjk1on.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780937296/D4CT6AYK_mcsond.jpg" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780937296/48CTH3M1_fsnpbl.jpg" },
+      { type: "video", youtubeId: "jQ5lPt9edzQ", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780937299/BH7ENNT0_b2huot.jpg" }
+    ],
+    url: "https://en.wikipedia.org/wiki/Ridley_Scott",
+    bio: "Ridley Scott doesn't make films so much as construct civilisations and then drop a camera inside them. Two of the most visually influential science fiction films ever made came from his first four years as a director. That alone would be a career. He kept going for five more decades, moving between genres with the restlessness of someone who treats the medium as a laboratory. His obsession is always the same: the world around the character. The texture, the weather, the decay, the light coming through a gap in a structure that took a set designer three months to build. Scott sees production design the way other directors see performance, which is why even his weaker films look like nothing else on earth.",
+    traits: [
+      "Production design as the primary storytelling instrument, not the backdrop to it.",
+      "Atmosphere built through accumulation: fog, steam, grime, diffused backlight, and surfaces that look genuinely inhabited.",
+      "The long lens compressing space, turning environments into walls of texture and threat.",
+      "Genre treated as a container to be pressurised until it transforms into something else entirely.",
+      "Collaboration with cinematographers as genuine co-authorship: Jordan Cronenweth, Adrian Biddle, Dariusz Wolski."
+    ],
+    philosophy: "I am a painter first. I think in images before I think in story. The frame has to be right before anything else can be right. If the world doesn't feel real, nothing the characters do inside it will matter.",
+    works: [
+      { title: "Alien (1979)", desc: "He took a haunted house film, put it in deep space, and made it look like a discovery. The Nostromo remains one of the most convincingly tactile environments in cinema history." },
+      { title: "Blade Runner (1982)", desc: "The most influential science fiction film ever made. Every vision of the near-future city that followed -- in games, comics, advertising, architecture -- is in conversation with what he built here." },
+      { title: "Gladiator (2000)", desc: "Epic filmmaking returned to cinema with actual weight behind it. The Colosseum sequences rewired what audiences expected from historical spectacle." }
+    ]
+  },
+
   // DESIGN / TYPOGRAPHY
   {
     id: "herb-lubalin",
@@ -2825,7 +2859,7 @@ const PEOPLE = [
     style: "Naturalistic / Unbroken",
     born: "1964",
     nationality: "Mexican",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065907/image_ynlpa8.jpg",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780938412/4C6D40JE_azilpt.jpg",
     galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780065964/image_cq0jlt.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066037/image_h4uas8.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780066059/image_dk0hsl.jpg"],
     url: "https://en.wikipedia.org/wiki/Emmanuel_Lubezki",
     bio: "Emmanuel Lubezki — Chivo to everyone who's worked with him — rewired what a camera could do inside a narrative film. Three consecutive Oscars. But the statues miss the point. What Lubezki actually did was convince Hollywood that natural light wasn't a limitation, it was the whole argument. He shot Gravity in a lightbox. He shot The Revenant in dying daylight with no artificial sources. He convinced Terrence Malick that the camera should move like a living thing, not an observer. Cinema before and after Chivo are measurably different.",
@@ -2851,6 +2885,7 @@ const PEOPLE = [
     born: "1940",
     nationality: "Italian",
     coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069862/image_s0fnjn.jpg",
+    coverImagePosition: "80% center",
     galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069921/image_hzoxka.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069963/image_qyfbdv.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1780069823/image_e3gyvi.jpg"],
     url: "https://en.wikipedia.org/wiki/Vittorio_Storaro",
     bio: "Vittorio Storaro doesn't light films. He writes them in colour. Working from a deeply studied philosophy rooted in Jung, Goethe, and the Italian Renaissance, Storaro treats every hue as a psychological instrument — warm against cold, shadow against revelation, chaos against order. Three Oscars across three decades with three different directors. His collaboration with Bernardo Bertolucci produced some of the most visually orchestrated cinema ever committed to celluloid. He called his work 'writing with light' before that phrase became a cliché.",
@@ -3331,6 +3366,10 @@ window.addEventListener('popstate', function(e) {
         <span class="mos-nav-label">Social</span>
         <span class="mos-nav-arrow">→</span>
       </button>
+      <button class="mos-nav-item" data-target="resources" aria-expanded="false">
+        <span class="mos-nav-label">Resources</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
     </nav>
 
     <!-- VERTICAL DIVIDER -->
@@ -3370,6 +3409,20 @@ window.addEventListener('popstate', function(e) {
         <p class="mos-content-body" style="margin-top: 20px;">YouTube</p>
         <a href="https://www.youtube.com/@mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
           @mastersofsight <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-resources">
+        <h2 class="mos-content-heading">Resources</h2>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Eyecandy</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The deepest searchable database of motion design and visual inspiration on the internet. If it moved beautifully, it's probably in here.</p>
+        <a href="https://eyecannndy.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          eyecannndy.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Shotdeck</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The definitive film still library. Searchable by color, mood, lens, and lighting. Essential for anyone who thinks in frames.</p>
+        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+          shotdeck.com <span>→</span>
         </a>
       </div>
 
