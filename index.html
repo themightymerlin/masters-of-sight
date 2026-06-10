@@ -455,18 +455,6 @@
 
   .profile-traits li:last-child { border-bottom: none; }
 
-  .profile-philosophy {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.8;
-    letter-spacing: 0.01em;
-    color: var(--text);
-    font-style: italic;
-    padding: 24px 28px;
-    border-left: 2px solid var(--accent);
-    background: rgba(200,169,110,0.05);
-  }
 
   .profile-works {
     list-style: none;
@@ -1387,10 +1375,7 @@
         <ul class="profile-traits" id="p-traits"></ul>
       </div>
 
-      <div class="profile-section">
-        <p class="profile-section-label">Philosophy</p>
-        <blockquote class="profile-philosophy" id="p-philosophy"></blockquote>
-      </div>
+
 
       <div class="profile-section">
         <p class="profile-section-label">Major Works</p>
@@ -3123,6 +3108,32 @@ const PEOPLE = [
     ]
   },
 
+  {
+    id: "norman-parkinson",
+    name: "Norman Parkinson",
+    discipline: "Photographer",
+    style: "Fashion / Portraiture",
+    born: "1913",
+    nationality: "British",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1781019592/23_f3087e73d5e47d267fb5a606c5d8e575_ypy2qp.jpg",
+    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/v1781019608/Audrey-Hepburn-Italy_tg8ahl.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1781019611/Corn-Poppy.-Adele-Collins-wearing-an-Otto-Lucas-velvet-toque.-British-Vogue_pvndqi.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/v1781019601/Traffic-Ivy-Nicholson-in-New-York_mtyg9i.jpg"],
+    url: "https://en.wikipedia.org/wiki/Norman_Parkinson",
+    bio: "Norman Parkinson took fashion photography outside. Not metaphorically. Literally. At a time when the industry was built around studio lights, seamless backdrops, and controlled environments, he put models in fields, on streets, in markets, on the sides of mountains, and in doing so changed what fashion imagery thought it was allowed to be. Working primarily for British Vogue across five decades, he brought a wit, a physicality, and a genuine joy to his work that made the artifice of fashion feel like the most natural thing in the world. His women were not decorative objects arranged for the male gaze. They were in motion, laughing, striding, living inside the frame with a vitality that made every contemporary studio shot look embalmed by comparison. He wore a handlebar mustache, farmed in Tobago, and photographed the Royal Family with the same easy charm he brought to everything else. He was completely himself in every frame he made and it shows.",
+    traits: [
+      "Location over studio as a philosophical commitment, the real world brought into fashion photography decades before it became standard practice.",
+      "Movement and joy as primary compositional values, subjects caught in genuine laughter and motion rather than posed stillness.",
+      "Color used with the confidence of someone who understood that fashion exists in the world not in a vacuum.",
+      "A wit embedded in every frame, humor treated as a legitimate and serious photographic tool.",
+      "The long career as argument, five decades of British Vogue work that never lost its sense of adventure or its genuine delight in the act of making pictures."
+    ],
+    philosophy: "A photograph should look as though it was not taken but discovered. The moment you can see the effort it cost you the game is up.",
+    works: [
+      { title: "British Vogue (1945-1990)", desc: "Five decades of covers and editorial work that defined the visual language of British fashion photography. The longest and most consistently inventive run any photographer has had at a single publication." },
+      { title: "Royal Family portraits", desc: "Official portraits of the British Royal Family shot with a warmth and informality that was genuinely revolutionary for the subject matter. Made the monarchy look human without making it look diminished." },
+      { title: "Wicked Wit (1982)", desc: "A retrospective that reads like a life fully and joyfully lived through a camera. The book that introduces most photographers to his work and immediately makes them wish they had found it sooner." }
+    ]
+  },
+
   // INDUSTRIAL DESIGN
   {
     id: "dieter-rams",
@@ -3235,8 +3246,6 @@ function showProfile(id, pushHistory = true) {
 
   const traits = document.getElementById('p-traits');
   traits.innerHTML = person.traits.map(t => `<li>${t}</li>`).join('');
-
-  document.getElementById('p-philosophy').textContent = person.philosophy;
 
   const works = document.getElementById('p-works');
   works.innerHTML = person.works.map(w => `
