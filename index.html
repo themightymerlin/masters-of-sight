@@ -992,6 +992,8 @@
   grid-template-columns: 1fr 1px 1fr;
   width: 90vw;
   max-width: 960px;
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
   /* ─── LEFT: NAV ─────────────────────────────────────────── */
@@ -1206,13 +1208,9 @@
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
-    .mos-content {
-      padding: 36px 0 0 0;
-      min-height: auto;
-      max-height: 50vh;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
+    .mos-content { padding: 36px 0 0 0; min-height: auto; overflow-y: visible; max-height: none; }
+
+    .mos-panel { max-height: 85vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
     .mos-wordmark { bottom: -44px; }
   }
