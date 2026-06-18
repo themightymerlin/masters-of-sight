@@ -1321,11 +1321,11 @@
 
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-    <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographer</button>
-    <button class="filter-btn" onclick="filterCards('Designer', this)">Designer</button>
-    <button class="filter-btn" onclick="filterCards('Director', this)">Director</button>
-    <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographer</button>
-    <button class="filter-btn" onclick="filterCards('Provocateur', this)">Provocateur</button>
+    <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographers</button>
+    <button class="filter-btn" onclick="filterCards('Designer', this)">Designers</button>
+    <button class="filter-btn" onclick="filterCards('Director', this)">Directors</button>
+    <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographers</button>
+    <button class="filter-btn" onclick="filterCards('Provocateur', this)">Provocateurs</button>
     <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
   </div>
 
@@ -3325,6 +3325,11 @@ function getInitials(name) {
   return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
 
+function displayDiscipline(d) {
+  if (Array.isArray(d)) return d.map(displayDiscipline).join(' / ');
+  return d === 'Dream Makers' ? 'Dream Maker' : d;
+}
+
 function buildCard(person) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -3343,7 +3348,7 @@ function buildCard(person) {
       <span class="card-placeholder-initials">${getInitials(person.name)}</span>
     </div>
     <div class="card-info">
-      <p class="card-discipline">${Array.isArray(person.discipline) ? person.discipline[0] : person.discipline}</p>
+      <p class="card-discipline">${displayDiscipline(person.discipline)}</p>
       <p class="card-name">${person.cardName || formatCardName(person.name)}</p>
     </div>
     <div class="card-arrow">↗</div>
@@ -3390,7 +3395,7 @@ function showProfile(id, pushHistory = true) {
   heroImg.style.objectPosition = person.coverImagePosition || 'center center';
   heroImg.alt = person.name;
 
-  document.getElementById('p-discipline').textContent = Array.isArray(person.discipline) ? person.discipline.join(' / ') : person.discipline;
+  document.getElementById('p-discipline').textContent = displayDiscipline(person.discipline);
   document.getElementById('p-name').textContent = person.name;
 
   const tags = document.getElementById('p-tags');
@@ -3473,7 +3478,7 @@ function showProfile(id, pushHistory = true) {
 
   const meta = document.getElementById('p-meta');
   meta.innerHTML = `
-    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${Array.isArray(person.discipline) ? person.discipline.join(' / ') : person.discipline}</span></div>
+    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${displayDiscipline(person.discipline)}</span></div>
     <div class="meta-row"><span class="meta-label">Style</span><span class="meta-value">${person.style}</span></div>
     <div class="meta-row"><span class="meta-label">Born</span><span class="meta-value">${person.born}</span></div>
     <div class="meta-row"><span class="meta-label">Nationality</span><span class="meta-value">${person.nationality}</span></div>
