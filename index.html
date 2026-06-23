@@ -1084,6 +1084,7 @@
     min-height: 360px;
     overflow-y: auto;
     max-height: 60vh;
+    overflow: hidden;
   }
 
   .mos-content-inner {
@@ -1099,15 +1100,17 @@
   .mos-content-heading {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: clamp(26px, 3vw, 42px);
+    font-size: clamp(20px, 2.4vw, 36px);
     text-transform: uppercase;
-    display: inline-block;
-    transform: scaleX(1.30);
+    display: block;
+    transform: scaleX(1.10);
     transform-origin: left center;
-    line-height: 0.80;
+    line-height: 1.0;
     letter-spacing: -0.02em;
     color: #e8e0d0;
     margin-bottom: 24px;
+    max-width: 73%;
+    white-space: nowrap;
   }
 
   .mos-content-body {
@@ -3783,7 +3786,7 @@ window.addEventListener('popstate', function(e) {
         <span class="mos-nav-arrow">→</span>
       </button>
       <button class="mos-nav-item" data-target="resources" aria-expanded="false">
-        <span class="mos-nav-label">Resources</span>
+        <span class="mos-nav-label">The Reference</span>
         <span class="mos-nav-arrow">→</span>
       </button>
       <button class="mos-nav-item" data-target="frame" aria-expanded="false">
@@ -3828,7 +3831,8 @@ window.addEventListener('popstate', function(e) {
       </div>
 
       <div class="mos-content-inner" id="panel-resources">
-        <h2 class="mos-content-heading">Resources</h2>
+        <h2 class="mos-content-heading">The Reference</h2>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px;">The sites we keep open in the other tab.</p>
         <p class="mos-content-body" style="margin-bottom: 4px;">Eyecandy</p>
         <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The deepest searchable database of motion design and visual inspiration on the internet. If it moved beautifully, it's probably in here.</p>
         <a href="https://eyecannndy.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
@@ -3836,8 +3840,13 @@ window.addEventListener('popstate', function(e) {
         </a>
         <p class="mos-content-body" style="margin-bottom: 4px;">Shotdeck</p>
         <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The definitive film still library. Searchable by color, mood, lens, and lighting. Essential for anyone who thinks in frames.</p>
-        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
           shotdeck.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px; margin-top: 8px;">The Art of End Cards</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">A curated collection of advertising end cards.</p>
+        <a href="https://theartofendcards.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+          theartofendcards.com <span>→</span>
         </a>
       </div>
 
