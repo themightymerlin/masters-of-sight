@@ -493,6 +493,37 @@
     line-height: 1.6;
   }
 
+.work-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border: 0.5px solid var(--accent-dim);
+  border-radius: 2px;
+  padding: 5px 12px;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.work-link:hover {
+  background: var(--tag-bg);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
   /* ── SIDEBAR ── */
   .profile-sidebar {}
 
@@ -1487,8 +1518,8 @@ const PEOPLE = [
     ],
     philosophy: "The best ideas feel like they couldn't have come from anywhere else. When something is truly specific, it becomes universal.",
     works: [
-      { title: "Being John Malkovich (1999)", desc: "A portal into a celebrity's mind. Absurdism in service of genuine existential longing." },
-      { title: "Her (2013)", desc: "A love story between a man and an operating system. Tender, prescient, heartbreaking." },
+      { title: "Being John Malkovich (1999)", desc: "A portal into a celebrity's mind. Absurdism in service of genuine existential longing.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/being-john-malkovich" }] },
+      { title: "Her (2013)", desc: "A love story between a man and an operating system. Tender, prescient, heartbreaking.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/her" }] },
       { title: "Fatboy Slim, Weapon of Choice", desc: "Christopher Walken dancing alone in a hotel. Joyful, weird, and utterly perfect." }
     ]
   },
@@ -1517,9 +1548,9 @@ const PEOPLE = [
     ],
     philosophy: "I don't think about meaning. I just want to go into a world and feel things. If you can make someone feel, you've done something.",
     works: [
-      { title: "Blue Velvet (1986)", desc: "A severed ear in a field. The perfect door into Lynch's worldview, beauty and rot, inseparable." },
-      { title: "Twin Peaks (1990)", desc: "Television reimagined as surrealist canvas. Changed what the medium thought it was allowed to do." },
-      { title: "Mulholland Drive (2001)", desc: "A dream about Hollywood's devouring machinery. Widely regarded as one of the finest films ever made." }
+      { title: "Blue Velvet (1986)", desc: "A severed ear in a field. The perfect door into Lynch's worldview, beauty and rot, inseparable.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/blue-velvet" }] },
+      { title: "Twin Peaks (1990)", desc: "Television reimagined as surrealist canvas. Changed what the medium thought it was allowed to do.", links: [{ type: "watch", url: "https://www.justwatch.com/us/tv-show/twin-peaks" }] },
+      { title: "Mulholland Drive (2001)", desc: "A dream about Hollywood's devouring machinery. Widely regarded as one of the finest films ever made.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/tbc" }] }
     ]
   },
   {
@@ -1695,10 +1726,10 @@ const PEOPLE = [
     ],
     philosophy: "Guillermo del Toro's philosophy centers on the glorification of the monstrous, the beauty of imperfection, and the necessity of art. He views monsters not as evil, but as marginalized oddities and symbols of truth, empathy, and resistance against societal conformity.",
     works: [
-      { title: "Pan's Labyrinth", desc: "It established him as a global auteur." },
-      { title: "The Shape of Water", desc: "Won Best Picture at the Academy Awards." },
-      { title: "Crimson Peak", desc: "A masterclass in gothic production design." },
-      { title: "Hellboy", desc: "Shows his comic-book-meets-myth sensibility." }
+      { title: "Pan's Labyrinth", desc: "It established him as a global auteur.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/pans-labyrinth" }] },
+      { title: "The Shape of Water", desc: "Won Best Picture at the Academy Awards.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/the-shape-of-water" }] },
+      { title: "Crimson Peak", desc: "A masterclass in gothic production design.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/crimson-peak" }] },
+      { title: "Hellboy", desc: "Shows his comic-book-meets-myth sensibility.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/super-sapiens" }] }
     ]
   },
   {
@@ -1968,9 +1999,9 @@ const PEOPLE = [
     ],
     philosophy: "I want to make films that disturb people in a good way. Films that linger.",
     works: [
-      { title: "Requiem for a Dream (2000)", desc: "Four addictions, four destructions. The most viscerally uncomfortable film about desire ever made." },
-      { title: "Black Swan (2010)", desc: "Perfectionism as self-annihilation. Natalie Portman dissolving into the role. Horror through ballet." },
-      { title: "The Wrestler (2008)", desc: "Mickey Rourke's career resurrection and Aronofsky's most humane film. Quiet devastation." }
+      { title: "Requiem for a Dream (2000)", desc: "Four addictions, four destructions. The most viscerally uncomfortable film about desire ever made.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/requiem-for-a-dream" } ] },
+      { title: "Black Swan (2010)", desc: "Perfectionism as self-annihilation. Natalie Portman dissolving into the role. Horror through ballet.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/black-swan" } ] },
+      { title: "The Wrestler (2008)", desc: "Mickey Rourke's career resurrection and Aronofsky's most humane film. Quiet devastation.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/the-wrestler" } ] }
     ]
   },
   {
@@ -2051,9 +2082,9 @@ const PEOPLE = [
     ],
     philosophy: "Film is the most powerful dream machine ever invented. My job is to control what the audience experiences while making them believe they're in control.",
     works: [
-      { title: "Memento (2000)", desc: "Reverse chronology as empathy. You experience the protagonist's amnesia, not just observe it." },
-      { title: "The Dark Knight (2008)", desc: "A superhero film that became a meditation on chaos, morality, and the cost of civilization." },
-      { title: "Oppenheimer (2023)", desc: "IMAX intimacy applied to the atomic age. Three hours of cinema that felt too short." }
+      { title: "Memento (2000)", desc: "Reverse chronology as empathy. You experience the protagonist's amnesia, not just observe it.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/memento" }] },
+      { title: "The Dark Knight (2008)", desc: "A superhero film that became a meditation on chaos, morality, and the cost of civilization.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/batman-the-dark-knight" }] },
+      { title: "Oppenheimer (2023)", desc: "IMAX intimacy applied to the atomic age. Three hours of cinema that felt too short.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/oppenheimer" }] }
     ]
   },
   {
@@ -2081,9 +2112,9 @@ const PEOPLE = [
     ],
     philosophy: "I make the world I want to live in. The symmetry, the order, that's wishful thinking on a grand scale. And I think audiences feel that wish.",
     works: [
-      { title: "The Royal Tenenbaums (2001)", desc: "His thesis statement. Dysfunction, genius, and failure wrapped in the most beautiful production design in American cinema." },
-      { title: "The Grand Budapest Hotel (2014)", desc: "A film about the death of a civilisation told as a comedy caper. Hilarious and devastating." },
-      { title: "Fantastic Mr. Fox (2009)", desc: "Stop-motion that proved the style wasn't just visual, it was a complete worldview." }
+      { title: "The Royal Tenenbaums (2001)", desc: "His thesis statement. Dysfunction, genius, and failure wrapped in the most beautiful production design in American cinema.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/the-royal-tenenbaums" } ] },
+      { title: "The Grand Budapest Hotel (2014)", desc: "A film about the death of a civilisation told as a comedy caper. Hilarious and devastating.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/the-grand-budapest-hotel" } ] },
+      { title: "Fantastic Mr. Fox (2009)", desc: "Stop-motion that proved the style wasn't just visual, it was a complete worldview.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/fantastic-mr-fox" } ] }
     ]
   },
   {
@@ -2111,9 +2142,9 @@ const PEOPLE = [
     ],
     philosophy: "I'm interested in what people are feeling when nothing is happening. That gap between inner life and outward existence, that's where I want to live as a filmmaker.",
     works: [
-      { title: "Lost in Translation (2003)", desc: "Two people not quite connecting in Tokyo. Loneliness made cinematically physical. Won the Oscar for screenplay." },
-      { title: "The Virgin Suicides (1999)", desc: "Female interiority observed through male incomprehension. A debut that announced a wholly original voice." },
-      { title: "Marie Antoinette (2006)", desc: "Versailles as a teenage prison. New Wave soundtrack against eighteenth century silk. Anachronism as emotional truth." }
+      { title: "Lost in Translation (2003)", desc: "Two people not quite connecting in Tokyo. Loneliness made cinematically physical. Won the Oscar for screenplay.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/lost-in-translation" }] },
+      { title: "The Virgin Suicides (1999)", desc: "Female interiority observed through male incomprehension. A debut that announced a wholly original voice.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/the-virgin-suicides" }] },
+      { title: "Marie Antoinette (2006)", desc: "Versailles as a teenage prison. New Wave soundtrack against eighteenth century silk. Anachronism as emotional truth.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/marie-antoinette-2006-0" }] }
     ]
   },
   {
@@ -2141,9 +2172,9 @@ const PEOPLE = [
     ],
     philosophy: "I've become skeptical of the unwritten rule that just because a boy and a girl appear in the same feature, a romance must ensue. Rather, I want to portray a slightly different relationship, one where the two mutually inspire each other to live.",
     works: [
-      { title: "Spirited Away (2001)", desc: "The highest-grossing Japanese film in history. A ten-year-old navigating a spirit economy. Perfect in every frame." },
-      { title: "Princess Mononoke (1997)", desc: "An ecological war with no villains. The most politically complex film ever made for a young audience." },
-      { title: "My Neighbor Totoro (1988)", desc: "The grammar of wonder. Every animator since has been influenced by this film whether they know it or not." }
+      { title: "Spirited Away (2001)", desc: "The highest-grossing Japanese film in history. A ten-year-old navigating a spirit economy. Perfect in every frame.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/spirited-away" }] },
+      { title: "Princess Mononoke (1997)", desc: "An ecological war with no villains. The most politically complex film ever made for a young audience.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/princess-mononoke" }] },
+      { title: "My Neighbor Totoro (1988)", desc: "The grammar of wonder. Every animator since has been influenced by this film whether they know it or not.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/my-neighbor-totoro" }] }
     ]
   },
   {
@@ -2171,9 +2202,9 @@ const PEOPLE = [
     ],
     philosophy: "The best horror doesn't just scare you, it stays with you because it told you something true about the world you live in. That truth is the real terror.",
     works: [
-      { title: "Get Out (2017)", desc: "A breakthrough in American cinema. Horror about liberal racism, shot with the precision of a documentary. Oscar for screenplay." },
-      { title: "Us (2019)", desc: "Doppelgangers as a metaphor for class and the American shadow self. Unresolved by design." },
-      { title: "Nope (2022)", desc: "A film about spectacle and the ethics of watching. The most visually ambitious of the three." }
+      { title: "Get Out (2017)", desc: "A breakthrough in American cinema. Horror about liberal racism, shot with the precision of a documentary. Oscar for screenplay.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/get-out" }] },
+      { title: "Us (2019)", desc: "Doppelgangers as a metaphor for class and the American shadow self. Unresolved by design.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/us-2019" }] },
+      { title: "Nope (2022)", desc: "A film about spectacle and the ethics of watching. The most visually ambitious of the three.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/nope" }] }
     ]
   },
   {
@@ -2201,9 +2232,9 @@ const PEOPLE = [
     ],
     philosophy: "I want audiences to feel like they're inside the film, not watching it. The moment you feel observed, you're outside the story. I want you in it.",
     works: [
-      { title: "Fruitvale Station (2013)", desc: "One day in Oscar Grant's life. Restraint and proximity producing the most emotionally devastating debut in recent memory." },
-      { title: "Black Panther (2018)", desc: "A superhero film that became a cultural event. Afrofuturism as mainstream cinema. $1.3 billion worldwide." },
-      { title: "Creed (2015)", desc: "The Rocky sequel nobody needed that became the best film in the franchise. Character study as sports movie." }
+      { title: "Fruitvale Station (2013)", desc: "One day in Oscar Grant's life. Restraint and proximity producing the most emotionally devastating debut in recent memory.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/fruitvale-station" }] },
+      { title: "Black Panther (2018)", desc: "A superhero film that became a cultural event. Afrofuturism as mainstream cinema. $1.3 billion worldwide.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/black-panther" }] },
+      { title: "Creed (2015)", desc: "The Rocky sequel nobody needed that became the best film in the franchise. Character study as sports movie.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/creed" }] }
     ]
   },
   {
@@ -2231,9 +2262,9 @@ const PEOPLE = [
     ],
     philosophy: "You have to make the audience forget they are watching a film. The world has to be so complete, so convincing, that disbelief becomes impossible. That is the only goal.",
     works: [
-      { title: "The Lord of the Rings trilogy (2001–2003)", desc: "The most ambitious adaptation in cinema history. Seventeen Oscars. A new benchmark for world-building." },
-      { title: "Heavenly Creatures (1994)", desc: "The film that showed his range before Rings. Kate Winslet's debut. Disturbing, beautiful, operatic." },
-      { title: "They Shall Not Grow Old (2018)", desc: "WWI footage restored and colourised. Documentary filmmaking as time travel." }
+      { title: "The Lord of the Rings trilogy (2001–2003)", desc: "The most ambitious adaptation in cinema history. Seventeen Oscars. A new benchmark for world-building.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/lord-of-the-rings-i-the-fellowship-of-the-ring" }] },
+      { title: "Heavenly Creatures (1994)", desc: "The film that showed his range before Rings. Kate Winslet's debut. Disturbing, beautiful, operatic.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/heavenly-creatures" }] },
+      { title: "They Shall Not Grow Old (2018)", desc: "WWI footage restored and colourised. Documentary filmmaking as time travel.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/they-shall-not-grow-old" }] }
     ]
   },
   {
@@ -2365,9 +2396,9 @@ const PEOPLE = [
     ],
     philosophy: "There are no accidents in my films. If something is in the frame, I put it there. Every choice is a decision about what the audience should feel, even if they never consciously notice it.",
     works: [
-      { title: "Se7en (1995)", desc: "The film that established his visual language. Rain, rot, and moral nihilism. The ending changed what Hollywood thought it was allowed to do." },
-      { title: "Fight Club (1999)", desc: "A misread film that turned out to have correctly read its audience. Masculinity crisis as anarchist comedy." },
-      { title: "The Social Network (2010)", desc: "The founding myth of our age told as Greek tragedy. Aaron Sorkin's best script, Fincher's most controlled direction." }
+      { title: "Se7en (1995)", desc: "The film that established his visual language. Rain, rot, and moral nihilism. The ending changed what Hollywood thought it was allowed to do.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/se7en" }] },
+      { title: "Fight Club (1999)", desc: "A misread film that turned out to have correctly read its audience. Masculinity crisis as anarchist comedy.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/fight-club" }] },
+      { title: "The Social Network (2010)", desc: "The founding myth of our age told as Greek tragedy. Aaron Sorkin's best script, Fincher's most controlled direction.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/the-social-network" }] }
     ]
   },
   {
@@ -2395,9 +2426,9 @@ const PEOPLE = [
     ],
     philosophy: "I want the audience to feel small. Not diminished, but calibrated, to feel their actual size in relation to the universe. That feeling is not frightening to me. It is sacred.",
     works: [
-      { title: "Arrival (2016)", desc: "A linguist and an alien language as a meditation on grief and time. Science fiction as emotional philosophy." },
-      { title: "Blade Runner 2049 (2017)", desc: "The impossible sequel that surpassed expectations. Deakins won his long-overdue Oscar. A masterwork of visual world-building." },
-      { title: "Dune (2021)", desc: "The unfilmable novel, filmed. Desert as cathedral. Scale as spiritual experience." }
+      { title: "Arrival (2016)", desc: "A linguist and an alien language as a meditation on grief and time. Science fiction as emotional philosophy.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/arrival-2016" }] },
+      { title: "Blade Runner 2049 (2017)", desc: "The impossible sequel that surpassed expectations. Deakins won his long-overdue Oscar. A masterwork of visual world-building.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/blade-runner-2049" }] },
+      { title: "Dune (2021)", desc: "The unfilmable novel, filmed. Desert as cathedral. Scale as spiritual experience.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/dune-2021" }] }
     ]
   },
   {
@@ -2425,9 +2456,9 @@ const PEOPLE = [
     ],
     philosophy: "I am not interested in making films that make everyone comfortable. Comfort is the enemy of change. I want to make films that disturb, that demand something from the audience.",
     works: [
-      { title: "Do the Right Thing (1989)", desc: "One day, one Brooklyn block, one summer. The most important American film of the 1980s." },
-      { title: "Malcolm X (1992)", desc: "Denzel Washington's greatest performance. A three-hour biopic of total conviction." },
-      { title: "25th Hour (2002)", desc: "Post-9/11 New York through the lens of one man's last day of freedom. Elegiac and furious." }
+      { title: "Do the Right Thing (1989)", desc: "One day, one Brooklyn block, one summer. The most important American film of the 1980s.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/do-the-right-thing" }] },
+      { title: "Malcolm X (1992)", desc: "Denzel Washington's greatest performance. A three-hour biopic of total conviction.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/malcolm-x" }] },
+      { title: "25th Hour (2002)", desc: "Post-9/11 New York through the lens of one man's last day of freedom. Elegiac and furious.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/25th-hour" }] }
     ]
   },
   {
@@ -2455,9 +2486,9 @@ const PEOPLE = [
     ],
     philosophy: "The great nations have always acted like gangsters, and the small nations like prostitutes.",
     works: [
-      { title: "2001: A Space Odyssey (1968)", desc: "The film that redefined what cinema could be. No dialogue for the first 25 minutes. The bone becomes the spaceship. Nothing has matched it." },
-      { title: "The Shining (1980)", desc: "Horror as architecture. The Overlook Hotel is a labyrinth, a brain, an argument. Every frame is perfectly wrong." },
-      { title: "Full Metal Jacket (1987)", desc: "A film that splits in two and never recovers, by design. Boot camp as dehumanisation machine, Vietnam as its output." }
+      { title: "2001: A Space Odyssey (1968)", desc: "The film that redefined what cinema could be. No dialogue for the first 25 minutes. The bone becomes the spaceship. Nothing has matched it.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/how-the-solar-system-was-won" }] },
+      { title: "The Shining (1980)", desc: "Horror as architecture. The Overlook Hotel is a labyrinth, a brain, an argument. Every frame is perfectly wrong.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/the-shining" }] },
+      { title: "Full Metal Jacket (1987)", desc: "A film that splits in two and never recovers, by design. Boot camp as dehumanisation machine, Vietnam as its output.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/la-chaqueta-metalica" }] }
     ]
   },
   {
@@ -2517,9 +2548,9 @@ const PEOPLE = [
     ],
     philosophy: "I want the audience to feel the weight of the world I'm putting them in. Not just see it. Every surface, every sound, every decision is in service of that feeling.",
     works: [
-      { title: "TRON: Legacy (2010)", desc: "A grid built from scratch. Daft Punk on the score. A visual language for the digital world that nobody had attempted at this scale before or since." },
-      { title: "Oblivion (2013)", desc: "Post-apocalyptic Earth rendered with an architect's eye. Tom Cruise alone in a world of breathtaking desolation. Underrated and gorgeous." },
-      { title: "Top Gun: Maverick (2022)", desc: "The best pure cinema experience of its decade. Practical jet photography that made audiences remember what it feels like to be genuinely overwhelmed by a screen." }
+      { title: "TRON: Legacy (2010)", desc: "A grid built from scratch. Daft Punk on the score. A visual language for the digital world that nobody had attempted at this scale before or since.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/tron-2-0" }] },
+      { title: "Oblivion (2013)", desc: "Post-apocalyptic Earth rendered with an architect's eye. Tom Cruise alone in a world of breathtaking desolation. Underrated and gorgeous.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/oblivion-2013" }] },
+      { title: "Top Gun: Maverick (2022)", desc: "The best pure cinema experience of its decade. Practical jet photography that made audiences remember what it feels like to be genuinely overwhelmed by a screen.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/top-gun-maverick" }] }
     ]
   },
 
@@ -2549,9 +2580,9 @@ const PEOPLE = [
     ],
     philosophy: "I am a painter first. I think in images before I think in story. The frame has to be right before anything else can be right. If the world doesn't feel real, nothing the characters do inside it will matter.",
     works: [
-      { title: "Alien (1979)", desc: "He took a haunted house film, put it in deep space, and made it look like a discovery. The Nostromo remains one of the most convincingly tactile environments in cinema history." },
-      { title: "Blade Runner (1982)", desc: "The most influential science fiction film ever made. Every vision of the near-future city that followed, in games, comics, advertising, architecture, is in conversation with what he built here." },
-      { title: "Gladiator (2000)", desc: "Epic filmmaking returned to cinema with actual weight behind it. The Colosseum sequences rewired what audiences expected from historical spectacle." }
+      { title: "Alien (1979)", desc: "He took a haunted house film, put it in deep space, and made it look like a discovery. The Nostromo remains one of the most convincingly tactile environments in cinema history.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/alien" }] },
+      { title: "Blade Runner (1982)", desc: "The most influential science fiction film ever made. Every vision of the near-future city that followed, in games, comics, advertising, architecture, is in conversation with what he built here.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/blade-runner" }] },
+      { title: "Gladiator (2000)", desc: "Epic filmmaking returned to cinema with actual weight behind it. The Colosseum sequences rewired what audiences expected from historical spectacle.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/gladiator-2000" }] }
     ]
   },
 
@@ -2580,10 +2611,10 @@ const PEOPLE = [
     ],
     philosophy: "I write and direct what I know. The streets I grew up on. The moral compromises people make to survive inside broken systems. I am not interested in the version of America that looks good. I am interested in the version that is real.",
     works: [
-      { title: "Training Day (2001)", desc: "He wrote it. Fuqua directed it. Washington won the Oscar. The corrupt cop as tragic American archetype, built from the ground up by Ayer's intimate knowledge of LA's street-level reality." },
-      { title: "End of Watch (2012)", desc: "Found footage grammar applied to the police procedural. Two cops, one camera, South Central. Immediate, terrifying, and unexpectedly moving." },
-      { title: "Fury (2014)", desc: "A Sherman tank. Five men. Germany 1945. War filmmaking stripped of heroism and replaced with something closer to survival horror." },
-      { title: "Suicide Squad (2016)", desc: "Critically dismissed and visually underrated. Saturated, tactile, and dripping with a comic book grime that nobody else was attempting at that scale." }
+      { title: "Training Day (2001)", desc: "He wrote it. Fuqua directed it. Washington won the Oscar. The corrupt cop as tragic American archetype, built from the ground up by Ayer's intimate knowledge of LA's street-level reality.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/jour-de-formation" } ] },
+      { title: "End of Watch (2012)", desc: "Found footage grammar applied to the police procedural. Two cops, one camera, South Central. Immediate, terrifying, and unexpectedly moving.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/end-of-watch" } ] },
+      { title: "Fury (2014)", desc: "A Sherman tank. Five men. Germany 1945. War filmmaking stripped of heroism and replaced with something closer to survival horror.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/fury-2014" } ] },
+      { title: "Suicide Squad (2016)", desc: "Critically dismissed and visually underrated. Saturated, tactile, and dripping with a comic book grime that nobody else was attempting at that scale.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/suicide-squad-2016" } ] }
     ]
   },
 
@@ -2796,8 +2827,8 @@ const PEOPLE = [
     ],
     philosophy: "You can't fake where the camera was. Either you were there or you weren't. The image knows the difference and so does the audience.",
     works: [
-      { title: "Free Solo (2018)", desc: "Co-directed with Elizabeth Chai Vasarhelyi. Won the Oscar for Best Documentary. Alex Honnold. El Capitan. No ropes. The most viscerally terrifying film ever made about human will." },
-      { title: "Meru (2015)", desc: "Co-directed documentary about the first ascent of the Shark's Fin on Mount Meru. Personal, brutal, and visually staggering. The film he had to survive to make." },
+      { title: "Free Solo (2018)", desc: "Co-directed with Elizabeth Chai Vasarhelyi. Won the Oscar for Best Documentary. Alex Honnold. El Capitan. No ropes. The most viscerally terrifying film ever made about human will.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/free-solo" }] },
+      { title: "Meru (2015)", desc: "Co-directed documentary about the first ascent of the Shark's Fin on Mount Meru. Personal, brutal, and visually staggering. The film he had to survive to make.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/meru" }] },
       { title: "National Geographic editorial work", desc: "Decades of expedition photography from places most photographers could not physically reach. The benchmark for adventure imagery." }
     ]
   },
@@ -3386,10 +3417,10 @@ const PEOPLE = [
       "Emotional directness as a superpower. Abrams is not afraid to make you feel it."
     ],
     works: [
-      { title: "Lost (2004, co-created)", desc: "Changed what serialized television thought it was capable of. Questions as the engine. The journey as the destination." },
-      { title: "Star Trek (2009)", desc: "He took a dead franchise and made it feel urgent, funny, and alive. The cast alone was an act of genius." },
-      { title: "Super 8 (2011)", desc: "His most personal film. Spielbergian in the best sense, wonder, danger, and kids on bikes in the dark." },
-      { title: "Star Wars: The Force Awakens (2015)", desc: "A billion-dollar passing of a torch, done with care, craft, and genuine reverence for what came before." }
+      { title: "Lost (2004, co-created)", desc: "Changed what serialized television thought it was capable of. Questions as the engine. The journey as the destination.", links: [ { type: "watch", url: "https://www.justwatch.com/us/tv-show/lost" } ] },
+      { title: "Star Trek (2009)", desc: "He took a dead franchise and made it feel urgent, funny, and alive. The cast alone was an act of genius.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/star-trek" } ] },
+      { title: "Super 8 (2011)", desc: "His most personal film. Spielbergian in the best sense, wonder, danger, and kids on bikes in the dark.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/1super8" } ] },
+      { title: "Star Wars: The Force Awakens (2015)", desc: "A billion-dollar passing of a torch, done with care, craft, and genuine reverence for what came before.", links: [ { type: "watch", url: "https://www.justwatch.com/us/movie/star-wars-the-force-awakens" } ] }
     ]
   },
   {
@@ -3447,10 +3478,10 @@ const PEOPLE = [
       "Restraint deployed as detonator. The shark you never see. The dinosaur held back until the precise moment the reveal earns everything it cost."
     ],
     works: [
-      { title: "Close Encounters of the Third Kind (1977)", desc: "Shot on 65mm because the sky demanded it. Wonder as a complete visual language, constructed before anyone knew he was capable of it." },
-      { title: "Raiders of the Lost Ark (1981)", desc: "Pure cinema grammar. Every shot a lesson in spatial storytelling and tension. The boulder. The truck. The face melting. Perfect sequencing from first frame to last." },
-      { title: "Schindler's List (1993)", desc: "Black and white. No crane. Handheld. The girl in the red coat. His most morally serious work shot with his most morally serious technique. Won Best Picture and Best Director." },
-      { title: "Jurassic Park (1993)", desc: "The T-Rex reveal. Practical and digital in perfect, unrepeatable balance. The frame that made an entire generation believe in something impossible." }
+      { title: "Close Encounters of the Third Kind (1977)", desc: "Shot on 65mm because the sky demanded it. Wonder as a complete visual language, constructed before anyone knew he was capable of it.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/close-encounters-of-the-third-kind" }] },
+      { title: "Raiders of the Lost Ark (1981)", desc: "Pure cinema grammar. Every shot a lesson in spatial storytelling and tension. The boulder. The truck. The face melting. Perfect sequencing from first frame to last.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/indiana-jones-and-the-raiders-of-the-lost-ark" }] },
+      { title: "Schindler's List (1993)", desc: "Black and white. No crane. Handheld. The girl in the red coat. His most morally serious work shot with his most morally serious technique. Won Best Picture and Best Director.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/schindlers-list" }] },
+      { title: "Jurassic Park (1993)", desc: "The T-Rex reveal. Practical and digital in perfect, unrepeatable balance. The frame that made an entire generation believe in something impossible.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/jurassic-park" }] }
     ]
   },
   {
@@ -3615,12 +3646,29 @@ function showProfile(id, pushHistory = true) {
   traits.innerHTML = person.traits.map(t => `<li>${t}</li>`).join('');
 
   const works = document.getElementById('p-works');
-  works.innerHTML = person.works.map(w => `
-    <li>
-      <p class="work-title">${w.title}</p>
-      <p class="work-desc">${w.desc}</p>
-    </li>
-  `).join('');
+  works.innerHTML = person.works.map(w => {
+    const linkTypeConfig = {
+      watch:   { label: 'Watch',        icon: '▶' },
+      play:    { label: 'Play',         icon: '◈' },
+      book:    { label: 'Get the Book', icon: '○' },
+      gallery: { label: 'View Gallery', icon: '◻' },
+      read:    { label: 'Read',         icon: '◇' },
+      listen:  { label: 'Listen',       icon: '◎' },
+    };
+    const linksHTML = (w.links && w.links.length)
+      ? `<div class="work-links">${w.links.map(l => {
+          const cfg = linkTypeConfig[l.type] || { label: l.type, icon: '→' };
+          return `<a class="work-link work-link--${l.type}" href="${l.url}" target="_blank" rel="noopener noreferrer">${cfg.icon} ${cfg.label}</a>`;
+        }).join('')}</div>`
+      : '';
+    return `
+      <li>
+        <p class="work-title">${w.title}</p>
+        <p class="work-desc">${w.desc}</p>
+        ${linksHTML}
+      </li>
+    `;
+  }).join('');
 
   const gallery = document.getElementById('p-gallery');
 
