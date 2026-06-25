@@ -102,6 +102,9 @@
     padding: 100px 48px 14px;
     max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .hero-eyebrow {
@@ -123,7 +126,7 @@
     transform: scaleX(1.30);
     transform-origin: left center;
     color: var(--text);
-    margin-bottom: 14px;
+    margin-top: -28px;
   }
 
   .hero-title em {
@@ -780,8 +783,7 @@
     border-top: 0.5px solid var(--border);
     padding: 32px 48px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 100%;
   }
@@ -1303,6 +1305,22 @@
   @media (min-width: 601px) {
     .search-bar { padding: 0 48px 32px; }
   }
+
+.card-new-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  border-radius: 2px;
+  padding: 4px 8px;
+  z-index: 2;
+}
 </style>
 </head>
 <body>
@@ -1329,6 +1347,7 @@
   <div class="hero">
     <p class="hero-sub">A living archive of the artists who taught us how to see.</p>
     <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
+    <p class="hero-sub">New masters added every week.</p>
   </div>
 
   <div class="filter-bar">
@@ -1360,8 +1379,10 @@
   <div class="grid" id="card-grid"></div>
 
   <footer>
-    <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/v1780602714/MOS_cw95su.png" alt="Masters of Sight" class="footer-logo" style="max-height: 32px; opacity: 0.4;">
-    <span class="footer-copy">A living archive of the artists who taught us how to see.</span>
+    <div style="text-align: center; line-height: 1.9;">
+      <div class="footer-copy">Masters Of Sight™  est. 2025 — A living archive of the artists who taught us how to see.</div>
+      <div class="footer-copy" id="footer-count"></div>
+    </div>
   </footer>
 
 </div>
@@ -2866,6 +2887,7 @@ const PEOPLE = [
   },
   {
     id: "shinji-mikami",
+    added: "2026-06-25",
     name: "Shinji Mikami",
     discipline: "Dream Makers",
     style: "Survival Horror / Genre Architect",
@@ -3311,6 +3333,7 @@ const PEOPLE = [
   },
   {
     id: "hype-williams",
+    added: "2026-06-25",
     name: "Hype Williams",
     discipline: "Director",
     style: "Music Video / Maximalist",
@@ -3341,6 +3364,7 @@ const PEOPLE = [
   {
     id: "jj-abrams",
     name: "J.J. Abrams",
+    added: "2026-06-25",
     discipline: "Director",
     style: "Mystery / Blockbuster",
     born: "1966",
@@ -3370,6 +3394,7 @@ const PEOPLE = [
   },
   {
     id: "saul-bass",
+    added: "2026-06-25",
     name: "Saul Bass",
     discipline: "Designer",
     style: "Motion / Identity",
@@ -3399,6 +3424,7 @@ const PEOPLE = [
   },
   {
     id: "steven-spielberg",
+    added: "2026-06-25",
     name: "Steven Spielberg",
     discipline: "Director",
     style: "Blockbuster / Humanist",
@@ -3456,6 +3482,35 @@ const PEOPLE = [
       { title: "The Aviator (2004)", desc: "Each era of Hughes's life shot in a different historical photographic process. Obsession made visible through the image itself." },
       { title: "Inglourious Basterds (2009)", desc: "Warm, classical, and then suddenly brutal. The gap between the beauty and the violence is the whole point." }
     ]
+  },
+  {
+    id: "gregory-crewdson",
+    name: "Gregory Crewdson",
+    discipline: "Photographer",
+    style: "Cinematic / Psychological",
+    born: "1962",
+    nationality: "American",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/v1782405074/rbPSM6qCGfZr_4800x4800_sd96fq.jpg",
+    galleryImages: [
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1782405076/ecE-yMfXgT1p_4800x4800_rrxbt9.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1782405078/A8tFnA6-f74M_4800x4800_o2rzhx.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1782405072/zCmiPREb5qzR_4800x4800_lmahbz.jpg",
+    ],
+    added: "2026-06-25",
+    url: "https://gagosian.com/artists/gregory-crewdson/",
+    bio: "Gregory Crewdson doesn't take photographs. He directs them. With a crew the size of a film shoot, a production budget to match, and the meticulous pre-visualization of someone who grew up haunted by Hitchcock and Hopper in equal measure, he constructs images of small-town America so precisely charged with psychological dread that they feel like frames from a movie nobody ever made. Streets slicked with rain. Windows glowing with a light that has no clear source. Figures standing in doorways, dresses pooling on lawns, cars idling at intersections at 2am for reasons the image refuses to explain. His subject is always the same thing: the interior life leaking through the surface of the ordinary. He studied at Yale. He has taught there for thirty years. He has shot in western Massachusetts so many times that the region has become its own mythology. The suburbs aren't a backdrop in his work. They are the wound.",
+    traits: [
+      "Feature film production methodology applied to a single still image. Dozens of crew. Hollywood grip equipment. Weeks of pre-production for one photograph.",
+      "The twilight hour as signature atmosphere. That specific threshold where natural and artificial light coexist and neither one wins.",
+      "Narrative suspended mid-event. Something has happened or is about to. The image refuses to say which.",
+      "Edward Hopper's loneliness married to Spielberg's suburbia and Lynch's dread. The combination produces something that belongs entirely to Crewdson.",
+      "Scale as psychological pressure. Prints large enough that you stand inside them rather than in front of them."
+    ],
+    works: [
+      { title: "Twilight (1998-2002)", desc: "The series that announced a wholly original vision. Suburban exteriors staging scenes of quiet supernatural rupture. The lawn, the minivan, the open garage door, and something deeply wrong underneath all of it." },
+      { title: "Beneath the Roses (2003-2008)", desc: "His most operatic work. Cinematic scale pushed to its limit. Motel rooms, diners, and empty streets rendered with a grandeur that makes mundane America feel like the site of an ongoing catastrophe nobody has named yet." },
+      { title: "Cathedral of the Pines (2013-2014)", desc: "A turn inward. The forests of Becket, Massachusetts. Figures in clearing light. Quieter than anything before it and somehow more unsettling for that quiet." }
+    ]
   }
 ];
 
@@ -3479,9 +3534,19 @@ function buildCard(person) {
   card.dataset.discipline = person.discipline;
   card.onclick = () => showProfile(person.id);
 
+  const isNew = (() => {
+    if (!person.added) return false;
+    const [year, month, day] = person.added.split('-').map(Number);
+    const added = new Date(year, month - 1, day || 1);
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - 14);
+    return added >= cutoff;
+  })();
+
   const hasImage = person.coverImage && person.coverImage.trim() !== '';
 
   card.innerHTML = `
+    ${isNew ? `<span class="card-new-badge">New</span>` : ''}
     ${hasImage
       ? `<img class="card-img" src="${person.coverImage}" alt="${person.name}" loading="lazy" style="object-position: ${person.coverImagePosition || 'center center'}" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
          <div class="card-overlay"></div>`
@@ -3772,6 +3837,7 @@ function clearSearch() {
 }
 
 buildGallery(PEOPLE);
+document.getElementById('footer-count').textContent = `${PEOPLE.length} visual architects and counting.`;
 
 const searchInput = document.getElementById('search-input');
 if (searchInput) {
