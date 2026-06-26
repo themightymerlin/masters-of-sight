@@ -1352,6 +1352,33 @@
   padding: 4px 8px;
   z-index: 2;
 }
+
+.platform-badges {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.platform-badge {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--tag-bg);
+  border: 0.5px solid var(--accent-dim);
+  border-radius: 2px;
+  padding: 3px 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.platform-badge:hover {
+  background: rgba(200,169,110,0.25);
+  color: var(--text);
+}
 </style>
 </head>
 <body>
@@ -1608,9 +1635,32 @@ const PEOPLE = [
     ],
     philosophy: "The best games make you feel like the world exists whether you are there or not. Like you stumbled into something real. That feeling of discovery, that is what we are always chasing.",
     works: [
-      { title: "The Elder Scrolls III: Morrowind (2002)", desc: "A world so alien and so fully realized it felt like genuine archaeology. No quest markers. No hand-holding. Just a strange land that rewarded patience and curiosity in equal measure." },
-      { title: "The Elder Scrolls V: Skyrim (2011)", desc: "The open world distilled to its purest form. Dragon shouts, mountain vistas, and a Nordic mythology so convincingly constructed that players still debate its lore thirteen years later." },
-      { title: "Fallout 3 (2008)", desc: "Washington D.C. as a post-apocalyptic ruin. America's monuments reduced to rubble and repopulated with mutants, survivors, and ghosts of the old world. Bleak, beautiful, and impossible to stop exploring." }
+      {
+        title: "The Elder Scrolls III: Morrowind (2002)",
+        desc: "A world so alien and so fully realized it felt like genuine archaeology. No quest markers. No hand-holding. Just a strange land that rewarded patience and curiosity in equal measure.",
+        platforms: [
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/the-elder-scrolls-iii-morrowind/BXVCFBJBNS17/0001" },
+          { name: "Steam", url: "https://store.steampowered.com/app/22320/The_Elder_Scrolls_III_Morrowind_Game_of_the_Year_Edition/" }
+        ]
+      },
+      {
+        title: "The Elder Scrolls V: Skyrim (2011)",
+        desc: "The open world distilled to its purest form. Dragon shouts, mountain vistas, and a Nordic mythology so convincingly constructed that players still debate its lore thirteen years later.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/the-elder-scrolls-v-skyrim/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/the-elder-scrolls-v-skyrim-special-edition/BQ1W1T1FC14W/0001" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/the-elder-scrolls-v-skyrim-anniversary-edition-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Anniversary_Edition/" }
+        ]
+      },
+      {
+        title: "Fallout 3 (2008)",
+        desc: "Washington D.C. as a post-apocalyptic ruin. America's monuments reduced to rubble and repopulated with mutants, survivors, and ghosts of the old world. Bleak, beautiful, and impossible to stop exploring.",
+        platforms: [
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/fallout-3/C29HQ887KH4B/0001" },
+          { name: "Steam", url: "https://store.steampowered.com/app/22300/Fallout_3_Game_of_the_Year_Edition/" }
+        ]
+      }
     ]
   },
   {
@@ -2530,9 +2580,33 @@ const PEOPLE = [
     ],
     philosophy: "I want to put the player inside an idea. Not explain the idea to them, not illustrate it, inhabit it. Walk its streets. Buy into it. And then watch it fail. That's when it becomes real.",
     works: [
-      { title: "System Shock 2 (1999)", desc: "Co-designed the game that invented the template BioShock would later perfect. Atmospheric horror and narrative depth that was a decade ahead of its time." },
-      { title: "BioShock (2007)", desc: "Rapture. An underwater city built on libertarian philosophy, consumed by its own contradictions. The most fully realized ideological world ever constructed in a game. Would you kindly." },
-      { title: "BioShock Infinite (2013)", desc: "Columbia. A city in the clouds built on American nationalism and religious fervor. Audacious, flawed, and more intellectually ambitious than anything else released that year in any medium." }
+      {
+        title: "System Shock 2 (1999)",
+        desc: "Co-designed the game that invented the template BioShock would later perfect. Atmospheric horror and narrative depth that was a decade ahead of its time.",
+        platforms: [
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/system-shock-2-25th-anniversary-remaster/9P4FK543SMZF/0010" },
+          { name: "Steam", url: "https://store.steampowered.com/app/238210/System_Shock_2/" }
+        ]
+      },
+      {
+        title: "BioShock (2007)",
+        desc: "Rapture. An underwater city built on libertarian philosophy, consumed by its own contradictions. The most fully realized ideological world ever constructed in a game. Would you kindly.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/bioshock-remastered/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/bioshock/BTBMZQ3FM2V8/0001" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/bioshock-remastered-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/agecheck/app/7670/" }
+        ]
+      },
+      {
+        title: "BioShock Infinite (2013)",
+        desc: "Columbia. A city in the clouds built on American nationalism and religious fervor. Audacious, flawed, and more intellectually ambitious than anything else released that year in any medium.",
+        platforms: [
+          { name: "Xbox", url: "https://www.xbox.com/en-us/games/store/bioshock-infinite-the-complete-edition/btc8br7v276x" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/bioshock-infinite-the-complete-edition-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/agecheck/app/8870/" }
+        ]
+      }
     ]
   },
 
@@ -2938,9 +3012,34 @@ const PEOPLE = [
     ],
     philosophy: "I am always making films. The controller in the player's hand is just a different kind of camera. The story is the same. The emotion is the same.",
     works: [
-      { title: "Metal Gear Solid (1998)", desc: "Cinematic game design at a scale nobody had attempted. Broke the fourth wall. Still studied in design schools." },
-      { title: "Metal Gear Solid 2: Sons of Liberty (2001)", desc: "A game about information warfare and the controllability of narrative. Released in 2001. Horrifyingly prescient." },
-      { title: "Death Stranding (2019)", desc: "A post-apocalyptic delivery game about human connection. Divisive. Singular. The most ambitious interactive work of the decade." }
+      {
+        title: "Metal Gear Solid (1998)",
+        desc: "Cinematic game design at a scale nobody had attempted. Broke the fourth wall. Still studied in design schools.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/metal-gear-solid--master-collection-vol-1/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/metal-gear-solid-master-collection-version/9NB4KT6SS2L4/0010" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/metal-gear-solid-master-collection-version-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/2131630/METAL_GEAR_SOLID_Master_Collection_Vol1/" }
+        ]
+      },
+      {
+        title: "Metal Gear Solid 2: Sons of Liberty (2001)",
+        desc: "A game about information warfare and the controllability of narrative. Released in 2001. Horrifyingly prescient.",
+        platforms: [
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/metal-gear-solid-2-sons-of-liberty-master-collection-version/9NQ7B5TW16R6/0010" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/metal-gear-solid-master-collection-version-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/2131640/METAL_GEAR_SOLID_2_Sons_of_Liberty__Master_Collection_Version/" }
+        ]
+      },
+      {
+        title: "Death Stranding (2019)",
+        desc: "A post-apocalyptic delivery game about human connection. Divisive. Singular. The most ambitious interactive work of the decade.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/death-stranding/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/death-stranding-directors-cut/9NQGN8TGNT8P/0010" },
+          { name: "Steam", url: "https://store.steampowered.com/app/1850570/DEATH_STRANDING_DIRECTORS_CUT/" }
+        ]
+      }
     ]
   },
   {
@@ -3110,9 +3209,29 @@ const PEOPLE = [
     ],
     philosophy: "The thing that makes games unique is that you are doing it. You are making these choices. When something terrible happens and your hands did it, that feeling lives in you differently than watching it happen to someone else. That's what I'm chasing.",
     works: [
-      { title: "The Last of Us (2013)", desc: "A fungal apocalypse as the backdrop for the most emotionally precise father-daughter story ever told in any medium. Changed the conversation about what games could be permanently." },
-      { title: "The Last of Us Part II (2020)", desc: "One of the most divisive and courageously constructed sequels ever made. Deliberately devastating. Refuses every comfort the first game offered. A masterwork that demands something from its audience." },
-      { title: "The Last of Us, HBO Series (2023)", desc: "Executive produced and co-written by Druckmann. Proved the source material was strong enough to anchor prestige television without losing what made it extraordinary." }
+      {
+        title: "The Last of Us (2013)",
+        desc: "A fungal apocalypse as the backdrop for the most emotionally precise father-daughter story ever told in any medium. Changed the conversation about what games could be permanently.",
+        platforms: [
+          { name: "PS5", url: "https://www.playstation.com/en-us/games/the-last-of-us-part-i/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/" }
+        ]
+      },
+      {
+        title: "The Last of Us Part II (2020)",
+        desc: "One of the most divisive and courageously constructed sequels ever made. Deliberately devastating. Refuses every comfort the first game offered. A masterwork that demands something from its audience.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/the-last-of-us-part-ii/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/2183900/The_Last_of_Us_Part_II_Remastered/" }
+        ]
+      },
+      {
+        title: "The Last of Us, HBO Series (2023)",
+        desc: "Executive produced and co-written by Druckmann. Proved the source material was strong enough to anchor prestige television without losing what made it extraordinary.",
+        platforms: [
+          { name: "Watch", url: "https://www.justwatch.com/us/tv-show/the-last-of-us" }
+        ]
+      }
     ]
   },
   {
@@ -3221,10 +3340,40 @@ const PEOPLE = [
     ],
     philosophy: "We want to make you feel something you were not expecting to feel inside a game. That surprise, the moment you realise this medium can break your heart, that is what we are always building toward.",
     works: [
-      { title: "Crash Bandicoot (1996)", desc: "The game that put Naughty Dog on the map and helped define the PlayStation 1 era. Technical ambition and pure playfulness in equal measure." },
-      { title: "Uncharted 2: Among Thieves (2009)", desc: "The moment the industry understood what Naughty Dog was actually capable of. Cinematic action storytelling that made every other studio raise its ambitions." },
-      { title: "The Last of Us (2013)", desc: "A fungal apocalypse as the backdrop for the most emotionally precise story the medium has ever told. The game that made HBO call." },
-      { title: "The Last of Us Part II (2020)", desc: "The most courageously constructed sequel in gaming. Deliberately devastating. Refuses every comfort the first game offered. Won Game of the Year." }
+      {
+        title: "Crash Bandicoot (1996)",
+        desc: "The game that put Naughty Dog on the map and helped define the PlayStation 1 era. Technical ambition and pure playfulness in equal measure.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/crash-bandicoot-n-sane-trilogy/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/731490/Crash_Bandicoot_N_Sane_Trilogy/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/crash-bandicoot-n-sane-trilogy/9NJ2FD5HJ7SB/0010" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/crash-bandicoot-n-sane-trilogy-switch/" }
+        ]
+      },
+      {
+        title: "Uncharted 2: Among Thieves (2009)",
+        desc: "The moment the industry understood what Naughty Dog was actually capable of. Cinematic action storytelling that made every other studio raise its ambitions.",
+        platforms: [
+          { name: "PS5", url: "https://www.playstation.com/en-us/games/uncharted-legacy-of-thieves-collection/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/1659420/Uncharted_Legacy_of_Thieves_Collection/" }
+        ]
+      },
+      {
+        title: "The Last of Us (2013)",
+        desc: "A fungal apocalypse as the backdrop for the most emotionally precise story the medium has ever told. The game that made HBO call.",
+        platforms: [
+          { name: "PS5", url: "https://www.playstation.com/en-us/games/the-last-of-us-part-i/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/" }
+        ]
+      },
+      {
+        title: "The Last of Us Part II (2020)",
+        desc: "The most courageously constructed sequel in gaming. Deliberately devastating. Refuses every comfort the first game offered. Won Game of the Year.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/the-last-of-us-part-ii/" },
+          { name: "Steam", url: "https://store.steampowered.com/app/2183900/The_Last_of_Us_Part_II_Remastered/" }
+        ]
+      }
     ]
   },
   {
@@ -3252,9 +3401,34 @@ const PEOPLE = [
     ],
     philosophy: "We want you to forget you are playing a game. The moment you remember, we have failed.",
     works: [
-      { title: "Grand Theft Auto V (2013)", desc: "Three protagonists, one sprawling Los Santos, and a satire of contemporary America so precise it still feels current. The most financially successful entertainment product in human history." },
-      { title: "Red Dead Redemption 2 (2018)", desc: "The American frontier rendered with a fidelity that borders on the obsessive. Arthur Morgan's story is among the finest character studies in any medium. The horse physics alone took two years." },
-      { title: "Grand Theft Auto: San Andreas (2004)", desc: "A love letter to 1990s Los Angeles, hip hop culture, and the specific texture of a city on the edge of itself. Still the most culturally ambitious game in the franchise." }
+      {
+        title: "Grand Theft Auto V (2013)",
+        desc: "Three protagonists, one sprawling Los Santos, and a satire of contemporary America so precise it still feels current. The most financially successful entertainment product in human history.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/grand-theft-auto-v/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/grand-theft-auto-v-xbox-series-xs/9NXMBTB02ZSF" },
+          { name: "Steam", url: "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" }
+        ]
+      },
+      {
+        title: "Red Dead Redemption 2 (2018)",
+        desc: "The American frontier rendered with a fidelity that borders on the obsessive. Arthur Morgan's story is among the finest character studies in any medium. The horse physics alone took two years.",
+        platforms: [
+          { name: "PS4", url: "https://www.playstation.com/en-us/games/red-dead-redemption-2/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-us/games/store/red-dead-redemption-2/9n2zdn7nwqkv" },
+          { name: "Steam", url: "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" }
+        ]
+      },
+      {
+        title: "Grand Theft Auto: San Andreas (2004)",
+        desc: "A love letter to 1990s Los Angeles, hip hop culture, and the specific texture of a city on the edge of itself. Still the most culturally ambitious game in the franchise.",
+        platforms: [
+          { name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/grand-theft-auto-trilogy-definitive-edition/" },
+          { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/grand-theft-auto-san-andreas/c3b11wf6swcn" },
+          { name: "Switch", url: "https://www.nintendo.com/us/store/products/grand-theft-auto-the-trilogy-the-definitive-edition-switch/" },
+          { name: "Steam", url: "https://store.steampowered.com/agecheck/app/1547000/" }
+        ]
+      }
     ]
   },
   {
@@ -3690,11 +3864,15 @@ function showProfile(id, pushHistory = true) {
           return `<a class="work-link work-link--${l.type}" href="${l.url}" target="_blank" rel="noopener noreferrer">${cfg.icon} ${cfg.label}</a>`;
         }).join('')}</div>`
       : '';
+    const platformsHTML = (w.platforms && w.platforms.length)
+      ? `<div class="platform-badges">${w.platforms.map(p => `<a class="platform-badge" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.name}</a>`).join('')}</div>`
+      : '';
     return `
       <li>
         <p class="work-title">${w.title}</p>
         <p class="work-desc">${w.desc}</p>
         ${linksHTML}
+        ${platformsHTML}
       </li>
     `;
   }).join('');
