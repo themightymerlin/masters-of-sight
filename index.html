@@ -108,6 +108,16 @@
     opacity: 1;
   }
 
+  @media (max-width: 767px) {
+    .nav-logo {
+      transition: opacity 0.2s ease;
+    }
+    .nav-logo.nav-logo--hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
   /* ── VIEWS ── */
   #view-gallery, #view-profile {
     transition: opacity 0.3s ease;
@@ -4053,11 +4063,14 @@ function showProfile(id, pushHistory = true) {
   navName.textContent = person.name;
   navName.classList.remove('is-visible');
 
+  const navLogo = document.querySelector('.nav-logo');
   window._profileScrollHandler && window.removeEventListener('scroll', window._profileScrollHandler);
   window._profileScrollHandler = function() {
     const hero = document.querySelector('#view-profile .profile-hero');
     const threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
-    navName.classList.toggle('is-visible', window.scrollY > threshold);
+    const visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
   };
   window.addEventListener('scroll', window._profileScrollHandler, { passive: true });
 }
@@ -4069,6 +4082,7 @@ function showGallery(pushHistory = true) {
   const navName = document.getElementById('nav-profile-name');
   navName.textContent = '';
   navName.classList.remove('is-visible');
+  document.querySelector('.nav-logo').classList.remove('nav-logo--hidden');
   window._profileScrollHandler && window.removeEventListener('scroll', window._profileScrollHandler);
   window._profileScrollHandler = null;
   window.scrollTo({ top: 0, behavior: 'smooth' });
