@@ -90,6 +90,24 @@
     color: var(--text-muted);
   }
 
+  .nav-profile-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .nav-profile-name.is-visible {
+    opacity: 1;
+  }
+
   /* ── VIEWS ── */
   #view-gallery, #view-profile {
     transition: opacity 0.3s ease;
@@ -1395,8 +1413,9 @@
   <span class="lightbox-counter" id="lightbox-counter"></span>
 </div>
 
-<nav class="site-nav"> 
+<nav class="site-nav">
   <a class="nav-logo" href="#" onclick="showGallery(); return false;">Masters of Sight</a>
+  <span class="nav-profile-name" id="nav-profile-name"></span>
 </nav>
 
 <!-- ═══════════════════════════════════════════ GALLERY VIEW -->
@@ -3067,9 +3086,9 @@ const PEOPLE = [
       "Institutional restlessness. Capcom. Clover Studio. PlatinumGames. Tango Gameworks. He has never stayed comfortable long enough to stop inventing."
     ],
     works: [
-      { title: "Resident Evil (1996)", desc: "The game that built survival horror as a commercial and artistic category. Fixed cameras, limited saves, and zombies in a mansion. The template that defined a decade of horror games and the baseline against which everything in the genre is still measured." },
-      { title: "Resident Evil 4 (2005)", desc: "The most influential third-person action game ever made. He scrapped the entire project three times before arriving at something so structurally new that the industry spent fifteen years trying to catch up. Leon Kennedy. Las Plagas. The village. All of it." },
-      { title: "Vanquish (2010)", desc: "A rocket-propelled fever dream of kinetic action design. Underplayed on release. Recognized since as one of the most technically accomplished and purely enjoyable action games ever built. The one that proved the RE4 innovations were a philosophy, not a one-time accident." }
+      { title: "Resident Evil (1996)", desc: "The game that built survival horror as a commercial and artistic category. Fixed cameras, limited saves, and zombies in a mansion. The template that defined a decade of horror games and the baseline against which everything in the genre is still measured.", platforms: [{ name: "Steam", url: "https://store.steampowered.com/agecheck/app/4249100/" }] },
+      { title: "Resident Evil 4 (2005)", desc: "The most influential third-person action game ever made. He scrapped the entire project three times before arriving at something so structurally new that the industry spent fifteen years trying to catch up. Leon Kennedy. Las Plagas. The village. All of it.", platforms: [{ name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/resident-evil-4/" }, { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/resident-evil-4-2005/C1XHZ605DZPG/0001" }, { name: "Switch", url: "https://www.nintendo.com/us/store/products/resident-evil-4-switch/" }, { name: "Steam", url: "https://store.steampowered.com/agecheck/app/254700/" }] },
+      { title: "Vanquish (2010)", desc: "A rocket-propelled fever dream of kinetic action design. Underplayed on release. Recognized since as one of the most technically accomplished and purely enjoyable action games ever built. The one that proved the RE4 innovations were a philosophy, not a one-time accident.", platforms: [{ name: "PS4/PS5", url: "https://www.playstation.com/en-us/games/vanquish/" }, { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/vanquish/9N15CB2JX4VZ/0010" }, { name: "Steam", url: "https://store.steampowered.com/agecheck/app/460810/" }] }
     ]
   },
   {
@@ -3097,9 +3116,9 @@ const PEOPLE = [
     ],
     philosophy: "A game is not finished until it is fun. And it is not fun until you cannot stop playing. Everything else, story, graphics, technology, is in service of that feeling.",
     works: [
-      { title: "Donkey Kong (1981)", desc: "The game that introduced Mario. Jump as a game verb, invented here." },
-      { title: "Super Mario Bros. (1985)", desc: "The template for platform game design. Every subsequent platformer has been in dialogue with this one." },
-      { title: "The Legend of Zelda (1986)", desc: "Open-world exploration with a sense of genuine mystery. The direct ancestor of every open-world game ever made." }
+      { title: "Donkey Kong (1981)", desc: "The game that introduced Mario. Jump as a game verb, invented here.", platforms: [{ name: "Switch", url: "https://www.nintendo.com/us/store/products/arcade-archives-donkey-kong-switch/" }] },
+      { title: "Super Mario Bros. (1985)", desc: "The template for platform game design. Every subsequent platformer has been in dialogue with this one.", platforms: [{ name: "Switch", url: "https://www.nintendo.com/us/store/products/arcade-archives-vs-super-mario-bros-switch/" }] },
+      { title: "The Legend of Zelda (1986)", desc: "Open-world exploration with a sense of genuine mystery. The direct ancestor of every open-world game ever made.", platforms: [{ name: "Switch", url: "https://www.nintendo.com/en-gb/News/2024/August/Revisit-classic-The-Legend-of-Zelda-series-games-and-more-with-Nintendo-Switch-Online--2640746.html" }] }
     ]
   },
   {
@@ -3127,9 +3146,9 @@ const PEOPLE = [
     ],
     philosophy: "I want to create experiences that make the player feel a sense of achievement that they themselves have earned. The difficulty is not cruelty. It is respect. I believe players are capable of more than most games ask of them.",
     works: [
-      { title: "Dark Souls (2011)", desc: "The one that rewired expectations for an entire generation of game makers and players. A dying world held together by fire, faith, and the stubbornness of the undead. Its influence on everything that followed is immeasurable." },
-      { title: "Bloodborne (2015)", desc: "Victorian gothic horror meets Lovecraftian cosmic dread. Faster, more aggressive, more terrifying. The most purely atmospheric world he has ever built." },
-      { title: "Elden Ring (2022)", desc: "An open world designed by a man who understands that discovery is its own reward. Co-created with George R.R. Martin. Won Game of the Year. Sold 25 million copies. The mainstream finally caught up." }
+      { title: "Dark Souls Remastered (2011)", desc: "The one that rewired expectations for an entire generation of game makers and players. A dying world held together by fire, faith, and the stubbornness of the undead. Its influence on everything that followed is immeasurable.", platforms: [{ name: "PS4/PS5", url: "https://store.playstation.com/en-us/product/UP0700-CUSA08692_00-DARKSOULSHD00000/" }, { name: "Xbox", url: "https://www.xbox.com/en-US/games/store/dark-souls-remastered/bs18vcf4nlq9" }, { name: "Steam", url: "https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/" }] },
+      { title: "Bloodborne (2015)", desc: "Victorian gothic horror meets Lovecraftian cosmic dread. Faster, more aggressive, more terrifying. The most purely atmospheric world he has ever built.", platforms: [{ name: "PS4/PS5", url: "https://store.playstation.com/en-us/product/UP9000-CUSA00900_00-BLOODBORNE000000" }] },
+      { title: "Elden Ring (2022)", desc: "An open world designed by a man who understands that discovery is its own reward. Co-created with George R.R. Martin. Won Game of the Year. Sold 25 million copies. The mainstream finally caught up.", platforms: [{ name: "PS4/PS5", url: "https://store.playstation.com/en-us/product/UP0700-PPSA04610_00-ELDENRING0000000" }, { name: "Xbox", url: "https://www.xbox.com/en-US/games/elden-ring" }, { name: "Steam", url: "https://store.steampowered.com/app/1245620/ELDEN_RING/" }] }
     ]
   },
 
@@ -3311,8 +3330,8 @@ const PEOPLE = [
     philosophy: "I want players to feel things that can't be described in words. If you can explain what a game made you feel, I haven't done my job. The experience should live somewhere language can't reach.",
     works: [
       { title: "Ico (2001)", desc: "A boy and a girl escape a castle together. Hand-holding as a game mechanic. One of the most quietly devastating things ever made." },
-      { title: "Shadow of the Colossus (2005)", desc: "Sixteen bosses. No other enemies. A vast empty world and a question the game never answers: are you the hero or the villain? Widely regarded as the definitive argument for games as art." },
-      { title: "The Last Guardian (2016)", desc: "A boy and a giant feathered creature navigate ruins together. Eleven years in development. Worth every one of them." }
+      { title: "Shadow of the Colossus (2005)", desc: "Sixteen bosses. No other enemies. A vast empty world and a question the game never answers: are you the hero or the villain? Widely regarded as the definitive argument for games as art.", platforms: [{ name: "PS4/PS5", url: "https://store.playstation.com/en-us/product/UP9000-CUSA08034_00-SOTC0000000000US" }] },
+      { title: "The Last Guardian (2016)", desc: "A boy and a giant feathered creature navigate ruins together. Eleven years in development. Worth every one of them.", platforms: [{ name: "PS4/PS5", url: "https://store.playstation.com/en-us/product/UP9000-CUSA03627_00-LASTGUARDIANUS00" }] }
     ]
   },
   {
@@ -3951,11 +3970,29 @@ function showProfile(id, pushHistory = true) {
   document.getElementById('view-gallery').style.display = 'none';
   document.getElementById('view-profile').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const navName = document.getElementById('nav-profile-name');
+  navName.textContent = person.name;
+  navName.classList.remove('is-visible');
+
+  window._profileScrollHandler && window.removeEventListener('scroll', window._profileScrollHandler);
+  window._profileScrollHandler = function() {
+    const hero = document.querySelector('#view-profile .profile-hero');
+    const threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    navName.classList.toggle('is-visible', window.scrollY > threshold);
+  };
+  window.addEventListener('scroll', window._profileScrollHandler, { passive: true });
 }
 
 function showGallery(pushHistory = true) {
   document.getElementById('view-profile').style.display = 'none';
   document.getElementById('view-gallery').style.display = 'block';
+
+  const navName = document.getElementById('nav-profile-name');
+  navName.textContent = '';
+  navName.classList.remove('is-visible');
+  window._profileScrollHandler && window.removeEventListener('scroll', window._profileScrollHandler);
+  window._profileScrollHandler = null;
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (pushHistory) history.pushState({ view: 'gallery' }, '', window.location.pathname);
 }
