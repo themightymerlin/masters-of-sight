@@ -1352,6 +1352,26 @@
     color: var(--text-dim);
     white-space: nowrap;
   }
+  @keyframes mos-breathe {
+    0%, 100% { color: var(--text-dim); }
+    50% { color: var(--accent); }
+  }
+  .surprise-btn {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--text-dim);
+    background: transparent;
+    border: none;
+    padding: 4px 6px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.15s ease;
+    flex-shrink: 0;
+    animation: mos-breathe 8s ease-in-out infinite;
+  }
+  .surprise-btn:hover {
+    color: var(--accent);
+    transform: scale(1.25) rotate(20deg);
+  }
   @media (max-width: 600px) {
     .hero { padding: 90px 20px 20px; }
     .hero-sub { margin-bottom: 20px; }
@@ -1460,6 +1480,7 @@
       >
       <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
     </div>
+    <button class="surprise-btn" id="surprise-btn" title="Show me a random master">&#9661;</button>
     <span class="search-count" id="search-count"></span>
   </div>
 
@@ -4261,6 +4282,26 @@ function clearSearch() {
   document.getElementById('search-count').textContent = '';
   runFilter();
 }
+
+function showSurprise() {
+  const q = _activeSearch.toLowerCase().trim();
+  const d = _activeDiscipline;
+  const pool = PEOPLE.filter(p => {
+    const disciplineMatch = d === 'all' || (Array.isArray(p.discipline) ? p.discipline.includes(d) : p.discipline === d);
+    if (!disciplineMatch) return false;
+    if (!q) return true;
+    return (
+      p.name.toLowerCase().includes(q) ||
+      (Array.isArray(p.discipline) ? p.discipline.join(' ').toLowerCase() : p.discipline.toLowerCase()).includes(q) ||
+      (p.style || '').toLowerCase().includes(q)
+    );
+  });
+  if (!pool.length) return;
+  const pick = pool[Math.floor(Math.random() * pool.length)];
+  showProfile(pick.id);
+}
+
+document.getElementById('surprise-btn').addEventListener('click', showSurprise);
 
 buildGallery(PEOPLE);
 document.getElementById('footer-count').textContent = `${PEOPLE.length} visual architects and counting.`;
