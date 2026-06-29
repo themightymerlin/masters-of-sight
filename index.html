@@ -652,6 +652,86 @@
     margin-left: 3px;
   }
 
+  /* ── RELATED MASTERS ── */
+  .related-masters {
+    padding: 64px 48px 80px;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .related-masters-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  .related-masters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .related-card {
+    cursor: pointer;
+    background: var(--bg-2);
+    border: 0.5px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+
+  .related-card:hover {
+    border-color: var(--border-hover);
+  }
+
+  .related-card-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+
+  .related-card:hover .related-card-img {
+    filter: grayscale(0%);
+  }
+
+  .related-card-info {
+    padding: 12px 14px 14px;
+  }
+
+  .related-card-discipline {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .related-card-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: left center;
+    color: var(--text);
+  }
+
+  @media (max-width: 768px) {
+    .related-masters {
+      padding: 48px 20px 64px;
+    }
+    .related-masters-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
   .video-bookend-caption {
     font-size: 10px;
     letter-spacing: 0.12em;
@@ -1534,6 +1614,8 @@
     </div>
   </div>
 
+  <div class="related-masters" id="p-related"></div>
+
 </div>
 
 <script>
@@ -1544,6 +1626,7 @@ const PEOPLE = [
   // ── ORIGINAL 9 ── (your existing entries, unchanged)
   {
     id: "annie-liebovitz",
+    related: ["richard-avedon", "nigel-parry", "ryan-coogler"],
     name: "Annie Leibovitz",
     discipline: "Photographer",
     style: "Portrait",
@@ -1574,6 +1657,7 @@ const PEOPLE = [
   },
   {
     id: "spike-jonze",
+    related: ["hype-williams", "wes-anderson", "fumito-ueda"],
     name: "Spike Jonze",
     discipline: "Director",
     style: "Narrative / Surreal",
@@ -1603,6 +1687,7 @@ const PEOPLE = [
   },
   {
     id: "david-lynch",
+    related: ["gregory-crewdson", "stanley-kubrick", "gordon-willis"],
     name: "David Lynch",
     discipline: "Director",
     style: "Surrealist / Noir",
@@ -1633,6 +1718,7 @@ const PEOPLE = [
   },
   {
     id: "tim-walker",
+    related: ["guy-bourdin", "guillermo-del-toro", "hayao-miyazaki"],
     name: "Tim Walker",
     discipline: "Photographer",
     style: "Fantasy / Fashion",
@@ -1662,6 +1748,7 @@ const PEOPLE = [
   },
   {
     id: "todd-howard",
+    related: ["peter-jackson", "hideo-kojima", "hayao-miyazaki"],
     name: "Todd Howard",
     discipline: "Dream Makers",
     style: "Open World / Mythological",
@@ -1715,6 +1802,7 @@ const PEOPLE = [
   },
   {
     id: "david-lachapelle",
+    related: ["guy-bourdin", "hype-williams", "stefan-sagmeister"],
     name: "David LaChapelle",
     discipline: "Photographer",
     style: "Hyperrealist / Pop",
@@ -1746,6 +1834,7 @@ const PEOPLE = [
   },
   {
     id: "nadav-kander",
+    related: ["hiroshi-sugimoto", "roger-deakins", "denis-villeneuve"],
     name: "Nadav Kander",
     discipline: "Photographer",
     style: "Landscape / Portrait",
@@ -1776,6 +1865,7 @@ const PEOPLE = [
   },
   {
     id: "paul-rand",
+    related: ["saul-bass", "herb-lubalin", "milton-glaser"],
     name: "Paul Rand",
     discipline: "Designer",
     style: "Modernist / Identity",
@@ -1806,6 +1896,7 @@ const PEOPLE = [
   },
   {
     id: "guillermo-del-toro",
+    related: ["tim-walker", "hayao-miyazaki", "syd-mead"],
     name: "Guillermo del Toro",
     cardName: "Guillermo<br>del Toro",
     discipline: "Director",
@@ -1837,6 +1928,7 @@ const PEOPLE = [
   },
   {
     id: "alex-trochut",
+    related: ["herb-lubalin", "hype-williams", "stefan-sagmeister"],
     name: "Alex Trochut",
     discipline: "Designer",
     style: "Typography / Illustration",
@@ -1866,6 +1958,7 @@ const PEOPLE = [
   },
   {
     id: "richard-avedon",
+    related: ["annie-liebovitz", "irving-penn", "david-fincher"],
     name: "Richard Avedon",
     discipline: "Photographer",
     style: "Portrait / Fashion",
@@ -1901,6 +1994,7 @@ const PEOPLE = [
   // PHOTOGRAPHY
   {
     id: "dana-scruggs",
+    related: ["ryan-coogler", "bradford-young", "jordan-peele"],
     name: "Dana Scruggs",
     discipline: "Photographer",
     style: "Portrait / Documentary",
@@ -1927,6 +2021,7 @@ const PEOPLE = [
   },
   {
     id: "hiroshi-sugimoto",
+    related: ["ansel-adams", "gordon-willis", "fumito-ueda"],
     name: "Hiroshi Sugimoto",
     discipline: "Photographer",
     style: "Conceptual / Long Exposure",
@@ -1953,6 +2048,7 @@ const PEOPLE = [
   },
   {
     id: "dewey-nicks",
+    related: ["nigel-parry", "hype-williams", "david-lachapelle"],
     name: "Dewey Nicks",
     discipline: "Photographer",
     style: "Commercial / Fashion",
@@ -1979,6 +2075,7 @@ const PEOPLE = [
   },
   {
     id: "irving-penn",
+    related: ["richard-avedon", "helmut-newton", "dieter-rams"],
     name: "Irving Penn",
     discipline: "Photographer",
     style: "Portrait / Still Life",
@@ -2006,6 +2103,7 @@ const PEOPLE = [
   },
   {
     id: "helmut-newton",
+    related: ["guy-bourdin", "richard-avedon", "stefan-sagmeister"],
     name: "Helmut Newton",
     discipline: "Photographer",
     style: "Fashion / Erotic",
@@ -2033,6 +2131,7 @@ const PEOPLE = [
   },
   {
     id: "guy-bourdin",
+    related: ["helmut-newton", "tim-walker", "david-lynch"],
     name: "Guy Bourdin",
     discipline: "Photographer",
     style: "Surrealist / Fashion",
@@ -2060,6 +2159,7 @@ const PEOPLE = [
   },
   {
     id: "ansel-adams",
+    related: ["hiroshi-sugimoto", "nadav-kander", "roger-deakins"],
     name: "Ansel Adams",
     discipline: "Photographer",
     style: "Landscape / Fine Art",
@@ -2087,6 +2187,7 @@ const PEOPLE = [
   },
   {
     id: "darren-aronofsky",
+    related: ["stanley-kubrick", "vittorio-storaro", "hidetaka-miyazaki"],
     name: "Darren Aronofsky",
     discipline: "Director",
     style: "Psychological / Visceral",
@@ -2117,6 +2218,7 @@ const PEOPLE = [
   },
   {
     id: "banksy",
+    related: ["shepard-fairey", "barbara-kruger", "martin-parr"],
     name: "Banksy",
     discipline: "Provocateur",
     style: "Street Art / Political Satire",
@@ -2143,6 +2245,7 @@ const PEOPLE = [
 
   {
     id: "martin-parr",
+    related: ["william-eggleston", "barbara-kruger", "shepard-fairey"],
     name: "Martin Parr",
     discipline: "Photographer",
     style: "Documentary / Satirical",
@@ -2171,6 +2274,7 @@ const PEOPLE = [
   // FILM / DIRECTORS
   {
     id: "christopher-nolan",
+    related: ["denis-villeneuve", "stanley-kubrick", "hideo-kojima"],
     name: "Christopher Nolan",
     discipline: "Director",
     style: "Cerebral / Epic",
@@ -2201,6 +2305,7 @@ const PEOPLE = [
   },
   {
     id: "wes-anderson",
+    related: ["william-eggleston", "saul-bass", "hayao-miyazaki"],
     name: "Wes Anderson",
     discipline: "Director",
     style: "Symmetrical / Whimsical",
@@ -2231,6 +2336,7 @@ const PEOPLE = [
   },
   {
     id: "sofia-coppola",
+    related: ["nadav-kander", "tim-walker", "hayao-miyazaki"],
     name: "Sofia Coppola",
     discipline: "Director",
     style: "Atmospheric / Introspective",
@@ -2261,6 +2367,7 @@ const PEOPLE = [
   },
   {
     id: "hayao-miyazaki",
+    related: ["guillermo-del-toro", "fumito-ueda", "moebius"],
     name: "Hayao Miyazaki",
     discipline: "Director",
     style: "Animated / Mythological",
@@ -2291,6 +2398,7 @@ const PEOPLE = [
   },
   {
     id: "jordan-peele",
+    related: ["stanley-kubrick", "dana-scruggs", "barbara-kruger"],
     name: "Jordan Peele",
     discipline: "Director",
     style: "Horror / Social",
@@ -2321,6 +2429,7 @@ const PEOPLE = [
   },
   {
     id: "ryan-coogler",
+    related: ["bradford-young", "spike-lee", "dana-scruggs"],
     name: "Ryan Coogler",
     discipline: "Director",
     style: "Visceral / Cultural",
@@ -2351,6 +2460,7 @@ const PEOPLE = [
   },
   {
     id: "peter-jackson",
+    related: ["syd-mead", "hideo-kojima", "ridley-scott"],
     name: "Peter Jackson",
     discipline: "Director",
     style: "Epic / World-Building",
@@ -2381,6 +2491,7 @@ const PEOPLE = [
   },
   {
     id: "william-eggleston",
+    related: ["martin-parr", "nadav-kander", "wes-anderson"],
     name: "William Eggleston",
     discipline: "Photographer",
     style: "Color / Everyday",
@@ -2411,6 +2522,7 @@ const PEOPLE = [
   },
   {
     id: "shepard-fairey",
+    related: ["banksy", "barbara-kruger", "milton-glaser"],
     name: "Shepard Fairey",
     discipline: "Provocateur",
     style: "Propaganda Aesthetics / Street Art",
@@ -2436,6 +2548,7 @@ const PEOPLE = [
   },
   {
     id: "jenny-holzer",
+    related: ["barbara-kruger", "banksy", "stefan-sagmeister"],
     name: "Jenny Holzer",
     discipline: "Provocateur",
     style: "Text / Installation",
@@ -2461,6 +2574,7 @@ const PEOPLE = [
   },
   {
     id: "barbara-kruger",
+    related: ["jenny-holzer", "shepard-fairey", "jordan-peele"],
     name: "Barbara Kruger",
     discipline: "Provocateur",
     style: "Conceptual / Political",
@@ -2486,6 +2600,7 @@ const PEOPLE = [
   },
   {
     id: "david-fincher",
+    related: ["gordon-willis", "roger-deakins", "david-lynch"],
     name: "David Fincher",
     discipline: "Director",
     style: "Precision / Dark",
@@ -2516,6 +2631,7 @@ const PEOPLE = [
   },
   {
     id: "denis-villeneuve",
+    related: ["roger-deakins", "christopher-nolan", "nadav-kander"],
     name: "Denis Villeneuve",
     discipline: "Director",
     style: "Sci-Fi / Contemplative",
@@ -2546,6 +2662,7 @@ const PEOPLE = [
   },
   {
     id: "spike-lee",
+    related: ["ryan-coogler", "bradford-young", "barbara-kruger"],
     name: "Spike Lee",
     discipline: "Director",
     style: "Political / Visceral",
@@ -2576,6 +2693,7 @@ const PEOPLE = [
   },
   {
     id: "stanley-kubrick",
+    related: ["gordon-willis", "vittorio-storaro", "hidetaka-miyazaki"],
     name: "Stanley Kubrick",
     discipline: "Director",
     style: "Obsessive / Visionary",
@@ -2606,6 +2724,7 @@ const PEOPLE = [
   },
   {
     id: "ken-levine",
+    related: ["christopher-nolan", "stanley-kubrick", "jenny-holzer"],
     name: "Ken Levine",
     discipline: "Dream Makers",
     style: "Narrative / Political",
@@ -2662,6 +2781,7 @@ const PEOPLE = [
 
   {
     id: "joseph-kosinski",
+    related: ["roger-deakins", "denis-villeneuve", "syd-mead"],
     name: "Joseph Kosinski",
     discipline: "Director",
     style: "Architectural / Visceral",
@@ -2693,6 +2813,7 @@ const PEOPLE = [
 
   {
     id: "ridley-scott",
+    related: ["syd-mead", "vittorio-storaro", "peter-jackson"],
     name: "Ridley Scott",
     discipline: "Director",
     style: "Visceral / World-Building",
@@ -2725,6 +2846,7 @@ const PEOPLE = [
 
   {
     id: "david-ayer",
+    related: ["robert-elswit", "ryan-coogler", "bradford-young"],
     name: "David Ayer",
     discipline: "Director",
     style: "Gritty / Visceral",
@@ -2758,6 +2880,7 @@ const PEOPLE = [
   // DESIGN / TYPOGRAPHY
   {
     id: "herb-lubalin",
+    related: ["paul-rand", "jonathan-hoefler", "alex-trochut"],
     name: "Herb Lubalin",
     discipline: "Designer",
     style: "Typography / Editorial",
@@ -2784,6 +2907,7 @@ const PEOPLE = [
   },
   {
     id: "jonathan-hoefler",
+    related: ["herb-lubalin", "dieter-rams", "jony-ive"],
     name: "Jonathan Hoefler",
     discipline: "Designer",
     style: "Classical / Typographic",
@@ -2813,6 +2937,7 @@ const PEOPLE = [
   },
   {
     id: "stefan-sagmeister",
+    related: ["banksy", "barbara-kruger", "david-lachapelle"],
     name: "Stefan Sagmeister",
     discipline: "Designer",
     style: "Provocateur / Experiential",
@@ -2838,6 +2963,7 @@ const PEOPLE = [
   },
   {
     id: "milton-glaser",
+    related: ["paul-rand", "shepard-fairey", "saul-bass"],
     name: "Milton Glaser",
     discipline: "Designer",
     style: "Iconic / Humanist",
@@ -2864,6 +2990,7 @@ const PEOPLE = [
   },
   {
     id: "susan-kare",
+    related: ["jony-ive", "saul-bass", "shigeru-miyamoto"],
     name: "Susan Kare",
     discipline: "Designer",
     style: "Interface / Iconographic",
@@ -2889,6 +3016,7 @@ const PEOPLE = [
   },
   {
     id: "jony-ive",
+    related: ["dieter-rams", "jonathan-hoefler", "fumito-ueda"],
     name: "Jony Ive",
     discipline: "Designer",
     style: "Industrial / Minimalist",
@@ -2916,6 +3044,7 @@ const PEOPLE = [
   // ILLUSTRATION / CONCEPT
   {
     id: "nigel-parry",
+    related: ["richard-avedon", "annie-liebovitz", "dewey-nicks"],
     name: "Nigel Parry",
     discipline: "Photographer",
     style: "Celebrity Portrait / Editorial",
@@ -2954,6 +3083,7 @@ const PEOPLE = [
   },
   {
     id: "jimmy-chin",
+    related: ["ansel-adams", "roger-deakins", "nadav-kander"],
     name: "Jimmy Chin",
     discipline: ["Photographer", "Director"],
     style: "Adventure / Documentary",
@@ -2985,6 +3115,7 @@ const PEOPLE = [
   },
   {
     id: "moebius",
+    related: ["syd-mead", "ridley-scott", "hayao-miyazaki"],
     name: "Moebius (Jean Giraud)",
     discipline: "Dream Makers",
     style: "Sci-Fi / Illustration",
@@ -3011,6 +3142,7 @@ const PEOPLE = [
   },
   {
     id: "syd-mead",
+    related: ["moebius", "ridley-scott", "jony-ive"],
     name: "Syd Mead",
     discipline: "Dream Makers",
     style: "Futurist / Industrial",
@@ -3039,6 +3171,7 @@ const PEOPLE = [
   // GAMES
   {
     id: "hideo-kojima",
+    related: ["ridley-scott", "denis-villeneuve", "neil-druckmann"],
     name: "Hideo Kojima",
     discipline: "Dream Makers",
     style: "Cinematic / Auteur",
@@ -3094,6 +3227,7 @@ const PEOPLE = [
   },
   {
     id: "shinji-mikami",
+    related: ["hidetaka-miyazaki", "ridley-scott", "darren-aronofsky"],
     added: "2026-06-25",
     name: "Shinji Mikami",
     discipline: "Dream Makers",
@@ -3124,6 +3258,7 @@ const PEOPLE = [
   },
   {
     id: "shigeru-miyamoto",
+    related: ["hayao-miyazaki", "susan-kare", "wes-anderson"],
     name: "Shigeru Miyamoto",
     discipline: "Dream Makers",
     style: "Interactive / Playful",
@@ -3154,6 +3289,7 @@ const PEOPLE = [
   },
   {
     id: "hidetaka-miyazaki",
+    related: ["stanley-kubrick", "darren-aronofsky", "fumito-ueda"],
     name: "Hidetaka Miyazaki",
     discipline: "Dream Makers",
     style: "Dark / Mythological",
@@ -3186,6 +3322,7 @@ const PEOPLE = [
   // CINEMATOGRAPHY
   {
     id: "roger-deakins",
+    related: ["gordon-willis", "emmanuel-lubezki", "nadav-kander"],
     name: "Roger Deakins",
     discipline: "Cinematographer",
     style: "Cinematography / Atmospheric",
@@ -3211,6 +3348,7 @@ const PEOPLE = [
   },
   {
     id: "yoji-shinkawa",
+    related: ["moebius", "syd-mead", "hideo-kojima"],
     name: "Yoji Shinkawa",
     discipline: "Dream Makers",
     style: "Concept Art / Futurist",
@@ -3236,6 +3374,7 @@ const PEOPLE = [
   },
   {
     id: "neil-druckmann",
+    related: ["hideo-kojima", "darren-aronofsky", "naughty-dog"],
     name: "Neil Druckmann",
     discipline: "Dream Makers",
     style: "Cinematic / Emotional",
@@ -3286,6 +3425,7 @@ const PEOPLE = [
   },
   {
     id: "emmanuel-lubezki",
+    related: ["roger-deakins", "bradford-young", "sofia-coppola"],
     name: "Emmanuel Lubezki",
     discipline: "Cinematographer",
     style: "Naturalistic / Unbroken",
@@ -3311,6 +3451,7 @@ const PEOPLE = [
   },
   {
     id: "vittorio-storaro",
+    related: ["gordon-willis", "stanley-kubrick", "darren-aronofsky"],
     name: "Vittorio Storaro",
     discipline: "Cinematographer",
     style: "Painterly / Symbolic",
@@ -3337,6 +3478,7 @@ const PEOPLE = [
   },
   {
     id: "fumito-ueda",
+    related: ["hayao-miyazaki", "hiroshi-sugimoto", "jony-ive"],
     name: "Fumito Ueda",
     discipline: "Dream Makers",
     style: "Minimalist / Melancholic",
@@ -3367,6 +3509,7 @@ const PEOPLE = [
   },
   {
     id: "naughty-dog",
+    related: ["neil-druckmann", "ridley-scott", "ryan-coogler"],
     name: "Naughty Dog",
     discipline: "Dream Makers",
     style: "Cinematic / Emotional",
@@ -3428,6 +3571,7 @@ const PEOPLE = [
   },
   {
     id: "rockstar-games",
+    related: ["ridley-scott", "spike-lee", "david-ayer"],
     name: "Rockstar Games",
     discipline: "Dream Makers",
     style: "Open World / Cinematic",
@@ -3483,6 +3627,7 @@ const PEOPLE = [
   },
   {
     id: "gordon-willis",
+    related: ["roger-deakins", "vittorio-storaro", "david-fincher"],
     name: "Gordon Willis",
     discipline: "Cinematographer",
     style: "Shadow / Minimalist",
@@ -3510,6 +3655,7 @@ const PEOPLE = [
 
   {
     id: "bradford-young",
+    related: ["emmanuel-lubezki", "dana-scruggs", "ryan-coogler"],
     name: "Bradford Young",
     discipline: "Cinematographer",
     style: "Naturalistic / Luminous",
@@ -3536,6 +3682,7 @@ const PEOPLE = [
 
   {
     id: "bungie",
+    related: ["ridley-scott", "syd-mead", "joseph-kosinski"],
     name: "Bungie",
     discipline: "Dream Makers",
     style: "Mythological / Heroic Sci-Fi",
@@ -3614,6 +3761,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
 
   {
     id: "robert-elswit",
+    related: ["roger-deakins", "robert-richardson", "david-ayer"],
     name: "Robert Elswit",
     discipline: "Cinematographer",
     style: "Gritty / Journalistic",
@@ -3640,6 +3788,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
 
   {
     id: "norman-parkinson",
+    related: ["richard-avedon", "irving-penn", "tim-walker"],
     name: "Norman Parkinson",
     discipline: "Photographer",
     style: "Fashion / Portraiture",
@@ -3669,6 +3818,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   // INDUSTRIAL DESIGN
   {
     id: "dieter-rams",
+    related: ["jony-ive", "jonathan-hoefler", "fumito-ueda"],
     name: "Dieter Rams",
     discipline: "Designer",
     style: "Functionalist / Minimalist",
@@ -3694,6 +3844,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "hype-williams",
+    related: ["spike-jonze", "david-lachapelle", "saul-bass"],
     added: "2026-06-25",
     name: "Hype Williams",
     discipline: "Director",
@@ -3724,6 +3875,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "jj-abrams",
+    related: ["steven-spielberg", "christopher-nolan", "hype-williams"],
     name: "J.J. Abrams",
     added: "2026-06-25",
     discipline: "Director",
@@ -3755,6 +3907,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "saul-bass",
+    related: ["paul-rand", "hype-williams", "stanley-kubrick"],
     added: "2026-06-25",
     name: "Saul Bass",
     discipline: "Designer",
@@ -3785,6 +3938,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "steven-spielberg",
+    related: ["christopher-nolan", "peter-jackson", "roger-deakins"],
     added: "2026-06-25",
     name: "Steven Spielberg",
     discipline: "Director",
@@ -3816,6 +3970,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "robert-richardson",
+    related: ["vittorio-storaro", "roger-deakins", "darren-aronofsky"],
     name: "Robert Richardson",
     discipline: "Cinematographer",
     style: "Volatile / Painterly",
@@ -3846,6 +4001,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "gregory-crewdson",
+    related: ["david-lynch", "stanley-kubrick", "ridley-scott"],
     name: "Gregory Crewdson",
     discipline: "Photographer",
     style: "Cinematic / Psychological",
@@ -3876,6 +4032,7 @@ What remains is a catalog that reshaped two decades of games and a question mark
   },
   {
     id: "quentin-tarantino",
+    related: ["robert-richardson", "ridley-scott", "gordon-willis"],
     added: "2026-06-28",
     name: "Quentin Tarantino",
     discipline: "Director",
@@ -4120,6 +4277,38 @@ function showProfile(id, pushHistory = true) {
 
   document.getElementById('view-gallery').style.display = 'none';
   document.getElementById('view-profile').style.display = 'block';
+
+  // Render related masters
+  const relatedEl = document.getElementById('p-related');
+  if (person.related && person.related.length) {
+    const relatedPeople = person.related
+      .map(rid => PEOPLE.find(p => p.id === rid))
+      .filter(Boolean);
+    if (relatedPeople.length) {
+      relatedEl.innerHTML = `
+        <p class="related-masters-label">If you like ${person.name}, you will like these masters</p>
+        <div class="related-masters-grid">
+          ${relatedPeople.map(rp => `
+            <div class="related-card" onclick="showProfile('${rp.id}')">
+              <img class="related-card-img" src="${rp.coverImage || ''}" alt="${rp.name}" loading="lazy">
+              <div class="related-card-info">
+                <p class="related-card-discipline">${displayDiscipline(rp.discipline)}</p>
+                <p class="related-card-name">${rp.name}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      relatedEl.style.display = 'block';
+    } else {
+      relatedEl.innerHTML = '';
+      relatedEl.style.display = 'none';
+    }
+  } else {
+    relatedEl.innerHTML = '';
+    relatedEl.style.display = 'none';
+  }
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const navName = document.getElementById('nav-profile-name');
