@@ -130,8 +130,6 @@
   /* ── HERO ── */
   .hero {
     padding: 100px 48px 14px;
-    max-width: 1400px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -169,6 +167,93 @@
     color: #ffffff;
   }
 
+  /* ── HERO LAYOUT ── */
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-right: 48px;
+  }
+
+  .hero-stat {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .hero-motw-rule {
+    width: 100%;
+    height: 0.5px;
+    background: var(--border-hover);
+    margin-bottom: 14px;
+  }
+
+  .hero-motw-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .hero-motw-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(16px, 1.4vw, 22px);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    display: inline-block;
+    transform: scaleX(1.30);
+    transform-origin: right center;
+    color: var(--text);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .hero-motw-name:hover {
+    color: var(--accent);
+  }
+
+  .hero-motw-discipline {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .hero-motw-block {
+    cursor: pointer;
+  }
+
+  .hero-motw-block:hover .hero-motw-name {
+    color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .hero-right { display: none; }
+    .hero-inner { display: block; }
+  }
+
   .hero-sub {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -182,8 +267,7 @@
   /* ── FILTER BAR ── */
   .filter-bar {
     padding: 0 48px 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -212,15 +296,13 @@
 
   /* ── GRID ── */
   .grid {
-    padding: 0 48px 120px;
-    max-width: 1400px;
-    margin: -10px auto 0;
+    padding: 0;
+    margin: -10px 0 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2px;
   }
 
-  @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .grid { grid-template-columns: repeat(2, 1fr); padding: 0; gap: 0; } }
 
@@ -1373,8 +1455,7 @@
 
   .search-bar {
     padding: 0 48px 2px;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1534,9 +1615,14 @@
 <div id="view-gallery">
 
   <div class="hero">
-    <p class="hero-sub">A living archive of the artists who taught us how to see.</p>
-    <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
-    <p class="hero-sub">New masters added every week.</p>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-sub">A living archive of the artists who taught us how to see.</p>
+        <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
+        <p class="hero-sub">New masters added every week.</p>
+      </div>
+      <div class="hero-right" id="hero-motw"></div>
+    </div>
   </div>
 
   <div class="filter-bar">
@@ -1623,6 +1709,10 @@
 <script>
 let _activeSearch = '';
 let _activeDiscipline = 'all';
+
+  // Set to an ID string to manually feature that master this week e.g. "christopher-nolan"
+  // Set to null to use the weekly seeded random
+  const FEATURED_MASTER_OVERRIDE = "hayao-miyazaki";
 
 const PEOPLE = [
   // ── ORIGINAL 9 ── (your existing entries, unchanged)
@@ -4358,6 +4448,42 @@ function showProfile(id, pushHistory = true) {
     document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972513/image_drh1u3.png');
   }
 
+  function renderMasterOfTheWeek() {
+    const el = document.getElementById('hero-motw');
+    if (!el) return;
+
+    let featured;
+    if (FEATURED_MASTER_OVERRIDE) {
+      featured = PEOPLE.find(p => p.id === FEATURED_MASTER_OVERRIDE);
+    }
+
+    if (!featured) {
+      // Seed by ISO week number so it changes every Monday
+      const now = new Date();
+      const startOfYear = new Date(now.getFullYear(), 0, 1);
+      const week = Math.floor((now - startOfYear) / (7 * 24 * 60 * 60 * 1000));
+      const seed = now.getFullYear() * 100 + week;
+      const index = seed % PEOPLE.length;
+      featured = PEOPLE[index];
+    }
+
+    if (!featured) return;
+
+    const discipline = displayDiscipline(featured.discipline);
+    const total = PEOPLE.length;
+    const disciplines = [...new Set(PEOPLE.flatMap(p => Array.isArray(p.discipline) ? p.discipline : [p.discipline]))].length;
+
+    el.innerHTML = `
+      <p class="hero-stat">${total} Masters. ${disciplines} Disciplines.</p>
+      <div class="hero-motw-rule"></div>
+      <div class="hero-motw-block" onclick="showProfile('${featured.id}')">
+        <p class="hero-motw-label">A Master Worth Knowing</p>
+        <p class="hero-motw-name">${featured.name}</p>
+        <p class="hero-motw-discipline">${discipline}</p>
+      </div>
+    `;
+  }
+
 function showGallery(pushHistory = true) {
   document.getElementById('view-profile').style.display = 'none';
   document.getElementById('view-gallery').style.display = 'block';
@@ -4525,6 +4651,7 @@ function showSurprise() {
 document.getElementById('surprise-btn').addEventListener('click', showSurprise);
 
 buildGallery(PEOPLE);
+renderMasterOfTheWeek();
 document.getElementById('footer-count').textContent = `${PEOPLE.length} visual architects and counting.`;
 
 const searchInput = document.getElementById('search-input');
