@@ -13,6 +13,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Masters Of Sight</title>
+<meta name="description" content="A living archive of the visual architects who shaped how we see. Photographers, directors, cinematographers, designers, and game makers." id="meta-description">
+<link rel="canonical" href="https://mastersofsight.com/" id="canonical-url">
 <meta property="og:title" content="Masters Of Sight" />
 <meta property="og:description" content="A living archive of the artists who taught us how to see." />
 <meta property="og:type" content="website" />
@@ -4309,6 +4311,7 @@ function showProfile(id, pushHistory = true) {
     relatedEl.style.display = 'none';
   }
 
+  updatePageMeta(person);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const navName = document.getElementById('nav-profile-name');
@@ -4327,6 +4330,34 @@ function showProfile(id, pushHistory = true) {
   window.addEventListener('scroll', window._profileScrollHandler, { passive: true });
 }
 
+  function updatePageMeta(person) {
+    const discipline = displayDiscipline(person.discipline);
+    const lifespan = person.died ? `${person.born}–${person.died}` : `b. ${person.born}`;
+    const bioSnippet = person.bio.length > 150 ? person.bio.slice(0, 147).trimEnd() + '...' : person.bio;
+    const title = `${person.name} — Masters Of Sight`;
+    const description = `${person.name}, ${discipline}. ${lifespan}. ${bioSnippet}`;
+    const url = `https://mastersofsight.com/#${person.id}`;
+    const image = person.coverImage || 'https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972513/image_drh1u3.png';
+
+    document.title = title;
+    document.getElementById('meta-description').setAttribute('content', description);
+    document.getElementById('canonical-url').setAttribute('href', url);
+
+    document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+    document.querySelector('meta[property="og:image"]').setAttribute('content', image);
+  }
+
+  function resetPageMeta() {
+    document.title = 'Masters Of Sight';
+    document.getElementById('meta-description').setAttribute('content', 'A living archive of the visual architects who shaped how we see. Photographers, directors, cinematographers, designers, and game makers.');
+    document.getElementById('canonical-url').setAttribute('href', 'https://mastersofsight.com/');
+
+    document.querySelector('meta[property="og:title"]').setAttribute('content', 'Masters Of Sight');
+    document.querySelector('meta[property="og:description"]').setAttribute('content', 'A living archive of the artists who taught us how to see.');
+    document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://res.cloudinary.com/dx8kswwgb/image/upload/v1779972513/image_drh1u3.png');
+  }
+
 function showGallery(pushHistory = true) {
   document.getElementById('view-profile').style.display = 'none';
   document.getElementById('view-gallery').style.display = 'block';
@@ -4337,6 +4368,7 @@ function showGallery(pushHistory = true) {
   document.querySelector('.nav-logo').classList.remove('nav-logo--hidden');
   window._profileScrollHandler && window.removeEventListener('scroll', window._profileScrollHandler);
   window._profileScrollHandler = null;
+  resetPageMeta();
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (pushHistory) history.pushState({ view: 'gallery' }, '', window.location.pathname);
 }
