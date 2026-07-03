@@ -1715,6 +1715,37 @@ let _activeDiscipline = 'all';
   const FEATURED_MASTER_OVERRIDE = "hayao-miyazaki";
 
 const PEOPLE = [
+  {
+    id: "jack-kirby",
+    related: ["moebius", "ridley-scott", "yoji-shinkawa"],
+    name: "Jack Kirby",
+    discipline: "Dream Makers",
+    style: "Cosmic / Collage",
+    born: "1917",
+    died: "1994",
+    nationality: "American",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783110263/captain-america-cover-punch_uavy9s.avif",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783110264/new-gods-1-0_y70ym5.avif" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783110263/fantastic-four-1-1961_0_eptrwu.webp" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783110265/black-panther-1-1977_cfukok.webp" }
+    ],
+    url: "https://en.wikipedia.org/wiki/Jack_Kirby",
+    bio: "Jack Kirby drew the visual grammar that every cosmic blockbuster since has been quoting whether it knows it or not. Working across four decades at Marvel and DC, he co-created the Fantastic Four, the Hulk, Thor, the X-Men, and Captain America, and in every case the drawing did as much storytelling as the script. His figures hit the panel border like they were trying to break out of the page, and his machinery looked engineered rather than imagined, dense, riveted, load-bearing. By the time he built the New Gods at DC he had stopped illustrating other people's mythology and started inventing his own.",
+    traits: [
+      "The Kirby Krackle. Dot-field explosions of black stippling used to render cosmic energy no one had drawn before.",
+      "Foreshortened, blocky anatomy that makes figures feel like they're punching through the panel border.",
+      "Machinery drawn with the conviction of an engineer, tech that reads as load-bearing, not decorative.",
+      "Diagonal, explosive panel geometry that breaks the grid instead of resting inside it.",
+      "Scale as emotional information. Gods and machines dwarfing characters to make stakes legible instantly."
+    ],
+    works: [
+      { title: "Captain America Comics #1 (1941, with Joe Simon)", desc: "The shield-first punch on the cover, aimed at a real man in power months before Pearl Harbor. Superhero comics as political weapon, established on page one." },
+      { title: "Fantastic Four (1961-1970, with Stan Lee)", desc: "The Marvel visual template. Galactus, the Negative Zone, the Inhumans, cosmic scale rendered with the same density as a street fight." },
+      { title: "The New Gods (1971)", desc: "Kirby with total creative control at DC. New Genesis and Apokolips built from scratch, mythology as pure collage and dot-field energy." },
+      { title: "Fantastic Four by Jack Kirby (Monograph)", desc: "The collected run at the height of his cosmic period, drawn and co-plotted. The primary source for nearly everything above.", links: [{ type: "book", url: "https://bookshop.org/p/books/fantastic-four-jack-kirby/845f98f3bfe64e7f?ean=9780143135838" }] }
+    ]
+  },
   // ── ORIGINAL 9 ── (your existing entries, unchanged)
   {
     id: "annie-liebovitz",
@@ -1984,7 +2015,8 @@ const PEOPLE = [
     works: [
       { title: "IBM Rebus poster (1981)", desc: "Eye. Bee. M. Modernism and wordplay fused. Still the most elegant logo presentation ever made." },
       { title: "ABC logo (1962)", desc: "A circle, some letters. Fifty years of broadcast identity." },
-      { title: "Thoughts on Design (1947)", desc: "The manifesto. Still required reading for anyone who touches visual communication." }
+      { title: "Thoughts on Design (1947)", desc: "The manifesto. Still required reading for anyone who touches visual communication." },
+      { title: "Design, Form, and Chaos (Monograph)", desc: "Rand's own writing on the discipline he helped define. Essays and case studies from a man who believed a logo was a philosophy compressed to a symbol, told this time in his own words.", links: [{ type: "book", url: "https://bookshop.org/p/books/design-form-and-chaos-paul-rand/fe6ecd89625f701b?ean=9780300230918" }] }
     ]
   },
   {
@@ -2996,7 +3028,8 @@ const PEOPLE = [
     works: [
       { title: "Avant Garde magazine (1968–1971)", desc: "The most visually adventurous magazine in American history. Every issue a typographic event." },
       { title: "ITC Avant Garde Gothic (1970)", desc: "The typeface derived from the magazine's logo. Still everywhere, still electrifying when used correctly." },
-      { title: "Mother & Child logotype", desc: "Two words. Perfectly letterspaced. The infant tucked inside the ampersand. Still the most elegant piece of visual wordplay ever made." }
+      { title: "Mother & Child logotype", desc: "Two words. Perfectly letterspaced. The infant tucked inside the ampersand. Still the most elegant piece of visual wordplay ever made." },
+      { title: "Herb Lubalin: American Graphic Designer (Monograph)", desc: "Adrian Shaughnessy's survey of a career built almost entirely on letterforms, tracing the path from Avant Garde magazine through decades of typographic experiments most designers only encounter in fragments.", links: [{ type: "book", url: "https://bookshop.org/p/books/herb-lubalin-american-graphic-designer-adrian-shaughnessy/38eb419faed435ba?ean=9780500028094" }] }
     ]
   },
   {
@@ -3052,7 +3085,8 @@ const PEOPLE = [
     works: [
       { title: "AIGA Detroit poster (1999)", desc: "Conference details carved into his own skin and photographed. Still the most viscerally impactful design poster ever made." },
       { title: "Things I Have Learned in My Life So Far (2008)", desc: "Typography installed in public spaces worldwide. Personal philosophy as street-level visual intervention." },
-      { title: "The Happy Film (2016)", desc: "A documentary about whether happiness can be designed. The experiment is the work." }
+      { title: "The Happy Film (2016)", desc: "A documentary about whether happiness can be designed. The experiment is the work." },
+      { title: "Now Is Better (Monograph)", desc: "A meditation on time and mortality, built from the belief that work matters more once you understand exactly how little of it you get. Typographic risk-taking and data visualization in equal measure.", links: [{ type: "book", url: "https://bookshop.org/p/books/now-is-better-stefan-sagmeister/979fcff35bdd8515?ean=9781838666965" }] }
     ]
   },
   {
@@ -3079,7 +3113,8 @@ const PEOPLE = [
     works: [
       { title: "I Love New York (1977)", desc: "The most recognisable logo on earth. Designed for free as a public service. Copied forever." },
       { title: "Bob Dylan poster (1966)", desc: "Psychedelic silhouette. A moment when graphic design became genuinely countercultural." },
-      { title: "New York magazine (1968)", desc: "Co-founded the publication that defined urban magazine design for a generation." }
+      { title: "New York magazine (1968)", desc: "Co-founded the publication that defined urban magazine design for a generation." },
+      { title: "Milton Glaser: Graphic Design (Monograph)", desc: "Glaser's own retrospective, organized the way he thought, warmly and plainly, built on the conviction that design's job is to communicate before it impresses.", links: [{ type: "book", url: "https://bookshop.org/p/books/milton-glaser-graphic-design-milton-glaser/4e80c3a7d730ec9e?ean=9780879511883" }] }
     ]
   },
   {
@@ -3933,7 +3968,8 @@ What remains is a catalog that reshaped two decades of games and a question mark
     works: [
       { title: "Braun T3 transistor radio (1958)", desc: "The direct visual ancestor of the iPod. Geometry, function, and material honesty in one object." },
       { title: "606 Universal Shelving System (1960)", desc: "Still in production. Still correct. The shelving system as a statement about permanence in design." },
-      { title: "Ten Principles of Good Design (1976)", desc: "The manifesto. Required reading for anyone who makes or uses objects, which is everyone." }
+      { title: "Ten Principles of Good Design (1976)", desc: "The manifesto. Required reading for anyone who makes or uses objects, which is everyone." },
+      { title: "Dieter Rams: The Complete Works (Monograph)", desc: "Klaus Klemp's exhaustive catalogue of six decades at Braun and Vitsœ. Every product, every principle, laid out as proof that less but better was never a slogan, it was a method.", links: [{ type: "book", url: "https://bookshop.org/p/books/dieter-rams-the-complete-works-klaus-klemp/14f00232a49639a9?ean=9781838661533" }] }
     ]
   },
   {
@@ -4027,7 +4063,8 @@ What remains is a catalog that reshaped two decades of games and a question mark
     works: [
       { title: "Vertigo title sequence (1958)", desc: "Spirals from a human eye. Bernard Herrmann's score underneath. The most psychologically precise opening in cinema history." },
       { title: "The Man with the Golden Arm (1955)", desc: "A jagged arm. White bars. Jazz. It invented the modern film title sequence and nobody has fully surpassed it." },
-      { title: "AT&T logo (1983)", desc: "The Death Star globe, his critics called it. Fifty years later it is still the company's face. That is what correct looks like." }
+      { title: "AT&T logo (1983)", desc: "The Death Star globe, his critics called it. Fifty years later it is still the company's face. That is what correct looks like." },
+      { title: "Saul Bass: A Life in Film & Design (Monograph)", desc: "Written by his daughter Jennifer Bass with Pat Kirkham. The fullest account of his career ever assembled, spanning title sequences, corporate identity work, and the short films he made purely for himself.", links: [{ type: "book", url: "https://bookshop.org/p/books/saul-bass-a-life-in-film-and-design-jennifer-bass/de01f89d1dc36284?ean=9781856697521" }] }
     ]
   },
   {
