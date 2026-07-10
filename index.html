@@ -4638,6 +4638,36 @@ function showProfile(id, pushHistory = true) {
     document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972513/image_drh1u3.png');
   }
 
+  function getISOWeekSeed(date) {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(d.getUTCDate() - dayNum + 3);
+    const firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+    const firstDayNum = (firstThursday.getUTCDay() + 6) % 7;
+    firstThursday.setUTCDate(firstThursday.getUTCDate() - firstDayNum + 3);
+    const weekNum = 1 + Math.round((d - firstThursday) / (7 * 24 * 60 * 60 * 1000));
+    return `${d.getUTCFullYear()}-W${weekNum}`;
+  }
+
+  function hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+    }
+    return hash;
+  }
+
+  function pickFeaturedForSeed(weekSeed, excludeIds) {
+    let best = null;
+    let bestHash = -Infinity;
+    PEOPLE.forEach(p => {
+      if (excludeIds.includes(p.id)) return;
+      const h = hashString(weekSeed + p.id);
+      if (h > bestHash) { bestHash = h; best = p; }
+    });
+    return best;
+  }
+
   function renderMasterOfTheWeek() {
     const el = document.getElementById('hero-motw');
     if (!el) return;
@@ -4648,13 +4678,17 @@ function showProfile(id, pushHistory = true) {
     }
 
     if (!featured) {
-      // Seed by ISO week number so it changes every Monday
       const now = new Date();
-      const startOfYear = new Date(now.getFullYear(), 0, 1);
-      const week = Math.floor((now - startOfYear) / (7 * 24 * 60 * 60 * 1000));
-      const seed = now.getFullYear() * 100 + week;
-      const index = seed % PEOPLE.length;
-      featured = PEOPLE[index];
+      const currentSeed = getISOWeekSeed(now);
+      const NO_REPEAT_WEEKS = 3;
+      const excludeIds = [];
+      for (let i = 1; i <= NO_REPEAT_WEEKS; i++) {
+        const pastDate = new Date(now.getTime() - i * 7 * 24 * 60 * 60 * 1000);
+        const pastSeed = getISOWeekSeed(pastDate);
+        const pastPick = pickFeaturedForSeed(pastSeed, []);
+        if (pastPick) excludeIds.push(pastPick.id);
+      }
+      featured = pickFeaturedForSeed(currentSeed, excludeIds) || pickFeaturedForSeed(currentSeed, []);
     }
 
     if (!featured) return;
