@@ -4742,6 +4742,13 @@ function showProfile(id, pushHistory = true) {
     return `${d.getUTCFullYear()}-W${weekNum}`;
   }
 
+  function getISOWeekMonday(date) {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(d.getUTCDate() - dayNum);
+    return d;
+  }
+
   function hashString(str) {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
@@ -4750,11 +4757,16 @@ function showProfile(id, pushHistory = true) {
     return hash;
   }
 
-  function pickFeaturedForSeed(weekSeed, excludeIds) {
+  function pickFeaturedForSeed(weekSeed, excludeIds, weekStartDate) {
     let best = null;
     let bestHash = -Infinity;
     PEOPLE.forEach(p => {
       if (excludeIds.includes(p.id)) return;
+      if (p.added && weekStartDate) {
+        const [year, month, day] = p.added.split('-').map(Number);
+        const addedDate = new Date(Date.UTC(year, month - 1, day || 1));
+        if (addedDate >= weekStartDate) return;
+      }
       const h = hashString(weekSeed + p.id);
       if (h > bestHash) { bestHash = h; best = p; }
     });
@@ -4773,15 +4785,17 @@ function showProfile(id, pushHistory = true) {
     if (!featured) {
       const now = new Date();
       const currentSeed = getISOWeekSeed(now);
+      const currentWeekStart = getISOWeekMonday(now);
       const NO_REPEAT_WEEKS = 3;
       const excludeIds = [];
       for (let i = 1; i <= NO_REPEAT_WEEKS; i++) {
         const pastDate = new Date(now.getTime() - i * 7 * 24 * 60 * 60 * 1000);
         const pastSeed = getISOWeekSeed(pastDate);
-        const pastPick = pickFeaturedForSeed(pastSeed, []);
+        const pastWeekStart = getISOWeekMonday(pastDate);
+        const pastPick = pickFeaturedForSeed(pastSeed, [], pastWeekStart);
         if (pastPick) excludeIds.push(pastPick.id);
       }
-      featured = pickFeaturedForSeed(currentSeed, excludeIds) || pickFeaturedForSeed(currentSeed, []);
+      featured = pickFeaturedForSeed(currentSeed, excludeIds, currentWeekStart) || pickFeaturedForSeed(currentSeed, [], currentWeekStart);
     }
 
     if (!featured) return;
