@@ -1756,6 +1756,7 @@ const PEOPLE = [
     born: "1949",
     nationality: "American",
     coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778523565/Annie_20Liebovitz_dmqkog.jpg",
+    coverImagePosition: "center top",
     galleryImages: [
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778523565/3376e8a93d8bd3422f8bd56e85526aa8_tig9h1.jpg",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778523565/famous-black-women-shot-by-annie-leibovitz-vs-by-someone-v0-9fdybyj1r3if1.jpg_gvcpqn.webp",
@@ -4364,6 +4365,36 @@ What remains is a catalog that reshaped two decades of games and a question mark
     ]
   },
   {
+    id: "lara-zankoul",
+    related: ["tim-walker", "annie-liebovitz", "guillermo-del-toro"],
+    name: "Lara Zankoul",
+    discipline: "Photographer",
+    style: "Surreal / Conceptual",
+    born: "1987",
+    nationality: "Lebanese",
+    added: "2026-07-16",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784231299/5.jpg_me4orx.webp",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784231298/The_Zoo_R_CR_Approved_copy.jpg_zachyb.webp" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784231301/LZ_UW10729copy2.jpg_o6niu4.webp" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784231297/edit_giving_in_to_clouds_clean3.jpg_x1aqny.webp" }
+    ],
+    url: "https://www.larazankoul.com",
+    bio: "Lara Zankoul turns Beirut apartments into stage sets for the subconscious. Self-taught and trained in economics rather than art school, she builds her surreal tableaux entirely in camera, using human sized water tanks and traditional Lebanese interiors instead of software to bend reality. Her Unseen series submerges subjects to expose the split between who they present and what they conceal, while Dream sends women levitating through ornately painted rooms salvaged from a country losing its architecture one demolition at a time. She has shown at Ayyam Gallery in Beirut and Dubai and at Guy Hepner in New York, and Broncolor named her a GenNext winner in 2016. Every image reads like proof that Lebanon's interior life survived what its exterior did not.",
+    traits: [
+      "Builds every surreal effect physically, water tanks, painted rooms, constructed sets, with no digital compositing.",
+      "Uses traditional Lebanese homes as recurring stages, high ceilings, hand painted walls, and mosaic floors treated as architecture worth preserving on film.",
+      "Splits a single frame into two truths, submerged and dry, concealed and revealed, most explicit in the water tank work.",
+      "Soft, muted color palettes that read closer to memory than documentation.",
+      "Female figures suspended mid gesture, levitating, diving, floating, never simply posed."
+    ],
+    works: [
+      { title: "Voyage (Monograph)", desc: "A collected survey of her surreal and fashion work gathered into a single volume, her self taught technique laid out series by series.", links: [{ type: "book", url: "https://shop.snap-collective.com/products/voyage-by-lara-zankoul?srsltid=AfmBOopu6S-Xvvkh4K3chnfKJFk9irdAbdbD0uqqs4bqqxBVG3w4DwhD" }] },
+      { title: "The Unseen (2014)", desc: "A human sized water tank splits each subject into two contrasting halves, submerged and dry, built entirely in camera with no digital manipulation." },
+      { title: "Dream", desc: "Women levitate and drift through traditional Lebanese homes with hand painted walls and mosaic floors, several photographed just before the houses were demolished." }
+    ]
+  },
+  {
     id: "brad-bird",
     name: "Brad Bird",
     discipline: "Director",
@@ -4697,7 +4728,7 @@ function showProfile(id, pushHistory = true) {
         <div class="related-masters-grid">
           ${relatedPeople.map(rp => `
             <div class="related-card" onclick="showProfile('${rp.id}')">
-              <img class="related-card-img" src="${rp.coverImage || ''}" alt="${rp.name}" loading="lazy">
+              <img class="related-card-img" src="${rp.coverImage || ''}" alt="${rp.name}" loading="lazy" style="object-position: ${rp.coverImagePosition || 'center center'}">
               <div class="related-card-info">
                 <p class="related-card-discipline">${displayDiscipline(rp.discipline)}</p>
                 <p class="related-card-name">${rp.name}</p>
