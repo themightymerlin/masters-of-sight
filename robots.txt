@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mastersofsight.com/sitemap.xml
