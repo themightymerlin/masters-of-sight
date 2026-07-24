@@ -1638,7 +1638,6 @@
     <button class="filter-btn" onclick="filterCards('Designer', this)">Designers</button>
     <button class="filter-btn" onclick="filterCards('Director', this)">Directors</button>
     <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographers</button>
-    <button class="filter-btn" onclick="filterCards('Provocateur', this)">Provocateurs</button>
     <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
   </div>
 
@@ -2004,10 +2003,9 @@ const PEOPLE = [
     style: "Hyperrealist / Pop",
     born: "1963",
     nationality: "American",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300375/david-lachapelle-the-house-at-the-end-of-the-world-los-angeles-2005-courtesy-of-visu-contemporary_swyke4.jpg",
-    coverImagePosition: "calc(50% + 120px) top",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300374/David-LaChapelle-Do-You-Realize-Still-Montage-32_ifqfpb.jpg",
     galleryImages: [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300374/David-LaChapelle-Do-You-Realize-Still-Montage-32_ifqfpb.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300375/david-lachapelle-the-house-at-the-end-of-the-world-los-angeles-2005-courtesy-of-visu-contemporary_swyke4.jpg",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300372/dlc-5_zaajuh.jpg",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300371/david-lachapelle-good-news-lost-and-found-ss03.jpg_rh4dwh.webp",
     ],
@@ -2444,36 +2442,9 @@ const PEOPLE = [
     ]
   },
   {
-    id: "banksy",
-    related: ["shepard-fairey", "barbara-kruger", "martin-parr"],
-    name: "Banksy",
-    discipline: "Provocateur",
-    style: "Street Art / Political Satire",
-    born: "c. 1973",
-    nationality: "British",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780152234/image_fbctsm.jpg",
-    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780151986/image_pedwgz.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780151997/image_oczz7z.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780152036/image_ptlvgf.jpg"],
-    url: "https://www.banksy.co.uk",
-    bio: "Banksy is the anonymous Bristol-born street artist who turned public walls into editorial cartoons and self-destruction into a performance. His stencil work weaponizes irony, rats carrying placards, soldiers drawing peace signs, children releasing balloons. The anonymity is not a gimmick; it forces the work to stand alone without the celebrity apparatus that normally tells you how to feel. He operates inside the art market while systematically humiliating it, most famously shredding his own Girl with Balloon the moment it sold at Sotheby's for £1 million. The system bought the critique and got got.",
-    traits: [
-      "Stencil technique enabling fast, repeatable deployment on public surfaces.",
-      "Site-specificity. The wall, the neighbourhood, the context are the medium.",
-      "Anonymity as structural argument: the work is the point, not the artist.",
-      "Institutional critique through participation. Entering the gallery to sabotage it.",
-      "Dark comedy as political argument: satire lands where protest cannot."
-    ],
-    philosophy: "The greatest crimes in the world are not committed by people breaking the rules but by people following the rules.",
-    works: [
-      { title: "Girl with Balloon (2002)", desc: "A child reaches toward a red heart-shaped balloon. His most recognisable image, optimism read as loss, hope read as futility." },
-      { title: "Shredding at Sotheby's (2018)", desc: "The moment Girl with Balloon auto-shredded after selling for £1M. The destruction was the artwork. The art world bought it anyway." },
-      { title: "Dismaland (2015)", desc: "A full-scale dystopian theme park in Weston-super-Mare. Cinderella's castle in ruin. The most elaborate institutional prank in contemporary art." }
-    ]
-  },
-
-  {
     id: "martin-parr",
     died: "2025",
-    related: ["william-eggleston", "barbara-kruger", "shepard-fairey"],
+    related: ["william-eggleston", "shepard-fairey", "wes-anderson"],
     name: "Martin Parr",
     discipline: "Photographer",
     style: "Documentary / Satirical",
@@ -2627,7 +2598,7 @@ const PEOPLE = [
   },
   {
     id: "jordan-peele",
-    related: ["stanley-kubrick", "dana-scruggs", "barbara-kruger"],
+    related: ["stanley-kubrick", "dana-scruggs", "ryan-coogler"],
     name: "Jordan Peele",
     discipline: "Director",
     style: "Horror / Social",
@@ -2751,10 +2722,10 @@ const PEOPLE = [
   },
   {
     id: "shepard-fairey",
-    related: ["banksy", "barbara-kruger", "milton-glaser"],
+    related: ["milton-glaser", "paul-rand", "stefan-sagmeister"],
     name: "Shepard Fairey",
-    discipline: "Provocateur",
-    style: "Propaganda Aesthetics / Street Art",
+    discipline: "Designer",
+    style: "Bold Reduction / Poster Systems",
     born: "1970",
     nationality: "American",
     coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780151631/image_djgt7d.jpg",
@@ -2773,58 +2744,6 @@ const PEOPLE = [
       { title: "André the Giant Has a Posse (1989)", desc: "A sticker campaign that became a 20-year street art experiment in semiotics and the mechanics of cult imagery." },
       { title: "Obama Hope (2008)", desc: "The most iconic political poster since WWII. Made without commission, reproduced without permission, seen by everyone." },
       { title: "OBEY Giant (1989–ongoing)", desc: "An ongoing propaganda campaign with no product, no manifesto, no message, just the structure of messaging itself." }
-    ]
-  },
-  {
-    id: "jenny-holzer",
-    related: ["barbara-kruger", "banksy", "stefan-sagmeister"],
-    name: "Jenny Holzer",
-    discipline: "Provocateur",
-    style: "Text / Installation",
-    born: "1950",
-    nationality: "American",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015623/Jenny_Holzer_Guggenheim_ysc4hh.jpg",
-    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015631/Jenny_Holzer_Projections_dbn8j8.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015628/Jenny_Holzer_7_WTC_detail_uah4tu.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015625/Holzer_forthecity_Bobst_ydfvzv.jpg"],
-    url: "https://en.wikipedia.org/wiki/Jenny_Holzer",
-    bio: "Jenny Holzer puts words in places words are not supposed to go and trusts that the collision will do something to you. She started by pasting anonymous broadsides across Lower Manhattan in the late 1970s, one-liners and provocations printed on cheap paper and wheatpasted over whatever surface would hold them. Protect me from what I want. Abuse of power comes as no surprise. In a dream you saw a way to survive and you were full of joy. The sentences are simple enough to read in a single glance and complex enough to live in your head for decades. She moved from streets to LED installations to projections onto the facades of government buildings, the Pentagon, the Guggenheim, ancient ruins in Europe. The medium keeps changing. The project stays the same: language as a physical force, words made so large and so public and so unavoidable that they stop being things you read and start being things you feel.",
-    traits: [
-      "Text as the primary visual and sculptural material, language treated with the same intentionality other artists bring to paint or stone.",
-      "The LED ticker as signature medium, words scrolling through public space with the authority of news and the weight of poetry.",
-      "Institutional surfaces used against institutional power, government buildings and museums becoming the canvas for their own critique.",
-      "Anonymity in the early work as structural argument, the Truisms presented without authorship so the ideas had to stand entirely alone.",
-      "Scale as amplification, words made building-sized because some things need to be impossible to look away from."
-    ],
-    philosophy: "Language can be used as material. It has weight, it has presence, it occupies space. When you put it in the right place it becomes something you cannot un-see.",
-    works: [
-      { title: "Truisms (1977-1979)", desc: "Anonymous broadsides pasted across Lower Manhattan. Hundreds of one-line statements presented without hierarchy or authorship. The project that established her entire practice in a single gesture." },
-      { title: "Inflammatory Essays (1979-1982)", desc: "100 word texts printed in bold type on colored paper and wheatpasted over the Truisms. Angrier, more urgent, deliberately destabilizing. Words as incitement." },
-      { title: "For the City, Rockefeller Center (2005)", desc: "A massive public projection onto the facades of Rockefeller Center. Text drawn from declassified government documents about torture scrolling across one of the most visible surfaces in America." }
-    ]
-  },
-  {
-    id: "barbara-kruger",
-    related: ["jenny-holzer", "shepard-fairey", "jordan-peele"],
-    name: "Barbara Kruger",
-    discipline: "Provocateur",
-    style: "Conceptual / Political",
-    born: "1945",
-    nationality: "American",
-    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015219/JOYFul_LOSERS_-_Flickr_-_Biker_Jun_shmqwc.jpg",
-    galleryImages: ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015210/Barbara_Kruger_at_ACCA__Melbourne_lfnzn7.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015216/Belief_Doubt__2012_i2tkvs.jpg", "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781015213/Barbara_Kruger_Staircase_pav47n.jpg"],
-    url: "https://en.wikipedia.org/wiki/Barbara_Kruger",
-    bio: "Barbara Kruger turned graphic design into a weapon and aimed it directly at power. Working in the visual language of advertising and mass media, she appropriated the tools of consumer culture and used them to dismantle it from the inside. Black and white photography overlaid with bold Futura Bold Oblique text in red and white bars. The format is instantly recognizable. The content is a sustained interrogation of who holds authority, who gets watched, who gets believed, and who gets to say so. She spent years as a picture editor and art director at Condé Nast before pivoting to fine art, and that commercial fluency is the whole point. She knows exactly how persuasion works because she spent years doing it professionally. Her art is what happens when someone with that knowledge decides to turn it around and point it back at the system that taught her.",
-    traits: [
-      "Futura Bold Oblique in white on red bars as a visual signature so distinct it has become a cultural shorthand for dissent.",
-      "Black and white photographic appropriation stripped of its original context and reloaded with new and destabilizing meaning.",
-      "Direct address to the viewer, you, your, we, they, positioning the audience inside the argument rather than outside it.",
-      "The scale of installation work used as aggression, entire rooms wrapped in text that cannot be ignored or walked past casually.",
-      "Advertising's own grammar turned against it, the billboard format weaponized as critique of the billboard format."
-    ],
-    philosophy: "I work with pictures and words because they have the ability to determine who we are and who we aren't.",
-    works: [
-      { title: "Untitled (Your Body Is a Battleground), 1989", desc: "Made for the Washington D.C. pro-choice march. A split face, positive and negative, text that became a rallying cry. One of the most reproduced political artworks ever made." },
-      { title: "Untitled (I Shop Therefore I Am), 1987", desc: "Descartes rewritten as consumer culture's actual philosophy. Four words that said everything about late capitalism that needed saying." },
-      { title: "Belief + Doubt, Hirshhorn Museum (2012)", desc: "A permanent floor-to-ceiling installation wrapping the entire museum lobby in text. Architecture as argument. Impossible to stand inside without feeling implicated." }
     ]
   },
   {
@@ -3198,7 +3117,7 @@ const PEOPLE = [
   },
   {
     id: "stefan-sagmeister",
-    related: ["banksy", "barbara-kruger", "david-lachapelle"],
+    related: ["david-lachapelle", "shepard-fairey", "milton-glaser"],
     name: "Stefan Sagmeister",
     discipline: "Designer",
     style: "Provocateur / Experiential",
@@ -4580,6 +4499,38 @@ What remains is a catalog that reshaped two decades of games and a question mark
       { title: "Swiss Army Man (2016)", desc: "A dead body becomes transportation, water fountain, and best friend. The most sincere film ever made about a farting corpse.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/swiss-army-man" }] },
       { title: "Everything Everywhere All at Once (2022)", desc: "An IRS audit spirals into the multiverse. Best Picture winner. The googly eyes carry more weight than most films' entire third acts.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/everything-everywhere-all-at-once" }] },
       { title: "Turn Down for What (2013)", desc: "A music video that turned uncontrollable dancing into body horror, practical effects and physical comedy pushed until the joke became something closer to a nightmare.", links: [{ type: "watch", url: "https://www.youtube.com/watch?v=wxN1T1uxQ2g" }] }
+    ]
+  },
+  {
+    id: "zack-snyder",
+    related: ["david-ayer", "jack-kirby", "ridley-scott"],
+    added: "2026-07-24",
+    name: "Zack Snyder",
+    discipline: "Director",
+    style: "Operatic / Mythic",
+    born: "1966",
+    nationality: "American",
+    coverImage: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910701/Q4VRZX5N_ckai5s.jpg",
+    galleryMedia: [
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910701/M58Y4RWU_xwwm0e.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910702/CGCWO5JM_cn9jbm.jpg", caption: "" },
+      { type: "image", src: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910954/738G9QJU_wasjv2.jpg", caption: "" },
+      { type: "video", youtubeId: "ui37YKQ9AC4", thumb: "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784911128/Screenshot_2026-07-24_at_12.38.25_qv3xhn.png", caption: "" }
+    ],
+    url: "https://en.wikipedia.org/wiki/Zack_Snyder",
+    bio: "Zack Snyder treats the camera like a weapon and slow motion like punctuation, and no other director working at blockbuster scale has committed so completely to that idea. He came up shooting commercials, then rebuilt 300 as a frame for frame recreation of Frank Miller's panels, full body green screen and speed ramping used to make violence feel like scripture. Watchmen pushed the same discipline further, treating Alan Moore's book as something closer to sacred text than source material. His superhero films read differently than anyone else's, slower, heavier, staged like religious paintings instead of theme park rides, which is exactly why they split audiences down the middle every time.",
+    traits: [
+      "Slow motion used as punctuation, not spectacle. A single frame held long enough to become a tableau.",
+      "Frame for frame panel recreation, treating comic source material as storyboard rather than inspiration.",
+      "Desaturated, high contrast color grading that reads as mythic rather than naturalistic.",
+      "Composition built like religious painting, symmetrical, low angle, figures lit from below like icons.",
+      "A refusal to soften violence or grief, sequences held past the point most studio films would cut away."
+    ],
+    works: [
+      { title: "300 (2006)", desc: "Nearly every frame shot against green screen and built to match Frank Miller's panels exactly, speed ramping turning slow motion into a visual dialect the industry spent the next decade imitating.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/300" }] },
+      { title: "Watchmen (2009)", desc: "A near line for line adaptation of Alan Moore's supposedly unfilmable book, right down to a title sequence that compresses forty years of alternate history into four minutes.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/watchmen" }] },
+      { title: "Zack Snyder's Justice League (2021)", desc: "The four hour cut released after a fan campaign forced a studio's hand, framed in 4:3 for IMAX and the clearest, least compromised version of Snyder's visual language ever put in front of an audience.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/zack-snyders-justice-league" }] },
+      { title: "Man of Steel (2013)", desc: "A Superman shot handheld and lens flared like a nature documentary, swapping comic book primary colors for something closer to Malick, the first take on the character that felt genuinely unsettled by what he is.", links: [{ type: "watch", url: "https://www.justwatch.com/us/movie/man-of-steel" }] }
     ]
   }
 ];
