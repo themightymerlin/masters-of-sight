@@ -4802,8 +4802,9 @@ function getInitials(name) {
   return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
 
-function displayDiscipline(d) {
-  if (Array.isArray(d)) return d.map(displayDiscipline).join(' / ');
+function displayDiscipline(d, entityType) {
+  if (Array.isArray(d)) return d.map(x => displayDiscipline(x, entityType)).join(' / ');
+  if (entityType === 'duo' && d === 'Director') return 'Directors';
   return d === 'Dream Makers' ? 'Dream Maker' : d;
 }
 
@@ -4835,7 +4836,7 @@ function buildCard(person) {
       <span class="card-placeholder-initials">${getInitials(person.name)}</span>
     </div>
     <div class="card-info">
-      <p class="card-discipline">${displayDiscipline(person.discipline)}</p>
+      <p class="card-discipline">${displayDiscipline(person.discipline, person.entityType)}</p>
       <p class="card-name">${person.cardName || formatCardName(person.name)}</p>
     </div>
     <div class="card-arrow">↗</div>
@@ -4882,7 +4883,7 @@ function showProfile(id, pushHistory = true) {
   heroImg.style.objectPosition = person.coverImagePosition || 'center center';
   heroImg.alt = person.name;
 
-  document.getElementById('p-discipline').textContent = displayDiscipline(person.discipline);
+  document.getElementById('p-discipline').textContent = displayDiscipline(person.discipline, person.entityType);
   document.getElementById('p-name').textContent = person.name;
 
   const tags = document.getElementById('p-tags');
@@ -4986,7 +4987,7 @@ function showProfile(id, pushHistory = true) {
 
   const meta = document.getElementById('p-meta');
   meta.innerHTML = `
-    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${displayDiscipline(person.discipline)}</span></div>
+    <div class="meta-row"><span class="meta-label">Discipline</span><span class="meta-value">${displayDiscipline(person.discipline, person.entityType)}</span></div>
     <div class="meta-row"><span class="meta-label">Style</span><span class="meta-value">${person.style}</span></div>
     <div class="meta-row"><span class="meta-label">${person.died ? 'Years' : person.entityType === 'studio' ? 'Founded' : person.entityType === 'duo' ? 'Formed' : 'Born'}</span><span class="meta-value">${person.died ? `${person.born} - ${person.died}` : person.born}</span></div>
     <div class="meta-row"><span class="meta-label">Nationality</span><span class="meta-value">${person.nationality}</span></div>
@@ -5010,7 +5011,7 @@ function showProfile(id, pushHistory = true) {
             <div class="related-card" onclick="showProfile('${rp.id}')">
               <img class="related-card-img" src="${rp.coverImage || ''}" alt="${rp.name}" loading="lazy" style="object-position: ${rp.coverImagePosition || 'center center'}">
               <div class="related-card-info">
-                <p class="related-card-discipline">${displayDiscipline(rp.discipline)}</p>
+                <p class="related-card-discipline">${displayDiscipline(rp.discipline, rp.entityType)}</p>
                 <p class="related-card-name">${rp.name}</p>
               </div>
             </div>
@@ -5047,7 +5048,7 @@ function showProfile(id, pushHistory = true) {
 }
 
   function updatePageMeta(person) {
-    const discipline = displayDiscipline(person.discipline);
+    const discipline = displayDiscipline(person.discipline, person.entityType);
     const lifespan = person.died ? `${person.born}–${person.died}` : person.entityType === 'studio' ? `founded ${person.born}` : person.entityType === 'duo' ? `formed ${person.born}` : `b. ${person.born}`;
     const bioSnippet = person.bio.length > 150 ? person.bio.slice(0, 147).trimEnd() + '...' : person.bio;
     const title = `${person.name} — Masters Of Sight`;
@@ -5143,7 +5144,7 @@ function showProfile(id, pushHistory = true) {
 
     if (!featured) return;
 
-    const discipline = displayDiscipline(featured.discipline);
+    const discipline = displayDiscipline(featured.discipline, featured.entityType);
     const total = PEOPLE.length;
     const disciplines = [...new Set(PEOPLE.flatMap(p => Array.isArray(p.discipline) ? p.discipline : [p.discipline]))].length;
 
