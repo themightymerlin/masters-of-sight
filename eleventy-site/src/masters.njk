@@ -49,11 +49,112 @@ permalink: "masters/{{ person.id }}/index.html"
   <span class="nav-profile-name">{{ person.name }}</span>
 </nav>
 
-<button class="mos-trigger" aria-label="Open menu" aria-expanded="false">
+<button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
   <span class="mos-trigger-line"></span>
   <span class="mos-trigger-line"></span>
   <span class="mos-trigger-line"></span>
 </button>
+
+<div class="mos-overlay" id="mosOverlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+
+  <div class="mos-backdrop" id="mosBackdrop"></div>
+
+  <div class="mos-panel">
+
+    <nav class="mos-nav" aria-label="Site navigation">
+      <button class="mos-nav-item" data-target="about" aria-expanded="false">
+        <span class="mos-nav-label">About Masters Of Sight</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="why" aria-expanded="false">
+        <span class="mos-nav-label">Why This Was Created</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="contact" aria-expanded="false">
+        <span class="mos-nav-label">Get in Touch</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="instagram" aria-expanded="false">
+        <span class="mos-nav-label">Social</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="resources" aria-expanded="false">
+        <span class="mos-nav-label">The Reference</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="frame" aria-expanded="false">
+        <span class="mos-nav-label">Stay in the Frame</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+    </nav>
+
+    <div class="mos-divider" aria-hidden="true"></div>
+
+    <div class="mos-content">
+
+      <div class="mos-placeholder" id="mosPlaceholder">
+        <p class="mos-placeholder-wordmark">Masters of Sight</p>
+        <p class="mos-placeholder-hint">← Select a section</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-about">
+        <h2 class="mos-content-heading">About Masters Of Sight</h2>
+        <p class="mos-content-body">Masters Of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and entertainment ceases to exist. This is not a portfolio. This is a resource for those who demand better.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-why">
+        <h2 class="mos-content-heading">Why This Was Created</h2><p class="mos-content-body">I built this because the world is drowning in content and forgetting what vision actually looks like. Consider this a reminder.</p><p class="mos-content-body" style="margin-top: 16px;">My name is Benny Jackson. I built this on my own time, with my own taste, because no one was going to build it for me. That's kind of the whole point.</p><p class="mos-content-body" style="margin-top: 16px;">For the ones who can't look away from great work. You know who you are.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-contact">
+        <h2 class="mos-content-heading">Get in Touch</h2><p class="mos-content-body">Have a project worth making? A collaboration worth exploring? A piece of work you think belongs here? I want to hear from you.</p><p class="mos-content-body" style="margin-top: 16px; color: rgba(232,224,208,0.7); font-size: 13px; letter-spacing: 0.04em;">Benny Jackson. Founder, Masters Of Sight.</p><a href="mailto:hello@mastersofsight.com" class="mos-content-link">hello@mastersofsight.com <span>→</span></a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-instagram">
+        <p class="mos-content-body">Instagram / Threads</p>
+        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-top: 20px;">YouTube</p>
+        <a href="https://www.youtube.com/@mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-resources">
+        <h2 class="mos-content-heading">The Reference</h2>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px;">The sites we keep open in the other tab.</p>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Eyecandy</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The deepest searchable database of motion design and visual inspiration on the internet. If it moved beautifully, it's probably in here.</p>
+        <a href="https://eyecannndy.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          eyecannndy.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Shotdeck</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The definitive film still library. Searchable by color, mood, lens, and lighting. Essential for anyone who thinks in frames.</p>
+        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          shotdeck.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px; margin-top: 8px;">The Art of End Cards</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">A curated collection of advertising end cards.</p>
+        <a href="https://theartofendcards.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+          theartofendcards.com <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-frame">
+        <h2 class="mos-content-heading">Stay in the Frame</h2>
+        <p class="mos-content-body">The archive is just the beginning. Full Frame is coming. A deeper room for the people who don't just browse. Be the first to know.</p>
+        <a href="https://mastersofsight.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+          Count me in <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <span class="mos-wordmark">Masters of Sight</span>
+
+  </div>
+</div>
 
 <a class="profile-back" href="https://mastersofsight.com/">← Back</a>
 
@@ -300,6 +401,92 @@ permalink: "masters/{{ person.id }}/index.html"
       img.dataset.index = i;
       img.addEventListener('click', function () { openLightbox(i); });
     });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var trigger     = document.getElementById('mosTrigger');
+  var overlay     = document.getElementById('mosOverlay');
+  var backdrop    = document.getElementById('mosBackdrop');
+  var placeholder = document.getElementById('mosPlaceholder');
+  var navItems    = document.querySelectorAll('.mos-nav-item');
+  var panels      = document.querySelectorAll('.mos-content-inner');
+
+  var isOpen      = false;
+  var activePanel = null;
+  var fadeTimer   = null;
+
+  function openMenu() {
+    isOpen = true;
+    trigger.classList.add('is-open');
+    trigger.setAttribute('aria-label', 'Close menu');
+    trigger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('is-visible');
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    trigger.classList.remove('is-open');
+    trigger.setAttribute('aria-label', 'Open menu');
+    trigger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('is-visible');
+    clearActivePanel();
+  }
+
+  function clearActivePanel() {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    placeholder.style.opacity = '';
+    placeholder.style.pointerEvents = '';
+    activePanel = null;
+  }
+
+  function showPanel(id) {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    placeholder.style.opacity = '0';
+    placeholder.style.pointerEvents = 'none';
+
+    var panel = document.getElementById('panel-' + id);
+    var btn   = document.querySelector('[data-target="' + id + '"]');
+    if (!panel) return;
+
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-expanded', 'true');
+    activePanel = id;
+
+    panel.classList.add('fade-in');
+    panel.getBoundingClientRect();
+    fadeTimer = setTimeout(function () { panel.classList.add('is-visible'); }, 20);
+  }
+
+  trigger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+  backdrop.addEventListener('click', closeMenu);
+
+  navItems.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.target;
+      if (activePanel === target) {
+        clearActivePanel();
+      } else {
+        showPanel(target);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) closeMenu();
   });
 })();
 </script>
