@@ -1,0 +1,57 @@
+name: Deploy Preview
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "eleventy-site/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-preview
+  cancel-in-progress: false
+
+jobs:
+  build-and-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: eleventy-site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: eleventy-site
+        run: npm ci
+
+      - name: Build site
+        working-directory: eleventy-site
+        run: npm run build
+
+      - name: Copy build output into preview/
+        run: |
+          rm -rf preview
+          mkdir -p preview
+          cp -r eleventy-site/_site/. preview/
+
+      - name: Commit and push preview build
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add preview
+          if git diff --staged --quiet; then
+            echo "No changes to preview/, skipping commit."
+            exit 0
+          fi
+          git commit -m "Update preview build [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
