@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zack Snyder — Masters Of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/profile.css">
+</head>
+<body>
+
+<script>
+  window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910701/M58Y4RWU_xwwm0e.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910702/CGCWO5JM_cn9jbm.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910954/738G9QJU_wasjv2.jpg","caption":""},{"type":"video","youtubeId":"ui37YKQ9AC4","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784911128/Screenshot_2026-07-24_at_12.38.25_qv3xhn.png","caption":""}];
+  window._galleryImagesRaw = [];
+</script>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+</div>
+
+
+
+<nav class="site-nav">
+  <a class="nav-logo" href="https://mastersofsight.com/">Masters of Sight</a>
+  <span class="nav-profile-name">Zack Snyder</span>
+</nav>
+
+<button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<div class="mos-overlay" id="mosOverlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+
+  <div class="mos-backdrop" id="mosBackdrop"></div>
+
+  <div class="mos-panel">
+
+    <nav class="mos-nav" aria-label="Site navigation">
+      <button class="mos-nav-item" data-target="about" aria-expanded="false">
+        <span class="mos-nav-label">About Masters Of Sight</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="why" aria-expanded="false">
+        <span class="mos-nav-label">Why This Was Created</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="contact" aria-expanded="false">
+        <span class="mos-nav-label">Get in Touch</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="instagram" aria-expanded="false">
+        <span class="mos-nav-label">Social</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="resources" aria-expanded="false">
+        <span class="mos-nav-label">The Reference</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="frame" aria-expanded="false">
+        <span class="mos-nav-label">Stay in the Frame</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+    </nav>
+
+    <div class="mos-divider" aria-hidden="true"></div>
+
+    <div class="mos-content">
+
+      <div class="mos-placeholder" id="mosPlaceholder">
+        <p class="mos-placeholder-wordmark">Masters of Sight</p>
+        <p class="mos-placeholder-hint">← Select a section</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-about">
+        <h2 class="mos-content-heading">About Masters Of Sight</h2>
+        <p class="mos-content-body">Masters Of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and entertainment ceases to exist. This is not a portfolio. This is a resource for those who demand better.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-why">
+        <h2 class="mos-content-heading">Why This Was Created</h2><p class="mos-content-body">I built this because the world is drowning in content and forgetting what vision actually looks like. Consider this a reminder.</p><p class="mos-content-body" style="margin-top: 16px;">My name is Benny Jackson. I built this on my own time, with my own taste, because no one was going to build it for me. That's kind of the whole point.</p><p class="mos-content-body" style="margin-top: 16px;">For the ones who can't look away from great work. You know who you are.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-contact">
+        <h2 class="mos-content-heading">Get in Touch</h2><p class="mos-content-body">Have a project worth making? A collaboration worth exploring? A piece of work you think belongs here? I want to hear from you.</p><p class="mos-content-body" style="margin-top: 16px; color: rgba(232,224,208,0.7); font-size: 13px; letter-spacing: 0.04em;">Benny Jackson. Founder, Masters Of Sight.</p><a href="mailto:hello@mastersofsight.com" class="mos-content-link">hello@mastersofsight.com <span>→</span></a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-instagram">
+        <p class="mos-content-body">Instagram / Threads</p>
+        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-top: 20px;">YouTube</p>
+        <a href="https://www.youtube.com/@mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-resources">
+        <h2 class="mos-content-heading">The Reference</h2>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px;">The sites we keep open in the other tab.</p>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Eyecandy</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The deepest searchable database of motion design and visual inspiration on the internet. If it moved beautifully, it's probably in here.</p>
+        <a href="https://eyecannndy.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          eyecannndy.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Shotdeck</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The definitive film still library. Searchable by color, mood, lens, and lighting. Essential for anyone who thinks in frames.</p>
+        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          shotdeck.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px; margin-top: 8px;">The Art of End Cards</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">A curated collection of advertising end cards.</p>
+        <a href="https://theartofendcards.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+          theartofendcards.com <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-frame">
+        <h2 class="mos-content-heading">Stay in the Frame</h2>
+        <p class="mos-content-body">The archive is just the beginning. Full Frame is coming. A deeper room for the people who don't just browse. Be the first to know.</p>
+        <a href="https://mastersofsight.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+          Count me in <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <span class="mos-wordmark">Masters of Sight</span>
+
+  </div>
+</div>
+
+<a class="profile-back" href="https://mastersofsight.com/">← Back</a>
+
+<div class="profile-hero">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910701/Q4VRZX5N_ckai5s.jpg" alt="Zack Snyder">
+  <div class="profile-hero-gradient"></div>
+  <div class="profile-hero-content">
+    <p class="profile-eyebrow">Director</p>
+    <h1 class="profile-name">Zack Snyder</h1>
+    <div class="profile-tags">
+      <span class="tag">Operatic / Mythic</span>
+      <span class="tag">American</span>
+      <span class="tag">1966</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-body">
+  <p class="profile-bio">Zack Snyder treats the camera like a weapon and slow motion like punctuation, and no other director working at blockbuster scale has committed so completely to that idea. He came up shooting commercials, then rebuilt 300 as a frame for frame recreation of Frank Miller&#39;s panels, full body green screen and speed ramping used to make violence feel like scripture. Watchmen pushed the same discipline further, treating Alan Moore&#39;s book as something closer to sacred text than source material. His superhero films read differently than anyone else&#39;s, slower, heavier, staged like religious paintings instead of theme park rides, which is exactly why they split audiences down the middle every time.</p>
+
+  <div class="profile-main">
+    <div class="profile-section">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        
+        <li>Slow motion used as punctuation, not spectacle. A single frame held long enough to become a tableau.</li>
+        
+        <li>Frame for frame panel recreation, treating comic source material as storyboard rather than inspiration.</li>
+        
+        <li>Desaturated, high contrast color grading that reads as mythic rather than naturalistic.</li>
+        
+        <li>Composition built like religious painting, symmetrical, low angle, figures lit from below like icons.</li>
+        
+        <li>A refusal to soften violence or grief, sequences held past the point most studio films would cut away.</li>
+        
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        
+        <li>
+          <p class="work-title">300 (2006)</p>
+          <p class="work-desc">Nearly every frame shot against green screen and built to match Frank Miller&#39;s panels exactly, speed ramping turning slow motion into a visual dialect the industry spent the next decade imitating.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/300" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Watchmen (2009)</p>
+          <p class="work-desc">A near line for line adaptation of Alan Moore&#39;s supposedly unfilmable book, right down to a title sequence that compresses forty years of alternate history into four minutes.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/watchmen" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Zack Snyder&#39;s Justice League (2021)</p>
+          <p class="work-desc">The four hour cut released after a fan campaign forced a studio&#39;s hand, framed in 4:3 for IMAX and the clearest, least compromised version of Snyder&#39;s visual language ever put in front of an audience.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/zack-snyders-justice-league" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Man of Steel (2013)</p>
+          <p class="work-desc">A Superman shot handheld and lens flared like a nature documentary, swapping comic book primary colors for something closer to Malick, the first take on the character that felt genuinely unsettled by what he is.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/man-of-steel" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-sidebar">
+    <div class="profile-gallery">
+      
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910701/M58Y4RWU_xwwm0e.jpg" alt="Zack Snyder">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910702/CGCWO5JM_cn9jbm.jpg" alt="Zack Snyder">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784910954/738G9QJU_wasjv2.jpg" alt="Zack Snyder">
+          
+        
+          
+        
+      
+    </div>
+
+    
+    <div id="p-video-bookend">
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="video-bookend" onclick="openVideoLightbox('ui37YKQ9AC4')">
+          <div class="video-bookend-thumb">
+            <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784911128/Screenshot_2026-07-24_at_12.38.25_qv3xhn.png" alt="Zack Snyder video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/ui37YKQ9AC4/hqdefault.jpg'">
+            <div class="video-bookend-overlay">
+              <div class="video-bookend-play">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    <div class="sidebar-meta">
+      <div class="meta-row">
+        <span class="meta-label">Discipline</span>
+        <span class="meta-value">Director</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Style</span>
+        <span class="meta-value">Operatic / Mythic</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Born</span>
+        <span class="meta-value">1966</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Nationality</span>
+        <span class="meta-value">American</span>
+      </div>
+      
+      <div class="meta-row">
+        <span class="meta-label">Learn more</span>
+        <a class="meta-link" href="https://en.wikipedia.org/wiki/Zack_Snyder" target="_blank">View profile →</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="related-masters">
+  <p class="related-masters-label">If you like Zack Snyder, you will like these masters</p>
+  <div class="related-masters-grid">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781193018/GVYOVSPT_qdslyt.jpg" alt="David Ayer">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">David Ayer</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783110263/captain-america-cover-punch_uavy9s.avif" alt="Jack Kirby">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Dream Maker</p>
+            <p class="related-card-name">Jack Kirby</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780937335/XYYUV925_xxug2f.jpg" alt="Ridley Scott">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Ridley Scott</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  </div>
+</div>
+
+<script>
+(function () {
+  var navName = document.querySelector('.nav-profile-name');
+  var navLogo = document.querySelector('.nav-logo');
+  var hero = document.querySelector('.profile-hero');
+
+  var handleScroll = function () {
+    var threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    var visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
+</script>
+
+<script>
+(function () {
+  var mediaItems = [];
+  if (window._galleryMediaRaw && window._galleryMediaRaw.length) {
+    mediaItems = window._galleryMediaRaw.filter(function (m) {
+      if (m.type === 'image' || m.type === 'gif') return m.src && m.src.trim() !== '';
+      if (m.type === 'video') return m.youtubeId && m.youtubeId.trim() !== '';
+      return false;
+    });
+  } else {
+    var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
+    mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  window._lightboxMedia = mediaItems;
+
+  var _lbIndex = 0;
+
+  window.openVideoLightbox = function (youtubeId) {
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'flex';
+    overlay.innerHTML =
+      '<div class="lightbox-video-wrap" onclick="event.stopPropagation()">' +
+        '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>' +
+        '<button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>' +
+      '</div>';
+    document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') closeLightbox(); }, { once: true });
+  };
+
+  window.openLightbox = function (index) {
+    var media = window._lightboxMedia || [];
+    if (!media.length) return;
+    _lbIndex = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  function updateLightbox() {
+    var media = window._lightboxMedia || [];
+    var item = media[_lbIndex];
+    var lb = document.getElementById('lightbox');
+
+    var existing = lb.querySelector('.lightbox-img, .lightbox-iframe-wrap');
+    if (existing) existing.remove();
+
+    var closeBtn = lb.querySelector('.lightbox-close');
+
+    if (item.type === 'video') {
+      var wrap = document.createElement('div');
+      wrap.className = 'lightbox-iframe-wrap';
+      wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      closeBtn.after(wrap);
+    } else {
+      var img = document.createElement('img');
+      img.className = 'lightbox-img';
+      img.id = 'lightbox-img';
+      img.src = item.src;
+      img.style.transform = 'scale(0.96)';
+      setTimeout(function () { img.style.transform = ''; }, 10);
+      closeBtn.after(img);
+    }
+
+    document.getElementById('lightbox-counter').textContent = (_lbIndex + 1) + ' / ' + media.length;
+    document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
+    document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
+  }
+
+  window.lightboxNav = function (dir) {
+    var media = window._lightboxMedia || [];
+    _lbIndex = (_lbIndex + dir + media.length) % media.length;
+    updateLightbox();
+  };
+
+  window.closeLightbox = function (e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close') && !e.target.classList.contains('lightbox-close-btn')) return;
+    document.getElementById('lightbox').classList.remove('active');
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.profile-gallery img').forEach(function (img, i) {
+      img.dataset.index = i;
+      img.addEventListener('click', function () { openLightbox(i); });
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var trigger     = document.getElementById('mosTrigger');
+  var overlay     = document.getElementById('mosOverlay');
+  var backdrop    = document.getElementById('mosBackdrop');
+  var placeholder = document.getElementById('mosPlaceholder');
+  var navItems    = document.querySelectorAll('.mos-nav-item');
+  var panels      = document.querySelectorAll('.mos-content-inner');
+
+  var isOpen      = false;
+  var activePanel = null;
+  var fadeTimer   = null;
+
+  function openMenu() {
+    isOpen = true;
+    trigger.classList.add('is-open');
+    trigger.setAttribute('aria-label', 'Close menu');
+    trigger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('is-visible');
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    trigger.classList.remove('is-open');
+    trigger.setAttribute('aria-label', 'Open menu');
+    trigger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('is-visible');
+    clearActivePanel();
+  }
+
+  function clearActivePanel() {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    placeholder.style.opacity = '';
+    placeholder.style.pointerEvents = '';
+    activePanel = null;
+  }
+
+  function showPanel(id) {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    placeholder.style.opacity = '0';
+    placeholder.style.pointerEvents = 'none';
+
+    var panel = document.getElementById('panel-' + id);
+    var btn   = document.querySelector('[data-target="' + id + '"]');
+    if (!panel) return;
+
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-expanded', 'true');
+    activePanel = id;
+
+    panel.classList.add('fade-in');
+    panel.getBoundingClientRect();
+    fadeTimer = setTimeout(function () { panel.classList.add('is-visible'); }, 20);
+  }
+
+  trigger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+  backdrop.addEventListener('click', closeMenu);
+
+  navItems.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.target;
+      if (activePanel === target) {
+        clearActivePanel();
+      } else {
+        showPanel(target);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) closeMenu();
+  });
+})();
+</script>
+
+</body>
+</html>

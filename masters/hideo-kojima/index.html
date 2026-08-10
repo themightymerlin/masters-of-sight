@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hideo Kojima — Masters Of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/profile.css">
+</head>
+<body>
+
+<script>
+  window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780063876/image_fy52kz.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064094/image_xcftma.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064143/image_abslxj.jpg"},{"type":"video","youtubeId":"etOOO9Sq7u8","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064438/image_r7qcut.jpg"}];
+  window._galleryImagesRaw = [];
+</script>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+</div>
+
+
+
+<nav class="site-nav">
+  <a class="nav-logo" href="https://mastersofsight.com/">Masters of Sight</a>
+  <span class="nav-profile-name">Hideo Kojima</span>
+</nav>
+
+<button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<div class="mos-overlay" id="mosOverlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+
+  <div class="mos-backdrop" id="mosBackdrop"></div>
+
+  <div class="mos-panel">
+
+    <nav class="mos-nav" aria-label="Site navigation">
+      <button class="mos-nav-item" data-target="about" aria-expanded="false">
+        <span class="mos-nav-label">About Masters Of Sight</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="why" aria-expanded="false">
+        <span class="mos-nav-label">Why This Was Created</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="contact" aria-expanded="false">
+        <span class="mos-nav-label">Get in Touch</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="instagram" aria-expanded="false">
+        <span class="mos-nav-label">Social</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="resources" aria-expanded="false">
+        <span class="mos-nav-label">The Reference</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+      <button class="mos-nav-item" data-target="frame" aria-expanded="false">
+        <span class="mos-nav-label">Stay in the Frame</span>
+        <span class="mos-nav-arrow">→</span>
+      </button>
+    </nav>
+
+    <div class="mos-divider" aria-hidden="true"></div>
+
+    <div class="mos-content">
+
+      <div class="mos-placeholder" id="mosPlaceholder">
+        <p class="mos-placeholder-wordmark">Masters of Sight</p>
+        <p class="mos-placeholder-hint">← Select a section</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-about">
+        <h2 class="mos-content-heading">About Masters Of Sight</h2>
+        <p class="mos-content-body">Masters Of Sight is a curated sanctuary for the visually obsessed. A place where craft is worshipped, where every frame is a deliberate act, and where the boundary between art and entertainment ceases to exist. This is not a portfolio. This is a resource for those who demand better.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-why">
+        <h2 class="mos-content-heading">Why This Was Created</h2><p class="mos-content-body">I built this because the world is drowning in content and forgetting what vision actually looks like. Consider this a reminder.</p><p class="mos-content-body" style="margin-top: 16px;">My name is Benny Jackson. I built this on my own time, with my own taste, because no one was going to build it for me. That's kind of the whole point.</p><p class="mos-content-body" style="margin-top: 16px;">For the ones who can't look away from great work. You know who you are.</p>
+      </div>
+
+      <div class="mos-content-inner" id="panel-contact">
+        <h2 class="mos-content-heading">Get in Touch</h2><p class="mos-content-body">Have a project worth making? A collaboration worth exploring? A piece of work you think belongs here? I want to hear from you.</p><p class="mos-content-body" style="margin-top: 16px; color: rgba(232,224,208,0.7); font-size: 13px; letter-spacing: 0.04em;">Benny Jackson. Founder, Masters Of Sight.</p><a href="mailto:hello@mastersofsight.com" class="mos-content-link">hello@mastersofsight.com <span>→</span></a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-instagram">
+        <p class="mos-content-body">Instagram / Threads</p>
+        <a href="https://instagram.com/mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-top: 20px;">YouTube</p>
+        <a href="https://www.youtube.com/@mastersofsight" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="color: var(--accent); border-color: rgba(201,169,110,0.3); margin-top: 8px;">
+          @mastersofsight <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-resources">
+        <h2 class="mos-content-heading">The Reference</h2>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px;">The sites we keep open in the other tab.</p>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Eyecandy</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The deepest searchable database of motion design and visual inspiration on the internet. If it moved beautifully, it's probably in here.</p>
+        <a href="https://eyecannndy.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          eyecannndy.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px;">Shotdeck</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">The definitive film still library. Searchable by color, mood, lens, and lighting. Essential for anyone who thinks in frames.</p>
+        <a href="https://shotdeck.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0; margin-bottom: 32px;">
+          shotdeck.com <span>→</span>
+        </a>
+        <p class="mos-content-body" style="margin-bottom: 4px; margin-top: 8px;">The Art of End Cards</p>
+        <p class="mos-content-body" style="color: rgba(232,224,208,0.35); font-size: 13px; margin-bottom: 16px;">A curated collection of advertising end cards.</p>
+        <a href="https://theartofendcards.com" target="_blank" rel="noopener noreferrer" class="mos-content-link" style="margin-top: 0;">
+          theartofendcards.com <span>→</span>
+        </a>
+      </div>
+
+      <div class="mos-content-inner" id="panel-frame">
+        <h2 class="mos-content-heading">Stay in the Frame</h2>
+        <p class="mos-content-body">The archive is just the beginning. Full Frame is coming. A deeper room for the people who don't just browse. Be the first to know.</p>
+        <a href="https://mastersofsight.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+          Count me in <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <span class="mos-wordmark">Masters of Sight</span>
+
+  </div>
+</div>
+
+<a class="profile-back" href="https://mastersofsight.com/">← Back</a>
+
+<div class="profile-hero">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780754568/DS2-1-1200x675_tqpim7.jpg" alt="Hideo Kojima">
+  <div class="profile-hero-gradient"></div>
+  <div class="profile-hero-content">
+    <p class="profile-eyebrow">Dream Maker</p>
+    <h1 class="profile-name">Hideo Kojima</h1>
+    <div class="profile-tags">
+      <span class="tag">Cinematic / Auteur</span>
+      <span class="tag">Japanese</span>
+      <span class="tag">1963</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-body">
+  <p class="profile-bio">Hideo Kojima is cinema&#39;s restless cousin who chose interactive media as his canvas and has spent four decades proving it can bear the weight of genuine artistic ambition. Creator of Metal Gear Solid and Death Stranding, he makes games that are uncompromising in their length, philosophical density, and cinematic pretension, and he has the audience to prove that uncompromising works. He is the game developer most comfortable being called a filmmaker, and the comparison is not entirely wrong.</p>
+
+  <div class="profile-main">
+    <div class="profile-section">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        
+        <li>Cutscenes as directorial statements, sometimes exceeding the gameplay in duration.</li>
+        
+        <li>Film references worn openly as intellectual credentials.</li>
+        
+        <li>Themes of nuclear anxiety, surveillance, and memetic identity explored across decades.</li>
+        
+        <li>Collaboration with film actors (Mads Mikkelsen, Norman Reedus, Lea Seydoux) as creative strategy.</li>
+        
+        <li>The auteur model applied to an industrial medium that resists it.</li>
+        
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        
+        <li>
+          <p class="work-title">Metal Gear Solid (1998)</p>
+          <p class="work-desc">Cinematic game design at a scale nobody had attempted. Broke the fourth wall. Still studied in design schools.</p>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Metal Gear Solid 2: Sons of Liberty (2001)</p>
+          <p class="work-desc">A game about information warfare and the controllability of narrative. Released in 2001. Horrifyingly prescient.</p>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Death Stranding (2019)</p>
+          <p class="work-desc">A post-apocalyptic delivery game about human connection. Divisive. Singular. The most ambitious interactive work of the decade.</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-sidebar">
+    <div class="profile-gallery">
+      
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780063876/image_fy52kz.jpg" alt="Hideo Kojima">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064094/image_xcftma.jpg" alt="Hideo Kojima">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064143/image_abslxj.jpg" alt="Hideo Kojima">
+          
+        
+          
+        
+      
+    </div>
+
+    
+    <div id="p-video-bookend">
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="video-bookend" onclick="openVideoLightbox('etOOO9Sq7u8')">
+          <div class="video-bookend-thumb">
+            <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064438/image_r7qcut.jpg" alt="Hideo Kojima video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/etOOO9Sq7u8/hqdefault.jpg'">
+            <div class="video-bookend-overlay">
+              <div class="video-bookend-play">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    <div class="sidebar-meta">
+      <div class="meta-row">
+        <span class="meta-label">Discipline</span>
+        <span class="meta-value">Dream Maker</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Style</span>
+        <span class="meta-value">Cinematic / Auteur</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Born</span>
+        <span class="meta-value">1963</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Nationality</span>
+        <span class="meta-value">Japanese</span>
+      </div>
+      
+      <div class="meta-row">
+        <span class="meta-label">Learn more</span>
+        <a class="meta-link" href="https://www.kojimaproductions.jp" target="_blank">View profile →</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="related-masters">
+  <p class="related-masters-label">If you like Hideo Kojima, you will like these masters</p>
+  <div class="related-masters-grid">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780937335/XYYUV925_xxug2f.jpg" alt="Ridley Scott">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Ridley Scott</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070103/image_l0iy47.jpg" alt="Denis Villeneuve">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Denis Villeneuve</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780073353/image_brcxzh.png" alt="Neil Druckmann">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Dream Maker</p>
+            <p class="related-card-name">Neil Druckmann</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  </div>
+</div>
+
+<script>
+(function () {
+  var navName = document.querySelector('.nav-profile-name');
+  var navLogo = document.querySelector('.nav-logo');
+  var hero = document.querySelector('.profile-hero');
+
+  var handleScroll = function () {
+    var threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    var visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
+</script>
+
+<script>
+(function () {
+  var mediaItems = [];
+  if (window._galleryMediaRaw && window._galleryMediaRaw.length) {
+    mediaItems = window._galleryMediaRaw.filter(function (m) {
+      if (m.type === 'image' || m.type === 'gif') return m.src && m.src.trim() !== '';
+      if (m.type === 'video') return m.youtubeId && m.youtubeId.trim() !== '';
+      return false;
+    });
+  } else {
+    var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
+    mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  window._lightboxMedia = mediaItems;
+
+  var _lbIndex = 0;
+
+  window.openVideoLightbox = function (youtubeId) {
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'flex';
+    overlay.innerHTML =
+      '<div class="lightbox-video-wrap" onclick="event.stopPropagation()">' +
+        '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>' +
+        '<button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>' +
+      '</div>';
+    document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') closeLightbox(); }, { once: true });
+  };
+
+  window.openLightbox = function (index) {
+    var media = window._lightboxMedia || [];
+    if (!media.length) return;
+    _lbIndex = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  function updateLightbox() {
+    var media = window._lightboxMedia || [];
+    var item = media[_lbIndex];
+    var lb = document.getElementById('lightbox');
+
+    var existing = lb.querySelector('.lightbox-img, .lightbox-iframe-wrap');
+    if (existing) existing.remove();
+
+    var closeBtn = lb.querySelector('.lightbox-close');
+
+    if (item.type === 'video') {
+      var wrap = document.createElement('div');
+      wrap.className = 'lightbox-iframe-wrap';
+      wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      closeBtn.after(wrap);
+    } else {
+      var img = document.createElement('img');
+      img.className = 'lightbox-img';
+      img.id = 'lightbox-img';
+      img.src = item.src;
+      img.style.transform = 'scale(0.96)';
+      setTimeout(function () { img.style.transform = ''; }, 10);
+      closeBtn.after(img);
+    }
+
+    document.getElementById('lightbox-counter').textContent = (_lbIndex + 1) + ' / ' + media.length;
+    document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
+    document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
+  }
+
+  window.lightboxNav = function (dir) {
+    var media = window._lightboxMedia || [];
+    _lbIndex = (_lbIndex + dir + media.length) % media.length;
+    updateLightbox();
+  };
+
+  window.closeLightbox = function (e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close') && !e.target.classList.contains('lightbox-close-btn')) return;
+    document.getElementById('lightbox').classList.remove('active');
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.profile-gallery img').forEach(function (img, i) {
+      img.dataset.index = i;
+      img.addEventListener('click', function () { openLightbox(i); });
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var trigger     = document.getElementById('mosTrigger');
+  var overlay     = document.getElementById('mosOverlay');
+  var backdrop    = document.getElementById('mosBackdrop');
+  var placeholder = document.getElementById('mosPlaceholder');
+  var navItems    = document.querySelectorAll('.mos-nav-item');
+  var panels      = document.querySelectorAll('.mos-content-inner');
+
+  var isOpen      = false;
+  var activePanel = null;
+  var fadeTimer   = null;
+
+  function openMenu() {
+    isOpen = true;
+    trigger.classList.add('is-open');
+    trigger.setAttribute('aria-label', 'Close menu');
+    trigger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('is-visible');
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    trigger.classList.remove('is-open');
+    trigger.setAttribute('aria-label', 'Open menu');
+    trigger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('is-visible');
+    clearActivePanel();
+  }
+
+  function clearActivePanel() {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    placeholder.style.opacity = '';
+    placeholder.style.pointerEvents = '';
+    activePanel = null;
+  }
+
+  function showPanel(id) {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    placeholder.style.opacity = '0';
+    placeholder.style.pointerEvents = 'none';
+
+    var panel = document.getElementById('panel-' + id);
+    var btn   = document.querySelector('[data-target="' + id + '"]');
+    if (!panel) return;
+
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-expanded', 'true');
+    activePanel = id;
+
+    panel.classList.add('fade-in');
+    panel.getBoundingClientRect();
+    fadeTimer = setTimeout(function () { panel.classList.add('is-visible'); }, 20);
+  }
+
+  trigger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+  backdrop.addEventListener('click', closeMenu);
+
+  navItems.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.target;
+      if (activePanel === target) {
+        clearActivePanel();
+      } else {
+        showPanel(target);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) closeMenu();
+  });
+})();
+</script>
+
+</body>
+</html>
