@@ -4,6 +4,8 @@ module.exports = function (eleventyConfig) {
     "src/_includes/homepage.css": "assets/homepage.css",
   });
 
+  eleventyConfig.addGlobalData("buildVersion", () => String(Date.now()));
+
   eleventyConfig.addFilter("displayDiscipline", function displayDiscipline(d, entityType) {
     if (Array.isArray(d)) {
       return d.map((x) => displayDiscipline(x, entityType)).join(" / ");
