@@ -779,6 +779,7 @@
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 4px;
+    text-decoration: none;
   }
 
   .related-card-name {
@@ -792,6 +793,7 @@
     transform: scaleX(1.30);
     transform-origin: left center;
     color: var(--text);
+    text-decoration: none;
   }
 
   @media (max-width: 768px) {
