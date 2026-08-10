@@ -1,0 +1,18 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mastersofsight.com/</loc>
+  </url>
+{%- for person in people %}
+  <url>
+    <loc>https://mastersofsight.com/masters/{{ person.id }}/</loc>
+{%- if person.added %}
+    <lastmod>{{ person.added }}</lastmod>
+{%- endif %}
+  </url>
+{%- endfor %}
+</urlset>
