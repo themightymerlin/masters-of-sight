@@ -750,6 +750,8 @@
     border: 0.5px solid var(--border);
     overflow: hidden;
     transition: border-color 0.2s ease;
+    color: var(--text);
+    text-decoration: none;
   }
 
   .related-card:hover {

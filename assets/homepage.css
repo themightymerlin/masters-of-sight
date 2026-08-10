@@ -117,6 +117,7 @@
   .hero-motw-block {
     cursor: pointer;
     text-decoration: none;
+    color: var(--text);
   }
 
   .hero-motw-block:hover .hero-motw-name {
@@ -186,6 +187,8 @@
     overflow: hidden;
     cursor: pointer;
     background: var(--bg-3);
+    color: var(--text);
+    text-decoration: none;
   }
 
   .card-img {
