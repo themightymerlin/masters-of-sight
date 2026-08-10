@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Projekt Red — Masters Of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/profile.css">
+</head>
+<body>
+
+<script>
+  window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/witcher3-1638987659679_grnxak.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121937/witcher2-1639524514675.jpg_rv9da9.webp"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121939/the-witcher-collectors-edition_crxh.jpg_bko8fz.png"},{"type":"video","youtubeId":"UnA7tepsc7s","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786122275/Screenshot_2026-08-07_at_13.04.23_a4ddkn.png"}];
+  window._galleryImagesRaw = [];
+</script>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+</div>
+
+
+
+<nav class="site-nav">
+  <a class="nav-logo" href="https://mastersofsight.com/">Masters of Sight</a>
+  <span class="nav-profile-name">CD Projekt Red</span>
+</nav>
+
+<button class="mos-trigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<a class="profile-back" href="https://mastersofsight.com/">← Back</a>
+
+<div class="profile-hero">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7_ierxod.jpg" alt="CD Projekt Red">
+  <div class="profile-hero-gradient"></div>
+  <div class="profile-hero-content">
+    <p class="profile-eyebrow">Dream Maker</p>
+    <h1 class="profile-name">CD Projekt Red</h1>
+    <div class="profile-tags">
+      <span class="tag">Dark Fantasy / Cyberpunk Noir</span>
+      <span class="tag">Polish</span>
+      <span class="tag">Founded 1994</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-body">
+  <p class="profile-bio">CD Projekt Red was founded in Warsaw in 1994 by two friends who started out importing and localizing Western games for the Polish market before deciding to build their own. That path shaped everything that followed, a Polish studio steeped in Andrzej Sapkowski&#39;s Witcher novels, translating literary fantasy into a trilogy that argued player choice could carry the weight of real moral consequence. Cyberpunk 2077 arrived in 2020 as a catastrophe of its own making, a broken launch on last generation consoles that nearly cost the studio its reputation. Then something rare happened, years of patient rework, the 2.0 update, and the Phantom Liberty expansion turned public failure into one of gaming&#39;s most complete redemption arcs, helped along by an anime tie in that introduced Night City to an audience that never touched a controller. Few studios have shipped both a genuine disaster and a genuine masterpiece under the same name and lived to tell a coherent story about it.</p>
+
+  <div class="profile-main">
+    <div class="profile-section">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        
+        <li>Moral choice systems built without a clean karma meter. Consequences surface hours or games later, often too subtle to trace back to the decision that caused them.</li>
+        
+        <li>Literary source material treated as canon, not commodity. Sapkowski&#39;s tone and politics preserved rather than smoothed for a wider audience.</li>
+        
+        <li>Post launch redemption as a house habit. Cyberpunk 2077&#39;s 2.0 overhaul and Phantom Liberty expansion rebuilt a broken game into one of the decade&#39;s most acclaimed.</li>
+        
+        <li>Free DLC bundled generously into every release, a policy that turned goodwill into part of the brand itself.</li>
+        
+        <li>World detail treated as worldview. Night City&#39;s advertising, architecture, and slang all argue the same thesis about unchecked capitalism.</li>
+        
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        
+        <li>
+          <p class="work-title">Cyberpunk 2077 (2020)</p>
+          <p class="work-desc">A launch disaster on last gen consoles rebuilt over three years into Night City&#39;s fullest version. The 2.0 update and Phantom Liberty expansion turned a punchline into one of the best RPGs of its generation.</p>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">The Witcher 3: Wild Hunt (2015)</p>
+          <p class="work-desc">Geralt hunting his adopted daughter across a war torn continent while every side quest carries the moral weight of the main one. Still the genre&#39;s high water mark for choice with real consequence.</p>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">The Witcher 2: Assassins of Kings (2011)</p>
+          <p class="work-desc">A branching second act that diverges so completely between paths that players compared notes to realize they&#39;d played different games. The moment CD Projekt Red proved Witcher wasn&#39;t a one game studio.</p>
+          
+        </li>
+        
+        <li>
+          <p class="work-title">The Witcher (2007)</p>
+          <p class="work-desc">A regicide mystery built from Sapkowski&#39;s novels, unpolished but unmistakably the studio&#39;s founding argument, that a video game could carry literary weight.</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-sidebar">
+    <div class="profile-gallery">
+      
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/witcher3-1638987659679_grnxak.jpg" alt="CD Projekt Red">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121937/witcher2-1639524514675.jpg_rv9da9.webp" alt="CD Projekt Red">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121939/the-witcher-collectors-edition_crxh.jpg_bko8fz.png" alt="CD Projekt Red">
+          
+        
+          
+        
+      
+    </div>
+
+    
+    <div id="p-video-bookend">
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="video-bookend" onclick="openVideoLightbox('UnA7tepsc7s')">
+          <div class="video-bookend-thumb">
+            <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786122275/Screenshot_2026-08-07_at_13.04.23_a4ddkn.png" alt="CD Projekt Red video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/UnA7tepsc7s/hqdefault.jpg'">
+            <div class="video-bookend-overlay">
+              <div class="video-bookend-play">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    <div class="sidebar-meta">
+      <div class="meta-row">
+        <span class="meta-label">Discipline</span>
+        <span class="meta-value">Dream Maker</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Style</span>
+        <span class="meta-value">Dark Fantasy / Cyberpunk Noir</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Founded</span>
+        <span class="meta-value">Founded 1994</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Nationality</span>
+        <span class="meta-value">Polish</span>
+      </div>
+      
+      <div class="meta-row">
+        <span class="meta-label">Learn more</span>
+        <a class="meta-link" href="https://www.cdprojektred.com/en" target="_blank">View profile →</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="related-masters">
+  <p class="related-masters-label">If you like CD Projekt Red, you will like these masters</p>
+  <div class="related-masters-grid">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780937335/XYYUV925_xxug2f.jpg" alt="Ridley Scott">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Ridley Scott</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779301769/elordi-creature_qlor0t.avif" alt="Guillermo del Toro">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Guillermo del Toro</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="related-card">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070103/image_l0iy47.jpg" alt="Denis Villeneuve">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Denis Villeneuve</p>
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  </div>
+</div>
+
+<script>
+(function () {
+  var navName = document.querySelector('.nav-profile-name');
+  var navLogo = document.querySelector('.nav-logo');
+  var hero = document.querySelector('.profile-hero');
+
+  var handleScroll = function () {
+    var threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    var visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
+</script>
+
+<script>
+(function () {
+  var mediaItems = [];
+  if (window._galleryMediaRaw && window._galleryMediaRaw.length) {
+    mediaItems = window._galleryMediaRaw.filter(function (m) {
+      if (m.type === 'image' || m.type === 'gif') return m.src && m.src.trim() !== '';
+      if (m.type === 'video') return m.youtubeId && m.youtubeId.trim() !== '';
+      return false;
+    });
+  } else {
+    var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
+    mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  window._lightboxMedia = mediaItems;
+
+  var _lbIndex = 0;
+
+  window.openVideoLightbox = function (youtubeId) {
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'flex';
+    overlay.innerHTML =
+      '<div class="lightbox-video-wrap" onclick="event.stopPropagation()">' +
+        '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>' +
+        '<button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>' +
+      '</div>';
+    document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') closeLightbox(); }, { once: true });
+  };
+
+  window.openLightbox = function (index) {
+    var media = window._lightboxMedia || [];
+    if (!media.length) return;
+    _lbIndex = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  function updateLightbox() {
+    var media = window._lightboxMedia || [];
+    var item = media[_lbIndex];
+    var lb = document.getElementById('lightbox');
+
+    var existing = lb.querySelector('.lightbox-img, .lightbox-iframe-wrap');
+    if (existing) existing.remove();
+
+    var closeBtn = lb.querySelector('.lightbox-close');
+
+    if (item.type === 'video') {
+      var wrap = document.createElement('div');
+      wrap.className = 'lightbox-iframe-wrap';
+      wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      closeBtn.after(wrap);
+    } else {
+      var img = document.createElement('img');
+      img.className = 'lightbox-img';
+      img.id = 'lightbox-img';
+      img.src = item.src;
+      img.style.transform = 'scale(0.96)';
+      setTimeout(function () { img.style.transform = ''; }, 10);
+      closeBtn.after(img);
+    }
+
+    document.getElementById('lightbox-counter').textContent = (_lbIndex + 1) + ' / ' + media.length;
+    document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
+    document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
+  }
+
+  window.lightboxNav = function (dir) {
+    var media = window._lightboxMedia || [];
+    _lbIndex = (_lbIndex + dir + media.length) % media.length;
+    updateLightbox();
+  };
+
+  window.closeLightbox = function (e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close') && !e.target.classList.contains('lightbox-close-btn')) return;
+    document.getElementById('lightbox').classList.remove('active');
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.profile-gallery img').forEach(function (img, i) {
+      img.dataset.index = i;
+      img.addEventListener('click', function () { openLightbox(i); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
