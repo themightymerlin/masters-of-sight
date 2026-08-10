@@ -1,0 +1,192 @@
+---
+pagination:
+  data: people
+  size: 1
+  alias: person
+permalink: "masters/{{ person.id }}/index.html"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ person.name }} — Masters Of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/profile.css">
+</head>
+<body>
+
+{% set linkTypeConfig = {
+  watch:   { label: "Watch", icon: "▶" },
+  play:    { label: "Play", icon: "◈" },
+  book:    { label: "Get the Book", icon: "○" },
+  gallery: { label: "View Gallery", icon: "◻" },
+  read:    { label: "Read", icon: "◇" },
+  listen:  { label: "Listen", icon: "◎" }
+} %}
+
+<nav class="site-nav">
+  <a class="nav-logo" href="https://mastersofsight.com/">Masters of Sight</a>
+  <span class="nav-profile-name">{{ person.name }}</span>
+</nav>
+
+<button class="mos-trigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<a class="profile-back" href="https://mastersofsight.com/">← Back</a>
+
+<div class="profile-hero">
+  <img class="profile-hero-img" src="{{ person.heroImage or person.coverImage }}" alt="{{ person.name }}">
+  <div class="profile-hero-gradient"></div>
+  <div class="profile-hero-content">
+    <p class="profile-eyebrow">{{ person.discipline | displayDiscipline(person.entityType) }}</p>
+    <h1 class="profile-name">{{ person.name }}</h1>
+    <div class="profile-tags">
+      <span class="tag">{{ person.style }}</span>
+      <span class="tag">{{ person.nationality }}</span>
+      <span class="tag">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-body">
+  <p class="profile-bio">{{ person.bio }}</p>
+
+  <div class="profile-main">
+    <div class="profile-section">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        {% for trait in person.traits %}
+        <li>{{ trait }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        {% for work in person.works %}
+        <li>
+          <p class="work-title">{{ work.title }}</p>
+          <p class="work-desc">{{ work.desc }}</p>
+          {% if work.links and work.links.length %}
+          <div class="work-links">
+            {% for link in work.links %}
+            {% set cfg = linkTypeConfig[link.type] %}
+            <a class="work-link work-link--{{ link.type }}" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ cfg.icon if cfg else "→" }} {{ cfg.label if cfg else link.type }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-sidebar">
+    <div class="profile-gallery">
+      {% if person.galleryMedia and person.galleryMedia.length %}
+        {% for item in person.galleryMedia %}
+          {% if item.type == "image" or item.type == "gif" %}
+          <img src="{{ item.src }}" alt="{{ person.name }}">
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for src in person.galleryImages %}
+        <img src="{{ src }}" alt="{{ person.name }}">
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if person.galleryMedia and person.galleryMedia.length %}
+    <div id="p-video-bookend">
+      {% for item in person.galleryMedia %}
+        {% if item.type == "video" %}
+        <div class="video-bookend">
+          <div class="video-bookend-thumb">
+            <img src="{{ item.thumb }}" alt="{{ item.caption or (person.name + ' video') }}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/{{ item.youtubeId }}/hqdefault.jpg'">
+            <div class="video-bookend-overlay">
+              <div class="video-bookend-play">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              {% if item.caption %}<div class="video-bookend-caption">{{ item.caption }}</div>{% endif %}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="sidebar-meta">
+      <div class="meta-row">
+        <span class="meta-label">Discipline</span>
+        <span class="meta-value">{{ person.discipline | displayDiscipline(person.entityType) }}</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Style</span>
+        <span class="meta-value">{{ person.style }}</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">{% if person.entityType == "duo" %}Formed{% elif person.entityType == "studio" %}Founded{% else %}Born{% endif %}</span>
+        <span class="meta-value">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Nationality</span>
+        <span class="meta-value">{{ person.nationality }}</span>
+      </div>
+      {% if person.url %}
+      <div class="meta-row">
+        <span class="meta-label">Learn more</span>
+        <a class="meta-link" href="{{ person.url }}" target="_blank">View profile →</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="related-masters">
+  <p class="related-masters-label">If you like {{ person.name }}, you will like these masters</p>
+  <div class="related-masters-grid">
+    {% for relatedId in person.related %}
+      {% for candidate in people %}
+        {% if candidate.id == relatedId %}
+        <div class="related-card">
+          <img class="related-card-img" src="{{ candidate.coverImage }}" alt="{{ candidate.name }}">
+          <div class="related-card-info">
+            <p class="related-card-discipline">{{ candidate.discipline | displayDiscipline(candidate.entityType) }}</p>
+            <p class="related-card-name">{{ candidate.name }}</p>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function () {
+  var navName = document.querySelector('.nav-profile-name');
+  var navLogo = document.querySelector('.nav-logo');
+  var hero = document.querySelector('.profile-hero');
+
+  var handleScroll = function () {
+    var threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    var visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
+</script>
+
+</body>
+</html>
