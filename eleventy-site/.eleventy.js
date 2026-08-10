@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/preview/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       output: "_site",
