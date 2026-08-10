@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/_includes/profile.css": "assets/profile.css",
+    "src/_includes/homepage.css": "assets/homepage.css",
   });
 
   eleventyConfig.addFilter("displayDiscipline", function displayDiscipline(d, entityType) {

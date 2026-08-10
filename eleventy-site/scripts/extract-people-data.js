@@ -122,6 +122,11 @@ function main() {
   const { lines } = runIntegrityChecks(people, html);
   console.log(lines.join("\n"));
 
+  people.sort((a, b) => {
+    const lastName = (name) => name.trim().split(" ").slice(-1)[0];
+    return lastName(a.name).localeCompare(lastName(b.name));
+  });
+
   fs.mkdirSync(path.dirname(OUTPUT_JSON), { recursive: true });
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(people, null, 2) + "\n", "utf8");
   console.log(`\nWrote ${people.length} entries to ${path.relative(process.cwd(), OUTPUT_JSON)}`);

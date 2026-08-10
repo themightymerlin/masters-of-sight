@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masters Of Sight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/profile.css">
+<link rel="stylesheet" href="/assets/homepage.css">
+</head>
+<body>
+
+<script>window.PEOPLE = {{ people | dump | safe }};</script>
+
+<nav class="site-nav">
+  <a class="nav-logo" href="/">Masters of Sight</a>
+  <span class="nav-profile-name" id="nav-profile-name"></span>
+</nav>
+
+<button class="mos-trigger" aria-label="Open menu" aria-expanded="false">
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+  <span class="mos-trigger-line"></span>
+</button>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-sub">A living archive of the artists who taught us how to see.</p>
+      <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
+      <p class="hero-sub">New masters added every week.</p>
+    </div>
+    <div class="hero-right" id="hero-motw"></div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+  <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographers</button>
+  <button class="filter-btn" onclick="filterCards('Designer', this)">Designers</button>
+  <button class="filter-btn" onclick="filterCards('Director', this)">Directors</button>
+  <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographers</button>
+  <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
+</div>
+
+<div class="search-bar" id="search-bar">
+  <div class="search-input-wrap">
+    <span class="search-icon">⌕</span>
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="Search name, discipline, style…"
+      autocomplete="off"
+      spellcheck="false"
+    >
+    <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+  </div>
+  <button class="surprise-btn" id="surprise-btn" title="Show me a random master">&#9661;</button>
+  <span class="search-count" id="search-count"></span>
+</div>
+
+<div class="grid" id="card-grid">
+  {% for person in people %}
+  <a class="card" href="/masters/{{ person.id }}/" data-id="{{ person.id }}" data-discipline="{{ person.discipline }}">
+    {% set hasImage = person.coverImage and person.coverImage | trim != "" %}
+    {% if hasImage %}
+    <img class="card-img" src="{{ person.coverImage }}" alt="{{ person.name }}" loading="lazy" style="object-position: {{ person.coverImagePosition or 'center center' }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
+    <div class="card-overlay"></div>
+    {% else %}
+    <div class="card-overlay" style="display:none;"></div>
+    {% endif %}
+    <div class="card-placeholder" style="display:{% if hasImage %}none{% else %}flex{% endif %}; position:absolute; inset:0;">
+      <span class="card-placeholder-initials"></span>
+    </div>
+    <div class="card-info">
+      <p class="card-discipline">{{ person.discipline | displayDiscipline(person.entityType) }}</p>
+      <p class="card-name">{% if person.cardName %}{{ person.cardName | safe }}{% else %}{{ person.name }}{% endif %}</p>
+    </div>
+    <div class="card-arrow">↗</div>
+  </a>
+  {% endfor %}
+</div>
+
+<footer>
+  <div style="text-align: center; line-height: 1.9;">
+    <div class="footer-copy">Masters Of Sight™  est. 2026 — A living archive of the artists who taught us how to see.</div>
+    <div class="footer-copy" id="footer-count"></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var FEATURED_MASTER_OVERRIDE = null;
+  var _activeSearch = '';
+  var _activeDiscipline = 'all';
+
+  function getInitials(name) {
+    return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+  }
+
+  function displayDiscipline(d, entityType) {
+    if (Array.isArray(d)) return d.map(function (x) { return displayDiscipline(x, entityType); }).join(' / ');
+    if (entityType === 'duo' && d === 'Director') return 'Directors';
+    return d === 'Dream Makers' ? 'Dream Maker' : d;
+  }
+
+  function formatCardName(name) {
+    var parts = name.trim().split(' ');
+    if (parts.length === 1) return name;
+    var last = parts[parts.length - 1];
+    var first = parts.slice(0, -1).join(' ');
+    return first + '<br>' + last;
+  }
+
+  function isNewMaster(person) {
+    if (!person.added) return false;
+    var parts = person.added.split('-').map(Number);
+    var year = parts[0], month = parts[1], day = parts[2];
+    var added = new Date(year, month - 1, day || 1);
+    var cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - 14);
+    return added >= cutoff;
+  }
+
+  function buildCard(person) {
+    var card = document.createElement('a');
+    card.className = 'card';
+    card.href = '/masters/' + person.id + '/';
+    card.dataset.discipline = person.discipline;
+    card.dataset.id = person.id;
+
+    var isNew = isNewMaster(person);
+    var hasImage = person.coverImage && person.coverImage.trim() !== '';
+
+    card.innerHTML =
+      (isNew ? '<span class="card-new-badge">New</span>' : '') +
+      (hasImage
+        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'none\'; this.parentElement.querySelector(\'.card-placeholder\').style.display=\'flex\';">' +
+          '<div class="card-overlay"></div>'
+        : '<div class="card-overlay" style="display:none;"></div>') +
+      '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +
+        '<span class="card-placeholder-initials">' + getInitials(person.name) + '</span>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<p class="card-discipline">' + displayDiscipline(person.discipline, person.entityType) + '</p>' +
+        '<p class="card-name">' + (person.cardName || formatCardName(person.name)) + '</p>' +
+      '</div>' +
+      '<div class="card-arrow">↗</div>';
+    return card;
+  }
+
+  function buildGallery(people) {
+    var grid = document.getElementById('card-grid');
+    grid.innerHTML = '';
+    people.forEach(function (person) { grid.appendChild(buildCard(person)); });
+  }
+
+  function runFilter() {
+    var q = _activeSearch.toLowerCase().trim();
+    var d = _activeDiscipline;
+    var filtered = window.PEOPLE.filter(function (p) {
+      var disciplineMatch = d === 'all' || (Array.isArray(p.discipline) ? p.discipline.includes(d) : p.discipline === d);
+      if (!disciplineMatch) return false;
+      if (!q) return true;
+      return (
+        p.name.toLowerCase().includes(q) ||
+        (Array.isArray(p.discipline) ? p.discipline.join(' ').toLowerCase() : p.discipline.toLowerCase()).includes(q) ||
+        (p.style || '').toLowerCase().includes(q) ||
+        (p.bio || '').toLowerCase().includes(q) ||
+        (p.nationality || '').toLowerCase().includes(q)
+      );
+    });
+    buildGallery(filtered);
+    var countEl = document.getElementById('search-count');
+    if (countEl) countEl.textContent = q ? (filtered.length + ' result' + (filtered.length !== 1 ? 's' : '')) : '';
+  }
+
+  window.filterCards = function (discipline, btn) {
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    _activeDiscipline = discipline;
+    runFilter();
+  };
+
+  window.clearSearch = function () {
+    var input = document.getElementById('search-input');
+    if (input) input.value = '';
+    _activeSearch = '';
+    document.getElementById('search-clear').classList.remove('visible');
+    document.getElementById('search-count').textContent = '';
+    runFilter();
+  };
+
+  function showSurprise() {
+    var q = _activeSearch.toLowerCase().trim();
+    var d = _activeDiscipline;
+    var pool = window.PEOPLE.filter(function (p) {
+      var disciplineMatch = d === 'all' || (Array.isArray(p.discipline) ? p.discipline.includes(d) : p.discipline === d);
+      if (!disciplineMatch) return false;
+      if (!q) return true;
+      return (
+        p.name.toLowerCase().includes(q) ||
+        (Array.isArray(p.discipline) ? p.discipline.join(' ').toLowerCase() : p.discipline.toLowerCase()).includes(q) ||
+        (p.style || '').toLowerCase().includes(q)
+      );
+    });
+    if (!pool.length) return;
+    var pick = pool[Math.floor(Math.random() * pool.length)];
+    window.location.href = '/masters/' + pick.id + '/';
+  }
+
+  function getISOWeekSeed(date) {
+    var d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    var dayNum = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(d.getUTCDate() - dayNum + 3);
+    var firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+    var firstDayNum = (firstThursday.getUTCDay() + 6) % 7;
+    firstThursday.setUTCDate(firstThursday.getUTCDate() - firstDayNum + 3);
+    var weekNum = 1 + Math.round((d - firstThursday) / (7 * 24 * 60 * 60 * 1000));
+    return d.getUTCFullYear() + '-W' + weekNum;
+  }
+
+  function getISOWeekMonday(date) {
+    var d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    var dayNum = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(d.getUTCDate() - dayNum);
+    return d;
+  }
+
+  function hashString(str) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+      hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+    }
+    return hash;
+  }
+
+  function pickFeaturedForSeed(weekSeed, excludeIds, weekStartDate) {
+    var best = null;
+    var bestHash = -Infinity;
+    window.PEOPLE.forEach(function (p) {
+      if (excludeIds.includes(p.id)) return;
+      if (p.added && weekStartDate) {
+        var parts = p.added.split('-').map(Number);
+        var year = parts[0], month = parts[1], day = parts[2];
+        var addedDate = new Date(Date.UTC(year, month - 1, day || 1));
+        if (addedDate >= weekStartDate) return;
+      }
+      var h = hashString(weekSeed + p.id);
+      if (h > bestHash) { bestHash = h; best = p; }
+    });
+    return best;
+  }
+
+  function renderMasterOfTheWeek() {
+    var el = document.getElementById('hero-motw');
+    if (!el) return;
+
+    var featured;
+    if (FEATURED_MASTER_OVERRIDE) {
+      featured = window.PEOPLE.find(function (p) { return p.id === FEATURED_MASTER_OVERRIDE; });
+    }
+
+    if (!featured) {
+      var now = new Date();
+      var currentSeed = getISOWeekSeed(now);
+      var currentWeekStart = getISOWeekMonday(now);
+      var NO_REPEAT_WEEKS = 3;
+      var excludeIds = [];
+      for (var i = 1; i <= NO_REPEAT_WEEKS; i++) {
+        var pastDate = new Date(now.getTime() - i * 7 * 24 * 60 * 60 * 1000);
+        var pastSeed = getISOWeekSeed(pastDate);
+        var pastWeekStart = getISOWeekMonday(pastDate);
+        var pastPick = pickFeaturedForSeed(pastSeed, [], pastWeekStart);
+        if (pastPick) excludeIds.push(pastPick.id);
+      }
+      featured = pickFeaturedForSeed(currentSeed, excludeIds, currentWeekStart) || pickFeaturedForSeed(currentSeed, [], currentWeekStart);
+    }
+
+    if (!featured) return;
+
+    var discipline = displayDiscipline(featured.discipline, featured.entityType);
+    var total = window.PEOPLE.length;
+    var disciplines = new Set(window.PEOPLE.flatMap(function (p) { return Array.isArray(p.discipline) ? p.discipline : [p.discipline]; })).size;
+
+    el.innerHTML =
+      '<p class="hero-stat">' + total + ' Masters. ' + disciplines + ' Disciplines.</p>' +
+      '<div class="hero-motw-rule"></div>' +
+      '<a class="hero-motw-block" href="/masters/' + featured.id + '/">' +
+        '<p class="hero-motw-label">A Master Worth Knowing</p>' +
+        '<p class="hero-motw-name">' + featured.name + '</p>' +
+        '<p class="hero-motw-discipline">' + discipline + '</p>' +
+      '</a>';
+  }
+
+  function hydrateInitialCards() {
+    document.querySelectorAll('#card-grid .card').forEach(function (card) {
+      var person = window.PEOPLE.find(function (p) { return p.id === card.dataset.id; });
+      if (!person) return;
+
+      var nameEl = card.querySelector('.card-name');
+      if (nameEl && !person.cardName) {
+        nameEl.innerHTML = formatCardName(person.name);
+      }
+
+      var initialsEl = card.querySelector('.card-placeholder-initials');
+      if (initialsEl) {
+        initialsEl.textContent = getInitials(person.name);
+      }
+
+      if (isNewMaster(person) && !card.querySelector('.card-new-badge')) {
+        var badge = document.createElement('span');
+        badge.className = 'card-new-badge';
+        badge.textContent = 'New';
+        card.prepend(badge);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    hydrateInitialCards();
+    renderMasterOfTheWeek();
+
+    var footerCount = document.getElementById('footer-count');
+    if (footerCount) footerCount.textContent = window.PEOPLE.length + ' visual architects and counting.';
+
+    var surpriseBtn = document.getElementById('surprise-btn');
+    if (surpriseBtn) surpriseBtn.addEventListener('click', showSurprise);
+
+    var searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', function (e) {
+        _activeSearch = e.target.value;
+        var clearBtn = document.getElementById('search-clear');
+        if (clearBtn) clearBtn.classList.toggle('visible', _activeSearch.length > 0);
+        runFilter();
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
