@@ -276,13 +276,13 @@ permalink: "masters/{{ person.id }}/index.html"
     {% for relatedId in person.related %}
       {% for candidate in people %}
         {% if candidate.id == relatedId %}
-        <div class="related-card">
+        <a class="related-card" href="{{ ('/masters/' ~ candidate.id ~ '/') | url }}">
           <img class="related-card-img" src="{{ candidate.coverImage }}" alt="{{ candidate.name }}">
           <div class="related-card-info">
             <p class="related-card-discipline">{{ candidate.discipline | displayDiscipline(candidate.entityType) }}</p>
             <p class="related-card-name">{{ candidate.name }}</p>
           </div>
-        </div>
+        </a>
         {% endif %}
       {% endfor %}
     {% endfor %}
