@@ -3382,6 +3382,38 @@
     ]
   },
   {
+    "id": "ellen-kuras",
+    "related": ["michel-gondry", "spike-lee", "autumn-durald-arkapaw"],
+    "added": "2026-08-11",
+    "name": "Ellen Kuras",
+    "discipline": "Cinematographer",
+    "style": "Lyrical / High-Contrast",
+    "born": "1959",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460992/XG7GFFHA_cjudvc.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460991/G79DG1DY_wwhgjm.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460992/0006ILGM_kxkgkw.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460991/ZK4AEACJ_nlkdjq.jpg", "caption": "" },
+      { "type": "video", "youtubeId": "StfoiYS0JaE", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786461531/Screenshot_2026-08-11_at_11.18.17_crwh9m.png", "caption": "" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Ellen_Kuras",
+    "bio": "Ellen Kuras built her reputation as a bold stylist who visualizes a character's psychology through light alone, sliding between blown out white and near total dark inside a single scene until the imagery becomes the story's memory. She came up through documentary, shooting Samsara: Death and Rebirth in Cambodia and 4 Little Girls before crossing into narrative feature with Tom Kalin's Swoon, and she has carried that verite instinct into everything since, whether lighting Spike Lee's Summer of Sam or Michel Gondry's dissolving Eternal Sunshine of the Spotless Mind. In 2022 she became the first woman to receive the ASC Lifetime Achievement Award. She has since stepped fully into directing, helming the Oscar-nominated documentary The Betrayal and the 2023 narrative feature Lee.",
+    "traits": [
+      "High-contrast lighting used as a narrative device, blown-out white cut against near-black shadow within a single scene.",
+      "Documentary-honed handheld instinct carried straight into studio-financed narrative work.",
+      "Color and exposure shifted to track a character's internal state rather than the time of day.",
+      "Long, repeat collaborations across wildly different directors, from Gondry's surrealism to Spike Lee's street-level realism.",
+      "Equally fluent shooting DV documentary and 35mm studio comedy without losing a consistent visual signature."
+    ],
+    "works": [
+      { "title": "Eternal Sunshine of the Spotless Mind (2004)", "desc": "Michel Gondry's fractured love story, where fading light and dissolving color track a memory being erased scene by scene.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/eternal-sunshine-of-the-spotless-mind" }] },
+      { "title": "Blow (2001)", "desc": "Ted Demme's decades-spanning drug trade drama, its warm saturated tones curdling colder and harder as the American dream collapses.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/blow" }] },
+      { "title": "Summer of Sam (1999)", "desc": "Spike Lee's 1977 heatwave thriller, shot with the same handheld immediacy she brought to documentary work, panic rendered as sweat-soaked texture.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/summer-of-sam" }] },
+      { "title": "Be Kind Rewind (2008)", "desc": "Michel Gondry's homemade movie-reshoot comedy, DIY analog texture built to feel like it was shot on a VHS camcorder budget.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/be-kind-rewind" }] }
+    ]
+  },
+  {
     "id": "david-lachapelle",
     "related": [
       "guy-bourdin",
