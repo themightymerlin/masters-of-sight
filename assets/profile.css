@@ -619,6 +619,33 @@
   color: var(--text);
 }
 
+.platform-badges {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.platform-badge {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--tag-bg);
+  border: 0.5px solid var(--accent-dim);
+  border-radius: 2px;
+  padding: 3px 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.platform-badge:hover {
+  background: rgba(200,169,110,0.25);
+  color: var(--text);
+}
+
   /* ── SIDEBAR ── */
   .profile-gallery {
     display: grid;
