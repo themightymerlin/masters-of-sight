@@ -318,7 +318,7 @@
   function buildCard(person) {
     var card = document.createElement('a');
     card.className = 'card';
-    card.href = window.SITE_BASE_URL + 'masters/' + person.id + '/';
+    card.href = window.SITE_BASE_URL + 'masters/' + person.id + '/' + (_activeDiscipline ? '?from=' + _activeDiscipline : '');
     card.dataset.discipline = person.discipline;
     card.dataset.id = person.id;
 
@@ -373,6 +373,7 @@
     btn.classList.add('active');
     _activeDiscipline = discipline;
     runFilter();
+    history.replaceState(null, '', discipline ? '?discipline=' + discipline : window.location.pathname);
   };
 
   window.clearSearch = function () {
@@ -513,6 +514,15 @@
   document.addEventListener('DOMContentLoaded', function () {
     hydrateInitialCards();
     renderMasterOfTheWeek();
+
+    var disciplineParam = new URLSearchParams(window.location.search).get('discipline');
+    if (disciplineParam) {
+      var matchingBtn = Array.prototype.find.call(document.querySelectorAll('.filter-btn'), function (b) {
+        var onclickAttr = b.getAttribute('onclick') || '';
+        return onclickAttr.indexOf("'" + disciplineParam + "'") !== -1;
+      });
+      if (matchingBtn) filterCards(disciplineParam, matchingBtn);
+    }
 
     var footerCount = document.getElementById('footer-count');
     if (footerCount) footerCount.textContent = window.PEOPLE.length + ' visual architects and counting.';

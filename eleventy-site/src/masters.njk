@@ -156,7 +156,14 @@ permalink: "masters/{{ person.id }}/index.html"
   </div>
 </div>
 
-<a class="profile-back" href="https://mastersofsight.com/">← Back</a>
+<a class="profile-back" id="profile-back-link">← Back</a>
+<script>
+(function () {
+  var from = new URLSearchParams(window.location.search).get('from');
+  var link = document.getElementById('profile-back-link');
+  if (link) link.href = from ? '/?discipline=' + from : '/';
+})();
+</script>
 
 <div class="profile-hero">
   <img class="profile-hero-img" src="{{ person.heroImage or person.coverImage }}" alt="{{ person.name }}">
