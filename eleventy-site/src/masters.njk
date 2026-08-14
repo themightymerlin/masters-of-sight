@@ -200,6 +200,13 @@ permalink: "masters/{{ person.id }}/index.html"
             {% endfor %}
           </div>
           {% endif %}
+          {% if work.platforms and work.platforms.length %}
+          <div class="platform-badges">
+            {% for platform in work.platforms %}
+            <a class="platform-badge" href="{{ platform.url }}" target="_blank" rel="noopener noreferrer">{{ platform.name }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
