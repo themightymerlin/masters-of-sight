@@ -3804,6 +3804,89 @@
     ]
   },
   {
+    "id": "george-lucas",
+    "related": [
+      "steven-spielberg",
+      "moebius",
+      "jj-abrams"
+    ],
+    "name": "George Lucas",
+    "added": "2026-08-15",
+    "discipline": "Director",
+    "style": "Mythic / Space Opera",
+    "born": "1944",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799156/R34PI8FB_qyq7te.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799137/DJSH42JZ_vzsxfj.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799154/YU8519BH_uqnt60.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799137/6NMSA9V9_w6tzr3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799155/20GU9VVV_isk9ln.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799137/Z0Y3R43K_oc8cws.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "vZ734NWnAHA",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799400/Screenshot_2026-08-15_at_09.09.45_duxfrl.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/George_Lucas",
+    "bio": "George Lucas built the mythology that swallowed modern cinema whole. Before Star Wars, blockbusters were an accident. After it, they were an industry, one he engineered himself, patenting merchandising rights nobody thought to value and founding Industrial Light & Magic to solve effects problems that did not yet have solutions. His early work, formally rigorous, sparse, deliberately cold, reveals a director capable of real restraint before he chose spectacle instead. What he actually gave cinema was structure: Joseph Campbell's hero's journey smuggled into a space opera, a template so durable that four decades of franchise filmmaking are still just copying his homework.",
+    "traits": [
+      "Mythology borrowed wholesale from Joseph Campbell and rebuilt as pulp adventure, the monomyth disguised as space opera.",
+      "Practical models and miniatures pushed until the technology to realize them had to be invented from scratch, hence Industrial Light & Magic.",
+      "Sound built into the film's DNA rather than layered on top, John Williams's score and Ben Burtt's effects work treated as coequal authors.",
+      "Worldbuilding through texture over exposition, a used and weathered universe where the hardware looks older than the story being told.",
+      "Franchise architecture understood as part of the creative act itself, not a business decision bolted on after the film was finished."
+    ],
+    "works": [
+      {
+        "title": "THX 1138 (1971)",
+        "desc": "His feature debut, a sterile dystopia of white voids and surveillance built for a fraction of what any studio would spend today. Proof he had a rigorous formal eye years before he had a budget to match it.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/thx-1138"
+          }
+        ]
+      },
+      {
+        "title": "American Graffiti (1973)",
+        "desc": "A single night of cruising set entirely to Top 40 radio, structured as parallel threads instead of one throughline. It rewrote what an ensemble youth film could sound and feel like, and made enough money to fund what came next.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/american-graffiti"
+          }
+        ]
+      },
+      {
+        "title": "Star Wars (1977)",
+        "desc": "A used-future space opera built from spare parts, war footage, and Joseph Campbell, shot on a budget nobody at Fox believed in. It did not just make money, it invented the modern blockbuster as an industry.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/star-wars-episode-iv-a-new-hope"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "david-lynch",
     "related": [
       "gregory-crewdson",
