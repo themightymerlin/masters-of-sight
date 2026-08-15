@@ -649,9 +649,25 @@
   /* ── SIDEBAR ── */
   .profile-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3px;
     margin-bottom: 48px;
+  }
+
+  .profile-gallery:has(> img:nth-child(2):last-child) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .profile-gallery:has(> img:nth-child(3):last-child) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-gallery:has(> img:nth-child(4):last-child) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profile-gallery:has(> img:nth-child(5):last-child) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .profile-gallery img {
@@ -670,8 +686,13 @@
   }
 
   .profile-gallery img:first-child {
-    grid-column: span 2;
+    grid-column: 1 / -1;
+    grid-row: 1;
     aspect-ratio: 16/9;
+  }
+
+  .profile-gallery img:not(:first-child) {
+    grid-row: 2;
   }
 
   /* ── VIDEO BOOKEND ── */
