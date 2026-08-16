@@ -1155,7 +1155,7 @@
     "related": [
       "saul-bass",
       "danny-yount",
-      "hideo-kojima"
+      "gmunk"
     ],
     "added": "2026-07-31",
     "name": "Kyle Cooper",
@@ -3234,7 +3234,7 @@
     "related": [
       "roger-deakins",
       "denis-villeneuve",
-      "syd-mead"
+      "gmunk"
     ],
     "name": "Joseph Kosinski",
     "discipline": "Director",
@@ -4400,6 +4400,48 @@
             "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "gmunk",
+    "related": ["kyle-cooper", "joseph-kosinski", "danny-yount"],
+    "added": "2026-08-16",
+    "name": "GMUNK",
+    "discipline": ["Designer", "Director"],
+    "style": "Holographic / Psychedelic",
+    "born": "1975",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786890618/image_b6c1oc.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786890427/059.TRONSS.08_v5nloa.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1786890431/TG_COLLECT_036_00000_hrcb2p.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786890432/_DSC2418-2_mi7m40.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786890428/01_OBLVN_Light_Table_UI_17br_xbmlfv.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786890426/_DSC7520_breathing-03_plc8ha.jpg", "caption": "" },
+      { "type": "video", "vimeoId": "923828868", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786891392/Screenshot_2026-08-16_at_10.38.12_nzm7iy.png", "caption": "" }
+    ],
+    "url": "https://gmunk.com",
+    "bio": "GMUNK trained under Kyle Cooper at Imaginary Forces, then spent 2010 inside Digital Domain leading a team that built nearly ten minutes of holographic interface work for TRON: Legacy, the disc rectifier sequence chief among it. He carried that same sci-fi-meets-psychedelia instinct into Oblivion's UI design for Joseph Kosinski, then into Box, the Bot & Dolly film that fused projection mapping with a moving robotic arm before anyone called it real time visualization. His practice runs wider than film credits, light installations, infrared photography, generative print work, all built from the same conviction that an interface should feel physically inhabited, not screen bound. Cooper's title sequence lineage is audible in him, but where Cooper works in narrative shorthand, GMUNK builds entire visual physics for worlds that don't exist yet.",
+    "traits": [
+      "Holographic and diegetic UI treated as world-building, not screen dressing",
+      "Sci-fi geometry burning against saturated, psychedelic color",
+      "Practical robotics and projection mapping used to pull digital imagery into real physical space",
+      "A title-sequence pedigree, trained under Kyle Cooper, audible in the rhythm of his motion graphics",
+      "Restless across mediums: film VFX, installation art, infrared photography, generative print, one signature underneath all of it"
+    ],
+    "works": [
+      {
+        "title": "TRON: Legacy (2010)",
+        "desc": "The disc rectifier sequence and the film's entire holographic data language, built from scratch inside a black-ops GFX team at Digital Domain."
+      },
+      {
+        "title": "Oblivion (2013)",
+        "desc": "UI and GFX design for Joseph Kosinski again, colder and cleaner than TRON, a light table interface that reads like actual hardware."
+      },
+      {
+        "title": "Top Gun: Maverick (2022)",
+        "desc": "Cockpit UI design for the Darkstar hypersonic jet, screens that had to feel like real avionics under a pilot's helmet, not sci-fi dressing."
       }
     ]
   },
@@ -6398,7 +6440,7 @@
     "related": [
       "saul-bass",
       "pablo-ferro",
-      "hype-williams"
+      "gmunk"
     ],
     "added": "2026-07-26",
     "name": "Danny Yount",
