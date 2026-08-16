@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1786800621222">
+<link rel="stylesheet" href="/assets/profile.css?v=1786891677370">
 </head>
 <body>
 
@@ -278,7 +278,7 @@
         
       
         
-        <div class="video-bookend" onclick="openVideoLightbox('etOOO9Sq7u8')">
+        <div class="video-bookend" onclick="openVideoLightbox('etOOO9Sq7u8', '')">
           <div class="video-bookend-thumb">
             <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064438/image_r7qcut.jpg" alt="Hideo Kojima video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/etOOO9Sq7u8/hqdefault.jpg'">
             <div class="video-bookend-overlay">
@@ -970,12 +970,18 @@
 
   var _lbIndex = 0;
 
-  window.openVideoLightbox = function (youtubeId) {
+  window.openVideoLightbox = function (youtubeId, vimeoId) {
     var overlay = document.getElementById('lightbox-overlay');
     overlay.style.display = 'flex';
+    var videoEmbed;
+    if (vimeoId) {
+      videoEmbed = '<iframe src="https://player.vimeo.com/video/' + vimeoId + '?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"></iframe>';
+    } else {
+      videoEmbed = '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>';
+    }
     overlay.innerHTML =
       '<div class="lightbox-video-wrap" onclick="event.stopPropagation()">' +
-        '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>' +
+        videoEmbed +
         '<button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>' +
       '</div>';
     document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') closeLightbox(); }, { once: true });
@@ -1003,7 +1009,11 @@
     if (item.type === 'video') {
       var wrap = document.createElement('div');
       wrap.className = 'lightbox-iframe-wrap';
-      wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      if (item.vimeoId) {
+        wrap.innerHTML = '<iframe src="https://player.vimeo.com/video/' + item.vimeoId + '?autoplay=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+      } else {
+        wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      }
       closeBtn.after(wrap);
     } else {
       var img = document.createElement('img');
