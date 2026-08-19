@@ -6191,6 +6191,65 @@
     ]
   },
   {
+    "id": "alex-webb",
+    "related": [
+      "william-eggleston",
+      "robert-frank",
+      "martin-parr"
+    ],
+    "added": "2026-08-19",
+    "name": "Alex Webb",
+    "discipline": "Photographer",
+    "style": "Street / Documentary",
+    "born": "1952",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/a5f568f914967ab2b507d36d784715eac7b8457a-3046x2000.jpg_wqtuza.avif",
+    "galleryImages": [
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152992/2285f4765518db34c8bcd155964e2ac52698869e-3034x2000.jpg_nwmgdv.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152994/d44631859b6161fd5cd669ed6441675b0fd4ce40-2994x2000.jpg_mknq5t.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152990/71014374e5e2029243fa7a2152f6c9e3c27c55d0-2997x2000.jpg_rqffsl.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/c704cf7074bfdcce4700bb60db1fd8fa3c6983b8-3004x2000.jpg_zbj129.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152993/9458f96e9a92eef6c987b39befaf64abc1faa38b-3014x2000.jpg_ntgcpb.avif"
+    ],
+    "url": "https://webbnorriswebb.co",
+    "bio": "Alex Webb turned street photography into a puzzle of color, shadow, and coincidence. A Magnum member since 1976, he built his reputation on the tropics, the Caribbean, Haiti, Mexico, and the U.S. border, places where brutal light and layered geometry gave him frames within frames. His pictures work like visual chess, several unrelated events compressed into one moment of accidental alignment. He committed to vivid, saturated color at a time when serious documentary photographers were still expected to shoot black and white.",
+    "traits": [
+      "Frames built from multiple overlapping planes, unrelated events compressed into one geometrically resolved image.",
+      "Punishing tropical and border light used as a compositional tool, never treated as an obstacle to work around.",
+      "Color pushed to near-oversaturation and treated as structure, not mood.",
+      "Decades spent returning to the same geographies, Haiti, Mexico, the U.S. border, until the work reads as an ongoing argument rather than a series of trips.",
+      "Serendipity treated as a discipline. He waits for chaos to resolve into order instead of staging it."
+    ],
+    "works": [
+      {
+        "title": "The Suffering of Light (2011)",
+        "desc": "His definitive career monograph. Thirty years of color street photography across the tropics, the U.S. border, and beyond, the single best entry point into how he sees.",
+        "links": [
+          {
+            "type": "book",
+            "url": "https://bookshop.org/p/books/alex-webb-the-suffering-of-light-alex-webb/446ef647e1c80435"
+          }
+        ]
+      },
+      {
+        "title": "La Calle (2016)",
+        "desc": "A vivid homage to Mexico, gathering decades of black-and-white and intense color work shot across Oaxaca, Tijuana, and Nuevo Laredo."
+      },
+      {
+        "title": "Hot Light/Half-Made Worlds (1986)",
+        "desc": "The breakthrough collection. Sun-drenched, saturated frames from the tropics, Latin America, and the Caribbean that first announced his voice."
+      },
+      {
+        "title": "Istanbul: City of a Hundred Names (2007)",
+        "desc": "A layered visual read on the Turkish metropolis, its history and daily life folded into the same frame."
+      },
+      {
+        "title": "Jumping, Boquillas, Mexico (1979)",
+        "desc": "A silhouetted boy caught mid-leap against pink and blue rustic walls. The single image that best captures his instinct for serendipity and geometry landing at once."
+      }
+    ]
+  },
+  {
     "id": "hype-williams",
     "related": [
       "spike-jonze",
