@@ -5285,6 +5285,60 @@
     ]
   },
   {
+    "id": "sebastiao-salgado",
+    "related": [
+      "alex-webb",
+      "robert-frank",
+      "martin-parr"
+    ],
+    "added": "2026-08-22",
+    "name": "Sebastião Salgado",
+    "discipline": "Photographer",
+    "style": "Documentary / Humanitarian",
+    "born": "1944",
+    "died": "2025",
+    "nationality": "Brazilian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787426122/Wiley-Salgado-Kuwait-1991.jpg_l3oevo.webp",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787426131/10043589aedde4c9d2631d3063cca5fe_tampja.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1787426123/photo3_zxpjrd.png" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787426130/541ce973fe5e4fa0801b0fa453362811_qrtutv.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787426132/bae61505b8fd6243f18aa786c79ae20f_dwblki.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787426128/cb431b7412c82f3d961ff0057885fd7ej.jpg_sueumh.webp" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Sebastião_Salgado",
+    "bio": "Sebastião Salgado trained as an economist before he ever picked up a camera, and the discipline never left his eye. He spent years, sometimes the better part of a decade, embedded inside the story he was photographing, from the open pit gold mine at Serra Pelada to famine camps across the Sahel, treating patience as the only ethical way to earn an image. His black and white frames carry the weight of scripture, human labor and mass migration rendered with the same unflinching clarity he later turned on the planet's last untouched wilderness. He and his wife Lélia founded Amazonas Images to control his archive outright, then Instituto Terra, converting decades of documentary urgency into an actual reforestation of Brazil's Atlantic Forest. He died in 2025, having spent fifty years proving a photograph could still change how a person sees the world.",
+    "traits": [
+      "Black and white as moral clarity. Color removed so light and composition carry the full weight.",
+      "Extended immersion. Months or years living inside a story before a single frame reaches print.",
+      "Human labor rendered at epic scale, individual figures dwarfed by the industrial or natural forces around them.",
+      "Classical painterly composition applied to famine, migration, and mining alike.",
+      "Documentary conviction with activist follow-through. Instituto Terra turned his images into a working land restoration project."
+    ],
+    "works": [
+      {
+        "title": "Workers: An Archaeology of the Industrial Age (1993)",
+        "desc": "Six years across twenty-six countries documenting manual labor at the exact moment it began disappearing. The Serra Pelada gold mine images alone rewired how scale gets photographed.",
+        "links": [ { "type": "book", "url": "https://bookshop.org/p/books/sebastiao-salgado-workers-an-archaeology-of-the-industrial-age-lelia-wanick-salgado/078c8163b9327be6?ean=9783836596329&bkshp-astro=t" } ]
+      },
+      {
+        "title": "Amazônia (2021)",
+        "desc": "Seven years photographing the rainforest and the Indigenous peoples defending it, completed just before deforestation and fire accelerated past the point Salgado could keep documenting it as wilderness.",
+        "links": [ { "type": "book", "url": "https://bookshop.org/p/books/sebasti-o-salgado-amaz-nia-sebasti-o-salgado/e0dec861b04bffb1?ean=9783836594028&bkshp-astro=t" } ]
+      },
+      {
+        "title": "Genesis (2013)",
+        "desc": "Eight years spent locating the roughly half of the planet still untouched by industrial life, from Antarctic ice fields to uncontacted Amazon tribes. Widely considered his magnum opus.",
+        "links": [ { "type": "book", "url": "https://bookshop.org/p/books/sebasti-o-salgado-genesis-l-lia-wanick-salgado/d7fa593f12f20e3f?ean=9783836594011&bkshp-astro=t" } ]
+      },
+      {
+        "title": "Kuwait: A Desert on Fire (2016)",
+        "desc": "Kuwait's oil fields burning after the Gulf War, shot in 1991 and left unpublished as a book for twenty-five years.",
+        "links": [ { "type": "book", "url": "https://bookshop.org/p/books/sebasti-o-salgado-kuwait-a-desert-on-fire-sebasti-o-salgado/09940218999a453b?ean=9783836561259&bkshp-astro=t" } ]
+      }
+    ]
+  },
+  {
     "id": "ridley-scott",
     "related": [
       "syd-mead",
