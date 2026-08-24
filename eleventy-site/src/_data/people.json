@@ -2549,6 +2549,95 @@
     ]
   },
   {
+    "id": "amy-hennig",
+    "related": [
+      "neil-druckmann",
+      "hideo-kojima",
+      "naughty-dog"
+    ],
+    "name": "Amy Hennig",
+    "discipline": "Dream Makers",
+    "style": "Cinematic / Narrative",
+    "born": "1964",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787582728/71GHvs6SeML_dyyb8s.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787581255/uncharted-drakes-fortune-logo.jpg_wvrtk8.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787581253/Uncharted-2-Among-Thieves-Header_tnzztp.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787581253/Uncharted-3-Drakes-Deception-Header-1068x580_mhsabu.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787581252/1db414e9c500cf7424b66651345839541fd07121c832e1ca.png_ddoyhx.avif"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787581252/lok_sr1_cover.png_uve1ja.webp"
+      },
+      {
+        "type": "video",
+        "youtubeId": "tlkkceDkT88",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787583100/Screenshot_2026-08-24_at_10.47.44_gzcuve.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Amy_Hennig",
+    "bio": "Amy Hennig spent eight years at Crystal Dynamics writing and directing the Legacy of Kain: Soul Reaver games before Naughty Dog brought her in to build something with none of that gothic weight and all of that structural discipline. As creative director and head writer on the Uncharted trilogy, she imported the pulp serial grammar of Indiana Jones directly into game design, banter, cliffhangers, and a buddy dynamic doing as much load bearing work as any gunfight. She left before Uncharted 4 shipped, but the template she built, cinematic pacing married to player control, is the one most cinematic games are still copying whether they know it or not. She still calls Soul Reaver her real masterpiece.",
+    "traits": [
+      "Writer and director credited as one role, not two, narrative built into the architecture of a level rather than bolted on after.",
+      "Tonal range from gothic vampire revenge tragedy to pulp adventure banter without either register feeling like a costume.",
+      "Three-act structure and cliffhanger pacing lifted straight from serial adventure film and applied to interactive pacing.",
+      "Long single-studio tenures, eight years at Crystal Dynamics and roughly a decade at Naughty Dog, building sustained authorial voice across sequels.",
+      "Buddy chemistry treated as the actual plot engine, Drake and Sully carrying more narrative weight than any set piece around them."
+    ],
+    "works": [
+      {
+        "title": "Legacy of Kain: Soul Reaver (1999)",
+        "desc": "Writer, director, and designer on the game that turned a scrapped side project called Shifter into a gothic revenge epic, Raziel clawing back through Nosgoth to kill the vampire who cast him into the abyss.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://www.playstation.com/en-us/games/legacy-of-kain-soul-reaver-1-2-remastered/" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/2521380/Legacy_of_Kain_Soul_Reaver_12_Remastered/" }
+        ]
+      },
+      {
+        "title": "Legacy of Kain: Soul Reaver 2 (2001)",
+        "desc": "The direct continuation, Raziel moving backward through Nosgoth's own history, time itself repositioned as the central puzzle mechanic years before that idea was anywhere near common.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://www.playstation.com/en-us/games/legacy-of-kain-soul-reaver-1-2-remastered/" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/2521380/Legacy_of_Kain_Soul_Reaver_12_Remastered/" }
+        ]
+      },
+      {
+        "title": "Uncharted: Drake's Fortune (2007)",
+        "desc": "Her directorial debut at Naughty Dog, structured explicitly on pulp serial rhythm, cliffhangers and banter borrowed from Indiana Jones and delivered inside a PlayStation 3 launch window nobody expected to move this fast.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP9000-CUSA02320_00-UNCHARTEDTRILOGY" }
+        ]
+      },
+      {
+        "title": "Uncharted 2: Among Thieves (2009)",
+        "desc": "Widely regarded as the series peak and one of the highest-rated games ever released, a single train sequence resetting what action set pieces in games were allowed to attempt.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP9000-CUSA02320_00-UNCHARTEDTRILOGY" }
+        ]
+      },
+      {
+        "title": "Uncharted 3: Drake's Deception (2011)",
+        "desc": "Her final entry as creative director, a desert-to-shipwreck finale that pushed the Drake and Sully relationship to its most exposed and vulnerable point in the trilogy.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP9000-CUSA02320_00-UNCHARTEDTRILOGY" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "jonathan-hoefler",
     "related": [
       "herb-lubalin",
