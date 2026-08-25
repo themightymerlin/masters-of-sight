@@ -5152,6 +5152,7 @@
     "born": "Founded 1994",
     "nationality": "Polish",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7_ierxod.jpg",
+    "coverImagePosition": "center calc(50% + 20px)",
     "galleryMedia": [
       {
         "type": "image",
