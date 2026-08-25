@@ -5503,6 +5503,95 @@
     ]
   },
   {
+    "id": "tony-scott",
+    "related": [
+      "ridley-scott",
+      "quentin-tarantino",
+      "hype-williams"
+    ],
+    "added": "2026-08-25",
+    "name": "Tony Scott",
+    "discipline": "Director",
+    "style": "Kinetic / Sensory Overload",
+    "born": "1944",
+    "died": "2012",
+    "nationality": "English",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668669/8GQ8HR6O_ba7syr.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668667/OQY5TLCH_mprno2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668665/94Q0FD4S_opyokv.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668666/I74OGDHN_tkixf6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668666/TK3SI46E_xftwj2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668668/I0893PZH_nbyasc.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "eDDh50B6kA4",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787668665/Screenshot_2026-08-25_at_10.37.11_n8wmsf.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Tony_Scott",
+    "bio": "Tony Scott never met a frame he couldn't set on fire. He came out of British commercials shooting product like religious iconography, then carried that same instinct for glamour and speed into Hollywood, and for a decade he was mistaken for a director who only made things look expensive. The mistake stopped holding once Man on Fire arrived, bleached film stock, subtitles turned into moving typography, cuts landing like a nervous system short circuiting. He kept escalating from there, chasing a kind of visual velocity nobody else in mainstream American cinema was chasing, until his films stopped resembling anything but themselves. Younger brother to Ridley, permanently in his shadow critically and permanently ahead of him in sheer nerve.",
+    "traits": [
+      "Bleach bypass processing and crushed color used to make ordinary places feel dangerous, first fully unleashed on Man on Fire.",
+      "Subtitles treated as graphic elements, jittering and resized for emotional emphasis instead of sitting quietly at the bottom of frame.",
+      "Whip pans, stutter cuts, and radical shutter speed changes stacked until the editing itself carries the anxiety of the story.",
+      "Saturated, high-contrast lighting inherited from his advertising years, glamour applied equally to fighter jets, race cars, and violence.",
+      "Genre used as a delivery system for pure sensation, plot always secondary to how fast and how hard a scene can hit."
+    ],
+    "works": [
+      {
+        "title": "The Hunger (1983)",
+        "desc": "His directorial debut, awash in blue gel light and slow dissolves, more art film than horror. The MTV aesthetic that would define the decade, applied to vampires years before anyone else thought to try it.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-hunger-1983" }
+        ]
+      },
+      {
+        "title": "Top Gun (1986)",
+        "desc": "Backlit haze, chrome, and bodies shot like product on a runway. The exact moment advertising's visual grammar became the template for the modern action blockbuster.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/top-gun" }
+        ]
+      },
+      {
+        "title": "True Romance (1993)",
+        "desc": "Tarantino's script shot as a sun-bleached pulp paperback cover come to life. Proof he could serve someone else's voice and still leave fingerprints everywhere.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/true-romance" }
+        ]
+      },
+      {
+        "title": "Man on Fire (2004)",
+        "desc": "Bleach bypass film stock and subtitles turned into kinetic typography, cutting like the film itself is having a breakdown alongside Denzel Washington. The film where he stopped imitating anyone.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/man-on-fire-2004" }
+        ]
+      },
+      {
+        "title": "Domino (2005)",
+        "desc": "Hyper-saturated, near-hallucinatory editing pushed past the point most audiences could follow. His most extreme visual statement, and the clearest argument that he never stopped experimenting.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/domino" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "dana-scruggs",
     "related": [
       "ryan-coogler",
