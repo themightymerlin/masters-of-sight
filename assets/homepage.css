@@ -1,4 +1,4 @@
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   /* ── HERO ── */
   .hero {

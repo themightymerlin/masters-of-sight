@@ -24,6 +24,7 @@
     line-height: 1.8;
     min-height: 100vh;
     cursor: default;
+    overflow-x: hidden;
   }
 
   .site-nav {
