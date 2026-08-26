@@ -2198,6 +2198,115 @@
     ]
   },
   {
+    "id": "greig-fraser",
+    "related": [
+      "hoyte-van-hoytema",
+      "roger-deakins",
+      "emmanuel-lubezki"
+    ],
+    "added": "2026-08-26",
+    "name": "Greig Fraser",
+    "discipline": "Cinematographer",
+    "style": "Naturalism / Scale",
+    "born": "1975",
+    "nationality": "Australian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753112/96BLPIUO_aktm3l.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753114/MRANHOQV_bkqfjx.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753111/RLAQ7UPD_bksybq.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753107/G4RJISQ7_djmzza.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753108/B8F5828Y_ututhy.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753110/D0G41HU0_ofksue.jpg",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "n9xhJrPXop4",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787753091/Screenshot_2026-08-26_at_10.04.22_ihudlf.png",
+        "caption": ""
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Greig_Fraser",
+    "bio": "Greig Fraser spent the 2010s becoming Hollywood's answer to an impossible brief: make sprawling franchise machinery feel like it was shot by someone who still cares about light. Zero Dark Thirty proved he could carry dread on almost no artificial illumination at all. Lion earned him his first Oscar nomination for finding warmth inside grief without ever tipping into sentiment. Then Dune reset the bar for what studio science fiction could look like, real desert, real dust, a palette that trusted silence over spectacle, and an Academy Award to prove the industry noticed. He now moves between Gotham's noir sprawl and Arrakis's white heat without ever losing the instinct that made Zero Dark Thirty feel like found footage nobody was supposed to see.",
+    "traits": [
+      "Natural and motivated light sources favored even inside enormous studio builds, sunlight and practical fixtures over rigged illumination.",
+      "Desaturated, earth-toned palettes that read as documentary rather than spectacle, even at Dune's scale.",
+      "Large-format and IMAX cameras used to make emptiness itself a compositional subject.",
+      "Restraint over coverage. Fewer setups, wider spaces, actors left alone in the frame.",
+      "Total tonal reinvention per project, Gotham's noir and Arrakis's sun sharing no visual DNA beyond the same eye behind the camera."
+    ],
+    "works": [
+      {
+        "title": "Lion (2016)",
+        "desc": "Warmth found inside a story built on loss and distance, drawing on Indian street photography for its color sense. His first Oscar nomination.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/lion"
+          }
+        ]
+      },
+      {
+        "title": "Dune (2021)",
+        "desc": "Real desert light and negative space so vast it becomes its own character. Won the Academy Award for Best Cinematography.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/dune-2021"
+          }
+        ]
+      },
+      {
+        "title": "Dune: Part Two (2024)",
+        "desc": "The Harkonnen sequences shot in infrared, turning an entire planet's palette to black and white without a single frame feeling like a gimmick.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/dune-part-two-2023"
+          }
+        ]
+      },
+      {
+        "title": "The Creator (2023)",
+        "desc": "A war epic shot largely on location with mirrorless cameras and natural light, proving big science fiction doesn't require a soundstage to look enormous.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/the-creator"
+          }
+        ]
+      },
+      {
+        "title": "Project Hail Mary (2026)",
+        "desc": "His next collaboration on a solitary-survival space epic, continuing the run of scale handled through restraint rather than excess.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/project-hail-mary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "rockstar-games",
     "related": [
       "ridley-scott",
