@@ -2658,6 +2658,86 @@
     ]
   },
   {
+    "id": "benjamin-hardman",
+    "related": [
+      "ansel-adams",
+      "nadav-kander",
+      "reuben-wu"
+    ],
+    "added": "2026-08-27",
+    "name": "Benjamin Hardman",
+    "discipline": "Photographer",
+    "style": "Landscape / Fine Art",
+    "born": "1993",
+    "nationality": "Australian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837053/58372836_2128155523965355_4306768143847522304_n_ktpkuj.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837056/IMG_9016-3.jpg_gj0uyf.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837054/733328658_965533449845904_8204267086068548908_n.png_lttp3c.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837053/728503417_1910206356243824_828344215797508133_n.png_qutfug.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837053/727970696_1562887881848830_2963614625994715718_n.png_fpc1nt.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787837054/735456954_3547454708739711_8630006447431856113_n.png_mpulmk.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "UrO8JQxwlOc"
+      }
+    ],
+    "url": "https://benjaminhardman.com",
+    "bio": "Benjamin Hardman grew up in Perth, hated the heat, and eventually found his actual climate on the other side of the planet. For the past decade he has based himself in Iceland, photographing ice, rock, and empty sky until each frame strips down to almost nothing, a single ridgeline, a blank horizon, restraint that takes real nerve in a genre that usually reaches for drama. That same instinct for reduction carried him into motion work, where he shot aerial and gimbal sequences for Netflix's Life on Our Planet and Our Universe, treating polar landscape less like backdrop and more like a subject with its own pulse. Stills to cinematography, same discipline, just a different frame rate.",
+    "traits": [
+      "Compositions reduced to a single ridgeline or horizon, negative space doing more work than the subject.",
+      "A fixed geography, Iceland, Greenland, Svalbard, Antarctica, returned to again and again rather than treated as one stop on a nature tour.",
+      "Aerial and gimbal tracking shots that read as moving abstraction, not establishing wides.",
+      "A tonal, desaturated palette built for large-format prints as much as for screen.",
+      "Equal fluency in stills and motion, the same restraint applied whether the output is a photograph or a Netflix sequence."
+    ],
+    "works": [
+      {
+        "title": "Life on Our Planet (2023)",
+        "desc": "Aerial cinematographer across the Netflix series. Was already on site in Iceland when the Fagradalsfjall volcano erupted and had footage back within hours, shots that ended up shaping the visual style of the whole show.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/tv-show/life-on-our-planet"
+          }
+        ]
+      },
+      {
+        "title": "Our Universe (2022)",
+        "desc": "Cinematography and drone work on the Morgan Freeman-narrated Netflix and BBC Studios series linking cosmic events to life on Earth.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/tv-show/our-universe"
+          }
+        ]
+      },
+      {
+        "title": "66°North",
+        "desc": "Five years as commercial photographer for the Icelandic outdoor brand, moving into the role of Editor-in-Chief in 2019."
+      },
+      {
+        "title": "Polar fine art archive",
+        "desc": "An ongoing body of minimalist prints from Iceland, Greenland, Svalbard, and Antarctica, sold through his own studio rather than a gallery system."
+      }
+    ]
+  },
+  {
     "id": "amy-hennig",
     "related": [
       "neil-druckmann",
