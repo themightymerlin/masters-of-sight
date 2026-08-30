@@ -3764,6 +3764,109 @@
     ]
   },
   {
+    "id": "dan-laustsen",
+    "related": [
+      "guillermo-del-toro",
+      "vittorio-storaro",
+      "hoyte-van-hoytema"
+    ],
+    "added": "2026-08-30",
+    "name": "Dan Laustsen",
+    "discipline": "Cinematographer",
+    "style": "Gothic Atmosphere / Genre Craft",
+    "born": "1954",
+    "nationality": "Danish",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123856/8WVEI3TI_rykfci.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123857/NGE5DBO7_uaykl1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123796/A3XTDBXB_xwiv0k.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123795/4Y7O38A1_ztelsm.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123795/56RLXH10_tzr96q.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123795/OYF2I51E_zkuj2g.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "8aulMPhE12g",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123867/Screenshot_2026-08-30_at_17.04.12_nammxk.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Dan_Laustsen",
+    "bio": "Dan Laustsen spent two decades making unglamorous Danish dramas before Hollywood caught up with what he could do with shadow. He met Guillermo del Toro on 1997's Mimic, then didn't work with him again for eighteen years, until Crimson Peak reunited them and became the first of four collaborations that turned gothic horror into awards season cinematography. The Shape of Water, Nightmare Alley, and Frankenstein each earned him an Academy Award nomination, three nods built on the same instinct: darkness as a character, not an absence of light. He gave the John Wick franchise its neon drenched, brutalist glow starting with Chapter 2, proving the same eye that photographs monsters in candlelit mansions can photograph gunfights in glass hotels. Sixty productions and four decades in, he still shoots like someone auditioning for the job.",
+    "traits": [
+      "Practical light sources, candles, neon signage, firelight, doing the narrative work instead of just filling the frame.",
+      "Saturated, near theatrical color grading that separates a scene's danger from its safety without a line of dialogue.",
+      "Fluency across genre extremes, gothic romance, monster horror, martial arts spectacle, without a visible change in toolkit.",
+      "Long director partnerships, Ole Bornedal, Guillermo del Toro, Chad Stahelski, that deepen rather than repeat with each collaboration.",
+      "Darkness treated as production value, not a budget compromise. Shadow with texture and intention, never just underexposure."
+    ],
+    "works": [
+      {
+        "title": "Crimson Peak (2015)",
+        "desc": "The film that reunited him with del Toro after eighteen years apart. A haunted house shot like a wound, red clay bleeding through white snow.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/crimson-peak"
+          }
+        ]
+      },
+      {
+        "title": "The Shape of Water (2017)",
+        "desc": "Cold War Baltimore drowned in teal and gold. His first Oscar nomination, and proof a fish man could be the most romantic thing in a frame.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/the-shape-of-water"
+          }
+        ]
+      },
+      {
+        "title": "John Wick: Chapter 4 (2023)",
+        "desc": "Paris shot through stained glass and gunfire, the Arc de Triomphe sequence turning traffic into one continuous kill shot.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/john-wick-chapter-4"
+          }
+        ]
+      },
+      {
+        "title": "The Gorge (2025)",
+        "desc": "A mile deep chasm and the thing living inside it, photographed with the same patience he gives gothic mansions.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/the-gorge"
+          }
+        ]
+      },
+      {
+        "title": "Frankenstein (2025)",
+        "desc": "His third Oscar nomination, del Toro's monster movie lit like a cathedral built out of dread.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/frankenstein-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "spike-lee",
     "related": [
       "ryan-coogler",
