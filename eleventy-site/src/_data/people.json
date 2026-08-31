@@ -148,6 +148,70 @@
     ]
   },
   {
+    "id": "chuck-anderson",
+    "related": [
+      "gmunk",
+      "alex-trochut",
+      "shepard-fairey"
+    ],
+    "added": "2026-08-31",
+    "name": "Chuck Anderson",
+    "discipline": "Designer",
+    "style": "Color & Light / Digital Illustration",
+    "born": "1985",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188270/AIGA-2015_05_tjpdpj.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188273/edit01_drm9sm.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188269/7ab075207911153.66e597633d09b.jpg_a1yhlo.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188273/LastDance3_qzoxqc.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188717/Vans-12_pfepzd.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788188273/LupeFiascoFL-01-update_pj340b.jpg"
+      }
+    ],
+    "url": "https://nopattern.com",
+    "bio": "Chuck Anderson started NoPattern in 2004 at eighteen, with no formal design training, and built a signature around streaked, colored light bent around a subject until the image reads like it was lit from somewhere other than the camera. That style landed him the cover of Lupe Fiasco's Food & Liquor at twenty, one of the most cited hip hop album covers of its decade, and the same commercial-meets-culture path kept following him after: Nike, Vans, ESPN, the Chicago Bulls, Target. In 2005 he co-founded the blog THE BRILLIANCE! with Virgil Abloh and Benjamin Edgar, one of the early internet's clearinghouses for a visual sensibility a lot of designers absorbed without knowing where it started. He has spent two decades working almost entirely outside agencies and studios, so his influence traveled through imitation more than institutional credit.",
+    "traits": [
+      "A signature light-streak effect, color refracted until a photograph reads like it is lit from another dimension.",
+      "Self-taught and studio-less, building a two-decade career entirely outside agency structure.",
+      "Photography, illustration, apparel, and motion treated as one continuous practice rather than separate lanes.",
+      "Brand collaborations chosen for cultural fit over budget size, sneakers, hip hop, and sports culture over generic commercial clients.",
+      "The early internet used as a training ground, an audience built through blogs and forums before social platforms existed to do it for him."
+    ],
+    "works": [
+      {
+        "title": "Lupe Fiasco's Food & Liquor album cover (2006)",
+        "desc": "Shot and designed at twenty, built around Fiasco's own memory of a Katsuhiro Otomo manga panel. Still regularly named one of the defining hip hop album covers of the 2000s."
+      },
+      {
+        "title": "NoPattern x Vans Surf, SS2010",
+        "desc": "A full apparel collaboration, tees, hats, wallets, trunks, built around his light and color language rather than a licensed graphic dropped onto a product."
+      },
+      {
+        "title": "ESPN The Magazine, NFL Season Preview (2012)",
+        "desc": "Photo illustration for the magazine's annual season opener issue, commercial work carrying the same charged color treatment as his personal art."
+      },
+      {
+        "title": "Chicago Bulls x ESPN, The Last Dance campaign (2017–2020)",
+        "desc": "A hat design made with the Bulls for the 2017-18 season, followed by a ten-piece visual campaign for the team's social channels timed to each episode of the Michael Jordan documentary."
+      }
+    ]
+  },
+  {
     "id": "wes-anderson",
     "related": [
       "william-eggleston",
