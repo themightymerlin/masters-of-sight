@@ -6043,6 +6043,70 @@
     ]
   },
   {
+    "id": "newton-thomas-sigel",
+    "related": [
+      "robert-elswit",
+      "dan-laustsen",
+      "greig-fraser"
+    ],
+    "added": "2026-09-03",
+    "name": "Newton Thomas Sigel",
+    "discipline": "Cinematographer",
+    "style": "Kinetic / Genre-Fluent",
+    "born": "1955",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/E05Q69L3_mv7blm.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/9D7ZYSK3_hmzskr.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/39PZUP7S_ukrqqb.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/ZN69ZUY3_irhem5.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/8OCKS5LR_hsidpu.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448330/CGLPSPHN_jzq5p0.jpg" },
+      { "type": "video", "youtubeId": "KBiOF3y1W0Y", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448652/Screenshot_2026-09-03_at_11.17.11_brxdtu.png" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Newton_Thomas_Sigel",
+    "bio": "Newton Thomas Sigel spent the 1990s remaking what a studio thriller could look like, then spent the next three decades refusing to repeat himself. His camera runs hot and precise at once, capable of the bleach bypassed sunburn he invented for Three Kings and the glacial control he brought to Drive's Los Angeles nights. He shot four X-Men films without ever settling into a house style, then pivoted into music biopic spectacle with Bohemian Rhapsody, Netflix scale kinetics with Extraction, and a five-part psychological freefall with Cherry. Few working cinematographers move this fluidly between genre extremes and come out the other side with a signature intact.",
+    "traits": [
+      "Bleach bypass and cross processing pushed until color becomes commentary, the technique that defined Three Kings' desert glare.",
+      "Neon and streetlight treated as the only acceptable light source, turning Los Angeles into a synth lit fever dream in Drive.",
+      "A camera that holds still exactly as long as a scene can bear it, then breaks into handheld without warning.",
+      "Equal fluency inside a fifteen week studio tentpole and a runaway indie schedule, four X-Men films and Cherry sit in the same filmography without contradiction.",
+      "Music and violence photographed with identical physical urgency, Bohemian Rhapsody's Live Aid sequence and Three Kings share a pulse."
+    ],
+    "works": [
+      {
+        "title": "The Usual Suspects (1995)",
+        "desc": "The interrogation room lit in flat fluorescent dread, the visual bedrock the entire twist ending rests on.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/usual-suspects-the" } ]
+      },
+      {
+        "title": "Three Kings (1999)",
+        "desc": "Bleach bypass processing invented on the spot with David O. Russell, blowing the Iraqi desert into a chemical white no studio film had risked before.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/three-kings" } ]
+      },
+      {
+        "title": "Drive (2011)",
+        "desc": "A getaway movie lit almost entirely by LA streetlight and neon signage, turning violence into something closer to a synth ballad.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/drive-2011" } ]
+      },
+      {
+        "title": "Bohemian Rhapsody (2018)",
+        "desc": "The twenty minute Live Aid recreation matched to Queen's actual 1985 broadcast camera angles almost beat for beat.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/bohemian-rhapsody" } ]
+      },
+      {
+        "title": "Extraction (2020)",
+        "desc": "The stitched single-take car chase and rooftop sequence through Dhaka, choreographed to read as one unbroken breath.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/extraction-2020" } ]
+      },
+      {
+        "title": "Cherry (2021)",
+        "desc": "Five distinct visual registers, one per chapter of the character's collapse, aspect ratio and color science shifting as his mental state does.",
+        "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/cherry-2021" } ]
+      }
+    ]
+  },
+  {
     "id": "zack-snyder",
     "related": [
       "david-ayer",
