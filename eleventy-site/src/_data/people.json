@@ -1709,6 +1709,94 @@
     ]
   },
   {
+    "id": "peter-deming",
+    "related": [
+      "david-lynch",
+      "dan-laustsen",
+      "robert-elswit"
+    ],
+    "added": "2026-09-08",
+    "name": "Peter Deming",
+    "discipline": "Cinematographer",
+    "style": "Genre Fluent / Atmospheric",
+    "born": "1957",
+    "nationality": "Lebanese-American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878042/XFHQOJCH_o5qofj.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878044/ZFZ0826Q_lc1yoh.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878039/Y1ZGSLJ2_inrkyb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878041/X4H79H7W_hs6iuf.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878043/C3TP4G67_lb6zyw.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878040/RBD7FGIB_ehpbo2.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "C_uTkUGcHv4",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878365/Screenshot_2026-09-08_at_10.38.56_fujfa4.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Peter_Deming",
+    "bio": "Peter Deming got his first real break shooting Evil Dead II for Sam Raimi in 1987, and spent the next four decades proving a cinematographer's fingerprint can survive genre hopping most careers can't. He shot Lost Highway, Mulholland Drive, and Twin Peaks: The Return for David Lynch, three decades of collaboration that turned dread into something you could almost touch, and won the Independent Spirit Award for the second of those. In between he lit horror for Wes Craven's Scream franchise and comedy for the Austin Powers trilogy and My Cousin Vinny, without letting one genre's grammar bleed into another's. His recent work, The Menu and The Cabin in the Woods, runs on the same instinct that made Raimi and Lynch trust him: know exactly which register the story needs, then commit to it completely.",
+    "traits": [
+      "Practical dread over digital sheen, fog machines and tungsten bulbs doing the work a VFX budget usually gets credited for.",
+      "Fluent inside David Lynch's dream logic, where a hallway is rarely just a hallway.",
+      "Genre fluency without a visible seam, horror one year, screwball comedy the next, same eye underneath both.",
+      "Decades long director marriages (Lynch, Raimi, Craven) built on trust rather than repeating the same look.",
+      "A camera that commits fully to whatever the scene needs, joke or scare, never hedging between them."
+    ],
+    "works": [
+      {
+        "title": "Evil Dead II (1987)",
+        "desc": "His first big break, shooting Raimi's whip pans and Dutch angles into a horror comedy language still being imitated.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/evil-dead-ii" }
+        ]
+      },
+      {
+        "title": "Mulholland Drive (2001)",
+        "desc": "The Independent Spirit Award winner, a dreamscape shot so precisely the seam between reality and nightmare disappears.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/tbc" }
+        ]
+      },
+      {
+        "title": "Drag Me to Hell (2009)",
+        "desc": "Raimi's return to horror after a decade of Spider-Man, and Deming's camera hadn't lost a step.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/drag-me-to-hell" }
+        ]
+      },
+      {
+        "title": "The Cabin in the Woods (2012)",
+        "desc": "A horror movie about horror movies, shot straight enough that the genre commentary never undercuts the actual scares.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-cabin-in-the-woods" }
+        ]
+      },
+      {
+        "title": "The Menu (2022)",
+        "desc": "A tasting menu turned hostage situation, lit with the clinical precision of a five star kitchen about to kill you.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-menu-2022" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "naughty-dog",
     "related": [
       "neil-druckmann",
@@ -2228,6 +2316,14 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785509503/W1siZiIsIjE4MjE2NSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ_sf8lbl.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788545507/Unknown-6_gpvqbk.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788545507/Unknown-5_mpfkin.webp"
       },
       {
         "type": "video",
