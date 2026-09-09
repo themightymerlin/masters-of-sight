@@ -5495,6 +5495,69 @@
     ]
   },
   {
+    "id": "jason-m-peterson",
+    "related": [
+      "hiroshi-sugimoto",
+      "gregory-crewdson",
+      "martin-parr"
+    ],
+    "name": "Jason M. Peterson",
+    "discipline": "Photographer",
+    "style": "Street / High-Contrast",
+    "born": "1968",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788970027/In_E2_80_A2come_E2_80_A2ing-2021.jpeg_nygvw8.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1788970010/v2-3_qm8f1l.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788970016/v2_qbt6xp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788970013/v2-2_q20od9.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788970021/stacks-image-d1a56e9-960x1198_ndvc9s.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788970018/stacks-image-7200e51-960x1198_of4wpt.jpg"
+      }
+    ],
+    "url": "https://www.instagram.com/jasonmpeterson/",
+    "bio": "Jason M. Peterson turned Chicago into a monochrome stage where architecture wins the frame and the human figure exists mostly as scale. Colorblind since childhood, he builds every image in black, white, and the negative space between them, a limitation converted into the most recognizable visual signature in street photography today. Over three decades and an Instagram following pushing toward seven figures, that high-contrast, faceless-figure style became so widely copied it functions as its own genre. He runs the creative agency The Times by day, applying the same graphic instinct that built campaigns for Adidas, the NBA, and Kanye West to the same city he has been photographing his entire career.",
+    "traits": [
+      "Faceless, often silhouetted figures used as scale markers against monumental architecture.",
+      "Negative space treated as physical weight in the composition, not empty background.",
+      "Full commitment to black and white, a result of childhood colorblindness rather than a stylistic choice made after the fact.",
+      "A visual grammar imitated widely enough across Instagram to be recognizable before a caption loads.",
+      "The same graphic control applied equally to a Kanye West campaign and a gallery print."
+    ],
+    "works": [
+      {
+        "title": "Talking to Angels, Counting the Stars (2016)",
+        "desc": "A lone figure swallowed by Chicago architecture. The image that first made the style unmistakable."
+      },
+      {
+        "title": "Some Kind of Night into Your Darkness (2017)",
+        "desc": "Negative space doing most of the emotional work, the subject barely a third of the frame."
+      },
+      {
+        "title": "Chicago Snow (2018)",
+        "desc": "Weather turned into texture. The city rendered almost abstract, the figure the only thing still legible."
+      },
+      {
+        "title": "In•come•ing (2021)",
+        "desc": "Geometry and human scale collapsed into a single graphic silhouette."
+      }
+    ]
+  },
+  {
     "id": "dieter-rams",
     "related": [
       "jony-ive",
