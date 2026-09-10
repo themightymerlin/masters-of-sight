@@ -5778,6 +5778,59 @@
     ]
   },
   {
+    "id": "mario-renzi",
+    "related": [
+      "jimmy-chin",
+      "nigel-parry",
+      "annie-liebovitz"
+    ],
+    "name": "Mario Renzi",
+    "discipline": "Photographer",
+    "style": "Portrait / Emotive",
+    "born": "19XX",
+    "nationality": "French",
+    "added": "2026-09-10",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042357/aceavuuiv_rvloch.png",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042656/mr-2018-bahrain-sunday-014.jpg_yetdtr.webp", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042294/487489323_9747629048629574_4167053717570925347_n_qnkeai.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042289/486612432_9735621823163630_6995066056964875926_n_ml8oir.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042358/486489755_9705623769496769_3382491058999213222_n_mlkcbm.png", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789042294/487048067_9747629005296245_2014140744322980839_n_wlplcy.jpg", "caption": "" }
+    ],
+    "url": "https://www.mariorenzi.com",
+    "bio": "Mario Renzi is a French photographer who has shot every Formula 1 season since 1997, embedded so deep in the paddock that F1's own marketing operation eventually brought him in-house. He trained as an architect and had little interest in racing until a friend competing in Formula 3 asked him to shoot a few frames trackside, a single afternoon that rewired his career. Early rejections from French magazines pushed him toward a four-year run with a Japanese quarterly and three years with a Spanish outlet, where he built the deliberate, emotion-first style that still defines his work. His signature images favor psychological weight over the obvious moment: Pierre Gasly frozen on the 2020 Monza podium unable to process his own win, or Felipe Massa in tears as Hamilton celebrates a title feet away. He has self-published four photo books spanning 2008 to 2022, still turning frames around over days rather than racing the social feed.",
+    "traits": [
+      "Extreme proximity to drivers used as the entire argument, physical access before the photograph.",
+      "Emotional aftermath prioritized over the moment of victory itself.",
+      "A patient two to three day turnaround, refusing the real-time pace of social sports photography.",
+      "Portraits built to read as interpretation rather than record, deliberately resistant to imitation.",
+      "Two decades in the same paddock mined for the angle no one else has shot."
+    ],
+    "works": [
+      {
+        "title": "SPEEED COLORS LEWIS (2008)",
+        "desc": "His first published book, out three weeks after Lewis Hamilton's title-deciding final lap in Brazil. Blurb's listing carries no official synopsis, but the timing speaks for itself.",
+        "links": [{ "type": "book", "url": "https://www.blurb.com/b/452062-speeed-colors-lewis" }]
+      },
+      {
+        "title": "SPEEDCOLORS 1 (2008)",
+        "desc": "A broader early portfolio, 120 pages pulled from his opening years shooting the sport.",
+        "links": [{ "type": "book", "url": "https://www.blurb.com/b/480353-speedcolors-1" }]
+      },
+      {
+        "title": "SPEEDCOLORS 2#010 (2011)",
+        "desc": "A season book built entirely around 2010, tagged and dated to match.",
+        "links": [{ "type": "book", "url": "https://www.blurb.com/b/1901016-speedcolors-2-010" }]
+      },
+      {
+        "title": "Speedcolors 20#22 (2023)",
+        "desc": "His most recent portfolio, covering the 2022 season after well over a decade of paddock access.",
+        "links": [{ "type": "book", "url": "https://www.blurb.com/b/11465925-speedcolors-20-22-by-mario-renzi" }]
+      }
+    ]
+  },
+  {
     "id": "robert-richardson",
     "related": [
       "vittorio-storaro",
