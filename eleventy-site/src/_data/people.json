@@ -4520,6 +4520,70 @@
     ]
   },
   {
+    "id": "szilveszter-mako",
+    "related": [
+      "tim-walker",
+      "david-lachapelle",
+      "guy-bourdin"
+    ],
+    "added": "2026-09-10",
+    "name": "Szilveszter Makó",
+    "discipline": "Photographer",
+    "style": "Surreal / Brutalist",
+    "born": "1992",
+    "nationality": "Hungarian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061988/wepresent-SzilveszterMako_024.jpg_svdsod.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061992/wepresent-SzilveszterMako_003.jpg_yo4vgm.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061990/wepresent-SzilveszterMako_012.jpg_zbujba.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061990/wepresent-SzilveszterMako_028.jpg_yfrmav.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061987/makonew-1_jwswjg.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061983/slyvo6.jpg_jnbvmd.webp"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Szilveszter_Makó",
+    "bio": "Szilveszter Makó grew up in a fairy-tale corner of northeastern Hungary raised by strict, postcommunist grandparents, and the discipline never left him. He builds every set and prop himself, mostly from recycled cardboard and fabric, lights it all with natural light, and refuses Photoshop, CGI, and AI on principle. What lands on film reads like a Renaissance painting staged inside a dollhouse: Willem Dafoe folded into a wooden box, Marina Abramović sealed inside a hermetic white cube, Monica Bellucci arranged like a still life. He calls his own mindset brutalist, and the contradiction is the whole point, a photographer obsessed with severity who keeps producing images that feel like theater built for one child's imagination. He works from what he calls A to B rather than A to Z, treating every restriction as the shape the image was always going to take.",
+    "traits": [
+      "Sets and props built entirely by hand from recycled cardboard and fabric, reused until they physically wear out.",
+      "The box and the cube as a recurring frame, subjects confined until the confinement becomes the subject.",
+      "Natural light only. No Photoshop, no CGI, no AI, on principle rather than convenience.",
+      "Painterly surrealism pulled from Renaissance staging and Dadaist theater, not fashion photography's usual reference points.",
+      "Self-imposed restriction treated as method. Works A to B, not A to Z, and calls the results freedom."
+    ],
+    "works": [
+      {
+        "title": "Marina Abramović, for M: La Revista de Milenio (2026)",
+        "desc": "A hermetic white cube built for the performance artist, ballet slippers propped on a wooden leg. Abramović surrendering control inside a set constructed entirely around control."
+      },
+      {
+        "title": "Rama Duwaji, for The Cut (2026)",
+        "desc": "Portrait of New York City's First Lady following Zohran Mamdani's mayoral win. Stillness read as deliberate political presence rather than softness."
+      },
+      {
+        "title": "Maison Margiela campaign (2022)",
+        "desc": "Recycled materials and hand-built sets for one of fashion's most conceptually rigorous houses, a client match that made sense on contact."
+      },
+      {
+        "title": "Aperture No. 263: Secrets (2026)",
+        "desc": "Cover feature and career-spanning profile in Aperture's flagship magazine. The house that sets the bar for photography criticism, choosing to write about him."
+      }
+    ]
+  },
+  {
     "id": "syd-mead",
     "related": [
       "moebius",
