@@ -181,6 +181,8 @@
   var emailInput      = document.getElementById('mosAuthEmail');
   var submitBtn       = document.getElementById('mosAuthSubmit');
   var statusEl        = document.getElementById('mosAuthStatus');
+  var saveBtn         = document.getElementById('profileSaveBtn');
+  var masterId        = saveBtn ? saveBtn.dataset.masterId : null;
 
   var currentSession = null;
 
@@ -192,12 +194,41 @@
     if (modal) modal.style.display = 'none';
   }
 
+  function updateSaveButtonState() {
+    if (!saveBtn) return;
+
+    if (!currentSession) {
+      saveBtn.classList.remove('is-saved');
+      return;
+    }
+
+    supabase
+      .from('saved_masters')
+      .select('id')
+      .eq('user_id', currentSession.user.id)
+      .eq('master_id', masterId)
+      .maybeSingle()
+      .then(function (result) {
+        if (result.error) {
+          console.error(result.error);
+          return;
+        }
+        if (result.data) {
+          saveBtn.classList.add('is-saved');
+        } else {
+          saveBtn.classList.remove('is-saved');
+        }
+      });
+  }
+
   supabase.auth.getSession().then(function (result) {
     currentSession = result.data.session;
+    updateSaveButtonState();
   });
 
   supabase.auth.onAuthStateChange(function (event, session) {
     currentSession = session;
+    updateSaveButtonState();
   });
 
   if (accountTrigger) {
@@ -230,6 +261,38 @@
         statusEl.textContent = result.error.message;
       } else {
         statusEl.textContent = 'Check your email for the link';
+      }
+    });
+  }
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', async function () {
+      if (!currentSession) {
+        openAuthModal();
+        return;
+      }
+
+      var result;
+      if (saveBtn.classList.contains('is-saved')) {
+        result = await supabase
+          .from('saved_masters')
+          .delete()
+          .eq('user_id', currentSession.user.id)
+          .eq('master_id', masterId);
+        if (result.error) {
+          console.error(result.error);
+          return;
+        }
+        saveBtn.classList.remove('is-saved');
+      } else {
+        result = await supabase
+          .from('saved_masters')
+          .insert({ user_id: currentSession.user.id, master_id: masterId });
+        if (result.error) {
+          console.error(result.error);
+          return;
+        }
+        saveBtn.classList.add('is-saved');
       }
     });
   }

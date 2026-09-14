@@ -131,7 +131,7 @@
   /* ─── ACCOUNT TRIGGER ───────────────────────────────────── */
   .mos-account-trigger {
     position: fixed;
-    top: 28px;
+    top: 23.5px;
     right: 92px;
     z-index: 300;
     background: none;
