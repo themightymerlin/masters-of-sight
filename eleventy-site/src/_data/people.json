@@ -792,6 +792,13 @@
           { "name": "Steam", "url": "https://store.steampowered.com/app/2357570/Overwatch/" },
           { "name": "Nintendo", "url": "https://www.nintendo.com/us/store/products/overwatch-switch-2/" }
         ]
+      },
+      {
+        "title": "Diablo (1996)",
+        "desc": "The dungeon crawler that invented the click-to-kill, loot-chasing formula half of modern action RPGs still run on, built by a studio Blizzard acquired and folded in as Blizzard North.",
+        "platforms": [
+          { "name": "Battle.net", "url": "https://us.shop.battle.net/en-us/product/diablo" }
+        ]
       }
     ]
   },
