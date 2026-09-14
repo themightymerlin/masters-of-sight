@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789421587467">
+<link rel="stylesheet" href="/assets/profile.css?v=1789422073411">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -146,6 +146,92 @@
 
   </div>
 </div>
+
+<script>
+(function () {
+  var trigger     = document.getElementById('mosTrigger');
+  var overlay     = document.getElementById('mosOverlay');
+  var backdrop    = document.getElementById('mosBackdrop');
+  var placeholder = document.getElementById('mosPlaceholder');
+  var navItems    = document.querySelectorAll('.mos-nav-item');
+  var panels      = document.querySelectorAll('.mos-content-inner');
+
+  var isOpen      = false;
+  var activePanel = null;
+  var fadeTimer   = null;
+
+  function openMenu() {
+    isOpen = true;
+    trigger.classList.add('is-open');
+    trigger.setAttribute('aria-label', 'Close menu');
+    trigger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('is-visible');
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    trigger.classList.remove('is-open');
+    trigger.setAttribute('aria-label', 'Open menu');
+    trigger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('is-visible');
+    clearActivePanel();
+  }
+
+  function clearActivePanel() {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    placeholder.style.opacity = '';
+    placeholder.style.pointerEvents = '';
+    activePanel = null;
+  }
+
+  function showPanel(id) {
+    clearTimeout(fadeTimer);
+    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
+    navItems.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    placeholder.style.opacity = '0';
+    placeholder.style.pointerEvents = 'none';
+
+    var panel = document.getElementById('panel-' + id);
+    var btn   = document.querySelector('[data-target="' + id + '"]');
+    if (!panel) return;
+
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-expanded', 'true');
+    activePanel = id;
+
+    panel.classList.add('fade-in');
+    panel.getBoundingClientRect();
+    fadeTimer = setTimeout(function () { panel.classList.add('is-visible'); }, 20);
+  }
+
+  trigger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+  backdrop.addEventListener('click', closeMenu);
+
+  navItems.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.target;
+      if (activePanel === target) {
+        clearActivePanel();
+      } else {
+        showPanel(target);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) closeMenu();
+  });
+})();
+</script>
 
 <div class="mos-auth-modal" id="mosAuthModal">
   <div class="mos-auth-modal-content" id="mosAuthModalContent">
@@ -1226,92 +1312,6 @@
       img.dataset.index = i;
       img.addEventListener('click', function () { openLightbox(i); });
     });
-  });
-})();
-</script>
-
-<script>
-(function () {
-  var trigger     = document.getElementById('mosTrigger');
-  var overlay     = document.getElementById('mosOverlay');
-  var backdrop    = document.getElementById('mosBackdrop');
-  var placeholder = document.getElementById('mosPlaceholder');
-  var navItems    = document.querySelectorAll('.mos-nav-item');
-  var panels      = document.querySelectorAll('.mos-content-inner');
-
-  var isOpen      = false;
-  var activePanel = null;
-  var fadeTimer   = null;
-
-  function openMenu() {
-    isOpen = true;
-    trigger.classList.add('is-open');
-    trigger.setAttribute('aria-label', 'Close menu');
-    trigger.setAttribute('aria-expanded', 'true');
-    overlay.classList.add('is-visible');
-  }
-
-  function closeMenu() {
-    isOpen = false;
-    trigger.classList.remove('is-open');
-    trigger.setAttribute('aria-label', 'Open menu');
-    trigger.setAttribute('aria-expanded', 'false');
-    overlay.classList.remove('is-visible');
-    clearActivePanel();
-  }
-
-  function clearActivePanel() {
-    clearTimeout(fadeTimer);
-    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
-    navItems.forEach(function (b) {
-      b.classList.remove('is-active');
-      b.setAttribute('aria-expanded', 'false');
-    });
-    placeholder.style.opacity = '';
-    placeholder.style.pointerEvents = '';
-    activePanel = null;
-  }
-
-  function showPanel(id) {
-    clearTimeout(fadeTimer);
-    panels.forEach(function (p) { p.classList.remove('is-visible', 'fade-in'); });
-    navItems.forEach(function (b) {
-      b.classList.remove('is-active');
-      b.setAttribute('aria-expanded', 'false');
-    });
-
-    placeholder.style.opacity = '0';
-    placeholder.style.pointerEvents = 'none';
-
-    var panel = document.getElementById('panel-' + id);
-    var btn   = document.querySelector('[data-target="' + id + '"]');
-    if (!panel) return;
-
-    btn.classList.add('is-active');
-    btn.setAttribute('aria-expanded', 'true');
-    activePanel = id;
-
-    panel.classList.add('fade-in');
-    panel.getBoundingClientRect();
-    fadeTimer = setTimeout(function () { panel.classList.add('is-visible'); }, 20);
-  }
-
-  trigger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
-  backdrop.addEventListener('click', closeMenu);
-
-  navItems.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var target = btn.dataset.target;
-      if (activePanel === target) {
-        clearActivePanel();
-      } else {
-        showPanel(target);
-      }
-    });
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && isOpen) closeMenu();
   });
 })();
 </script>
