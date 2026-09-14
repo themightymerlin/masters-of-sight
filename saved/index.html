@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789421183915">
-<link rel="stylesheet" href="/assets/homepage.css?v=1789421183915">
+<link rel="stylesheet" href="/assets/profile.css?v=1789421587467">
+<link rel="stylesheet" href="/assets/homepage.css?v=1789421587467">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -135,7 +135,7 @@
       <div class="mos-content-inner" id="panel-frame">
         <h2 class="mos-content-heading">Stay in the Frame</h2>
         <p class="mos-content-body">The archive is just the beginning. Full Frame is coming. A deeper room for the people who don't just browse. Be the first to know.</p>
-        <a href="https://mastersofsight.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="mos-content-link">
+        <a href="https://mastersofsight.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="mos-content-link" onclick="event.preventDefault(); document.getElementById('mosAuthModal').style.display='flex';">
           Count me in <span>→</span>
         </a>
       </div>
