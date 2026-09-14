@@ -47,6 +47,12 @@ eleventyComputed:
       <span class="tag">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
     </div>
   </div>
+
+  <button class="profile-save-btn" id="profileSaveBtn" data-master-id="{{ person.id }}" aria-label="Save this master">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3h12v18l-6-4.5L6 21V3z"></path>
+    </svg>
+  </button>
 </div>
 
 <div class="profile-body">
