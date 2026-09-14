@@ -15,32 +15,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789405779076">
+<link rel="stylesheet" href="/assets/profile.css?v=1789408239971">
+
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
+  window.supabase = createClient(
+    'https://bnfvhyubidngrdykilhd.supabase.co',
+    'sb_publishable_CjAaSwF06jtgDZDrYk_4vg_ssVTXjjx'
+  )
+</script>
 </head>
 <body>
-
-<script>
-  window._galleryMediaRaw = [];
-  window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069492/image_ligrxy.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069523/image_v2gpfc.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069437/image_cvwzzf.jpg"];
-</script>
-
-<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
-<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
-
-<!-- ── LIGHTBOX ── -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
-  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
-  <span class="lightbox-counter" id="lightbox-counter"></span>
-</div>
-
-
-
 <nav class="site-nav">
   <a class="nav-logo" href="https://mastersofsight.com/">Masters of Sight</a>
+  
   <span class="nav-profile-name">Stefan Sagmeister</span>
+  
 </nav>
 
 <button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
@@ -150,6 +140,7 @@
   </div>
 </div>
 
+
 <a class="profile-back" id="profile-back-link">← Back</a>
 <script>
 (function () {
@@ -158,6 +149,27 @@
   if (link) link.href = from ? '/?discipline=' + from : '/';
 })();
 </script>
+
+
+
+<script>
+  window._galleryMediaRaw = [];
+  window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069492/image_ligrxy.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069523/image_v2gpfc.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069437/image_cvwzzf.jpg"];
+</script>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+</div>
+
+
 
 <div class="profile-hero">
   <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069593/image_ru492q.png" alt="Stefan Sagmeister">
