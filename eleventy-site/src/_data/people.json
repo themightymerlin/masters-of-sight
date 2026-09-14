@@ -5828,12 +5828,16 @@
     "style": "Dark Fantasy / Cyberpunk Noir",
     "born": "Founded 1994",
     "nationality": "Polish",
-    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7_ierxod.jpg",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789399825/Cyberpunk2077_Immerse_Yourself_RGB_2x_t4enr8.jpg",
     "coverImagePosition": "center calc(50% + 20px)",
     "galleryMedia": [
       {
         "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/witcher3-1638987659679_grnxak.jpg"
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7_ierxod.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121939/the-witcher-collectors-edition_crxh.jpg_bko8fz.png"
       },
       {
         "type": "image",
@@ -5841,7 +5845,7 @@
       },
       {
         "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121939/the-witcher-collectors-edition_crxh.jpg_bko8fz.png"
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/witcher3-1638987659679_grnxak.jpg"
       },
       {
         "type": "video",
