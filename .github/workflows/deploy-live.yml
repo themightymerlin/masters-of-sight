@@ -45,7 +45,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html assets masters sitemap.xml
+          mapfile -t BUILD_OUTPUT < <(cd eleventy-site/_site && ls -A)
+          git add "${BUILD_OUTPUT[@]}"
           if git diff --staged --quiet; then
             echo "No changes to the built site, skipping commit."
             exit 0
