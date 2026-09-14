@@ -638,8 +638,8 @@
     top: 84px;
     right: 32px;
     z-index: 150;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(0,0,0,0.55);
     border: 1px solid var(--accent-dim);
@@ -655,8 +655,8 @@
   }
 
   .profile-save-btn svg {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     fill: none;
     stroke: #e8e0d0;
     stroke-width: 1.4;
