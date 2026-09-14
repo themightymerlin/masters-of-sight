@@ -789,6 +789,8 @@
         "title": "Overwatch (2016)",
         "desc": "A hero shooter built as much around character shorts and worldbuilding as around the game itself, later rebuilt into Overwatch 2 as a free to play live service.",
         "platforms": [
+          { "name": "Xbox", "url": "https://www.xbox.com/en-US/games/store/overwatch/c1c4dzjpbc2v" },
+          { "name": "PS4/PS5", "url": "https://www.playstation.com/en-us/games/overwatch/" },
           { "name": "Steam", "url": "https://store.steampowered.com/app/2357570/Overwatch/" },
           { "name": "Nintendo", "url": "https://www.nintendo.com/us/store/products/overwatch-switch-2/" }
         ]
