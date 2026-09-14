@@ -451,6 +451,19 @@
 }
 
 /* ── SAVED PAGE ── */
+.hero.saved-hero {
+  gap: 8px;
+  padding-bottom: 0;
+}
+
+.saved-hero .mos-content-heading {
+  margin-bottom: 0;
+}
+
+#saved-grid {
+  margin-top: 36px;
+}
+
 .saved-state {
   display: flex;
   flex-direction: column;
