@@ -724,6 +724,74 @@
     ]
   },
   {
+    "id": "blizzard",
+    "related": [
+      "bungie",
+      "rockstar-games",
+      "hideo-kojima"
+    ],
+    "added": "2026-09-14",
+    "name": "Blizzard",
+    "discipline": "Dream Makers",
+    "entityType": "studio",
+    "style": "PLACEHOLDER, confirm with Benny before publishing",
+    "born": "1991",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402844/wow-classic-wotlk-the-lich-king_nsvsdl.avif",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402846/page_1_social_preview.jpg_jxarsx.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402843/_57_dltevo.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402844/MV5BODMxMzQzMWYtMjIwMC00MmMzLTk2YzYtN2NjMDE2NDY3NTRiXkEyXkFqcGc._V1__demf7s.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "BCr7y4SLhck",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789403118/Screenshot_2026-09-14_at_12.24.57_txey6d.png"
+      }
+    ],
+    "url": "https://www.blizzard.com/en-us/",
+    "bio": "Blizzard Entertainment started in 1991 as three UCLA graduates porting other people's games under the name Silicon & Synapse, and it took them thirteen years to become the studio that made an entire genre synonymous with itself, World of Warcraft turning MMO into a verb for a whole generation of PC gaming. StarCraft did something almost as unlikely, a real time strategy game so mechanically precise it became South Korea's national televised sport, still played professionally decades after release. Overwatch proved the studio could walk into a genre it didn't invent, the hero shooter, and reshape the category's color palette and character design language on the way past. Four decades running across wildly different genres and somehow every one of them still gets called definitive.",
+    "traits": [
+      "Genre-defining launches across separate categories, RTS, MMO, hero shooter, each one still cited as the benchmark.",
+      "Character and world design built for decades of continuity, lore dense enough to support novels, a feature film, and an entire esports economy.",
+      "Cinematic cutscenes treated as prestige filmmaking, produced by an in-house team with its own award nominations.",
+      "Live service philosophy that predates the term, World of Warcraft still shipping new expansions two decades after launch.",
+      "A distinct visual identity per franchise, painterly fantasy for Warcraft, hard sci-fi for StarCraft, saturated pop color for Overwatch, none of them reading as off-brand."
+    ],
+    "works": [
+      {
+        "title": "World of Warcraft (2004)",
+        "desc": "The MMO that outgrew its own genre. An entire industry spent the 2000s trying and failing to build a WoW killer, and it's still shipping new expansions more than two decades later.",
+        "platforms": [
+          { "name": "Battle.net", "url": "https://us.shop.battle.net/en-us/product/world-of-warcraft-free-trial?p=76095" }
+        ]
+      },
+      {
+        "title": "StarCraft (1998)",
+        "desc": "A real time strategy game balanced so precisely it became South Korea's national televised sport, still played at a professional level decades after release.",
+        "platforms": [
+          { "name": "Battle.net", "url": "https://us.shop.battle.net/en-us/product/starcraft-remastered?p=28298" }
+        ]
+      },
+      {
+        "title": "Overwatch (2016)",
+        "desc": "A hero shooter built as much around character shorts and worldbuilding as around the game itself, later rebuilt into Overwatch 2 as a free to play live service.",
+        "platforms": [
+          { "name": "Steam", "url": "https://store.steampowered.com/app/2357570/Overwatch/" },
+          { "name": "Nintendo", "url": "https://www.nintendo.com/us/store/products/overwatch-switch-2/" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "guy-bourdin",
     "related": [
       "helmut-newton",
