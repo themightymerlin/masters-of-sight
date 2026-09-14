@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Saved — Masters Of Sight
+homepageCss: true
+---
+
+<script>
+  window.PEOPLE = {{ people | dump | safe }};
+  window.SITE_BASE_URL = "{{ '/' | url }}";
+</script>
+
+<div class="hero">
+  <h1 class="hero-title">Saved</h1>
+</div>
+
+<div class="saved-state" id="saved-logged-out-state" hidden>
+  <p class="saved-message">Sign in to see your saved masters</p>
+  <button class="filter-btn" id="savedSignInBtn" onclick="document.getElementById('mosAuthModal').style.display='flex'">Sign In</button>
+</div>
+
+<div class="saved-state" id="saved-empty-state" hidden>
+  <p class="saved-message">You haven't saved anyone yet — browse the archive to start building your list.</p>
+  <a class="saved-state-link" href="{{ '/' | url }}">Browse the archive →</a>
+</div>
+
+<div class="grid" id="saved-grid"></div>
