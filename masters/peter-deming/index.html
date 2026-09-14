@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789408239971">
+<link rel="stylesheet" href="/assets/profile.css?v=1789409250463">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -32,6 +32,13 @@
   <span class="nav-profile-name">Peter Deming</span>
   
 </nav>
+
+<button class="mos-account-trigger" id="mosAccountTrigger" aria-label="Account" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="8" r="4"></circle>
+    <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+  </svg>
+</button>
 
 <button class="mos-trigger" id="mosTrigger" aria-label="Open menu" aria-expanded="false">
   <span class="mos-trigger-line"></span>
@@ -137,6 +144,17 @@
 
     <span class="mos-wordmark">Masters of Sight</span>
 
+  </div>
+</div>
+
+<div class="mos-auth-modal" id="mosAuthModal">
+  <div class="mos-auth-modal-content" id="mosAuthModalContent">
+    <button class="mos-auth-modal-close" id="mosAuthModalClose">×</button>
+    <h2>Save your masters</h2>
+    <p>Enter your email and we'll send you a magic link.</p>
+    <input type="email" id="mosAuthEmail" placeholder="you@email.com">
+    <button id="mosAuthSubmit">Send magic link</button>
+    <p class="mos-auth-status" id="mosAuthStatus"></p>
   </div>
 </div>
 
@@ -1293,5 +1311,68 @@
 })();
 </script>
 
+
+<script type="module">
+(function () {
+  var accountTrigger = document.getElementById('mosAccountTrigger');
+  var modal           = document.getElementById('mosAuthModal');
+  var modalClose      = document.getElementById('mosAuthModalClose');
+  var emailInput      = document.getElementById('mosAuthEmail');
+  var submitBtn       = document.getElementById('mosAuthSubmit');
+  var statusEl        = document.getElementById('mosAuthStatus');
+
+  var currentSession = null;
+
+  function openAuthModal() {
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function closeAuthModal() {
+    if (modal) modal.style.display = 'none';
+  }
+
+  supabase.auth.getSession().then(function (result) {
+    currentSession = result.data.session;
+  });
+
+  supabase.auth.onAuthStateChange(function (event, session) {
+    currentSession = session;
+  });
+
+  if (accountTrigger) {
+    accountTrigger.addEventListener('click', function () {
+      if (currentSession) {
+        console.log('logged in, saved page not built yet');
+      } else {
+        openAuthModal();
+      }
+    });
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeAuthModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeAuthModal();
+    });
+  }
+
+  if (submitBtn) {
+    submitBtn.addEventListener('click', async function () {
+      var email = emailInput ? emailInput.value : '';
+      if (statusEl) statusEl.textContent = '';
+      var result = await supabase.auth.signInWithOtp({ email: email });
+      if (!statusEl) return;
+      if (result.error) {
+        statusEl.textContent = result.error.message;
+      } else {
+        statusEl.textContent = 'Check your email for the link';
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
