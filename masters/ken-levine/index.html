@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789418905223">
+<link rel="stylesheet" href="/assets/profile.css?v=1789419544897">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -1297,6 +1297,9 @@
   var statusEl        = document.getElementById('mosAuthStatus');
   var saveBtn         = document.getElementById('profileSaveBtn');
   var masterId        = saveBtn ? saveBtn.dataset.masterId : null;
+  var savedGrid           = document.getElementById('saved-grid');
+  var savedLoggedOutState = document.getElementById('saved-logged-out-state');
+  var savedEmptyState     = document.getElementById('saved-empty-state');
 
   var currentSession = null;
 
@@ -1335,20 +1338,94 @@
       });
   }
 
+  function getInitials(name) {
+    return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+  }
+
+  function displayDisciplineJS(d, entityType) {
+    if (Array.isArray(d)) return d.map(function (x) { return displayDisciplineJS(x, entityType); }).join(' / ');
+    if (entityType === 'duo' && d === 'Director') return 'Directors';
+    return d === 'Dream Makers' ? 'Dream Maker' : d;
+  }
+
+  function buildSavedCard(person) {
+    var card = document.createElement('a');
+    card.className = 'card';
+    card.href = window.SITE_BASE_URL + 'masters/' + person.id + '/';
+    card.dataset.id = person.id;
+
+    var hasImage = person.coverImage && person.coverImage.trim() !== '';
+
+    card.innerHTML =
+      (hasImage
+        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
+          '<div class="card-overlay"></div>'
+        : '<div class="card-overlay" style="display:none;"></div>') +
+      '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +
+        '<span class="card-placeholder-initials">' + getInitials(person.name) + '</span>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<p class="card-discipline">' + displayDisciplineJS(person.discipline, person.entityType) + '</p>' +
+        '<p class="card-name">' + (person.cardName || person.name) + '</p>' +
+      '</div>' +
+      '<div class="card-arrow">↗</div>';
+    return card;
+  }
+
+  function showSavedState(state) {
+    if (savedLoggedOutState) savedLoggedOutState.hidden = state !== 'logged-out';
+    if (savedEmptyState) savedEmptyState.hidden = state !== 'empty';
+    if (savedGrid) savedGrid.hidden = state !== 'grid';
+  }
+
+  function updateSavedPage() {
+    if (!savedGrid) return;
+
+    if (!currentSession) {
+      showSavedState('logged-out');
+      return;
+    }
+
+    supabase
+      .from('saved_masters')
+      .select('master_id')
+      .eq('user_id', currentSession.user.id)
+      .then(function (result) {
+        if (result.error) {
+          console.error(result.error);
+          return;
+        }
+        var rows = result.data || [];
+        if (!rows.length) {
+          showSavedState('empty');
+          return;
+        }
+        savedGrid.innerHTML = '';
+        rows.forEach(function (row) {
+          var person = (window.PEOPLE || []).find(function (p) { return p.id === row.master_id; });
+          if (!person) return;
+          savedGrid.appendChild(buildSavedCard(person));
+        });
+        showSavedState('grid');
+      });
+  }
+
   supabase.auth.getSession().then(function (result) {
     currentSession = result.data.session;
     updateSaveButtonState();
+    updateSavedPage();
   });
 
   supabase.auth.onAuthStateChange(function (event, session) {
     currentSession = session;
     updateSaveButtonState();
+    updateSavedPage();
   });
 
   if (accountTrigger) {
     accountTrigger.addEventListener('click', function () {
       if (currentSession) {
-        console.log('logged in, saved page not built yet');
+        window.location.href = "/saved/";
       } else {
         openAuthModal();
       }
