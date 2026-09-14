@@ -734,7 +734,7 @@
     "name": "Blizzard",
     "discipline": "Dream Makers",
     "entityType": "studio",
-    "style": "PLACEHOLDER, confirm with Benny before publishing",
+    "style": "Epic Fantasy / Sci-Fi",
     "born": "1991",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402844/wow-classic-wotlk-the-lich-king_nsvsdl.avif",
@@ -750,6 +750,10 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402844/MV5BODMxMzQzMWYtMjIwMC00MmMzLTk2YzYtN2NjMDE2NDY3NTRiXkEyXkFqcGc._V1__demf7s.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789402844/zqb6d2ba744g1_ixdgnv.png"
       },
       {
         "type": "video",
