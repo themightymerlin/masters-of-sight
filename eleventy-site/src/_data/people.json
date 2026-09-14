@@ -5622,6 +5622,94 @@
     ]
   },
   {
+    "id": "bill-pope",
+    "related": [
+      "the-wachowskis",
+      "newton-thomas-sigel",
+      "dan-laustsen"
+    ],
+    "added": "2026-09-14",
+    "name": "Bill Pope",
+    "discipline": "Cinematographer",
+    "style": "Kinetic Genre Craft",
+    "born": "1952",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789397970/TMICEEAG_ifty1x.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789398211/S817AC3D_rb5nr0.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789397966/464ZDT1U_toaoqb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789397966/YXWXYH14_zohg9i.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789397966/TTXUHZA7_wzmtjo.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789397966/WMDKV4PV_sbstve.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "CA5vsCnLm34",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789398676/Screenshot_2026-09-14_at_11.11.01_zmfbbb.png"
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Bill_Pope",
+    "bio": "Bill Pope spent the 1980s photographing music videos for MTV before Sam Raimi pulled him into features with Darkman and Army of Darkness, and the partnership never really ended. The Wachowskis hired him next, and across The Matrix and its two sequels he built the photographic language for a movie that reinvented what an action frame could look like, greenish digital dread giving way to real bullets and real glass. He kept working with Raimi through Spider-Man 2, proving a comic book blockbuster could carry the same tactile menace as a horror picture. Then he swung hard into Edgar Wright's corner, shooting Scott Pilgrim vs. the World's arcade-bright chaos, a genre that shares nothing with The Matrix except his eye behind it. Four decades in, the throughline was never the subject matter, it's a camera that treats spectacle as something to be felt physically, not just watched.",
+    "traits": [
+      "Bullet time and hyperkinetic action rendered as physical sensation, not a visual trick.",
+      "A green digital palette invented for The Matrix that became shorthand for an entire genre of imitators.",
+      "Comic book scale photographed with horror movie menace, tension built into the frame before anything explodes.",
+      "Equal fluency inside a nine figure studio tentpole and a scrappy indie comedy, no visible change in toolkit.",
+      "Practical, tactile camera work that favors real collisions and real light over compositing whenever the budget allows."
+    ],
+    "works": [
+      {
+        "title": "The Matrix (1999)",
+        "desc": "The green cascade and the bullet dodge that rewrote action cinema's vocabulary overnight, shot by a former music video DP who understood spectacle needed a pulse.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-matrix" }
+        ]
+      },
+      {
+        "title": "The Matrix Reloaded (2003)",
+        "desc": "The freeway chase and the Burly Brawl scaled the trilogy's practical stunt work up without losing the original's tactile grit.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-matrix-2-reloaded" }
+        ]
+      },
+      {
+        "title": "The Matrix Revolutions (2003)",
+        "desc": "The Zion battle and the final Neo and Smith collision close the trilogy in driving rain and real machinery, not just render farms.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-matrix-revolutions" }
+        ]
+      },
+      {
+        "title": "Spider-Man 2 (2004)",
+        "desc": "The elevated train fight against Doctor Octopus, a set piece that still plays like practical stunt work even at full CG scale.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/spiderman-2" }
+        ]
+      },
+      {
+        "title": "Scott Pilgrim vs. the World (2010)",
+        "desc": "Toronto rebuilt as a video game level, arcade bright color and game logic edits that made a breakup movie feel like a boss fight.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/scott-pilgrim-vs-the-world" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "dieter-rams",
     "related": [
       "jony-ive",
