@@ -44,7 +44,7 @@
   .nav-logo {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     line-height: 1;
@@ -86,7 +86,7 @@
 
   .mos-trigger {
     position: fixed;
-    top: 28px;
+    top: 17.25px;
     right: 32px;
     z-index: 300;
     background: none;
@@ -131,7 +131,7 @@
   /* ─── ACCOUNT TRIGGER ───────────────────────────────────── */
   .mos-account-trigger {
     position: fixed;
-    top: 23.5px;
+    top: 12.75px;
     right: 92px;
     z-index: 300;
     background: none;
@@ -155,6 +155,10 @@
   }
 
   .mos-account-trigger:hover svg {
+    stroke: var(--accent);
+  }
+
+  .mos-account-trigger.is-signed-in svg {
     stroke: var(--accent);
   }
 
