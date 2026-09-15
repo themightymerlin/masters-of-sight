@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789483366653">
-<link rel="stylesheet" href="/assets/homepage.css?v=1789483366653">
+<link rel="stylesheet" href="/assets/profile.css?v=1789484280694">
+<link rel="stylesheet" href="/assets/homepage.css?v=1789484280694">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -257,6 +257,16 @@
     <input type="email" id="mosAuthEmail" placeholder="you@email.com">
     <button id="mosAuthSubmit">Send magic link</button>
     <p class="mos-auth-status" id="mosAuthStatus"></p>
+  </div>
+</div>
+
+<div class="mos-auth-modal" id="mosDeleteConfirmModal" style="display: none;">
+  <div class="mos-auth-modal-content" id="mosDeleteConfirmContent">
+    <button class="mos-auth-modal-close" id="mosDeleteConfirmClose">×</button>
+    <h2>Delete your account?</h2>
+    <p>This permanently deletes your account and every master you've saved. This cannot be undone.</p>
+    <button id="mosDeleteConfirmSubmit" class="mos-delete-confirm-btn">Yes, delete everything</button>
+    <p class="mos-auth-status" id="mosDeleteStatus"></p>
   </div>
 </div>
 
