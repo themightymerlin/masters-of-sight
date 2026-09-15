@@ -317,6 +317,26 @@
     min-height: 16px;
   }
 
+  .mos-delete-confirm-btn {
+    width: 100%;
+    background: #b3261e;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .mos-delete-confirm-btn:hover {
+    background: #8f1e18;
+  }
+
   /* ─── OVERLAY ───────────────────────────────────────────── */
   .mos-overlay {
     position: fixed;

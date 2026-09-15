@@ -505,3 +505,31 @@
   color: var(--text);
   border-color: rgba(232,224,208,0.35);
 }
+
+.saved-danger-zone {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  padding-top: 24px;
+}
+
+.saved-danger-zone[hidden] {
+  display: none;
+}
+
+.saved-delete-link {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.saved-delete-link:hover {
+  color: var(--text-muted);
+}
