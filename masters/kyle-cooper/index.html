@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789484280694">
+<link rel="stylesheet" href="/assets/profile.css?v=1789484480157">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -1311,6 +1311,13 @@
   var savedGrid           = document.getElementById('saved-grid');
   var savedLoggedOutState = document.getElementById('saved-logged-out-state');
   var savedEmptyState     = document.getElementById('saved-empty-state');
+  var savedDangerZone     = document.getElementById('savedDangerZone');
+  var deleteBtn           = document.getElementById('savedDeleteAccountBtn');
+  var deleteModal         = document.getElementById('mosDeleteConfirmModal');
+  var deleteModalContent  = document.getElementById('mosDeleteConfirmContent');
+  var deleteModalClose    = document.getElementById('mosDeleteConfirmClose');
+  var deleteSubmitBtn     = document.getElementById('mosDeleteConfirmSubmit');
+  var deleteStatusEl      = document.getElementById('mosDeleteStatus');
 
   var currentSession = null;
 
@@ -1320,6 +1327,14 @@
 
   function closeAuthModal() {
     if (modal) modal.style.display = 'none';
+  }
+
+  function openDeleteModal() {
+    if (deleteModal) deleteModal.style.display = 'flex';
+  }
+
+  function closeDeleteModal() {
+    if (deleteModal) deleteModal.style.display = 'none';
   }
 
   function updateSaveButtonState() {
@@ -1387,6 +1402,7 @@
     if (savedLoggedOutState) savedLoggedOutState.hidden = state !== 'logged-out';
     if (savedEmptyState) savedEmptyState.hidden = state !== 'empty';
     if (savedGrid) savedGrid.hidden = state !== 'grid';
+    if (savedDangerZone) savedDangerZone.hidden = state === 'logged-out';
   }
 
   function updateSavedPage() {
@@ -1450,6 +1466,51 @@
   if (modal) {
     modal.addEventListener('click', function (e) {
       if (e.target === modal) closeAuthModal();
+    });
+  }
+
+  if (deleteBtn) {
+    deleteBtn.addEventListener('click', openDeleteModal);
+  }
+
+  if (deleteModalClose) {
+    deleteModalClose.addEventListener('click', closeDeleteModal);
+  }
+
+  if (deleteModal) {
+    deleteModal.addEventListener('click', function (e) {
+      if (e.target === deleteModal) closeDeleteModal();
+    });
+  }
+
+  if (deleteSubmitBtn) {
+    deleteSubmitBtn.addEventListener('click', async function () {
+      if (!currentSession) return;
+
+      if (deleteStatusEl) deleteStatusEl.textContent = 'Deleting...';
+      deleteSubmitBtn.disabled = true;
+
+      try {
+        var response = await fetch('https://bnfvhyubidngrdykilhd.supabase.co/functions/v1/delete-account', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + currentSession.access_token
+          }
+        });
+
+        if (!response.ok) {
+          var errorBody = await response.json().catch(function () { return {}; });
+          if (deleteStatusEl) deleteStatusEl.textContent = errorBody.error || 'Something went wrong. Please try again.';
+          deleteSubmitBtn.disabled = false;
+          return;
+        }
+
+        await supabase.auth.signOut();
+        window.location.href = "/";
+      } catch (err) {
+        if (deleteStatusEl) deleteStatusEl.textContent = 'Something went wrong. Please try again.';
+        deleteSubmitBtn.disabled = false;
+      }
     });
   }
 
