@@ -352,6 +352,11 @@
       });
   }
 
+  function updateAccountTriggerState() {
+    if (!accountTrigger) return;
+    accountTrigger.classList.toggle('is-signed-in', !!currentSession);
+  }
+
   function getInitials(name) {
     return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
   }
@@ -427,12 +432,14 @@
 
   supabase.auth.getSession().then(function (result) {
     currentSession = result.data.session;
+    updateAccountTriggerState();
     updateSaveButtonState();
     updateSavedPage();
   });
 
   supabase.auth.onAuthStateChange(function (event, session) {
     currentSession = session;
+    updateAccountTriggerState();
     updateSaveButtonState();
     updateSavedPage();
   });
