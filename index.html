@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486149584">
-<link rel="stylesheet" href="/assets/homepage.css?v=1789486149584">
+<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/homepage.css?v=1789486373559">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -2448,6 +2448,11 @@
       });
   }
 
+  function updateAccountTriggerState() {
+    if (!accountTrigger) return;
+    accountTrigger.classList.toggle('is-signed-in', !!currentSession);
+  }
+
   function getInitials(name) {
     return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
   }
@@ -2523,12 +2528,14 @@
 
   supabase.auth.getSession().then(function (result) {
     currentSession = result.data.session;
+    updateAccountTriggerState();
     updateSaveButtonState();
     updateSavedPage();
   });
 
   supabase.auth.onAuthStateChange(function (event, session) {
     currentSession = session;
+    updateAccountTriggerState();
     updateSaveButtonState();
     updateSavedPage();
   });
