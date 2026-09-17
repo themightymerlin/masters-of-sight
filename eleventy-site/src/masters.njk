@@ -94,37 +94,11 @@ eleventyComputed:
     {% endif %}
   </div>
 
-  <div class="sidebar-meta">
-    <div class="meta-row">
-      <span class="meta-label">Discipline</span>
-      <span class="meta-value">{{ person.discipline | displayDiscipline(person.entityType) }}</span>
-    </div>
-    <div class="meta-row">
-      <span class="meta-label">Style</span>
-      <span class="meta-value">{{ person.style }}</span>
-    </div>
-    <div class="meta-row">
-      <span class="meta-label">{% if person.entityType == "duo" %}Formed{% elif person.entityType == "studio" %}Founded{% else %}Born{% endif %}</span>
-      <span class="meta-value">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
-    </div>
-    <div class="meta-row">
-      <span class="meta-label">Nationality</span>
-      <span class="meta-value">{{ person.nationality }}</span>
-    </div>
-    {% if person.url %}
-    <div class="meta-row">
-      <span class="meta-label">Learn more</span>
-      <a class="meta-link" href="{{ person.url }}" target="_blank">View profile →</a>
-    </div>
-    {% endif %}
-  </div>
-
-  <button class="profile-more-toggle" id="profileMoreToggle" onclick="toggleProfileMore()" aria-expanded="false">
-    Would you like to know more?
-  </button>
-
-  <div class="profile-more-content" id="profileMoreContent">
+  <div class="profile-more-content">
     <p class="profile-bio">{{ person.bio }}</p>
+    {% if person.url %}
+    <a class="work-link profile-view-link" href="{{ person.url }}" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    {% endif %}
 
     <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
@@ -279,15 +253,7 @@ eleventyComputed:
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.toggleProfileMore = function () {
-    var content = document.getElementById('profileMoreContent');
-    var btn = document.getElementById('profileMoreToggle');
-    var isOpen = content.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    btn.textContent = isOpen ? 'Show less' : 'Would you like to know more?';
-  };
-
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();
