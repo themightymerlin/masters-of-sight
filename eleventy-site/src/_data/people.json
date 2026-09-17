@@ -6221,6 +6221,54 @@
     ]
   },
   {
+    "id": "kirill-sakryukin",
+    "related": [
+      "tim-walker",
+      "gregory-crewdson",
+      "guy-bourdin"
+    ],
+    "name": "Kirill Sakryukin",
+    "discipline": "Photographer",
+    "style": "Fine-Art / Conceptual",
+    "born": "19XX",
+    "nationality": "Russian",
+    "added": "2026-09-17",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789666050/0_r5reu6.jpg",
+    "galleryImages": [
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789665977/5404934_1500n_yxwpiz.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789665983/2047195_1500n_r88csr.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789666011/2487221_1000n_eq2wsc.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789666005/29957949_xu151s.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789666039/2428196_1000n_sonm3c.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789666027/1569267_1000n_yetv4j.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789665994/3415166_1500n_waitf4.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789665988/2047211_1500n_entlle.jpg"
+    ],
+    "url": "https://35photo.pro/sakryukinkirill/",
+    "bio": "Kirill Sakryukin builds his surrealism before he ever loads a camera, not after. Working out of Saint Petersburg since at least 2019, he has assembled a gown entirely from hundreds of red balloons stacked into a train, dressed two models as taxidermied court animals inside a paneled drawing room, and anchored an antique picture frame in open ocean with a body sealed inside it, all captured on set rather than composited afterward. He calls the decade-long project 'Rejection of Reality,' a rule that nothing gets faked in post: gold paint goes on skin, honey goes in the bathtub, and the storm in the background is the actual weather that day. His 2023 series 'CAT,' a six-model production with ten hours of makeup work staged inside a Saint Petersburg hotel, stands as the most elaborate build of his career so far and a good entry point into how he works.",
+    "traits": [
+      "Full theatrical sets built as practical production pieces, not composited in software: a train of loose balloons, a flower canopy grown for a single portrait, a paneled room dressed like a stage set.",
+      "A recurring image of a body sealed inside something else, an antique frame anchored in the open ocean, a face floating in a caramel-colored bath, a head barely surfacing in a rain puddle.",
+      "Costume work that borrows from taxidermy and prosthetics as much as fashion: full animal heads paired with period dress, an antique diving helmet, skin painted gold like a second layer.",
+      "Real weather and real water treated as raw material rather than backdrop, storm clouds left rough in the frame, ocean waves breaking against a prop instead of a green screen.",
+      "A muted, painterly palette that allows exactly one saturated color per image to carry the whole picture: red balloons against ash grey stone, gold skin against black, caramel against pale skin."
+    ],
+    "works": [
+      {
+        "title": "CAT (2023)",
+        "desc": "His own account calls this the most ambitious build of the year: six models, ten hours of makeup work, staged inside what he calls the most beautiful hotel in Saint Petersburg."
+      },
+      {
+        "title": "Mannequin (2023)",
+        "desc": "Shot across Saint Petersburg and Moscow before the production moved to Dubai that November, part of the expansion that now has him working across three cities."
+      },
+      {
+        "title": "Perestroika (2020)",
+        "desc": "A series he describes as tracking every upheaval in his own life at the time, changing, in his own words, at a wild pace."
+      }
+    ]
+  },
+  {
     "id": "sebastiao-salgado",
     "related": [
       "alex-webb",
