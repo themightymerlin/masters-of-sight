@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Gregory Crewdson doesn&#39;t take photographs, he directs them, with a crew the size of a film shoot and the meticulous pre-visualization of someone raised on Hitchcock and Hopper in equal measure. He constructs images of small-town America so precisely charged with psychological dread they feel like frames from a movie nobody ever made: streets slicked with rain, windows glowing with light that has no clear source, figures standing in doorways while dresses pool on lawns and cars idle at intersections at 2am for reasons the image refuses to explain. His subject is always the same, the interior life leaking through the surface of the ordinary. He has shot in western Massachusetts so many times the region has become its own mythology. The suburbs aren&#39;t a backdrop in his work, they are the wound.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405076/ecE-yMfXgT1p_4800x4800_rrxbt9.jpg" alt="Gregory Crewdson">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405078/A8tFnA6-f74M_4800x4800_o2rzhx.jpg" alt="Gregory Crewdson">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405072/zCmiPREb5qzR_4800x4800_lmahbz.jpg" alt="Gregory Crewdson">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Gregory Crewdson doesn&#39;t take photographs, he directs them, with a crew the size of a film shoot and the meticulous pre-visualization of someone raised on Hitchcock and Hopper in equal measure. He constructs images of small-town America so precisely charged with psychological dread they feel like frames from a movie nobody ever made: streets slicked with rain, windows glowing with light that has no clear source, figures standing in doorways while dresses pool on lawns and cars idle at intersections at 2am for reasons the image refuses to explain. His subject is always the same, the interior life leaking through the surface of the ordinary. He has shot in western Massachusetts so many times the region has become its own mythology. The suburbs aren&#39;t a backdrop in his work, they are the wound.</p>
+    
+    <a class="work-link profile-view-link" href="https://gagosian.com/artists/gregory-crewdson/" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -382,47 +403,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405076/ecE-yMfXgT1p_4800x4800_rrxbt9.jpg" alt="Gregory Crewdson">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405078/A8tFnA6-f74M_4800x4800_o2rzhx.jpg" alt="Gregory Crewdson">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405072/zCmiPREb5qzR_4800x4800_lmahbz.jpg" alt="Gregory Crewdson">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Photographer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Cinematic / Psychological</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1962</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://gagosian.com/artists/gregory-crewdson/" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1230,7 +1210,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

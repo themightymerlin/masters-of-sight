@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Robert Elswit shoots like a journalist who studied painting. His frames have the immediacy of someone who earned access to the room and the compositional intelligence of someone who knew exactly what to do once inside it. A decades-long collaborator with Paul Thomas Anderson, he built the visual language of Boogie Nights, Magnolia, and There Will Be Blood, three films that look nothing alike and all look exactly like him. His work has a specific texture, grain, handheld urgency, practical sources pushed past comfort, that feels lived in rather than designed. Nightcrawler alone would be enough, that sickly Los Angeles amber, the city as a predator&#39;s hunting ground, lit to make everything look simultaneously beautiful and wrong.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010264/O1HOB68E_h4fq8d.jpg" alt="Robert Elswit">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010381/D0MUZVJN_euqs8z.jpg" alt="Robert Elswit">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010320/XNO91QZR_dgwwob.jpg" alt="Robert Elswit">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Robert Elswit shoots like a journalist who studied painting. His frames have the immediacy of someone who earned access to the room and the compositional intelligence of someone who knew exactly what to do once inside it. A decades-long collaborator with Paul Thomas Anderson, he built the visual language of Boogie Nights, Magnolia, and There Will Be Blood, three films that look nothing alike and all look exactly like him. His work has a specific texture, grain, handheld urgency, practical sources pushed past comfort, that feels lived in rather than designed. Nightcrawler alone would be enough, that sickly Los Angeles amber, the city as a predator&#39;s hunting ground, lit to make everything look simultaneously beautiful and wrong.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Robert_Elswit" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -389,47 +410,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010264/O1HOB68E_h4fq8d.jpg" alt="Robert Elswit">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010381/D0MUZVJN_euqs8z.jpg" alt="Robert Elswit">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010320/XNO91QZR_dgwwob.jpg" alt="Robert Elswit">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Cinematographer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Gritty / Journalistic</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1950</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Robert_Elswit" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1237,7 +1217,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

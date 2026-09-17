@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Spike Jonze is a director who arrived from skateboarding videos and never forgot where he came from. His work across music videos, commercials, and feature films redefined what visual storytelling could be, blurring sincerity with absurdism, always in service of genuine emotional impact. He makes the strange feel inevitable.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778536300/image-9_r381og.png" alt="Spike Jonze">
+        
+        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&amp;q=80" alt="Spike Jonze">
+        
+        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&amp;q=80" alt="Spike Jonze">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Spike Jonze is a director who arrived from skateboarding videos and never forgot where he came from. His work across music videos, commercials, and feature films redefined what visual storytelling could be, blurring sincerity with absurdism, always in service of genuine emotional impact. He makes the strange feel inevitable.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Spike_Jonze" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -382,47 +403,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778536300/image-9_r381og.png" alt="Spike Jonze">
-        
-        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&amp;q=80" alt="Spike Jonze">
-        
-        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&amp;q=80" alt="Spike Jonze">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Director</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Narrative / Surreal</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1969</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Spike_Jonze" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1230,7 +1210,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

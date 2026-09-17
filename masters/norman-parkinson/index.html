@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Norman Parkinson took fashion photography outside, not metaphorically, literally. At a time when the industry was built around studio lights, seamless backdrops, and controlled environments, he put models in fields, on streets, in markets, on the sides of mountains, and changed what fashion imagery thought it was allowed to be. Working primarily for British Vogue across five decades, he brought a wit, a physicality, and a genuine joy to his work that made the artifice of fashion feel like the most natural thing in the world. His women were not decorative objects arranged for the male gaze, they were in motion, laughing, striding, living inside the frame with a vitality that made every contemporary studio shot look embalmed by comparison.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019608/Audrey-Hepburn-Italy_tg8ahl.jpg" alt="Norman Parkinson">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019611/Corn-Poppy.-Adele-Collins-wearing-an-Otto-Lucas-velvet-toque.-British-Vogue_pvndqi.jpg" alt="Norman Parkinson">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019601/Traffic-Ivy-Nicholson-in-New-York_mtyg9i.jpg" alt="Norman Parkinson">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Norman Parkinson took fashion photography outside, not metaphorically, literally. At a time when the industry was built around studio lights, seamless backdrops, and controlled environments, he put models in fields, on streets, in markets, on the sides of mountains, and changed what fashion imagery thought it was allowed to be. Working primarily for British Vogue across five decades, he brought a wit, a physicality, and a genuine joy to his work that made the artifice of fashion feel like the most natural thing in the world. His women were not decorative objects arranged for the male gaze, they were in motion, laughing, striding, living inside the frame with a vitality that made every contemporary studio shot look embalmed by comparison.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Norman_Parkinson" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -382,47 +403,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019608/Audrey-Hepburn-Italy_tg8ahl.jpg" alt="Norman Parkinson">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019611/Corn-Poppy.-Adele-Collins-wearing-an-Otto-Lucas-velvet-toque.-British-Vogue_pvndqi.jpg" alt="Norman Parkinson">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019601/Traffic-Ivy-Nicholson-in-New-York_mtyg9i.jpg" alt="Norman Parkinson">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Photographer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Fashion / Portraiture</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1913 - 1990</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">British</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Norman_Parkinson" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1230,7 +1210,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

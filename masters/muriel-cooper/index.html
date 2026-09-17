@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Muriel Cooper spent four decades making MIT look like it meant what it said, first as the first design director of MIT Press and then as a founding faculty member of the MIT Media Lab. She designed The Bauhaus in 1969 and Learning from Las Vegas in 1972, two volumes that turned academic publishing into a disciplined visual language and left MIT Press with an identity still recognizable on every spine it produces. In 1974 she founded the Visible Language Workshop with Ron MacNeil, teaching design through participatory experiment rather than solo authorship, at a moment when almost nobody treated computers as design tools. At the Media Lab in the 1980s she pushed further, building information landscapes, three dimensional environments where readers could fly through text long before any screen interface attempted the same idea. She became the Lab&#39;s first tenured woman and died in 1994, having spent a career treating typography as an interface problem before interfaces existed.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984245/Muriel_16_wdo7l2.jpg" alt="Muriel Cooper">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984247/Muriel_Cooper-05-1-673x1024_hhfrij.jpg" alt="Muriel Cooper">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984247/Muriel_Cooper-06-1024x1020_bj1mrs.jpg" alt="Muriel Cooper">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Muriel Cooper spent four decades making MIT look like it meant what it said, first as the first design director of MIT Press and then as a founding faculty member of the MIT Media Lab. She designed The Bauhaus in 1969 and Learning from Las Vegas in 1972, two volumes that turned academic publishing into a disciplined visual language and left MIT Press with an identity still recognizable on every spine it produces. In 1974 she founded the Visible Language Workshop with Ron MacNeil, teaching design through participatory experiment rather than solo authorship, at a moment when almost nobody treated computers as design tools. At the Media Lab in the 1980s she pushed further, building information landscapes, three dimensional environments where readers could fly through text long before any screen interface attempted the same idea. She became the Lab&#39;s first tenured woman and died in 1994, having spent a career treating typography as an interface problem before interfaces existed.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Muriel_Cooper" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -375,47 +396,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984245/Muriel_16_wdo7l2.jpg" alt="Muriel Cooper">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984247/Muriel_Cooper-05-1-673x1024_hhfrij.jpg" alt="Muriel Cooper">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784984247/Muriel_Cooper-06-1024x1020_bj1mrs.jpg" alt="Muriel Cooper">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Designer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Digital Typography / Systems</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1925 - 1994</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Muriel_Cooper" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1223,7 +1203,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

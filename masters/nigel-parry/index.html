@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Nigel Parry started his career designing books for Faber &amp; Faber and ended up photographing presidents, a pivot that says everything about his singular gift: the ability to enter the most surveilled faces on earth and still find something nobody else found. Born in a South Yorkshire mining village, he discovered photography while working as a graphic designer, and within a year of his first London exhibition the Sunday Times Magazine was calling. By 1994 he was in New York, shooting for The New York Times Magazine, Vanity Fair, and Entertainment Weekly, subjects from Bill Clinton to Martin Scorsese, all photographed with the same disquieting proximity, the camera so close the viewer feels they&#39;ve entered someone&#39;s private space uninvited. He was the first portrait photographer invited to exhibit at the Cannes Film Festival, and his work is held by the National Portrait Gallery in London.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068703/image_ud8ebm.jpg" alt="Nigel Parry">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068802/image_pmqwf8.jpg" alt="Nigel Parry">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068773/image_youmcl.jpg" alt="Nigel Parry">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Nigel Parry started his career designing books for Faber &amp; Faber and ended up photographing presidents, a pivot that says everything about his singular gift: the ability to enter the most surveilled faces on earth and still find something nobody else found. Born in a South Yorkshire mining village, he discovered photography while working as a graphic designer, and within a year of his first London exhibition the Sunday Times Magazine was calling. By 1994 he was in New York, shooting for The New York Times Magazine, Vanity Fair, and Entertainment Weekly, subjects from Bill Clinton to Martin Scorsese, all photographed with the same disquieting proximity, the camera so close the viewer feels they&#39;ve entered someone&#39;s private space uninvited. He was the first portrait photographer invited to exhibit at the Cannes Film Festival, and his work is held by the National Portrait Gallery in London.</p>
+    
+    <a class="work-link profile-view-link" href="https://nigelparryphoto.com" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -375,47 +396,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068703/image_ud8ebm.jpg" alt="Nigel Parry">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068802/image_pmqwf8.jpg" alt="Nigel Parry">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068773/image_youmcl.jpg" alt="Nigel Parry">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Photographer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Celebrity Portrait / Editorial</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1961</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">British</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://nigelparryphoto.com" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1223,7 +1203,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

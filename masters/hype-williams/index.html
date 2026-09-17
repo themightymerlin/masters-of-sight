@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,45 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Hype Williams started as a graffiti artist in Queens tagging his name on anything that would hold ink, and that instinct, the need to leave a mark so arresting it stops people mid-stride, never left him. He moved into music video direction in the early 1990s and within a decade had built a visual grammar for hip-hop that nobody else had attempted at that scale. The fisheye lens distorting reality at the edges. Afrofuturist production design before anyone was using that word. Slow motion deployed not for drama but for grandeur. He gave rap artists the same cinematic weight Hollywood reserved for action heroes, and in doing so changed what music video audiences thought they were entitled to. If you grew up in the 1990s with access to MTV or BET, Hype Williams shaped how you see.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878251/maxresdefault-1_tf4moi.jpg" alt="Hype Williams">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878209/Screenshot_2026-06-19_at_10.08.38_chp5fv.png" alt="Hype Williams">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878205/Screenshot_2026-06-19_at_10.01.12_tn6coy.png" alt="Hype Williams">
+          
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+    <div id="p-video-bookend">
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Hype Williams started as a graffiti artist in Queens tagging his name on anything that would hold ink, and that instinct, the need to leave a mark so arresting it stops people mid-stride, never left him. He moved into music video direction in the early 1990s and within a decade had built a visual grammar for hip-hop that nobody else had attempted at that scale. The fisheye lens distorting reality at the edges. Afrofuturist production design before anyone was using that word. Slow motion deployed not for drama but for grandeur. He gave rap artists the same cinematic weight Hollywood reserved for action heroes, and in doing so changed what music video audiences thought they were entitled to. If you grew up in the 1990s with access to MTV or BET, Hype Williams shaped how you see.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Hype_Williams" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +376,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -375,63 +412,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-          
-          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878251/maxresdefault-1_tf4moi.jpg" alt="Hype Williams">
-          
-        
-          
-          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878209/Screenshot_2026-06-19_at_10.08.38_chp5fv.png" alt="Hype Williams">
-          
-        
-          
-          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781878205/Screenshot_2026-06-19_at_10.01.12_tn6coy.png" alt="Hype Williams">
-          
-        
-      
-    </div>
-
-    
-    <div id="p-video-bookend">
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Director</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Music Video / Maximalist</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1970</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Hype_Williams" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1239,7 +1219,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Alex Trochut grew up staring at record covers, skateboard graphics, and video game art in Barcelona, and decided that was reason enough to build a career. Grandson of Spanish graphic artist Joan Trochut, he arrived at typography with something to prove and an inheritance to interrogate. For Trochut a letter isn&#39;t a container for meaning, it is meaning, before you&#39;ve read a single word. He has bent that conviction into work for Nike, The Rolling Stones, and Coca-Cola, pieces that sit somewhere between poster art, sculpture, and fever dream.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352802/AP_Alex_Trochut_paris_2x_gs9yzy.jpg" alt="Alex Trochut">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352816/AP_Alex_Trochut_BU_ASTERISK_BLACK_2x_rtm6re.jpg" alt="Alex Trochut">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352783/AP_Alex_Trochut_Tipo_1_2x_ude5is.jpg" alt="Alex Trochut">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Alex Trochut grew up staring at record covers, skateboard graphics, and video game art in Barcelona, and decided that was reason enough to build a career. Grandson of Spanish graphic artist Joan Trochut, he arrived at typography with something to prove and an inheritance to interrogate. For Trochut a letter isn&#39;t a container for meaning, it is meaning, before you&#39;ve read a single word. He has bent that conviction into work for Nike, The Rolling Stones, and Coca-Cola, pieces that sit somewhere between poster art, sculpture, and fever dream.</p>
+    
+    <a class="work-link profile-view-link" href="https://alextrochut.com" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -368,47 +389,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352802/AP_Alex_Trochut_paris_2x_gs9yzy.jpg" alt="Alex Trochut">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352816/AP_Alex_Trochut_BU_ASTERISK_BLACK_2x_rtm6re.jpg" alt="Alex Trochut">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352783/AP_Alex_Trochut_Tipo_1_2x_ude5is.jpg" alt="Alex Trochut">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Designer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Typography / Illustration</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1981</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">Spanish</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://alextrochut.com" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1216,7 +1196,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();

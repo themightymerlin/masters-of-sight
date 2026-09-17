@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1789486373559">
+<link rel="stylesheet" href="/assets/profile.css?v=1789608136178">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -322,10 +322,29 @@
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">Bradford Young shoots darkness the way most cinematographers shoot light. Where others fight shadow, he builds with it, finding luminosity inside the deepest parts of the frame in a way that feels less like technique and more like a philosophical position. He came up through independent film, shooting Pariah and Middle of Nowhere with Ava DuVernay, before Denis Villeneuve handed him Arrival and the world caught up to what independent cinema already knew. His work has a specific quality that is almost impossible to manufacture, the camera doesn&#39;t observe the room, it belongs in it. His light treats Black skin with a tenderness and specificity that represents a genuine correction to a century of cinematography that never figured out how.</p>
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009726/HA3AXJH2_zexfcd.jpg" alt="Bradford Young">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009722/ZDTRMWJC_hggsgz.jpg" alt="Bradford Young">
+        
+        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009730/L87IB2QM_bxebt6.jpg" alt="Bradford Young">
+        
+      
+    </div>
 
-  <div class="profile-main">
-    <div class="profile-section">
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Bradford Young shoots darkness the way most cinematographers shoot light. Where others fight shadow, he builds with it, finding luminosity inside the deepest parts of the frame in a way that feels less like technique and more like a philosophical position. He came up through independent film, shooting Pariah and Middle of Nowhere with Ava DuVernay, before Denis Villeneuve handed him Arrival and the world caught up to what independent cinema already knew. His work has a specific quality that is almost impossible to manufacture, the camera doesn&#39;t observe the room, it belongs in it. His light treats Black skin with a tenderness and specificity that represents a genuine correction to a century of cinematography that never figured out how.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Bradford_Young" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
       <p class="profile-section-label">Signature Traits</p>
       <ul class="profile-traits">
         
@@ -341,8 +360,10 @@
         
       </ul>
     </div>
+  </div>
 
-    <div class="profile-section">
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
         
@@ -389,47 +410,6 @@
         </li>
         
       </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
-    <div class="profile-gallery">
-      
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009726/HA3AXJH2_zexfcd.jpg" alt="Bradford Young">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009722/ZDTRMWJC_hggsgz.jpg" alt="Bradford Young">
-        
-        <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009730/L87IB2QM_bxebt6.jpg" alt="Bradford Young">
-        
-      
-    </div>
-
-    
-
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">Cinematographer</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">Naturalistic / Luminous</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Born</span>
-        <span class="meta-value">1977</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">American</span>
-      </div>
-      
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="https://en.wikipedia.org/wiki/Bradford_Young" target="_blank">View profile →</a>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -1237,7 +1217,7 @@
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
 
-  window.lightboxNav = function (dir) {
+window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
     _lbIndex = (_lbIndex + dir + media.length) % media.length;
     updateLightbox();
