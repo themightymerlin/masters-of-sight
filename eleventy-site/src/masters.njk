@@ -56,47 +56,7 @@ eleventyComputed:
 </div>
 
 <div class="profile-body">
-  <p class="profile-bio">{{ person.bio }}</p>
-
-  <div class="profile-main">
-    <div class="profile-section">
-      <p class="profile-section-label">Signature Traits</p>
-      <ul class="profile-traits">
-        {% for trait in person.traits %}
-        <li>{{ trait }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="profile-section">
-      <p class="profile-section-label">Major Works</p>
-      <ul class="profile-works">
-        {% for work in person.works %}
-        <li>
-          <p class="work-title">{{ work.title }}</p>
-          <p class="work-desc">{{ work.desc }}</p>
-          {% if work.links and work.links.length %}
-          <div class="work-links">
-            {% for link in work.links %}
-            {% set cfg = linkTypeConfig[link.type] %}
-            <a class="work-link work-link--{{ link.type }}" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ cfg.icon if cfg else "→" }} {{ cfg.label if cfg else link.type }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if work.platforms and work.platforms.length %}
-          <div class="platform-badges">
-            {% for platform in work.platforms %}
-            <a class="platform-badge" href="{{ platform.url }}" target="_blank" rel="noopener noreferrer">{{ platform.name }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-
-  <div class="profile-sidebar">
+  <div class="profile-gallery-hero">
     <div class="profile-gallery">
       {% if person.galleryMedia and person.galleryMedia.length %}
         {% for item in person.galleryMedia %}
@@ -132,30 +92,76 @@ eleventyComputed:
       {% endfor %}
     </div>
     {% endif %}
+  </div>
 
-    <div class="sidebar-meta">
-      <div class="meta-row">
-        <span class="meta-label">Discipline</span>
-        <span class="meta-value">{{ person.discipline | displayDiscipline(person.entityType) }}</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Style</span>
-        <span class="meta-value">{{ person.style }}</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">{% if person.entityType == "duo" %}Formed{% elif person.entityType == "studio" %}Founded{% else %}Born{% endif %}</span>
-        <span class="meta-value">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Nationality</span>
-        <span class="meta-value">{{ person.nationality }}</span>
-      </div>
-      {% if person.url %}
-      <div class="meta-row">
-        <span class="meta-label">Learn more</span>
-        <a class="meta-link" href="{{ person.url }}" target="_blank">View profile →</a>
-      </div>
-      {% endif %}
+  <div class="sidebar-meta">
+    <div class="meta-row">
+      <span class="meta-label">Discipline</span>
+      <span class="meta-value">{{ person.discipline | displayDiscipline(person.entityType) }}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Style</span>
+      <span class="meta-value">{{ person.style }}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">{% if person.entityType == "duo" %}Formed{% elif person.entityType == "studio" %}Founded{% else %}Born{% endif %}</span>
+      <span class="meta-value">{% if person.died %}{{ person.born }} - {{ person.died }}{% else %}{{ person.born }}{% endif %}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Nationality</span>
+      <span class="meta-value">{{ person.nationality }}</span>
+    </div>
+    {% if person.url %}
+    <div class="meta-row">
+      <span class="meta-label">Learn more</span>
+      <a class="meta-link" href="{{ person.url }}" target="_blank">View profile →</a>
+    </div>
+    {% endif %}
+  </div>
+
+  <button class="profile-more-toggle" id="profileMoreToggle" onclick="toggleProfileMore()" aria-expanded="false">
+    Would you like to know more?
+  </button>
+
+  <div class="profile-more-content" id="profileMoreContent">
+    <p class="profile-bio">{{ person.bio }}</p>
+
+    <div class="profile-section profile-section--traits">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        {% for trait in person.traits %}
+        <li>{{ trait }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-main">
+    <div class="profile-section profile-section--works">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        {% for work in person.works %}
+        <li>
+          <p class="work-title">{{ work.title }}</p>
+          <p class="work-desc">{{ work.desc }}</p>
+          {% if work.links and work.links.length %}
+          <div class="work-links">
+            {% for link in work.links %}
+            {% set cfg = linkTypeConfig[link.type] %}
+            <a class="work-link work-link--{{ link.type }}" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ cfg.icon if cfg else "→" }} {{ cfg.label if cfg else link.type }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% if work.platforms and work.platforms.length %}
+          <div class="platform-badges">
+            {% for platform in work.platforms %}
+            <a class="platform-badge" href="{{ platform.url }}" target="_blank" rel="noopener noreferrer">{{ platform.name }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
@@ -272,6 +278,14 @@ eleventyComputed:
     document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
     document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
   }
+
+  window.toggleProfileMore = function () {
+    var content = document.getElementById('profileMoreContent');
+    var btn = document.getElementById('profileMoreToggle');
+    var isOpen = content.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.textContent = isOpen ? 'Show less' : 'Would you like to know more?';
+  };
 
   window.lightboxNav = function (dir) {
     var media = window._lightboxMedia || [];
