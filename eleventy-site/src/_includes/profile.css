@@ -681,6 +681,16 @@
       font-size: clamp(36px, 10vw, 56px);
       transform: scaleX(1.15);
     }
+
+    .tag {
+      font-size: 8px;
+      padding: 4px 8px;
+      letter-spacing: 0.1em;
+    }
+
+    .profile-tags {
+      gap: 6px;
+    }
   }
 
   .profile-tags {
