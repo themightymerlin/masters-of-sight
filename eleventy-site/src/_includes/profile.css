@@ -708,6 +708,11 @@
 
     .profile-tags {
       gap: 4px;
+      margin-top: 12px;
+    }
+
+    .profile-eyebrow {
+      margin-bottom: 8px;
     }
   }
 
