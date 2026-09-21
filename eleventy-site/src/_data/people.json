@@ -5205,6 +5205,69 @@
     ]
   },
   {
+    "id": "walter-murch",
+    "related": [
+      "francis-ford-coppola",
+      "george-lucas",
+      "thelma-schoonmaker"
+    ],
+    "added": "2026-09-21",
+    "name": "Walter Murch",
+    "discipline": "Editor",
+    "style": "Sound & Picture / Structural Rhythm",
+    "born": "1943",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018514/WJFZ4LM2_lfocyq.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018943/VL3UUI42_jvwqn0.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018898/AA8IRDOS_ztuhfq.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018686/D412SIEA_b0iifu.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790019388/23R2MPKY_rijgxa.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018588/UUMMMDMG_dmexzg.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790018571/YGTNSF21_c8ee3l.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790019351/3YURKF8H_q1jzlb.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Walter_Murch",
+    "bio": "Walter Murch spent a career arguing that picture editing and sound design are the same act performed with different tools, then proved it by becoming the only person in Academy Award history to win Best Film Editing and Best Sound for the same film in the same year, The English Patient. He coined the credit sound designer outright on Apocalypse Now, a title that did not exist before he needed one to describe what he was actually doing. His thinking became doctrine well beyond his own cutting room once he wrote In the Blink of an Eye, still handed to film students as the clearest explanation of why a cut works when it works. Three decades inside the Coppola and Lucas circle, from The Conversation through Apocalypse Now Redux, gave him the rare chance to keep refining the same handful of ideas against radically different material.",
+    "traits": [
+      "Treats sound design and picture editing as one continuous act rather than two separate crafts handed off between departments.",
+      "Coined the sound designer credit itself, a title that entered standard industry vocabulary because he needed one.",
+      "The only person in Academy Award history to win Best Film Editing and Best Sound for the same film in the same year.",
+      "Wrote In the Blink of an Eye, the editing text assigned across film schools as the standard reference.",
+      "Returns to re-edit his own prior work when new time or tools allow, treating a finished cut as provisional rather than permanent."
+    ],
+    "works": [
+      {
+        "title": "The Conversation (1974)",
+        "desc": "His first true picture-editing showcase, an intimate surveillance thriller for Coppola that runs entirely on tension built through pacing and sound alone.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-conversation" }
+        ]
+      },
+      {
+        "title": "Apocalypse Now Redux (2001)",
+        "desc": "The cut where Murch stands as sole credited editor and mixer, restoring nearly fifty minutes trimmed from the 1979 release and reshaping the film's rhythm around the new footage.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/apocalypse-now-redux" }
+        ]
+      },
+      {
+        "title": "The English Patient (1996)",
+        "desc": "The only time in Oscar history one person won Best Film Editing and Best Sound for the same film in the same year.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-english-patient" }
+        ]
+      },
+      {
+        "title": "The Talented Mr. Ripley (1999)",
+        "desc": "Proof two decades after Apocalypse Now that his instinct for tension through restraint still worked inside a glossy studio thriller.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-talented-mr-ripley" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "gmunk",
     "related": ["kyle-cooper", "joseph-kosinski", "danny-yount"],
     "added": "2026-08-16",
