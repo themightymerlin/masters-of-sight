@@ -6892,6 +6892,68 @@
     ]
   },
   {
+    "id": "margaret-sixel",
+    "related": [
+      "michael-kahn",
+      "walter-murch",
+      "thelma-schoonmaker"
+    ],
+    "added": "2026-09-21",
+    "name": "Margaret Sixel",
+    "discipline": "Editor",
+    "style": "Kinetic Rupture / Rhythm",
+    "born": "19XX",
+    "nationality": "South African-Australian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790021026/EIOLF3LV_u072bj.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020835/949EIQW2_hfnedz.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790021091/XM51TI1K_psnp5y.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020910/CD4KEDVH_gwgqw2.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020988/CBVBA05Z_f3t81b.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790021207/HAUP5NTC_e3fjrt.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790021295/DAW19EBE_bx0o2z.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Margaret_Sixel",
+    "bio": "Margaret Sixel had never cut an action film before Mad Max: Fury Road, and the industry still has not fully recovered from what she did with that inexperience. She and George Miller, her husband and the film's director, spent years building Fury Road as a nearly wordless two hour chase, and Sixel's solution was to break nearly every rule of continuity editing on purpose, cutting on movement instead of action, ignoring the 180 degree line whenever the geography allowed it. It won her the Academy Award for Best Film Editing and immediately became the new reference point for how modern action gets cut. Before that she spent a decade in animation and family film, on Happy Feet and Babe: Pig in the City, work that trained an entirely different muscle and makes Fury Road look even more like a deliberate break from her own habits than a first attempt at the genre.",
+    "traits": [
+      "Breaks standard continuity rules on purpose, cutting on movement rather than action and abandoning the 180 degree line whenever geography allows it.",
+      "Spent roughly three months just watching raw footage before making a single cut, treating assembly itself as a distinct discipline from editing.",
+      "Builds tension with almost no dialogue to lean on, letting rhythm alone carry the storytelling.",
+      "Came to action editing from a decade in animation and family film, a genre switch few editors make this late in a career or this successfully.",
+      "Academy Award and BAFTA for Best Film Editing, won on the very first action film she had ever cut."
+    ],
+    "works": [
+      {
+        "title": "Mad Max: Fury Road (2015)",
+        "desc": "Her only action film, and the one that reset the rules for how the genre gets cut, built on movement instead of action throughout.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/mad-max-fury-road" }
+        ]
+      },
+      {
+        "title": "Furiosa: A Mad Max Saga (2024)",
+        "desc": "The prequel returned her to the Wasteland she reinvented in 2015, extending the same rule-breaking rhythm across an even longer runtime.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/furiosa" }
+        ]
+      },
+      {
+        "title": "Three Thousand Years of Longing (2022)",
+        "desc": "A return to Miller in a much quieter register, proof the same instinct for rhythm works at a whisper as well as a scream.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/three-thousand-years-of-longing" }
+        ]
+      },
+      {
+        "title": "Happy Feet (2006)",
+        "desc": "Her pre-Fury Road career, animated and family-friendly, the genre she spent a decade in before breaking every rule she had learned there.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/les-petits-pieds-du-bonheur" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "zack-snyder",
     "related": [
       "david-ayer",
