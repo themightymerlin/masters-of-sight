@@ -3549,6 +3549,71 @@
     ]
   },
   {
+    "id": "michael-kahn",
+    "related": [
+      "steven-spielberg",
+      "thelma-schoonmaker",
+      "walter-murch"
+    ],
+    "added": "2026-09-21",
+    "name": "Michael Kahn",
+    "discipline": "Editor",
+    "style": "Momentum / Emotional Restraint",
+    "born": "1930",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790019949/I4OI8XSH_obz3zd.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790019942/HHI4GE0P_zjpcii.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790019994/4SQ21PA9_uovmgy.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020002/KROZ855A_x8sdsi.png" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020064/KGPLUKOY_j9gorv.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020086/FKYGBASJ_fuxzju.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020107/PRP0Z6JU_mz1fmo.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020134/3Y6M6TAL_rokgs6.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020166/D6FD7LH4_zbgjg7.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790020207/9GTGU5E2_ukwx7j.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Michael_Kahn_(film_editor)",
+    "bio": "Michael Kahn has cut nearly every Steven Spielberg film since Close Encounters of the Third Kind in 1977, skipping only E.T., and in the process became the connective tissue behind almost the entire Spielberg filmography as audiences actually experience it. His three Academy Awards, for Raiders of the Lost Ark, Schindler's List, and Saving Private Ryan, span the full range of what he does, propulsive genre momentum, unbearable historical restraint, and combat chaos that somehow still reads as clear geography. Eight total Oscar nominations across five decades make him the most honored editor in the category's history. He came up cutting network television, and the instinct for pace that television demands never left him, even inside three hour prestige dramas.",
+    "traits": [
+      "Edited every Spielberg film since Close Encounters of the Third Kind except E.T., a nearly five-decade unbroken collaboration with one director.",
+      "Combat and chase sequences cut to stay spatially legible even at maximum speed, momentum without losing the audience's sense of geography.",
+      "Equally fluent at propulsive genre pacing and unbearable historical restraint, sometimes within the same decade of work.",
+      "Television-honed instinct for pace, carried over from early work on Hogan's Heroes into three hour prestige dramas.",
+      "Eight Academy Award nominations for editing across five decades, the most of any editor in the category's history, with three wins."
+    ],
+    "works": [
+      {
+        "title": "Close Encounters of the Third Kind (1977)",
+        "desc": "His first collaboration with Spielberg and his first Oscar nomination, the start of a partnership now running nearly five decades.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/close-encounters-of-the-third-kind" }
+        ]
+      },
+      {
+        "title": "Raiders of the Lost Ark (1981)",
+        "desc": "His first Oscar win, and still the reference point for how an action sequence stays comprehensible while moving at full speed.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/indiana-jones-and-the-raiders-of-the-lost-ark" }
+        ]
+      },
+      {
+        "title": "Schindler's List (1993)",
+        "desc": "His second Oscar, won by doing the opposite of Raiders, restraint and unbearable patience instead of momentum.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/schindlers-list" }
+        ]
+      },
+      {
+        "title": "Saving Private Ryan (1998)",
+        "desc": "His third Oscar, for cutting the Omaha Beach sequence into something that reads as chaos while never actually losing the viewer.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/saving-private-ryan" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "nadav-kander",
     "related": [
       "hiroshi-sugimoto",
