@@ -6004,6 +6004,72 @@
     ]
   },
   {
+    "id": "tom-poole",
+    "related": [
+      "newton-thomas-sigel",
+      "stefan-sonnenfeld",
+      "thelma-schoonmaker"
+    ],
+    "added": "2026-09-21",
+    "name": "Tom Poole",
+    "discipline": "Colorist",
+    "style": "Restraint / Naturalism",
+    "born": "19XX",
+    "nationality": "British-American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023776/V6233BGM_izugjt.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024232/NOGU5Q1P_cxerqg.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023730/905CLR5I_i4rua6.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023842/TLMW0ZN4_ma6bfy.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024095/ZQVB1SCQ_a3iwfa.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023888/1C8G7HJM_qbcj7j.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023708/W13UOI96_ucuvfr.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023868/TSWTI1TA_qh46yc.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790023977/BXMT6749_vqbphd.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024075/LEW03D44_yarzka.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024045/LN0W4ZV0_x7ldfj.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Tom_Poole_(colorist)",
+    "bio": "Tom Poole moved from London to New York in 2004 and built a career on a philosophy most colorists spend years unlearning, that the best grade is the one nobody notices. His work on 12 Years a Slave and Spotlight sits inside two different Best Picture winners, proof that restraint reads as prestige when the material calls for it, and his early run with Drive and The Place Beyond the Pines helped define the neon-noir palette an entire decade of American independent film then spent copying. He became the first colorist promoted to Chief Creative Officer at Company 3, and in 2017 was accepted into the Academy of Motion Picture Arts and Sciences, one of a small handful of colorists ever granted membership. Three Hollywood Post Alliance Awards for Outstanding Color Grading confirm what directors already knew, that his instinct is to protect an image rather than reshape it.",
+    "traits": [
+      "Treats the best grade as the one nobody notices, refining a cinematographer's intent rather than layering a visible style on top of it.",
+      "Colored two Best Picture winners, 12 Years a Slave and Spotlight, both defined by restraint rather than stylization.",
+      "Early work on Drive and The Place Beyond the Pines helped define the neon-noir palette a decade of American independent film went on to imitate.",
+      "First colorist promoted to Chief Creative Officer at Company 3, formal recognition inside a company built around directors and cinematographers.",
+      "One of a small number of colorists ever accepted into the Academy of Motion Picture Arts and Sciences, admitted in 2017."
+    ],
+    "works": [
+      {
+        "title": "Drive (2011)",
+        "desc": "His breakout feature credit, the neon and pink-toned Los Angeles palette that became shorthand for an entire genre of crime film afterward.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/drive-2011" }
+        ]
+      },
+      {
+        "title": "The Place Beyond the Pines (2012)",
+        "desc": "A grittier, naturalistic register than Drive in the same era, proof his range extended past the look he had just made famous.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-place-beyond-the-pines" }
+        ]
+      },
+      {
+        "title": "Twelve Years a Slave (2013)",
+        "desc": "Best Picture winner, graded with deliberate restraint so the color never undercut the weight of what the film was actually depicting.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/twelve-years-a-slave" }
+        ]
+      },
+      {
+        "title": "BlacKkKlansman (2018)",
+        "desc": "Spike Lee's 1970s period piece, grading tuned to a specific decade without tipping into pastiche.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/blackkklansman" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "dieter-rams",
     "related": [
       "jony-ive",
