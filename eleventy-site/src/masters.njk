@@ -111,6 +111,7 @@ eleventyComputed:
   </div>
 
   <div class="profile-main">
+    {% if person.works and person.works.length %}
     <div class="profile-section profile-section--works">
       <p class="profile-section-label">Major Works</p>
       <ul class="profile-works">
@@ -137,6 +138,7 @@ eleventyComputed:
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
   </div>
 </div>
 

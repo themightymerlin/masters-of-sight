@@ -2267,6 +2267,40 @@
     ]
   },
   {
+    "id": "carlos-fama",
+    "related": [
+      "dana-scruggs",
+      "chuck-anderson",
+      "david-lachapelle"
+    ],
+    "name": "Carlos Fama",
+    "discipline": "Designer",
+    "style": "Mixed Media / Digital Collage",
+    "born": "19XX",
+    "nationality": "Spanish",
+    "added": "2026-09-21",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998214/fama6.jpg_gjwjcw.webp",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998211/424607914_18325602919139984_1218001256190444797_n.jpg_qk7dbv.webp", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998218/424786526_18325992127139984_3599516858364335804_n.jpg_f0rafh.webp", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998214/776061437_18456161248139984_4915429492447599346_n_zcqrdq.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998216/431175212_287279784218480_4405738184215866958_n.jpg_lu54i6.webp", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998212/781867433_18457607668139984_7150261711388368346_n_dhhvec.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998212/798077661_18460188388139984_303239198168032385_n_xrdqct.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998216/434786473_2074332692940736_1350053845186496077_n.jpg_l9yukk.webp", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1789998211/808896784_18461632852139984_1400779591846954275_n_nlpyez.jpg", "caption": "" }
+    ],
+    "url": "https://www.instagram.com/ig_fama/",
+    "bio": "Carlos Fama is a self-taught digital collage artist working out of Cadiz, Spain, building a body of work almost entirely online. His subject is Black women, rendered with skin that reads less like photography and more like polished metal or cut stone, every portrait staged as if the sitter were both the jewelry and the person wearing it. Fashion, regalia and speculative futurism collapse into a single register, crowns and chains and gleaming surfaces treated as inherited status rather than accessory. The result lands closer to Afrofuturist iconography than digital illustration, confrontational, glossy and unmistakably his own. No agency, no client list, no institutional pedigree, just a recognizable visual argument built one post at a time.",
+    "traits": [
+      "Black skin rendered with the density and shine of polished gemstone or chrome, never soft, never matte.",
+      "Jewelry and skin treated as the same material, crowns, chains and studs fused into the body rather than layered on top of it.",
+      "Digital collage built with the texture of analog cutwork, edges left visibly sharp rather than smoothed away.",
+      "Compositions staged like fashion campaigns for a civilization that does not exist yet, power and glamour presented as inseparable.",
+      "Direct, unblinking eye contact in nearly every portrait, the subject given command of the frame instead of the camera."
+    ]
+  },
+  {
     "id": "pablo-ferro",
     "related": [
       "saul-bass",
