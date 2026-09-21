@@ -4334,6 +4334,69 @@
     ]
   },
   {
+    "id": "natasha-leonnet",
+    "related": [
+      "tom-poole",
+      "stefan-sonnenfeld",
+      "margaret-sixel"
+    ],
+    "added": "2026-09-21",
+    "name": "Natasha Leonnet",
+    "discipline": "Colorist",
+    "style": "Range / Emotional Color",
+    "born": "19XX",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024753/Z3F79UA8_jgdu8b.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024933/OHEWL1T2_hko8ba.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790025060/6RK2P0AN_vzdxev.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024956/SEIX5IVK_vrpeps.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024911/064RDN4Z_vg0ocr.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024884/OENEX1GX_sluer2.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024776/Z4OADO8U_eddgkx.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790024862/OHCSMPFD_miscnw.jpg" }
+    ],
+    "url": "https://www.natashaleonnet.com",
+    "bio": "Natasha Leonnet has won the same HPA Award for Outstanding Color Grading twice on the same franchise, five years apart, for Spider-Man: Into the Spider-Verse and its sequel Across the Spider-Verse, animated films where there is no camera or film stock underneath her decisions, only a comic panel's worth of ink and light to reinterpret. She apprenticed at ARRI in Munich before building a career that now spans over twenty years, and carries both Academy and ASC membership, one of a small number of colorists granted either. That range shows up in the work itself, the claustrophobic tension of Whiplash and the wide studio scale of Mulan routed through the same eye with nothing carried over between them except the instinct. Her HPA nominations span more than a decade, evidence that the range is not incidental, it is the actual signature.",
+    "traits": [
+      "Two HPA Awards for the same franchise five years apart, Spider-Man: Into the Spider-Verse and Across the Spider-Verse, proof the first win was not a one-off.",
+      "Grades animated features as deliberately as live action, treating comic-panel color logic as a real visual language rather than a workaround.",
+      "Member of both the Academy of Motion Picture Arts and Sciences and the American Society of Cinematographers, rare dual recognition for a colorist.",
+      "Moves between claustrophobic indie tension and wide studio blockbuster scale without a fixed house style carrying over.",
+      "HPA nominations spanning more than a decade across genres, a range that reads as her actual signature rather than a lack of one."
+    ],
+    "works": [
+      {
+        "title": "Spider-Man: Into the Spider-Verse (2018)",
+        "desc": "Her first HPA win, and the hardest case a colorist can make, no camera or film stock underneath her decisions, just a comic panel's worth of ink and light.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/spider-man-into-the-spider-verse" }
+        ]
+      },
+      {
+        "title": "Spider-Man: Across the Spider-Verse (2023)",
+        "desc": "Her second HPA win on the same franchise five years later, proof the first was not a fluke.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/spider-man-into-the-spider-verse-2" }
+        ]
+      },
+      {
+        "title": "Whiplash (2014)",
+        "desc": "Her earliest high-profile HPA nomination, claustrophobic and tense where her later animated work runs wide and expansive.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/whiplash" }
+        ]
+      },
+      {
+        "title": "Mulan (2020)",
+        "desc": "Studio live-action scale, an HPA nomination that shows the same eye working at a completely different register than the animated work.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/mulan-2020" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "annie-liebovitz",
     "related": [
       "richard-avedon",
