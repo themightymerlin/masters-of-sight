@@ -7053,6 +7053,71 @@
     ]
   },
   {
+    "id": "stefan-sonnenfeld",
+    "related": [
+      "zack-snyder",
+      "guillermo-del-toro",
+      "ridley-scott"
+    ],
+    "added": "2026-09-21",
+    "name": "Stefan Sonnenfeld",
+    "discipline": "Colorist",
+    "style": "Scale / Invisible Precision",
+    "born": "1964",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022274/MXRLO9SL_i5z6x9.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022403/JSYY6MVY_vqqxby.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022422/ZKCI85YD_fswdia.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022474/X1UWFTAY_imkra3.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022488/OA2VZBNI_iinvzd.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022613/MU9OG35L_jixt8c.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022684/J0NWQTN8_m43d1m.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022634/CRVNFP2A_i1ntly.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022759/75USRLAE_recnng.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790022510/GPHWYSHP_vdr1uh.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Stefan_Sonnenfeld",
+    "bio": "Stefan Sonnenfeld built the visual temperature of modern Hollywood without ever touching a camera, grading Star Wars, Star Trek, Jurassic Park, Pirates of the Caribbean, and Transformers until his choices became the default expectation for what a studio picture is supposed to look like. NPR once called him one of the most influential Hollywood artists nobody has heard of, a fair description for a job most audiences do not know exists. Company 3, the post house he co-founded, became the industry's most trusted color room precisely because his instinct was to serve a director's intent rather than announce his own, a philosophy that let him move between Zack Snyder's saturated comic book worlds and Guillermo del Toro's restrained gothic palette within the same career. He was the first colorist ever admitted to the Academy of Motion Picture Arts and Sciences, formal recognition for a discipline the industry spent decades treating as invisible.",
+    "traits": [
+      "Built the color language for entire franchises, Star Wars, Star Trek, Jurassic Park, and Transformers among them, until his grade became the industry default rather than a personal signature.",
+      "Treats restraint as the goal on some pictures and saturation as the goal on others, matching the grade to the director's intent rather than a house style.",
+      "First colorist ever admitted to the Academy of Motion Picture Arts and Sciences, formal recognition for a craft historically left off the awards conversation.",
+      "Runs Company 3, the post-production house that became the default color room for Hollywood's biggest tentpoles, built from the ground up rather than inherited.",
+      "Works across decades and directors without a signature look becoming his brand, the opposite strategy of most recognizable colorists."
+    ],
+    "works": [
+      {
+        "title": "Top Gun: Maverick (2022)",
+        "desc": "Grading built for IMAX scale and practical aerial photography, color that had to read correctly at a size most films never account for.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/top-gun-maverick" }
+        ]
+      },
+      {
+        "title": "Frankenstein (2025)",
+        "desc": "Guillermo del Toro's gothic epic, graded to preserve an organic, in-camera quality rather than reshape it, restraint as the explicit goal.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/frankenstein-0" }
+        ]
+      },
+      {
+        "title": "Man of Steel (2013)",
+        "desc": "Zack Snyder's desaturated, overcast take on Superman, color pulled back rather than pushed, a deliberate break from decades of primary-color superhero grading.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/man-of-steel" }
+        ]
+      },
+      {
+        "title": "Black Hawk Down (2001)",
+        "desc": "One of his earliest major feature credits, the film that helped establish the bleached, high-contrast war film look later imitated across the genre.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/black-hawk-down" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "steven-spielberg",
     "related": [
       "christopher-nolan",
