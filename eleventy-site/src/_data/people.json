@@ -6376,6 +6376,70 @@
     ]
   },
   {
+    "id": "thelma-schoonmaker",
+    "related": [
+      "robert-richardson",
+      "david-fincher",
+      "christopher-nolan"
+    ],
+    "added": "2026-09-21",
+    "name": "Thelma Schoonmaker",
+    "discipline": "Editor",
+    "style": "Rhythm / Kinetic Precision",
+    "born": "1940",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015979/QLQO792K_hgxtrx.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015978/Y45Q4C9C_p8xfio.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015987/9U0LA6RA_oaijaw.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015990/DDXWM4O1_ttfpqb.png" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015988/CGI3W6BS_dgpvco.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015985/75OX7XBP_eu1ttw.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015981/ZZ8GE8AI_qg2j5k.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015982/0JUGPY8Y_hsn9gz.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790015984/QDMAZPY5_ypa83r.jpg" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Thelma_Schoonmaker",
+    "bio": "Thelma Schoonmaker has cut nearly every film Martin Scorsese has made since Raging Bull, and in the process built a filmography whose violence, rhythm, and breath belong as much to her as to him. Her freeze frames stop a story mid sentence, and her cross cutting collapses decades into a single held beat, techniques other editors have spent forty years trying to reverse engineer. Three Academy Awards mark the official record, but the real proof is how often a scene people credit to a director's eye turns out, on closer inspection, to be built entirely in her cutting room. She trained under legendary director Michael Powell, later married him, and never lost the classical instinct for when a cut should be felt rather than noticed.",
+    "traits": [
+      "Freeze frames used as a full stop, halting momentum at the exact point a story needs to register its own violence.",
+      "Cross cutting that collapses years or decades of narrative time into one sustained rhythm.",
+      "A collaboration with a single director spanning over four decades, one of the longest active director-editor partnerships in film.",
+      "Classical continuity training under Michael Powell carried directly into modern kinetic cutting.",
+      "Three Academy Awards for Film Editing, more than any other editor working today."
+    ],
+    "works": [
+      {
+        "title": "Raging Bull (1980)",
+        "desc": "The entry point for her entire Scorsese partnership, still taught as the standard for how editing alone can control violence and the passage of time.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/raging-bull" }
+        ]
+      },
+      {
+        "title": "Goodfellas (1990)",
+        "desc": "The Copacabana tracking shot gets the director credit, but the freeze frames, voiceover timing, and relentless momentum of the whole film are hers.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/goodfellas" }
+        ]
+      },
+      {
+        "title": "The Aviator (2004)",
+        "desc": "Her first of three Academy Awards, proof she could carry prestige-era scale and pacing, not just the grit of Scorsese's earlier work.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-aviator" }
+        ]
+      },
+      {
+        "title": "The Departed (2006)",
+        "desc": "Her second Academy Award, and the film most audiences actually know her work through, without knowing they know it.",
+        "links": [
+          { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-departed" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ridley-scott",
     "related": [
       "syd-mead",
