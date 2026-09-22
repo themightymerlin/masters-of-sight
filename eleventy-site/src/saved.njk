@@ -24,7 +24,30 @@ homepageCss: true
   <a class="saved-state-link" href="{{ '/' | url }}">Browse the archive →</a>
 </div>
 
-<div class="grid" id="saved-grid"></div>
+<div class="saved-state" id="saved-error-state" hidden>
+  <p class="saved-message">We couldn't load your saved masters. Please refresh the page to try again.</p>
+</div>
+
+{% set savedSections = [
+  { discipline: "Director", slug: "director", label: "Directors" },
+  { discipline: "Cinematographer", slug: "cinematographer", label: "Cinematographers" },
+  { discipline: "Photographer", slug: "photographer", label: "Photographers" },
+  { discipline: "Designer", slug: "designer", label: "Designers" },
+  { discipline: "Dream Makers", slug: "dream-makers", label: "Dream Makers" },
+  { discipline: "Editor", slug: "editor", label: "Editors" },
+  { discipline: "Colorist", slug: "colorist", label: "Colorists" }
+] %}
+
+<div class="saved-sections" id="saved-sections" hidden>
+  <p class="saved-total" id="saved-total">All Saved (<span id="saved-total-count">0</span>)</p>
+  {% for section in savedSections %}
+  <section class="saved-section" data-discipline="{{ section.discipline }}">
+    <h2 class="saved-section-heading">{{ section.label }}</h2>
+    <div class="grid saved-section-grid" id="saved-grid-{{ section.slug }}"></div>
+    <p class="saved-section-empty" hidden>No saved entries yet</p>
+  </section>
+  {% endfor %}
+</div>
 
 <div class="saved-danger-zone" id="savedDangerZone" hidden>
   <button class="saved-delete-link" id="savedDeleteAccountBtn">Delete my account</button>
