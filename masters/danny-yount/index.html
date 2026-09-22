@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790025685489">
+<link rel="stylesheet" href="/assets/profile.css?v=1790111276040">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -1337,9 +1337,13 @@ window.lightboxNav = function (dir) {
   var statusEl        = document.getElementById('mosAuthStatus');
   var saveBtn         = document.getElementById('profileSaveBtn');
   var masterId        = saveBtn ? saveBtn.dataset.masterId : null;
-  var savedGrid           = document.getElementById('saved-grid');
+  var savedSectionsWrap   = document.getElementById('saved-sections');
+  var savedSections       = document.querySelectorAll('.saved-section');
+  var savedTotalCount     = document.getElementById('saved-total-count');
   var savedLoggedOutState = document.getElementById('saved-logged-out-state');
   var savedEmptyState     = document.getElementById('saved-empty-state');
+  var savedErrorState     = document.getElementById('saved-error-state');
+  var savedRequestId      = 0;
   var savedDangerZone     = document.getElementById('savedDangerZone');
   var deleteBtn           = document.getElementById('savedDeleteAccountBtn');
   var deleteModal         = document.getElementById('mosDeleteConfirmModal');
@@ -1435,12 +1439,17 @@ window.lightboxNav = function (dir) {
   function showSavedState(state) {
     if (savedLoggedOutState) savedLoggedOutState.hidden = state !== 'logged-out';
     if (savedEmptyState) savedEmptyState.hidden = state !== 'empty';
-    if (savedGrid) savedGrid.hidden = state !== 'grid';
+    if (savedErrorState) savedErrorState.hidden = state !== 'error';
+    if (savedSectionsWrap) savedSectionsWrap.hidden = state !== 'grid';
     if (savedDangerZone) savedDangerZone.hidden = state === 'logged-out';
   }
 
   function updateSavedPage() {
-    if (!savedGrid) return;
+    if (!savedSectionsWrap) return;
+
+    // Both getSession() and onAuthStateChange() call this on load; only the
+    // most recent request is allowed to render.
+    var requestId = ++savedRequestId;
 
     if (!currentSession) {
       showSavedState('logged-out');
@@ -1452,21 +1461,47 @@ window.lightboxNav = function (dir) {
       .select('master_id')
       .eq('user_id', currentSession.user.id)
       .then(function (result) {
+        if (requestId !== savedRequestId) return;
         if (result.error) {
           console.error(result.error);
+          showSavedState('error');
           return;
         }
         var rows = result.data || [];
-        if (!rows.length) {
+        var matched = [];
+        var seen = {};
+        rows.forEach(function (row) {
+          if (seen[row.master_id]) return;
+          var person = (window.PEOPLE || []).find(function (p) { return p.id === row.master_id; });
+          if (!person) return;
+          seen[row.master_id] = true;
+          matched.push(person);
+        });
+
+        if (!matched.length) {
           showSavedState('empty');
           return;
         }
-        savedGrid.innerHTML = '';
-        rows.forEach(function (row) {
-          var person = (window.PEOPLE || []).find(function (p) { return p.id === row.master_id; });
-          if (!person) return;
-          savedGrid.appendChild(buildSavedCard(person));
+
+        matched.sort(function (a, b) { return a.name.localeCompare(b.name); });
+        if (savedTotalCount) savedTotalCount.textContent = matched.length;
+
+        savedSections.forEach(function (section) {
+          var discipline = section.dataset.discipline;
+          var grid = section.querySelector('.saved-section-grid');
+          var empty = section.querySelector('.saved-section-empty');
+          grid.innerHTML = '';
+          var count = 0;
+          matched.forEach(function (person) {
+            var disciplines = Array.isArray(person.discipline) ? person.discipline : [person.discipline];
+            if (disciplines.indexOf(discipline) === -1) return;
+            grid.appendChild(buildSavedCard(person));
+            count++;
+          });
+          grid.hidden = count === 0;
+          if (empty) empty.hidden = count !== 0;
         });
+
         showSavedState('grid');
       });
   }
