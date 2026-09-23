@@ -114,6 +114,47 @@ homepageCss: true
   })();
 </script>
 
+<script>
+  (function () {
+    var bar = document.querySelector('.filter-bar');
+    if (!bar) return;
+
+    var EDGE_ZONE = 70;
+    var MAX_SPEED = 9;
+    var rafId = null;
+    var speed = 0;
+
+    function loop() {
+      if (speed !== 0) {
+        bar.scrollLeft += speed;
+      }
+      rafId = requestAnimationFrame(loop);
+    }
+
+    bar.addEventListener('mousemove', function (e) {
+      if (bar.scrollWidth <= bar.clientWidth) { speed = 0; return; }
+      var rect = bar.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var distFromRight = rect.width - x;
+      var distFromLeft = x;
+
+      if (distFromRight < EDGE_ZONE) {
+        speed = MAX_SPEED * (1 - distFromRight / EDGE_ZONE);
+      } else if (distFromLeft < EDGE_ZONE) {
+        speed = -MAX_SPEED * (1 - distFromLeft / EDGE_ZONE);
+      } else {
+        speed = 0;
+      }
+    });
+
+    bar.addEventListener('mouseleave', function () {
+      speed = 0;
+    });
+
+    rafId = requestAnimationFrame(loop);
+  })();
+</script>
+
 <div class="search-bar" id="search-bar">
   <div class="search-input-wrap">
     <span class="search-icon">⌕</span>
