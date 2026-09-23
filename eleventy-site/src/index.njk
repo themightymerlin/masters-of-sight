@@ -42,7 +42,15 @@ homepageCss: true
 
   var credit = hero.querySelector('.hero-credit');
   if (credit) {
-    credit.textContent = pick.name + ' \u2197';
+    credit.textContent = '';
+    var creditLabel = document.createElement('span');
+    creditLabel.className = 'hero-credit-label';
+    creditLabel.textContent = 'Cover by';
+    var creditName = document.createElement('span');
+    creditName.className = 'hero-credit-name';
+    creditName.textContent = pick.name + ' \u2197';
+    credit.appendChild(creditLabel);
+    credit.appendChild(creditName);
     credit.href = window.SITE_BASE_URL + 'masters/' + pick.id + '/';
     credit.hidden = false;
   }

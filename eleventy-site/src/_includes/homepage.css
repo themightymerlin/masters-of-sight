@@ -671,3 +671,7 @@
 @media (min-width: 1320px) {
   .hero-credit { bottom: -24px; z-index: 2; }
 }
+.hero-credit { display: inline-flex; align-items: baseline; gap: 12px; }
+.hero-credit-label { color: var(--accent); }
+.hero-credit-name { color: var(--text); transition: color 0.2s ease; }
+.hero-credit:hover .hero-credit-name { color: var(--accent); }
