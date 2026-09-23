@@ -68,16 +68,51 @@ homepageCss: true
 </script>
 </div>
 
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-  <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographers</button>
-  <button class="filter-btn" onclick="filterCards('Designer', this)">Designers</button>
-  <button class="filter-btn" onclick="filterCards('Director', this)">Directors</button>
-  <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographers</button>
-  <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
-  <button class="filter-btn" onclick="filterCards('Editor', this)">Editors</button>
-  <button class="filter-btn" onclick="filterCards('Colorist', this)">Colorists</button>
+<div class="filter-bar-wrap">
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+    <button class="filter-btn" onclick="filterCards('Cinematographer', this)">Cinematographers</button>
+    <button class="filter-btn" onclick="filterCards('Designer', this)">Designers</button>
+    <button class="filter-btn" onclick="filterCards('Director', this)">Directors</button>
+    <button class="filter-btn" onclick="filterCards('Photographer', this)">Photographers</button>
+    <button class="filter-btn" onclick="filterCards('Dream Makers', this)">Dream Makers</button>
+    <button class="filter-btn" onclick="filterCards('Editor', this)">Editors</button>
+    <button class="filter-btn" onclick="filterCards('Colorist', this)">Colorists</button>
+  </div>
 </div>
+
+<script>
+  (function () {
+    var bar = document.querySelector('.filter-bar');
+    var wrap = document.querySelector('.filter-bar-wrap');
+    if (!bar || !wrap) return;
+
+    function updateFade() {
+      var atEnd = bar.scrollLeft >= (bar.scrollWidth - bar.clientWidth - 2);
+      wrap.classList.toggle('at-end', atEnd);
+    }
+    updateFade();
+    bar.addEventListener('scroll', updateFade, { passive: true });
+    window.addEventListener('resize', updateFade);
+
+    bar.addEventListener('wheel', function (e) {
+      if (bar.scrollWidth <= bar.clientWidth) return;
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        bar.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    if (bar.scrollWidth > bar.clientWidth) {
+      setTimeout(function () {
+        bar.scrollTo({ left: 48, behavior: 'smooth' });
+        setTimeout(function () {
+          bar.scrollTo({ left: 0, behavior: 'smooth' });
+        }, 500);
+      }, 700);
+    }
+  })();
+</script>
 
 <div class="search-bar" id="search-bar">
   <div class="search-input-wrap">
