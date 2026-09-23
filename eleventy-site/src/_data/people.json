@@ -7765,6 +7765,74 @@
     ]
   },
   {
+    "id": "fries-vansevenant",
+    "related": [
+      "chuck-anderson",
+      "alex-trochut",
+      "saul-bass"
+    ],
+    "added": "2026-09-23",
+    "name": "Fries Vansevenant",
+    "discipline": "Designer",
+    "style": "Fragmented / Layered",
+    "born": "1985",
+    "nationality": "Belgian",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173965/SnapInsta.to_610749723_18550611376059338_5262413636598563713_n_s9tckn.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173969/623707782_18055517834691914_4230865563126972694_n_beobcb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173970/756671766_18608910421059338_415556997866457492_n_u99uuo.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173971/656464441_18574986910059338_1536107294273456349_n_l7eea1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173971/619411147_18552919582059338_210708443648787502_n_ee1rl8.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173971/763122438_18611385355059338_4158774507725752989_n_ydgayo.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173968/569395167_18537265393059338_7198394131776780220_n_loyl1i.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790175295/SnapInsta.to_669743964_18578811550059338_1305424226303587511_n-uai-902x1353_q2xc1c.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790173965/SnapInsta.to_566445118_18534936805059338_2619850804130221886_n-uai-900x1350_iqsryo.jpg"
+      }
+    ],
+    "url": "https://www.fries.studio",
+    "bio": "Fries Vansevenant learned to draw at his grandparents' house in Poperinge, copying Dragon Ball, Goldorak, and Captain Tsubasa off the French kids' show Club Dorothée, and in a sense he has been redrawing those heroes ever since. A master's in graphic design and the better part of a decade at Seven Productions, cutting motion work for festivals, television, and games, left him technically fluent and creatively blank, until a workshop with Brazilian designer Ariel Costa sent him back to the characters he had shelved. The signature that came out of it is surgical: Zidane, Rodman, Beatrix Kiddo, and Heath Ledger's Joker splintered into hard geometric shards and reassembled as collage, proportions bent until the figure reads like a memory rather than a photograph. He researches like a kit man, down to which Predator boots Zidane wore in 2006, then plants deliberate errors, sometimes as blatant as two left feet, because a picture that is slightly wrong holds the eye longer. He lectures at Artevelde University of Applied Sciences in Ghent, the city he works from.",
+    "traits": [
+      "Pop icons sliced into hard-edged geometric shards and rebuilt in layers, flat vector planes stacked over grain and print texture.",
+      "Anatomy exaggerated on purpose: limbs stretched, torsos compressed, proportions pushed until the pose carries more attitude than the person.",
+      "Forensic accuracy on the details fans check first, the right kit, the right boots, Rodman pulling a rebound into his chest exactly the way he did.",
+      "Deliberate wrongness left in the frame, an extra left foot or an impossible join, kept because tension beats correctness.",
+      "A subject canon lifted almost entirely from a 90s and 2000s childhood: anime, hip hop, Tarantino, Serie A, the Chicago Bulls."
+    ],
+    "works": [
+      {
+        "title": "Helm Heroes, Hersenletselliga (2026)",
+        "desc": "Belgian cycling legends, Eddy Merckx among them, recast as helmet-safety posters for a brain injury league, the prints built for auction to fund the cause."
+      },
+      {
+        "title": "Street League Skateboarding skater series",
+        "desc": "Eleven SLS pros and a brief that amounted to a blank check for the signature. The rare commission that asked for the style instead of sanding it down."
+      }
+    ]
+  },
+  {
     "id": "denis-villeneuve",
     "related": [
       "roger-deakins",
