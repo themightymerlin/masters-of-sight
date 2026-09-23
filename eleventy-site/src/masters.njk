@@ -57,7 +57,7 @@ eleventyComputed:
 
 <div class="profile-body">
   <div class="profile-gallery-hero">
-    <div class="profile-gallery{% if person.galleryLayout == 'diptych' %} profile-gallery--diptych{% endif %}">
+    <div class="profile-gallery">
       {% if person.galleryMedia and person.galleryMedia.length %}
         {% for item in person.galleryMedia %}
           {% if item.type == "image" or item.type == "gif" %}
