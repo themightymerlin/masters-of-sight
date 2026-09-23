@@ -668,10 +668,13 @@
 @media (max-width: 768px) {
   .nav-motw { display: none; }
 }
-@media (min-width: 1320px) {
+@media (min-width: 1390px) {
   .hero-credit { bottom: -24px; z-index: 2; }
 }
 .hero-credit { display: inline-flex; align-items: baseline; gap: 12px; }
 .hero-credit-label { color: var(--accent); }
 .hero-credit-name { color: var(--text); transition: color 0.2s ease; }
 .hero-credit:hover .hero-credit-name { color: var(--accent); }
+@media (max-width: 1389px) {
+  .hero-credit { display: none; }
+}
