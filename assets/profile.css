@@ -942,6 +942,7 @@
   .profile-gallery img:first-child {
     flex: 1 0 100%;
     aspect-ratio: 16/9;
+    object-position: center top;
   }
 
   /* ── VIDEO BOOKEND ── */
