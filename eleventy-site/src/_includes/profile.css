@@ -1316,3 +1316,29 @@
     color: rgba(255,255,255,0.35);
     text-transform: uppercase;
   }
+
+  /* ── EDGE-TO-EDGE GALLERY (desktop) ── */
+  @media (min-width: 769px) {
+    .profile-gallery {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      overflow: hidden;
+    }
+
+    .profile-gallery img:first-child {
+      max-height: 85vh;
+    }
+
+    .profile-gallery--diptych img:first-child,
+    .profile-gallery--diptych img:nth-child(2) {
+      flex: 1 1 calc(50% - 1.5px);
+      aspect-ratio: 3 / 2;
+      max-height: 85vh;
+      object-position: center top;
+    }
+  }
+
+  /* Prevent 100vw gallery from causing sideways scroll with visible scrollbars */
+  html:has(.profile-gallery) {
+    overflow-x: clip;
+  }
