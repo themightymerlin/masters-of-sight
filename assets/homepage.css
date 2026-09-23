@@ -678,3 +678,25 @@
 @media (max-width: 1389px) {
   .hero-credit { display: none; }
 }
+
+/* ── FILTER BAR SCROLL AFFORDANCE ── */
+.filter-bar-wrap {
+  position: relative;
+}
+
+.filter-bar-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 10px;
+  width: 44px;
+  background: linear-gradient(to right, transparent, #0f0f0f);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.filter-bar-wrap.at-end::after {
+  opacity: 0;
+}
