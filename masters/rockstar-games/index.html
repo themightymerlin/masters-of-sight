@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790200413447">
+<link rel="stylesheet" href="/assets/profile.css?v=1790200720357">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -1691,5 +1691,52 @@ window.lightboxNav = function (dir) {
   }
 })();
 </script>
+<!-- TEMP NOTICE: rehanging. Delete this entire block when gallery work is done. -->
+<div id="mos-notice" role="status" aria-live="polite">
+  Rehanging the archive. New work is going up on every profile.
+</div>
+<style>
+  #mos-notice {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translate(-50%, 8px);
+    z-index: 9999;
+    width: max-content;
+    max-width: calc(100vw - 40px);
+    padding: 14px 22px;
+    background: rgba(17, 17, 17, 0.92);
+    border: 1px solid var(--accent-dim, rgba(200, 170, 110, 0.4));
+    color: #efeae2;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  #mos-notice.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  .lightbox.active ~ #mos-notice { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    #mos-notice { transition: none; }
+  }
+</style>
+<script>
+  (function () {
+    var el = document.getElementById('mos-notice');
+    if (!el) return;
+    try {
+      if (sessionStorage.getItem('mosNoticeSeen')) { el.remove(); return; }
+      sessionStorage.setItem('mosNoticeSeen', '1');
+    } catch (e) {}
+    setTimeout(function () { el.classList.add('is-visible'); }, 600);
+    setTimeout(function () { el.classList.remove('is-visible'); }, 4600);
+    setTimeout(function () { el.remove(); }, 5400);
+  })();
+</script>
+<!-- END TEMP NOTICE -->
 </body>
 </html>
