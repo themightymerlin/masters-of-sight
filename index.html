@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790204245018">
-<link rel="stylesheet" href="/assets/homepage.css?v=1790204245018">
+<link rel="stylesheet" href="/assets/profile.css?v=1790204539434">
+<link rel="stylesheet" href="/assets/homepage.css?v=1790204539434">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -380,6 +380,47 @@
         }, 500);
       }, 700);
     }
+  })();
+</script>
+
+<script>
+  (function () {
+    var bar = document.querySelector('.filter-bar');
+    if (!bar) return;
+
+    var EDGE_ZONE = 70;
+    var MAX_SPEED = 9;
+    var rafId = null;
+    var speed = 0;
+
+    function loop() {
+      if (speed !== 0) {
+        bar.scrollLeft += speed;
+      }
+      rafId = requestAnimationFrame(loop);
+    }
+
+    bar.addEventListener('mousemove', function (e) {
+      if (bar.scrollWidth <= bar.clientWidth) { speed = 0; return; }
+      var rect = bar.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var distFromRight = rect.width - x;
+      var distFromLeft = x;
+
+      if (distFromRight < EDGE_ZONE) {
+        speed = MAX_SPEED * (1 - distFromRight / EDGE_ZONE);
+      } else if (distFromLeft < EDGE_ZONE) {
+        speed = -MAX_SPEED * (1 - distFromLeft / EDGE_ZONE);
+      } else {
+        speed = 0;
+      }
+    });
+
+    bar.addEventListener('mouseleave', function () {
+      speed = 0;
+    });
+
+    rafId = requestAnimationFrame(loop);
   })();
 </script>
 
