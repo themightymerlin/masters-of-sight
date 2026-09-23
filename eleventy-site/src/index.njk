@@ -14,7 +14,7 @@ homepageCss: true
     <div class="hero-left">
       <p class="hero-sub">A visual magazine of taste.</p>
       <h1 class="hero-title">Masters<br><em>of</em> <span class="hero-title-sight">Sight</span></h1>
-      <p class="hero-sub">New masters added every week.</p>
+      <p class="hero-sub">{{ people | length }} Masters with more added every week.</p>
     </div>
     <div class="hero-right" id="hero-motw"></div>
   </div>
@@ -42,7 +42,7 @@ homepageCss: true
 
   var credit = hero.querySelector('.hero-credit');
   if (credit) {
-    credit.textContent = 'Cover: ' + pick.name;
+    credit.textContent = pick.name + ' \u2197';
     credit.href = window.SITE_BASE_URL + 'masters/' + pick.id + '/';
     credit.hidden = false;
   }
@@ -308,6 +308,7 @@ homepageCss: true
     }
 
     if (!featured) return;
+    window.MOS_MOTW = { id: featured.id, name: featured.name };
 
     var discipline = displayDiscipline(featured.discipline, featured.entityType);
     var total = window.PEOPLE.length;
@@ -376,5 +377,31 @@ homepageCss: true
       });
     }
   });
+})();
+</script>
+<script>
+(function () {
+  function addNavMotw() {
+    var m = window.MOS_MOTW;
+    var nav = document.querySelector('.site-nav');
+    if (!m || !nav || nav.querySelector('.nav-motw')) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'nav-motw';
+    var label = document.createElement('span');
+    label.className = 'nav-motw-label';
+    label.textContent = 'Master of the Week';
+    var link = document.createElement('a');
+    link.className = 'nav-motw-name';
+    link.href = window.SITE_BASE_URL + 'masters/' + m.id + '/';
+    link.textContent = m.name;
+    wrap.appendChild(label);
+    wrap.appendChild(link);
+    nav.appendChild(wrap);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addNavMotw);
+  } else {
+    addNavMotw();
+  }
 })();
 </script>
