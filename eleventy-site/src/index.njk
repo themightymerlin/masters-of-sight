@@ -18,6 +18,46 @@ homepageCss: true
     </div>
     <div class="hero-right" id="hero-motw"></div>
   </div>
+<a class="hero-credit" href="#" hidden></a>
+<script>
+(function () {
+  var covers = [
+    {% for c in heroCovers %}{% for p in people %}{% if p.id == c.masterId %}{ id: "{{ p.id }}", name: {{ p.name | dump | safe }}, src: "{{ c.src }}", pos: "{{ c.position or 'center' }}" },{% endif %}{% endfor %}{% endfor %}
+  ];
+  var hero = document.querySelector('.hero');
+  if (!hero || !covers.length) return;
+
+  var last = null;
+  try { last = sessionStorage.getItem('mos-last-cover'); } catch (e) {}
+  var pool = covers.filter(function (c) { return c.id !== last; });
+  if (!pool.length) pool = covers;
+  var pick = pool[Math.floor(Math.random() * pool.length)];
+  try { sessionStorage.setItem('mos-last-cover', pick.id); } catch (e) {}
+
+  var width = window.innerWidth <= 600 ? 'w_1200' : 'w_2400';
+  var src = pick.src.replace('/upload/f_auto,q_auto/', '/upload/f_auto,q_auto,' + width + ',c_limit/');
+  hero.style.setProperty('--hero-cover', 'url("' + src + '")');
+  hero.style.setProperty('--hero-cover-pos', pick.pos);
+  hero.classList.add('has-cover');
+
+  var credit = hero.querySelector('.hero-credit');
+  if (credit) {
+    credit.textContent = 'Cover: ' + pick.name;
+    credit.href = window.SITE_BASE_URL + 'masters/' + pick.id + '/';
+    credit.hidden = false;
+  }
+
+  var nav = document.querySelector('.site-nav');
+  if (nav) {
+    nav.classList.add('nav-over-cover');
+    var update = function () {
+      nav.classList.toggle('nav-scrolled', window.scrollY > hero.offsetHeight - nav.offsetHeight);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  }
+})();
+</script>
 </div>
 
 <div class="filter-bar">
