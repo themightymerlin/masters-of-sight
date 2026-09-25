@@ -4615,10 +4615,42 @@
     "born": "1963",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300374/David-LaChapelle-Do-You-Realize-Still-Montage-32_ifqfpb.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300375/david-lachapelle-the-house-at-the-end-of-the-world-los-angeles-2005-courtesy-of-visu-contemporary_swyke4.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300372/dlc-5_zaajuh.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300371/david-lachapelle-good-news-lost-and-found-ss03.jpg_rh4dwh.webp"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300375/david-lachapelle-the-house-at-the-end-of-the-world-los-angeles-2005-courtesy-of-visu-contemporary_swyke4.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300372/dlc-5_zaajuh.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300371/david-lachapelle-good-news-lost-and-found-ss03.jpg_rh4dwh.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351919/3e273b_406a97b1861c472f899704286f4bdd2b_mv2.jpg_oskvyk.avif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351923/3e273b_0b34ec4f31634277bf6bc788b534892f_mv2.jpg_ugfulp.avif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351934/3e273b_21ceea3a36e94bb69f49f351d53ca07d_mv2.jpg_huevka.avif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351942/3e273b_b9abf53d925d4d908dddbe3e0f9826a0_mv2.jpg_r7alci.avif",
+        "caption": ""
+      }
     ],
     "url": "https://lachapellestudio.com",
     "bio": "David LaChapelle makes the loudest images in the room. Saturated beyond saturation, referencing everything from Renaissance painting to tabloid disaster simultaneously, he weaponized excess into critique. His work is about America, its appetite, its delusions, its gorgeous catastrophic energy. Andy Warhol hired him at 17. That tells you everything.",
@@ -4693,26 +4725,6 @@
         "type": "video",
         "youtubeId": "8aulMPhE12g",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123867/Screenshot_2026-08-30_at_17.04.12_nammxk.png"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351919/3e273b_406a97b1861c472f899704286f4bdd2b_mv2.jpg_oskvyk.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351923/3e273b_0b34ec4f31634277bf6bc788b534892f_mv2.jpg_ugfulp.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351934/3e273b_21ceea3a36e94bb69f49f351d53ca07d_mv2.jpg_huevka.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351942/3e273b_b9abf53d925d4d908dddbe3e0f9826a0_mv2.jpg_r7alci.avif",
-        "caption": ""
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Dan_Laustsen",
@@ -5181,10 +5193,47 @@
     "died": "1981",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065247/image_dj6bow.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065220/image_xzng2p.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065205/image_rjngze.png",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065191/image_lg6izc.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065220/image_xzng2p.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065205/image_rjngze.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065191/image_lg6izc.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353540/Herb_Lubalin-06-758x1024_syrkbv.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353554/Herb_Lubalin-09_cpi2rn.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353567/Herb_Lubalin-10_ocnusw.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353602/Herb_Lubalin-08_n6bobv.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065262/image_tvnnrb.png",
+        "caption": ""
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Herb_Lubalin",
     "bio": "Herb Lubalin treated typography as architecture and emotion simultaneously. Working in New York through the 1960s and 70s, he transformed the typeface from a neutral carrier of language into a charged, expressive visual event. His magazine designs for Eros, Fact, and Avant Garde pushed typography to its conceptual limits, and the Avant Garde typeface he designed with Tom Carnase became one of the most recognisable and influential letterforms of the twentieth century.",
@@ -5233,10 +5282,42 @@
     "born": "1964",
     "nationality": "Mexican",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780938412/4C6D40JE_azilpt.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065964/image_cq0jlt.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780066037/image_h4uas8.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780066059/image_dk0hsl.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065964/image_cq0jlt.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780066037/image_h4uas8.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780066059/image_dk0hsl.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780938253/ECD25SP6_e3oe8n.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353697/E356LJ7B_xu40e4.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353716/5TN53S9C_af4fd6.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353767/GX5L34BV_smqtrf.jpg",
+        "caption": ""
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Emmanuel_Lubezki",
     "bio": "Emmanuel Lubezki, Chivo to everyone who's worked with him, rewired what a camera could do inside a narrative film. What he actually did was convince Hollywood that natural light wasn't a limitation, it was the whole argument: he shot Gravity in a lightbox, and The Revenant in dying daylight with no artificial sources. He convinced Terrence Malick that the camera should move like a living thing, not an observer. Cinema before and after Chivo are measurably different.",
@@ -5319,51 +5400,6 @@
         "type": "video",
         "youtubeId": "vZ734NWnAHA",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786799400/Screenshot_2026-08-15_at_09.09.45_duxfrl.png"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353540/Herb_Lubalin-06-758x1024_syrkbv.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353554/Herb_Lubalin-09_cpi2rn.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353567/Herb_Lubalin-10_ocnusw.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353602/Herb_Lubalin-08_n6bobv.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065262/image_tvnnrb.png",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780938253/ECD25SP6_e3oe8n.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353697/E356LJ7B_xu40e4.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353716/5TN53S9C_af4fd6.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353767/GX5L34BV_smqtrf.jpg",
-        "caption": ""
       }
     ],
     "url": "https://en.wikipedia.org/wiki/George_Lucas",
@@ -5423,10 +5459,42 @@
     "nationality": "American",
     "coverImagePosition": "calc(50% + 30px) center",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299961/wildatheartmoviedavidlynch.jpg_l7nloj.webp",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299959/Twin-Peaks-Fire-Walk-With-Me_fha8to.webp",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299957/Eraserhead.jpg_wqjs64.webp",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299958/Mulholland-Drive.jpg_aqf9y4.webp"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299959/Twin-Peaks-Fire-Walk-With-Me_fha8to.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299957/Eraserhead.jpg_wqjs64.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779299958/Mulholland-Drive.jpg_aqf9y4.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353885/L28C8MKT_jd8ul0.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353820/WH0HF5BS_nduj5x.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353840/7P1FTSQP_egtni9.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353902/W8K3RRPE_mlvbwr.jpg",
+        "caption": ""
+      }
     ],
     "url": "https://davidlynch.com",
     "bio": "David Lynch was a painter who accidentally became one of cinema's most singular voices. His work operates in the frequency just below conscious thought, the place where dread and beauty become indistinguishable. He understood that the most unsettling images aren't violent. They're familiar things, slightly wrong.",
@@ -5504,26 +5572,6 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1789061983/slyvo6.jpg_jnbvmd.webp"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353885/L28C8MKT_jd8ul0.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353820/WH0HF5BS_nduj5x.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353840/7P1FTSQP_egtni9.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353902/W8K3RRPE_mlvbwr.jpg",
-        "caption": ""
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Szilveszter_Makó",
@@ -6221,10 +6269,52 @@
     "died": "2004",
     "nationality": "German-Australian",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780327448/402958_vdj0rs.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888084/image_jbdn0u.png",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888090/image_egl1e5.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888106/image_hh3uuj.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888084/image_jbdn0u.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888090/image_egl1e5.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779888106/image_hh3uuj.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355149/Helmut-Newton-2-scaled.jpeg_ozr3sa.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355172/Helmut-Newton-4.jpeg.jpeg_zxo1dz.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355200/featured-image-hat-1_s89nau.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355224/avion_kwvtrk.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355270/T6.-Helmut-Newton.-Shoe_-Walter-Steiger.-Monte-Carlo_1983-_EF_BF_BD_EF_BF_BD-Helmut-Newton-Foundation.jpg_pvmdbx.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355309/T10.-Helmut-Newton.-Andy-Warhol_-L_Uomo-Vogue.-Paris_-1974-_-Helmut-Newton-Foundation.jpg_cyevuk.webp",
+        "caption": ""
+      }
     ],
     "url": "https://www.helmut-newton.com",
     "bio": "Helmut Newton made fashion photography dangerous again. His women were not decorative objects but agents, powerful, knowing, often predatory, always in command of the frame. Working primarily in stark black and white, he brought a Berlin cabaret darkness into the glossy pages of Vogue and French Elle, creating images that scandalized and seduced in equal measure. His work remains a provocation about power, desire, and who holds the gaze.",
@@ -6273,10 +6363,47 @@
     "born": "1963",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817647/image_gn3qvg.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779816934/image_kizfi6.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817064/image_ya1fn4.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817004/image_oginet.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779816934/image_kizfi6.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817064/image_ya1fn4.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817004/image_oginet.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817145/image_kzqdsr.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355446/004_20160515_SHOT-2_0311_RT_FLAT_hoexe2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817013/image_skln9s.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355510/NYTM_Shot04-0498-1400x933_exh6zt.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355540/58426_321_pr13u0.jpg",
+        "caption": ""
+      }
     ],
     "url": "https://www.deweynicks.com",
     "bio": "Dewey Nicks shaped the visual language of 1990s youth culture with a deceptively effortless aesthetic, sun-drenched, tactile, perpetually on the cusp of something. His Abercrombie & Fitch campaigns became cultural artifacts, redefining how aspirational imagery could feel simultaneously wholesome and charged. His editorial work for magazines like Rolling Stone carried the same quality: candid precision, bodies in golden light, a world you want to step into.",
@@ -6342,61 +6469,6 @@
         "type": "video",
         "youtubeId": "Mzw2ttJD2qQ",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784393523/Screenshot_2026-07-18_at_12.50.53_rmgqx4.png"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355149/Helmut-Newton-2-scaled.jpeg_ozr3sa.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355172/Helmut-Newton-4.jpeg.jpeg_zxo1dz.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355200/featured-image-hat-1_s89nau.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355224/avion_kwvtrk.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355270/T6.-Helmut-Newton.-Shoe_-Walter-Steiger.-Monte-Carlo_1983-_EF_BF_BD_EF_BF_BD-Helmut-Newton-Foundation.jpg_pvmdbx.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355309/T10.-Helmut-Newton.-Andy-Warhol_-L_Uomo-Vogue.-Paris_-1974-_-Helmut-Newton-Foundation.jpg_cyevuk.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817145/image_kzqdsr.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355446/004_20160515_SHOT-2_0311_RT_FLAT_hoexe2.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779817013/image_skln9s.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355510/NYTM_Shot04-0498-1400x933_exh6zt.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355540/58426_321_pr13u0.jpg",
-        "caption": ""
       },
       {
         "type": "image",
@@ -6490,10 +6562,47 @@
     "died": "1990",
     "nationality": "British",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019592/23_f3087e73d5e47d267fb5a606c5d8e575_ypy2qp.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019608/Audrey-Hepburn-Italy_tg8ahl.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019611/Corn-Poppy.-Adele-Collins-wearing-an-Otto-Lucas-velvet-toque.-British-Vogue_pvndqi.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019601/Traffic-Ivy-Nicholson-in-New-York_mtyg9i.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019608/Audrey-Hepburn-Italy_tg8ahl.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019611/Corn-Poppy.-Adele-Collins-wearing-an-Otto-Lucas-velvet-toque.-British-Vogue_pvndqi.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019601/Traffic-Ivy-Nicholson-in-New-York_mtyg9i.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019595/NP_FA_40s002.jpg_npqt1b.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019605/Jean-Patchett-Vogue_txtc0d.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355931/410ade_402b348837ef44ec813b44430c3c2c81_mv2.jpg_b2lytl.avif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355959/410ade_611db7bc15864566b71463f86392d48a_mv2.jpg_ajf3xo.avif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355988/410ade_586859ecbe0d40e2a805de8fa55807bd_mv2.jpg_bvypsa.avif",
+        "caption": ""
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Norman_Parkinson",
     "bio": "Norman Parkinson took fashion photography outside, not metaphorically, literally. At a time when the industry was built around studio lights, seamless backdrops, and controlled environments, he put models in fields, on streets, in markets, on the sides of mountains, and changed what fashion imagery thought it was allowed to be. Working primarily for British Vogue across five decades, he brought a wit, a physicality, and a genuine joy to his work that made the artifice of fashion feel like the most natural thing in the world. His women were not decorative objects arranged for the male gaze, they were in motion, laughing, striding, living inside the frame with a vitality that made every contemporary studio shot look embalmed by comparison.",
@@ -6543,10 +6652,52 @@
     "born": "1952",
     "nationality": "British",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492362/image_msnia8.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492316/image_lldjkl.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492273/image_uzzttw.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492069/image_uxs8ov.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492316/image_lldjkl.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492273/image_uzzttw.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492069/image_uxs8ov.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492260/image_tnft94.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356098/canon-pro-martin-parr-1-1140_brk5eq.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356242/Martin_Parr_Margate_2C_Kent._England_2C_G.B._1986._C2_A9_Martin_Parr.png_zc8zuh.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356213/Brighton_Beach_2C_West_Susex_2C_1966._Tony_Ray-Jones_C2_A9_The_National_Media_Museum_2C_Bradford_2C_UK.jpg_hebm38.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356271/Martin_Parr_England_County_Show_2015.jpg_ttttsx.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356302/9b4650_debd57e984584cb58119e1b22995fdee_mv2_d_5000_3352_s_4_2.jpg_zndibc.avif",
+        "caption": ""
+      }
     ],
     "url": "https://martinparr.com",
     "bio": "Martin Parr is the anthropologist who hid a camera in his coat. For five decades he has pointed it at the British seaside, the global tourist, the suburban buffet table, the sunburned and the oblivious, producing images that are simultaneously hilarious and quietly devastating. His weapon is colour, oversaturated, flash-blasted, almost grotesque, and his subject is always the same thing: the gap between how people imagine themselves and how they actually are. He joined Magnum in 1994 and has published over 140 books since, proof that the joke never stopped being worth telling.",
@@ -6595,10 +6746,67 @@
     "born": "1961",
     "nationality": "British",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068731/image_fq64dn.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068703/image_ud8ebm.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068802/image_pmqwf8.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068773/image_youmcl.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068703/image_ud8ebm.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068802/image_pmqwf8.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068773/image_youmcl.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356399/30x40_FA_hcqsae.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356430/Bill_Murray_qg5085.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356490/Jimmy_Fallon_The_Tonight_Show_Thats_My_Jam_Approved_0140_ag9vho.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356521/Tom_Ford_3_gv5qdg.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356552/Phillip_SeymourHoffman_Print_reurrj.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356583/Robin_Williams_gdmjen.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356613/Cate_Blanchett_003_y0pio7.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356644/L_Pavarotti_001_y0bywp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356675/Sir_Anthony__Hopkins_u8ujyu.jpg",
+        "caption": ""
+      }
     ],
     "url": "https://nigelparryphoto.com",
     "bio": "Nigel Parry started his career designing books for Faber & Faber and ended up photographing presidents, a pivot that says everything about his singular gift: the ability to enter the most surveilled faces on earth and still find something nobody else found. Born in a South Yorkshire mining village, he discovered photography while working as a graphic designer, and within a year of his first London exhibition the Sunday Times Magazine was calling. By 1994 he was in New York, shooting for The New York Times Magazine, Vanity Fair, and Entertainment Weekly, subjects from Bill Clinton to Martin Scorsese, all photographed with the same disquieting proximity, the camera so close the viewer feels they've entered someone's private space uninvited. He was the first portrait photographer invited to exhibit at the Cannes Film Festival, and his work is held by the National Portrait Gallery in London.",
@@ -6668,106 +6876,6 @@
         "type": "video",
         "youtubeId": "kYkErSYlheI",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068581/image_q4kqly.jpg"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019595/NP_FA_40s002.jpg_npqt1b.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781019605/Jean-Patchett-Vogue_txtc0d.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355931/410ade_402b348837ef44ec813b44430c3c2c81_mv2.jpg_b2lytl.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355959/410ade_611db7bc15864566b71463f86392d48a_mv2.jpg_ajf3xo.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355988/410ade_586859ecbe0d40e2a805de8fa55807bd_mv2.jpg_bvypsa.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780492260/image_tnft94.png",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356098/canon-pro-martin-parr-1-1140_brk5eq.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356242/Martin_Parr_Margate_2C_Kent._England_2C_G.B._1986._C2_A9_Martin_Parr.png_zc8zuh.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356213/Brighton_Beach_2C_West_Susex_2C_1966._Tony_Ray-Jones_C2_A9_The_National_Media_Museum_2C_Bradford_2C_UK.jpg_hebm38.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356271/Martin_Parr_England_County_Show_2015.jpg_ttttsx.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356302/9b4650_debd57e984584cb58119e1b22995fdee_mv2_d_5000_3352_s_4_2.jpg_zndibc.avif",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356399/30x40_FA_hcqsae.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356430/Bill_Murray_qg5085.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356490/Jimmy_Fallon_The_Tonight_Show_Thats_My_Jam_Approved_0140_ag9vho.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356521/Tom_Ford_3_gv5qdg.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356552/Phillip_SeymourHoffman_Print_reurrj.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356583/Robin_Williams_gdmjen.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356613/Cate_Blanchett_003_y0pio7.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356644/L_Pavarotti_001_y0bywp.jpg",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356675/Sir_Anthony__Hopkins_u8ujyu.jpg",
-        "caption": ""
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Jordan_Peele",
@@ -6826,10 +6934,42 @@
     "died": "2009",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887178/image_za7tz1.png",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887073/image_sqqgog.png",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887163/image_fznkan.png",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887142/image_w2qbel.png"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887073/image_sqqgog.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887163/image_fznkan.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779887142/image_w2qbel.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356748/sophia_loren.jpg_nb4bup.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356791/white_face_with_color_smears_new_york_1986.jpg_alpepb.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356867/the_hand_of_miles_davis_new_york_1986.jpg_hwimmw.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356899/robin_williams_new_york_1998.jpg_xl260v.webp",
+        "caption": ""
+      }
     ],
     "url": "https://www.irvingpenn.org",
     "bio": "Irving Penn was a perfectionist of the quiet kind. His portraits placed subjects in the corner of two walls, a simple, slightly claustrophobic device that forced intimacy and removed distraction. His still lifes treated cigarette butts and human skulls with the same grave attention he gave to Picasso and Truman Capote. He spent six decades at Vogue and never once made a lazy image. Restraint, he believed, was where truth lived.",
@@ -6898,26 +7038,6 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1788972110/L1010731-Edit_lvgvdv.jpg"
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356748/sophia_loren.jpg_nb4bup.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356791/white_face_with_color_smears_new_york_1986.jpg_alpepb.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356867/the_hand_of_miles_davis_new_york_1986.jpg_hwimmw.webp",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790356899/robin_williams_new_york_1998.jpg_xl260v.webp",
-        "caption": ""
       }
     ],
     "url": "https://www.instagram.com/jasonmpeterson/",
