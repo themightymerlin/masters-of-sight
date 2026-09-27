@@ -7238,7 +7238,12 @@
     "galleryImages": [
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069109/image_bfyac7.jpg",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069139/image_dkxpl8.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069079/image_eq23io.jpg"
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069079/image_eq23io.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515102/d12937ea5c94a9610f3a15412e81f8b26ea67dce-1300x868.jpg_eujtsi.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515111/7381ed0ee5fe2393d51f9eba49b94485b68a20b4-1300x1014.jpg_kuigqf.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515121/585e7e1484f1589a9b8dfb08c0d23ea3cf62cdb3-1300x863.jpg_yrzeql.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515128/b18db84062c895f1823bcb5232181905059ad5b2-1300x873.jpg_lylfje.avif",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515132/4667bf62ade8c14a30c9e92521a52bdd90f8cfc3-786x1300.jpg_netkgl.avif"
     ],
     "url": "https://www.vitsoe.com/gb/about/dieter-rams",
     "bio": "Dieter Rams asked a question that has been answered a thousand times since but was genuinely radical when he posed it in 1976: is my design good design? His response was the Ten Principles, a manifesto for functional beauty that influenced every serious product designer who followed and most who never heard of him. As head of design at Braun for three decades, he made radios, razors, calculators, and speakers that looked like they had been discovered rather than designed. Jony Ive acknowledged him directly. Apple's hardware is an extended conversation with his work.",
@@ -7291,7 +7296,11 @@
     "galleryImages": [
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300956/PaulRandHP-1.jpg_vezxjg.webp",
       "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779300959/rand_esquire_mag_bwu8ap.png",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779301040/paul-rand-logos-grey.jpg_dfllp7.webp"
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779301040/paul-rand-logos-grey.jpg_dfllp7.webp",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1779300957/H2180-L367418426_e0t2og.jpg",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515740/Ice_20Cream_20Cone_20Poster_hsvoas.webp",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515749/HL_20Mencken_20Poster_kwxzvc.webp",
+      "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790515793/Sweden_20Builds-450_vndeg5.webp"
     ],
     "url": "https://en.wikipedia.org/wiki/Paul_Rand",
     "bio": "Paul Rand was the American designer who decided that commercial art was still art. He brought European modernism, Bauhaus rigour, Constructivist energy, into the boardroom, and in doing so created some of the most enduring marks in the visual history of capitalism. IBM. ABC. UPS. Each one a philosophy compressed to a symbol.",
@@ -7363,6 +7372,34 @@
         "type": "video",
         "youtubeId": "UnA7tepsc7s",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786122275/Screenshot_2026-08-07_at_13.04.23_a4ddkn.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1786122178/Screenshot_2026-08-07_at_13.02.39_uktwmu.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516091/Cyberpunk2077_Always_bring_a_gun_to_a_knife-fight_RGB-en_vw9fm6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516309/screen-its-a-deal-en_ftzwd2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516344/Cyberpunk2077-The_man_with_the_silver_hand-RGB-en_yu7lj6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516336/TW3RE_Gamescom_Combat_Group_FIN_PS5_16x9_EN_rpdv8f.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516318/08336916df25262078e418792359286202fcd819_vvxiul.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516327/TW3RE_Gamescom_Geralt_on_a_Horseback_FIN_PC_16x9_EN_zsysmy.png"
       }
     ],
     "url": "https://www.cdprojektred.com/en",
