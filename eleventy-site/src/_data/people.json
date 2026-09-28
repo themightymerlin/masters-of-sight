@@ -4,7 +4,7 @@
     "related": [
       "steven-spielberg",
       "christopher-nolan",
-      "hype-williams"
+      "george-lucas"
     ],
     "name": "J.J. Abrams",
     "added": "2026-06-25",
@@ -113,7 +113,7 @@
     "related": [
       "hiroshi-sugimoto",
       "nadav-kander",
-      "roger-deakins"
+      "benjamin-hardman"
     ],
     "name": "Ansel Adams",
     "discipline": "Photographer",
@@ -246,7 +246,7 @@
     "related": [
       "william-eggleston",
       "saul-bass",
-      "hayao-miyazaki"
+      "brad-bird"
     ],
     "name": "Wes Anderson",
     "discipline": "Director",
@@ -518,7 +518,7 @@
     "related": [
       "annie-liebovitz",
       "irving-penn",
-      "david-fincher"
+      "norman-parkinson"
     ],
     "name": "Richard Avedon",
     "discipline": "Photographer",
@@ -574,7 +574,7 @@
     "related": [
       "robert-elswit",
       "ryan-coogler",
-      "bradford-young"
+      "rockstar-games"
     ],
     "name": "David Ayer",
     "discipline": "Director",
@@ -1325,7 +1325,7 @@
     "id": "jimmy-chin",
     "related": [
       "ansel-adams",
-      "roger-deakins",
+      "mario-renzi",
       "nadav-kander"
     ],
     "name": "Jimmy Chin",
@@ -1632,7 +1632,7 @@
     "related": [
       "nadav-kander",
       "tim-walker",
-      "hayao-miyazaki"
+      "greta-gerwig"
     ],
     "name": "Sofia Coppola",
     "discipline": "Director",
@@ -1905,7 +1905,7 @@
     "related": [
       "spike-jonze",
       "wes-anderson",
-      "stefan-sagmeister"
+      "lord-and-miller"
     ],
     "name": "The Daniels",
     "discipline": "Director",
@@ -2120,7 +2120,7 @@
     "related": [
       "neil-druckmann",
       "ridley-scott",
-      "ryan-coogler"
+      "amy-hennig"
     ],
     "name": "Naughty Dog",
     "discipline": "Dream Makers",
@@ -2413,7 +2413,7 @@
   {
     "id": "robert-elswit",
     "related": [
-      "roger-deakins",
+      "newton-thomas-sigel",
       "robert-richardson",
       "david-ayer"
     ],
@@ -2731,7 +2731,7 @@
     "id": "robert-frank",
     "related": [
       "richard-avedon",
-      "irving-penn",
+      "jason-m-peterson",
       "dana-scruggs"
     ],
     "added": "2026-07-31",
@@ -2917,7 +2917,7 @@
   {
     "id": "rockstar-games",
     "related": [
-      "ridley-scott",
+      "cd-projekt-red",
       "spike-lee",
       "david-ayer"
     ],
@@ -3237,7 +3237,7 @@
     "related": [
       "spike-jonze",
       "wes-anderson",
-      "hayao-miyazaki"
+      "ellen-kuras"
     ],
     "added": "2026-07-18",
     "name": "Michel Gondry",
@@ -3421,7 +3421,7 @@
     "id": "amy-hennig",
     "related": [
       "neil-druckmann",
-      "hideo-kojima",
+      "ken-levine",
       "naughty-dog"
     ],
     "name": "Amy Hennig",
@@ -3814,7 +3814,7 @@
   {
     "id": "peter-jackson",
     "related": [
-      "syd-mead",
+      "todd-howard",
       "hideo-kojima",
       "ridley-scott"
     ],
@@ -4082,7 +4082,7 @@
     "id": "susan-kare",
     "related": [
       "jony-ive",
-      "saul-bass",
+      "muriel-cooper",
       "shigeru-miyamoto"
     ],
     "name": "Susan Kare",
@@ -4180,7 +4180,7 @@
     "id": "jack-kirby",
     "related": [
       "moebius",
-      "ridley-scott",
+      "zack-snyder",
       "yoji-shinkawa"
     ],
     "name": "Jack Kirby",
@@ -4261,7 +4261,7 @@
   {
     "id": "hideo-kojima",
     "related": [
-      "ridley-scott",
+      "yoji-shinkawa",
       "denis-villeneuve",
       "neil-druckmann"
     ],
@@ -4375,7 +4375,7 @@
   {
     "id": "joseph-kosinski",
     "related": [
-      "roger-deakins",
+      "bungie",
       "denis-villeneuve",
       "gmunk"
     ],
@@ -4607,7 +4607,7 @@
     "related": [
       "guy-bourdin",
       "hype-williams",
-      "stefan-sagmeister"
+      "szilveszter-mako"
     ],
     "name": "David LaChapelle",
     "discipline": "Photographer",
@@ -5449,7 +5449,7 @@
     "related": [
       "gregory-crewdson",
       "stanley-kubrick",
-      "gordon-willis"
+      "peter-deming"
     ],
     "name": "David Lynch",
     "discipline": "Director",
@@ -5607,7 +5607,7 @@
     "related": [
       "moebius",
       "ridley-scott",
-      "jony-ive"
+      "yoji-shinkawa"
     ],
     "name": "Syd Mead",
     "discipline": "Dream Makers",
@@ -6039,7 +6039,7 @@
     "id": "hidetaka-miyazaki",
     "related": [
       "stanley-kubrick",
-      "darren-aronofsky",
+      "shinji-mikami",
       "fumito-ueda"
     ],
     "name": "Hidetaka Miyazaki",
@@ -6444,7 +6444,7 @@
     "related": [
       "denis-villeneuve",
       "stanley-kubrick",
-      "hideo-kojima"
+      "the-wachowskis"
     ],
     "name": "Christopher Nolan",
     "discipline": "Director",
@@ -7339,7 +7339,7 @@
   {
     "id": "cd-projekt-red",
     "related": [
-      "ridley-scott",
+      "rockstar-games",
       "guillermo-del-toro",
       "denis-villeneuve"
     ],
@@ -7828,7 +7828,7 @@
     "related": [
       "syd-mead",
       "vittorio-storaro",
-      "peter-jackson"
+      "tony-scott"
     ],
     "name": "Ridley Scott",
     "discipline": "Director",
@@ -8378,7 +8378,7 @@
     "related": [
       "christopher-nolan",
       "peter-jackson",
-      "roger-deakins"
+      "james-cameron"
     ],
     "added": "2026-06-25",
     "name": "Steven Spielberg",
@@ -8524,7 +8524,7 @@
     "id": "hiroshi-sugimoto",
     "related": [
       "ansel-adams",
-      "gordon-willis",
+      "rinko-kawauchi",
       "fumito-ueda"
     ],
     "name": "Hiroshi Sugimoto",
@@ -8576,7 +8576,7 @@
     "id": "quentin-tarantino",
     "related": [
       "robert-richardson",
-      "ridley-scott",
+      "tony-scott",
       "gordon-willis"
     ],
     "added": "2026-06-28",
@@ -8656,7 +8656,7 @@
     "related": [
       "tim-walker",
       "hayao-miyazaki",
-      "syd-mead"
+      "tim-burton"
     ],
     "name": "Guillermo del Toro",
     "cardName": "Guillermo<br>del Toro",
@@ -8741,7 +8741,7 @@
     "id": "alex-trochut",
     "related": [
       "herb-lubalin",
-      "hype-williams",
+      "chuck-anderson",
       "stefan-sagmeister"
     ],
     "name": "Alex Trochut",
@@ -9074,7 +9074,7 @@
     "related": [
       "guy-bourdin",
       "guillermo-del-toro",
-      "hayao-miyazaki"
+      "lara-zankoul"
     ],
     "name": "Tim Walker",
     "discipline": "Photographer",
@@ -9122,7 +9122,7 @@
     "related": [
       "william-eggleston",
       "robert-frank",
-      "martin-parr"
+      "sebastiao-salgado"
     ],
     "added": "2026-08-19",
     "name": "Alex Webb",
@@ -9235,7 +9235,7 @@
   {
     "id": "gordon-willis",
     "related": [
-      "roger-deakins",
+      "francis-ford-coppola",
       "vittorio-storaro",
       "david-fincher"
     ],
