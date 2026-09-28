@@ -3,7 +3,7 @@
     "id": "jj-abrams",
     "related": [
       "steven-spielberg",
-      "christopher-nolan",
+      "hideo-kojima",
       "george-lucas"
     ],
     "name": "J.J. Abrams",
@@ -112,7 +112,7 @@
     "id": "ansel-adams",
     "related": [
       "hiroshi-sugimoto",
-      "nadav-kander",
+      "greig-fraser",
       "benjamin-hardman"
     ],
     "name": "Ansel Adams",
@@ -170,7 +170,7 @@
     "related": [
       "gmunk",
       "alex-trochut",
-      "shepard-fairey"
+      "reuben-wu"
     ],
     "added": "2026-08-31",
     "name": "Chuck Anderson",
@@ -516,7 +516,7 @@
   {
     "id": "richard-avedon",
     "related": [
-      "annie-liebovitz",
+      "david-fincher",
       "irving-penn",
       "norman-parkinson"
     ],
@@ -826,7 +826,7 @@
     "related": [
       "bungie",
       "rockstar-games",
-      "hideo-kojima"
+      "peter-jackson"
     ],
     "added": "2026-09-14",
     "name": "Blizzard",
@@ -1218,7 +1218,7 @@
     "id": "james-cameron",
     "related": [
       "ridley-scott",
-      "christopher-nolan",
+      "syd-mead",
       "steven-spielberg"
     ],
     "added": "2026-07-28",
@@ -1326,7 +1326,7 @@
     "related": [
       "ansel-adams",
       "mario-renzi",
-      "nadav-kander"
+      "emmanuel-lubezki"
     ],
     "name": "Jimmy Chin",
     "discipline": [
@@ -1507,7 +1507,7 @@
     "related": [
       "saul-bass",
       "danny-yount",
-      "gmunk"
+      "david-fincher"
     ],
     "added": "2026-07-31",
     "name": "Kyle Cooper",
@@ -1578,7 +1578,7 @@
   {
     "id": "muriel-cooper",
     "related": [
-      "paul-rand",
+      "shigeru-miyamoto",
       "jonathan-hoefler",
       "susan-kare"
     ],
@@ -1904,7 +1904,7 @@
     "id": "the-daniels",
     "related": [
       "spike-jonze",
-      "wes-anderson",
+      "carlos-fama",
       "lord-and-miller"
     ],
     "name": "The Daniels",
@@ -2477,7 +2477,7 @@
     "id": "shepard-fairey",
     "related": [
       "milton-glaser",
-      "paul-rand",
+      "spike-lee",
       "stefan-sagmeister"
     ],
     "name": "Shepard Fairey",
@@ -2730,7 +2730,7 @@
   {
     "id": "robert-frank",
     "related": [
-      "richard-avedon",
+      "robert-elswit",
       "jason-m-peterson",
       "dana-scruggs"
     ],
@@ -2809,7 +2809,7 @@
     "id": "greig-fraser",
     "related": [
       "hoyte-van-hoytema",
-      "roger-deakins",
+      "denis-villeneuve",
       "emmanuel-lubezki"
     ],
     "added": "2026-08-26",
@@ -3033,7 +3033,7 @@
     "id": "greta-gerwig",
     "related": [
       "sofia-coppola",
-      "wes-anderson",
+      "natasha-leonnet",
       "michel-gondry"
     ],
     "added": "2026-08-05",
@@ -3179,7 +3179,7 @@
     "related": [
       "paul-rand",
       "shepard-fairey",
-      "saul-bass"
+      "gordon-willis"
     ],
     "name": "Milton Glaser",
     "discipline": "Designer",
@@ -3329,7 +3329,7 @@
     "id": "benjamin-hardman",
     "related": [
       "ansel-adams",
-      "nadav-kander",
+      "hoyte-van-hoytema",
       "reuben-wu"
     ],
     "added": "2026-08-27",
@@ -3420,7 +3420,7 @@
   {
     "id": "amy-hennig",
     "related": [
-      "neil-druckmann",
+      "steven-spielberg",
       "ken-levine",
       "naughty-dog"
     ],
@@ -3511,7 +3511,7 @@
     "related": [
       "herb-lubalin",
       "dieter-rams",
-      "jony-ive"
+      "wes-anderson"
     ],
     "name": "Jonathan Hoefler",
     "discipline": "Designer",
@@ -5182,7 +5182,7 @@
   {
     "id": "herb-lubalin",
     "related": [
-      "paul-rand",
+      "richard-avedon",
       "jonathan-hoefler",
       "alex-trochut"
     ],
@@ -5543,7 +5543,7 @@
     "related": [
       "tim-walker",
       "david-lachapelle",
-      "guy-bourdin"
+      "carlos-fama"
     ],
     "added": "2026-09-10",
     "name": "Szilveszter Makó",
@@ -6443,7 +6443,7 @@
     "id": "christopher-nolan",
     "related": [
       "denis-villeneuve",
-      "stanley-kubrick",
+      "hoyte-van-hoytema",
       "the-wachowskis"
     ],
     "name": "Christopher Nolan",
@@ -6552,7 +6552,7 @@
     "id": "norman-parkinson",
     "related": [
       "richard-avedon",
-      "irving-penn",
+      "sofia-coppola",
       "tim-walker"
     ],
     "name": "Norman Parkinson",
@@ -6736,7 +6736,7 @@
   {
     "id": "nigel-parry",
     "related": [
-      "richard-avedon",
+      "jordan-peele",
       "annie-liebovitz",
       "dewey-nicks"
     ],
@@ -7010,7 +7010,7 @@
     "related": [
       "hiroshi-sugimoto",
       "gregory-crewdson",
-      "martin-parr"
+      "gordon-willis"
     ],
     "name": "Jason M. Peterson",
     "discipline": "Photographer",
@@ -7284,7 +7284,7 @@
     "related": [
       "saul-bass",
       "herb-lubalin",
-      "milton-glaser"
+      "brad-bird"
     ],
     "name": "Paul Rand",
     "discipline": "Designer",
@@ -7486,7 +7486,7 @@
     "id": "mario-renzi",
     "related": [
       "jimmy-chin",
-      "nigel-parry",
+      "bradford-young",
       "annie-liebovitz"
     ],
     "name": "Mario Renzi",
@@ -7662,7 +7662,7 @@
     "related": [
       "tim-walker",
       "gregory-crewdson",
-      "guy-bourdin"
+      "fries-vansevenant"
     ],
     "name": "Kirill Sakryukin",
     "discipline": "Photographer",
@@ -7710,7 +7710,7 @@
     "related": [
       "alex-webb",
       "robert-frank",
-      "martin-parr"
+      "emmanuel-lubezki"
     ],
     "added": "2026-08-22",
     "name": "Sebastião Salgado",
@@ -7903,7 +7903,7 @@
     "related": [
       "ridley-scott",
       "quentin-tarantino",
-      "hype-williams"
+      "margaret-sixel"
     ],
     "added": "2026-08-25",
     "name": "Tony Scott",
@@ -8044,7 +8044,7 @@
   {
     "id": "yoji-shinkawa",
     "related": [
-      "moebius",
+      "guillermo-del-toro",
       "syd-mead",
       "hideo-kojima"
     ],
@@ -8088,7 +8088,7 @@
     "related": [
       "robert-elswit",
       "dan-laustsen",
-      "greig-fraser"
+      "tom-poole"
     ],
     "added": "2026-09-03",
     "name": "Newton Thomas Sigel",
@@ -8214,7 +8214,7 @@
     "related": [
       "david-ayer",
       "jack-kirby",
-      "ridley-scott"
+      "blizzard"
     ],
     "added": "2026-07-24",
     "name": "Zack Snyder",
@@ -8376,7 +8376,7 @@
   {
     "id": "steven-spielberg",
     "related": [
-      "christopher-nolan",
+      "michael-kahn",
       "peter-jackson",
       "james-cameron"
     ],
@@ -8742,7 +8742,7 @@
     "related": [
       "herb-lubalin",
       "chuck-anderson",
-      "stefan-sagmeister"
+      "jack-kirby"
     ],
     "name": "Alex Trochut",
     "discipline": "Designer",
@@ -8852,7 +8852,7 @@
     "related": [
       "chuck-anderson",
       "alex-trochut",
-      "saul-bass"
+      "kirill-sakryukin"
     ],
     "added": "2026-09-23",
     "name": "Fries Vansevenant",
@@ -8992,7 +8992,7 @@
   {
     "id": "the-wachowskis",
     "related": [
-      "ridley-scott",
+      "bill-pope",
       "denis-villeneuve",
       "hideo-kojima"
     ],
@@ -9121,7 +9121,7 @@
     "id": "alex-webb",
     "related": [
       "william-eggleston",
-      "robert-frank",
+      "spike-lee",
       "sebastiao-salgado"
     ],
     "added": "2026-08-19",
@@ -9449,7 +9449,7 @@
   {
     "id": "danny-yount",
     "related": [
-      "saul-bass",
+      "joseph-kosinski",
       "pablo-ferro",
       "gmunk"
     ],
