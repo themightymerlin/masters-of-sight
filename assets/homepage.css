@@ -700,3 +700,211 @@
 .filter-bar-wrap.at-end::after {
   opacity: 0;
 }
+
+/* ── KEEP GOING SEARCH BAR (local preview) ── */
+.kg-wrap {
+  position: relative;
+}
+
+.kg-bar .search-input {
+  background: var(--bg-2);
+  border: 0.5px solid var(--border-hover);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  padding: 10px 36px 10px 38px;
+  transition: border-color 0.2s ease;
+}
+
+.kg-bar .search-input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.kg-bar .search-input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: none;
+}
+
+.kg-ghost {
+  position: absolute;
+  left: 38px;
+  top: 0;
+  right: 36px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--text-muted, #a39c90);
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+
+.kg-wrap.kg-ghost-hidden .kg-ghost {
+  opacity: 0;
+}
+
+.kg-caret {
+  display: inline-block;
+  width: 1px;
+  height: 0.68em;
+  margin-left: 2px;
+  background: var(--accent);
+  animation: kg-blink 1.05s steps(1) infinite;
+}
+
+@keyframes kg-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kg-caret {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ── KEEP GOING RESULT PANELS ── */
+.kg-result,
+.kg-miss {
+  max-width: 920px;
+  margin: 0 48px 32px;
+  padding: 24px 28px;
+  border: 1px solid var(--border-hover);
+  background: rgba(20,20,20,0.5);
+  border-radius: 2px;
+}
+
+.kg-result-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.kg-result-master {
+  margin-bottom: 18px;
+}
+
+.kg-result-master:last-of-type {
+  margin-bottom: 0;
+}
+
+.kg-result-name {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kg-result-name:hover {
+  color: var(--accent);
+}
+
+.kg-result-discipline {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 4px 0 8px;
+}
+
+.kg-result-desc {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.kg-result-keepgoing {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 0.5px solid var(--border-hover);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+
+.kg-result-keepgoing-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.kg-result-keepgoing-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--border-hover);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.kg-result-keepgoing-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.kg-miss-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.kg-miss-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+.kg-miss-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--accent-dim);
+}
+
+.kg-miss-link:hover {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .kg-result,
+  .kg-miss {
+    margin: 0 20px 24px;
+    padding: 18px 18px;
+  }
+  .kg-result-name { font-size: 24px; }
+  .kg-miss-title { font-size: 21px; }
+}
