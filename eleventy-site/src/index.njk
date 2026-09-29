@@ -8,6 +8,7 @@ homepageCss: true
   window.PEOPLE = {{ people | dump | safe }};
   window.SITE_BASE_URL = "{{ '/' | url }}";
 </script>
+<script type="application/json" id="kg-works-index">{{ worksIndex | dump | replace("<", "\\u003c") | safe }}</script>
 
 <div class="hero">
   <div class="hero-inner">
@@ -33,6 +34,7 @@ homepageCss: true
   if (!pool.length) pool = covers;
   var pick = pool[Math.floor(Math.random() * pool.length)];
   try { sessionStorage.setItem('mos-last-cover', pick.id); } catch (e) {}
+  window.MOS_HERO_COVER = { id: pick.id, name: pick.name };
 
   var width = window.innerWidth <= 600 ? 'w_1200' : 'w_2400';
   var src = pick.src.replace('/upload/f_auto,q_auto/', '/upload/f_auto,q_auto,' + width + ',c_limit/');
@@ -155,22 +157,31 @@ homepageCss: true
   })();
 </script>
 
-<div class="search-bar" id="search-bar">
+<div class="search-bar kg-bar" id="search-bar">
   <div class="search-input-wrap">
     <span class="search-icon">⌕</span>
-    <input
-      type="text"
-      id="search-input"
-      class="search-input"
-      placeholder="Search name, discipline, style…"
-      autocomplete="off"
-      spellcheck="false"
-    >
+    <div class="kg-wrap" id="kg-wrap">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Who shot Interstellar?"
+        aria-label="Search the archive"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <div class="kg-ghost" id="kg-ghost" aria-hidden="true">
+        <span class="kg-ghost-text" id="kg-ghost-text"></span><span class="kg-caret" id="kg-caret"></span>
+      </div>
+    </div>
     <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
   </div>
   <button class="surprise-btn" id="surprise-btn" title="Show me a random master">&#9661;</button>
   <span class="search-count" id="search-count"></span>
 </div>
+
+<div class="kg-result" id="kg-result" hidden></div>
+<div class="kg-miss" id="kg-miss" hidden></div>
 
 <div class="grid" id="card-grid">
   {% for person in people %}
@@ -303,6 +314,7 @@ homepageCss: true
     document.getElementById('search-clear').classList.remove('visible');
     document.getElementById('search-count').textContent = '';
     runFilter();
+    if (window.KG && window.KG.handleInput) window.KG.handleInput('', '');
   };
 
   function showSurprise() {
@@ -454,10 +466,13 @@ homepageCss: true
     var searchInput = document.getElementById('search-input');
     if (searchInput) {
       searchInput.addEventListener('input', function (e) {
-        _activeSearch = e.target.value;
+        var raw = e.target.value;
+        var cleaned = (window.KG && window.KG.normalizeQuery) ? window.KG.normalizeQuery(raw) : raw.toLowerCase().trim();
+        _activeSearch = cleaned;
         var clearBtn = document.getElementById('search-clear');
-        if (clearBtn) clearBtn.classList.toggle('visible', _activeSearch.length > 0);
+        if (clearBtn) clearBtn.classList.toggle('visible', raw.length > 0);
         runFilter();
+        if (window.KG && window.KG.handleInput) window.KG.handleInput(raw, cleaned);
       });
     }
   });
@@ -486,6 +501,378 @@ homepageCss: true
     document.addEventListener('DOMContentLoaded', addNavMotw);
   } else {
     addNavMotw();
+  }
+})();
+</script>
+<script>
+(function () {
+  var WORKS_INDEX = [];
+  try {
+    var rawEl = document.getElementById('kg-works-index');
+    WORKS_INDEX = rawEl ? JSON.parse(rawEl.textContent) : [];
+  } catch (e) { WORKS_INDEX = []; }
+
+  var WORKS_BY_ID = {};
+  WORKS_INDEX.forEach(function (p) { WORKS_BY_ID[p.id] = p; });
+
+  var KG_LINES = [
+    "Who shot Interstellar?",
+    "Who directed Terminator 2?",
+    "Who created Death Stranding?",
+    "Who directed The Iron Giant?",
+    "Who shot Nope?",
+    "Who directed Aliens?"
+  ];
+
+  var LEADING_PHRASES = [
+    "who shot", "who directed", "who made", "who created", "who filmed",
+    "who photographed", "who edited", "who cut", "who graded", "who colored",
+    "who designed", "who is behind", "whos behind", "who was behind"
+  ].sort(function (a, b) { return b.length - a.length; });
+
+  function stripYear(title) {
+    return (title || '').replace(/\s*\(\d{4}[^)]*\)\s*$/, '').trim();
+  }
+
+  function normalizeCore(str) {
+    var s = (str || '').toLowerCase();
+    s = s.replace(/\(\d{4}[^)]*\)/g, ' ');
+    s = s.replace(/[^\w\s]/g, ' ');
+    s = s.replace(/\s+/g, ' ').trim();
+    return s;
+  }
+
+  function stripLeadingThe(s) {
+    return s.indexOf('the ') === 0 ? s.slice(4).trim() : s;
+  }
+
+  function stripLeadingPhrase(s) {
+    for (var i = 0; i < LEADING_PHRASES.length; i++) {
+      var p = LEADING_PHRASES[i];
+      if (s === p) return '';
+      if (s.indexOf(p + ' ') === 0) return s.slice(p.length).trim();
+    }
+    return s;
+  }
+
+  function normalizeQuery(str) {
+    var s = normalizeCore(str);
+    s = stripLeadingPhrase(s);
+    s = stripLeadingThe(s);
+    return s;
+  }
+
+  function normalizeTitle(str) {
+    var s = normalizeCore(str);
+    s = stripLeadingThe(s);
+    return s;
+  }
+
+  function displayDiscipline(d, entityType) {
+    if (Array.isArray(d)) return d.map(function (x) { return displayDiscipline(x, entityType); }).join(' / ');
+    if (entityType === 'duo' && d === 'Director') return 'Directors';
+    return d === 'Dream Makers' ? 'Dream Maker' : d;
+  }
+
+  function verbForDiscipline(discipline) {
+    var d = Array.isArray(discipline) ? discipline[0] : discipline;
+    switch (d) {
+      case 'Cinematographer':
+      case 'Photographer': return 'Who shot';
+      case 'Director': return 'Who directed';
+      case 'Dream Makers':
+      case 'Designer': return 'Who created';
+      case 'Editor': return 'Who cut';
+      case 'Colorist': return 'Who graded';
+      default: return null;
+    }
+  }
+
+  function buildCoverLine() {
+    var cover = window.MOS_HERO_COVER;
+    if (!cover || !cover.id) return null;
+    var person = WORKS_BY_ID[cover.id];
+    if (!person || !person.works || !person.works.length) return null;
+    var verb = verbForDiscipline(person.discipline);
+    if (!verb) return null;
+    var title = stripYear(person.works[0].title);
+    if (!title) return null;
+    return verb + ' ' + title + '?';
+  }
+
+  var wrap = document.getElementById('kg-wrap');
+  var input = document.getElementById('search-input');
+  var ghost = document.getElementById('kg-ghost');
+  var ghostText = document.getElementById('kg-ghost-text');
+  var resultEl = document.getElementById('kg-result');
+  var missEl = document.getElementById('kg-miss');
+
+  if (!wrap || !input || !ghost || !ghostText) return;
+
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var lines = KG_LINES.slice();
+  var coverLine = buildCoverLine();
+  if (coverLine) lines.unshift(coverLine);
+  if (!lines.length) lines = ['Search the archive'];
+
+  var lineIndex = 0;
+  var charIndex = 0;
+  var deleting = false;
+  var timer = null;
+  var ghostPaused = false;
+
+  function randTypeDelay() {
+    return 75 + Math.random() * (130 - 75);
+  }
+
+  function tick() {
+    if (ghostPaused) { timer = null; return; }
+    var line = lines[lineIndex];
+    if (!deleting) {
+      charIndex++;
+      ghostText.textContent = line.slice(0, charIndex);
+      if (charIndex >= line.length) {
+        timer = setTimeout(function () { deleting = true; tick(); }, 1800);
+        return;
+      }
+      timer = setTimeout(tick, randTypeDelay());
+    } else {
+      charIndex--;
+      ghostText.textContent = line.slice(0, Math.max(charIndex, 0));
+      if (charIndex <= 0) {
+        deleting = false;
+        lineIndex = (lineIndex + 1) % lines.length;
+        timer = setTimeout(tick, 500);
+        return;
+      }
+      timer = setTimeout(tick, 38);
+    }
+  }
+
+  function startTyping() {
+    if (reducedMotion) {
+      ghostText.textContent = lines[0];
+      return;
+    }
+    if (timer) return;
+    tick();
+  }
+
+  function stopTyping() {
+    if (timer) { clearTimeout(timer); timer = null; }
+  }
+
+  function updateGhostState() {
+    var isFocused = document.activeElement === input;
+    var hasText = input.value.length > 0;
+    if (isFocused || hasText) {
+      if (!ghostPaused) {
+        ghostPaused = true;
+        stopTyping();
+        wrap.classList.add('kg-ghost-hidden');
+      }
+    } else {
+      if (ghostPaused) {
+        ghostPaused = false;
+        wrap.classList.remove('kg-ghost-hidden');
+        startTyping();
+      }
+    }
+  }
+
+  input.addEventListener('focus', updateGhostState);
+  input.addEventListener('blur', updateGhostState);
+
+  function findWorkMatches(cleaned) {
+    if (!cleaned) return [];
+    var exact = [];
+    WORKS_INDEX.forEach(function (p) {
+      (p.works || []).forEach(function (w) {
+        if (normalizeTitle(w.title) === cleaned) exact.push({ person: p, work: w });
+      });
+    });
+    if (exact.length) return exact;
+    if (cleaned.length < 3) return [];
+    var prefix = [];
+    WORKS_INDEX.forEach(function (p) {
+      (p.works || []).forEach(function (w) {
+        if (normalizeTitle(w.title).indexOf(cleaned) === 0) prefix.push({ person: p, work: w });
+      });
+    });
+    return prefix;
+  }
+
+  function escapeHtml(str) {
+    return (str || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderResultPanel(matches) {
+    var seen = {};
+    var list = [];
+    matches.forEach(function (m) {
+      if (!seen[m.person.id]) {
+        seen[m.person.id] = true;
+        list.push(m);
+      }
+    });
+
+    var titleClean = stripYear(matches[0].work.title);
+    var eyebrow = 'The eye' + (list.length > 1 ? 's' : '') + ' behind ' + titleClean;
+
+    var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
+    list.forEach(function (m) {
+      html +=
+        '<div class="kg-result-master">' +
+          '<a class="kg-result-name" href="' + window.SITE_BASE_URL + 'masters/' + m.person.id + '/">' + escapeHtml(m.person.name) + '</a>' +
+          '<p class="kg-result-discipline">' + escapeHtml(displayDiscipline(m.person.discipline)) + '</p>' +
+          '<p class="kg-result-desc">' + escapeHtml(m.work.desc || '') + '</p>' +
+        '</div>';
+    });
+
+    var related = (list[0].person.related || [])
+      .map(function (id) { return WORKS_BY_ID[id]; })
+      .filter(Boolean)
+      .slice(0, 3);
+
+    if (related.length) {
+      html += '<div class="kg-result-keepgoing"><span class="kg-result-keepgoing-label">Follow the thread</span>';
+      related.forEach(function (r) {
+        html += '<a class="kg-result-keepgoing-link" href="' + window.SITE_BASE_URL + 'masters/' + r.id + '/">' + escapeHtml(r.name) + '</a>';
+      });
+      html += '</div>';
+    }
+
+    resultEl.innerHTML = html;
+    resultEl.hidden = false;
+  }
+
+  function hideResultPanel() {
+    resultEl.hidden = true;
+    resultEl.innerHTML = '';
+  }
+
+  function pickRandomMaster() {
+    var pool = window.PEOPLE || [];
+    if (!pool.length) return null;
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
+  function renderMissPanel() {
+    var pick = pickRandomMaster();
+    if (!pick) { hideMissPanel(); return; }
+    missEl.innerHTML =
+      '<p class="kg-miss-title">Not in the archive yet.</p>' +
+      '<p class="kg-miss-sub">Here’s someone worth your time instead: ' +
+        '<a class="kg-miss-link" href="' + window.SITE_BASE_URL + 'masters/' + pick.id + '/">' + escapeHtml(pick.name) + '</a></p>';
+    missEl.hidden = false;
+  }
+
+  function hideMissPanel() {
+    missEl.hidden = true;
+    missEl.innerHTML = '';
+  }
+
+  function getInitials(name) {
+    return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+  }
+
+  function formatCardName(name) {
+    var parts = name.trim().split(' ');
+    if (parts.length === 1) return name;
+    var last = parts[parts.length - 1];
+    var first = parts.slice(0, -1).join(' ');
+    return first + '<br>' + last;
+  }
+
+  function buildOverrideCard(person) {
+    var card = document.createElement('a');
+    card.className = 'card';
+    card.href = window.SITE_BASE_URL + 'masters/' + person.id + '/';
+    card.dataset.discipline = person.discipline;
+    card.dataset.id = person.id;
+
+    var hasImage = person.coverImage && person.coverImage.trim() !== '';
+
+    card.innerHTML =
+      (hasImage
+        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
+          '<div class="card-overlay"></div>'
+        : '<div class="card-overlay" style="display:none;"></div>') +
+      '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +
+        '<span class="card-placeholder-initials">' + getInitials(person.name) + '</span>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<p class="card-discipline">' + displayDiscipline(person.discipline, person.entityType) + '</p>' +
+        '<p class="card-name">' + (person.cardName || formatCardName(person.name)) + '</p>' +
+      '</div>' +
+      '<div class="card-arrow">↗</div>';
+    return card;
+  }
+
+  function overrideGrid(matches) {
+    var grid = document.getElementById('card-grid');
+    if (!grid) return;
+    var seen = {};
+    var people = [];
+    matches.forEach(function (m) {
+      if (!seen[m.person.id]) {
+        seen[m.person.id] = true;
+        var full = (window.PEOPLE || []).find(function (p) { return p.id === m.person.id; });
+        if (full) people.push(full);
+      }
+    });
+    grid.innerHTML = '';
+    people.forEach(function (p) { grid.appendChild(buildOverrideCard(p)); });
+  }
+
+  function handleInput(raw, cleaned) {
+    if (!cleaned) {
+      hideResultPanel();
+      hideMissPanel();
+      updateGhostState();
+      return;
+    }
+
+    var matches = findWorkMatches(cleaned);
+    if (matches.length) {
+      renderResultPanel(matches);
+      hideMissPanel();
+      overrideGrid(matches);
+    } else {
+      hideResultPanel();
+      if (cleaned.length >= 3) {
+        var grid = document.getElementById('card-grid');
+        var gridEmpty = grid ? grid.children.length === 0 : false;
+        if (gridEmpty) {
+          renderMissPanel();
+        } else {
+          hideMissPanel();
+        }
+      } else {
+        hideMissPanel();
+      }
+    }
+    updateGhostState();
+  }
+
+  window.KG = {
+    normalizeQuery: normalizeQuery,
+    handleInput: handleInput
+  };
+
+  function init() {
+    input.setAttribute('placeholder', '');
+    updateGhostState();
+    if (!input.value) startTyping();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
 </script>
