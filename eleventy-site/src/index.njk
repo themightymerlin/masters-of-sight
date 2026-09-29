@@ -914,8 +914,10 @@ homepageCss: true
     return html;
   }
 
-  function buildKeepGoingHtml(relatedIds) {
+  function buildKeepGoingHtml(relatedIds, excludeIds) {
+    var exclude = Array.isArray(excludeIds) ? excludeIds : [];
     var related = (relatedIds || [])
+      .filter(function (id) { return exclude.indexOf(id) === -1; })
       .map(function (id) { return WORKS_BY_ID[id]; })
       .filter(Boolean)
       .slice(0, 3);
@@ -935,7 +937,7 @@ homepageCss: true
 
     var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
     html += buildMasterBlocksHtml(list);
-    html += buildKeepGoingHtml(list[0].person.related);
+    html += buildKeepGoingHtml(list[0].person.related, list.map(function (m) { return m.person.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
@@ -950,7 +952,7 @@ homepageCss: true
       '<p class="kg-miss-title">' + escapeHtml(message) + '</p>' +
       '<p class="kg-result-eyebrow">' + escapeHtml('These Masters worked on it') + '</p>';
     html += buildMasterBlocksHtml(list);
-    html += buildKeepGoingHtml(list[0].person.related);
+    html += buildKeepGoingHtml(list[0].person.related, list.map(function (m) { return m.person.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
@@ -972,7 +974,7 @@ homepageCss: true
           '<p class="kg-result-desc">' + escapeHtml(firstSentence(p.bio)) + '</p>' +
         '</div>';
     });
-    html += buildKeepGoingHtml(list[0].related);
+    html += buildKeepGoingHtml(list[0].related, list.map(function (p) { return p.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
