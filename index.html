@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790719704549">
-<link rel="stylesheet" href="/assets/homepage.css?v=1790719704549">
+<link rel="stylesheet" href="/assets/profile.css?v=1790722923110">
+<link rel="stylesheet" href="/assets/homepage.css?v=1790722923110">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -2760,11 +2760,11 @@
   ];
 
   var PHRASE_TABLE = [
-    { phrase: 'who shot', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'shot' },
+    { phrase: 'who shot', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], fallbackDisciplines: ['Director'], verbWord: 'shot' },
     { phrase: 'who directed', mode: 'title', disciplines: ['Director'], verbWord: 'directed' },
     { phrase: 'who made', mode: 'title', disciplines: ['Dream Makers', 'Dream Maker', 'Designer'], verbWord: 'made' },
     { phrase: 'who created', mode: 'title', disciplines: ['Dream Makers', 'Dream Maker', 'Designer'], verbWord: 'created' },
-    { phrase: 'who filmed', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'filmed' },
+    { phrase: 'who filmed', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], fallbackDisciplines: ['Director'], verbWord: 'filmed' },
     { phrase: 'who photographed', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'photographed' },
     { phrase: 'who edited', mode: 'title', disciplines: ['Editor'], verbWord: 'edited' },
     { phrase: 'who cut', mode: 'title', disciplines: ['Editor'], verbWord: 'cut' },
@@ -2843,29 +2843,32 @@
     var mode = 'title';
     var disciplines = null;
     var verbWord = null;
+    var fallbackDisciplines = null;
     var remainder = core;
 
     if (match) {
       mode = match.entry.mode;
       disciplines = match.entry.disciplines;
       verbWord = match.entry.verbWord;
+      fallbackDisciplines = match.entry.fallbackDisciplines || null;
       remainder = match.remainder;
     }
 
     if (mode === 'name') {
-      return { mode: 'name', cleaned: remainder, disciplines: null, verbWord: null };
+      return { mode: 'name', cleaned: remainder, disciplines: null, fallbackDisciplines: null, verbWord: null };
     }
 
     var fillerDiscipline = detectFillerDiscipline(core);
     if (fillerDiscipline) {
       disciplines = fillerDiscipline.disciplines;
       verbWord = fillerDiscipline.verbWord;
+      fallbackDisciplines = null;
     }
 
     remainder = stripLeadingFillerPhrase(remainder);
     remainder = stripLeadingThe(remainder);
 
-    return { mode: 'title', cleaned: remainder, disciplines: disciplines, verbWord: verbWord };
+    return { mode: 'title', cleaned: remainder, disciplines: disciplines, fallbackDisciplines: fallbackDisciplines, verbWord: verbWord };
   }
 
   function normalizeQuery(str) {
@@ -3330,7 +3333,8 @@
     var matches = findWorkMatches(cleaned, parsed.disciplines);
     if (matches.length) {
       var hasVerbMatch = matches.some(function (m) {
-        return personMatchesVerb(m.person.discipline, parsed.disciplines);
+        return personMatchesVerb(m.person.discipline, parsed.disciplines) ||
+          (parsed.fallbackDisciplines && personMatchesVerb(m.person.discipline, parsed.fallbackDisciplines));
       });
       if (parsed.disciplines && !hasVerbMatch) {
         renderStrictRoleMissPanel(matches, parsed.verbWord);
