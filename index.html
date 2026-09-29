@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790722923110">
-<link rel="stylesheet" href="/assets/homepage.css?v=1790722923110">
+<link rel="stylesheet" href="/assets/profile.css?v=1790723186300">
+<link rel="stylesheet" href="/assets/homepage.css?v=1790723186300">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -3149,8 +3149,10 @@
     return html;
   }
 
-  function buildKeepGoingHtml(relatedIds) {
+  function buildKeepGoingHtml(relatedIds, excludeIds) {
+    var exclude = Array.isArray(excludeIds) ? excludeIds : [];
     var related = (relatedIds || [])
+      .filter(function (id) { return exclude.indexOf(id) === -1; })
       .map(function (id) { return WORKS_BY_ID[id]; })
       .filter(Boolean)
       .slice(0, 3);
@@ -3170,7 +3172,7 @@
 
     var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
     html += buildMasterBlocksHtml(list);
-    html += buildKeepGoingHtml(list[0].person.related);
+    html += buildKeepGoingHtml(list[0].person.related, list.map(function (m) { return m.person.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
@@ -3185,7 +3187,7 @@
       '<p class="kg-miss-title">' + escapeHtml(message) + '</p>' +
       '<p class="kg-result-eyebrow">' + escapeHtml('These Masters worked on it') + '</p>';
     html += buildMasterBlocksHtml(list);
-    html += buildKeepGoingHtml(list[0].person.related);
+    html += buildKeepGoingHtml(list[0].person.related, list.map(function (m) { return m.person.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
@@ -3207,7 +3209,7 @@
           '<p class="kg-result-desc">' + escapeHtml(firstSentence(p.bio)) + '</p>' +
         '</div>';
     });
-    html += buildKeepGoingHtml(list[0].related);
+    html += buildKeepGoingHtml(list[0].related, list.map(function (p) { return p.id; }));
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
