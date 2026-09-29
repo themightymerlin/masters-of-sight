@@ -684,23 +684,98 @@ homepageCss: true
   input.addEventListener('focus', updateGhostState);
   input.addEventListener('blur', updateGhostState);
 
-  function findWorkMatches(cleaned) {
+  var VERB_DISCIPLINE_MAP = [
+    { phrases: ['who shot', 'who filmed', 'who photographed'], disciplines: ['Cinematographer', 'Photographer'] },
+    { phrases: ['who directed'], disciplines: ['Director'] },
+    { phrases: ['who edited', 'who cut'], disciplines: ['Editor'] },
+    { phrases: ['who graded', 'who colored'], disciplines: ['Colorist'] },
+    { phrases: ['who created', 'who designed', 'who made'], disciplines: ['Dream Makers', 'Dream Maker', 'Designer'] }
+  ];
+
+  function getVerbDisciplines(raw) {
+    var core = normalizeCore(raw);
+    for (var i = 0; i < VERB_DISCIPLINE_MAP.length; i++) {
+      var entry = VERB_DISCIPLINE_MAP[i];
+      for (var j = 0; j < entry.phrases.length; j++) {
+        var p = entry.phrases[j];
+        if (core === p || core.indexOf(p + ' ') === 0) return entry.disciplines;
+      }
+    }
+    return null;
+  }
+
+  function personMatchesVerb(discipline, verbDisciplines) {
+    if (!verbDisciplines) return false;
+    var list = Array.isArray(discipline) ? discipline : [discipline];
+    return list.some(function (d) { return verbDisciplines.indexOf(d) !== -1; });
+  }
+
+  function collectTitleMatches(cleaned) {
     if (!cleaned) return [];
+
     var exact = [];
     WORKS_INDEX.forEach(function (p) {
       (p.works || []).forEach(function (w) {
-        if (normalizeTitle(w.title) === cleaned) exact.push({ person: p, work: w });
+        if (normalizeTitle(w.title) === cleaned) exact.push({ person: p, title: w.title, desc: w.desc, source: 'works' });
+      });
+      (p.alsoWorkedOn || []).forEach(function (title) {
+        if (normalizeTitle(title) === cleaned) exact.push({ person: p, title: title, desc: null, source: 'also' });
       });
     });
     if (exact.length) return exact;
+
     if (cleaned.length < 3) return [];
+
     var prefix = [];
     WORKS_INDEX.forEach(function (p) {
       (p.works || []).forEach(function (w) {
-        if (normalizeTitle(w.title).indexOf(cleaned) === 0) prefix.push({ person: p, work: w });
+        if (normalizeTitle(w.title).indexOf(cleaned) === 0) prefix.push({ person: p, title: w.title, desc: w.desc, source: 'works' });
+      });
+      (p.alsoWorkedOn || []).forEach(function (title) {
+        if (normalizeTitle(title).indexOf(cleaned) === 0) prefix.push({ person: p, title: title, desc: null, source: 'also' });
       });
     });
     return prefix;
+  }
+
+  function dedupeKeepingWorks(matches) {
+    var order = [];
+    var byPerson = {};
+    matches.forEach(function (m) {
+      var existing = byPerson[m.person.id];
+      if (!existing) {
+        byPerson[m.person.id] = m;
+        order.push(m.person.id);
+      } else if (existing.source === 'also' && m.source === 'works') {
+        byPerson[m.person.id] = m;
+      }
+    });
+    return order.map(function (id) { return byPerson[id]; });
+  }
+
+  function findWorkMatches(cleaned, raw) {
+    var collected = collectTitleMatches(cleaned);
+    if (!collected.length) return [];
+
+    var deduped = dedupeKeepingWorks(collected);
+    var verbDisciplines = getVerbDisciplines(raw);
+
+    var ranked = deduped
+      .map(function (m, i) { return { m: m, i: i }; })
+      .sort(function (a, b) {
+        var av = personMatchesVerb(a.m.person.discipline, verbDisciplines) ? 0 : 1;
+        var bv = personMatchesVerb(b.m.person.discipline, verbDisciplines) ? 0 : 1;
+        if (av !== bv) return av - bv;
+        var asrc = a.m.source === 'works' ? 0 : 1;
+        var bsrc = b.m.source === 'works' ? 0 : 1;
+        if (asrc !== bsrc) return asrc - bsrc;
+        return a.i - b.i;
+      })
+      .map(function (x) { return x.m; });
+
+    return ranked.slice(0, 4).map(function (m) {
+      return { person: m.person, work: { title: m.title, desc: m.desc } };
+    });
   }
 
   function escapeHtml(str) {
@@ -724,11 +799,14 @@ homepageCss: true
 
     var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
     list.forEach(function (m) {
+      var descLine = m.work.desc
+        ? '<p class="kg-result-desc">' + escapeHtml(m.work.desc) + '</p>'
+        : '<p class="kg-result-discipline">' + escapeHtml('Worked on ' + stripYear(m.work.title)) + '</p>';
       html +=
         '<div class="kg-result-master">' +
           '<a class="kg-result-name" href="' + window.SITE_BASE_URL + 'masters/' + m.person.id + '/">' + escapeHtml(m.person.name) + '</a>' +
           '<p class="kg-result-discipline">' + escapeHtml(displayDiscipline(m.person.discipline)) + '</p>' +
-          '<p class="kg-result-desc">' + escapeHtml(m.work.desc || '') + '</p>' +
+          descLine +
         '</div>';
     });
 
@@ -836,7 +914,7 @@ homepageCss: true
       return;
     }
 
-    var matches = findWorkMatches(cleaned);
+    var matches = findWorkMatches(cleaned, raw);
     if (matches.length) {
       renderResultPanel(matches);
       hideMissPanel();

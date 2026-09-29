@@ -139,6 +139,13 @@ eleventyComputed:
       </ul>
     </div>
     {% endif %}
+
+    {% if person.alsoWorkedOn and person.alsoWorkedOn.length %}
+    <div class="profile-section profile-section--also-worked-on">
+      <p class="profile-section-label">Also Worked On</p>
+      <p class="also-worked-on">{{ person.alsoWorkedOn | join(" • ") }}</p>
+    </div>
+    {% endif %}
   </div>
 </div>
 

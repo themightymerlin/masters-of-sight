@@ -10,6 +10,7 @@ module.exports = function () {
       works: (p.works || []).map(function (w) {
         return { title: w.title, desc: w.desc };
       }),
+      alsoWorkedOn: p.alsoWorkedOn || [],
     };
   });
 };
