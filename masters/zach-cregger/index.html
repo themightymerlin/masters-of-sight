@@ -11,12 +11,12 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Masters Of Sight</title>
+<title>Zach Cregger — Masters Of Sight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/profile.css?v=1790695926270">
-<link rel="stylesheet" href="/assets/homepage.css?v=1790695926270">
+
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -27,9 +27,9 @@
 </head>
 <body>
 <nav class="site-nav">
-  <a class="nav-logo" href="/">MOS</a>
+  <a class="nav-logo" href="https://mastersofsight.com/">MOS</a>
   
-  <span class="nav-profile-name" id="nav-profile-name"></span>
+  <span class="nav-profile-name">Zach Cregger</span>
   
 </nav>
 
@@ -271,15 +271,1121 @@
 </div>
 
 
+<a class="profile-back" id="profile-back-link">← Back</a>
+<script>
+(function () {
+  var from = new URLSearchParams(window.location.search).get('from');
+  var link = document.getElementById('profile-back-link');
+  if (link) link.href = from ? '/?discipline=' + from : '/';
+})();
+</script>
 
 
-<div class="hero">
-  <h1 class="mos-content-heading">Privacy Policy</h1>
-  <p class="saved-message">Masters Of Sight collects your email address when you create an account, so you can save masters to your board and sign back in later. That's it.</p>
-  <p class="saved-message">Your email is never sold, shared, or used for anything beyond signing you in and, if you choose to subscribe, sending Stay in the Frame updates.</p>
-  <p class="saved-message">You can delete your account and all your saved data at any time from your board page, no need to ask. It's permanent and takes effect immediately.</p>
-  <p class="saved-message">Questions, reach out at <a class="saved-state-link" href="mailto:hello@mastersofsight.com">hello@mastersofsight.com</a>.</p>
+
+<script>
+  window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/ROM3I1P8_vcslql.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BZmNmZWQ4YjMtZjUzOC00OGNkLTgxNWEtZWE2NTY1OTEwZDA3XkEyXkFqcGc._V1_FMjpg_UX2000__rimvx1.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/AEHEB9VY_ydcoo9.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MQ8OXVAQ_smhnp6.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BZDk2MzE1ZDEtZmZkNi00MDY5LWEzMzYtOGU1YTFkYTMzOGRjXkEyXkFqcGc._V1_FMjpg_UX2160__ussdyk.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNDFiZjYwMjUtY2U3OC00OTBjLWI1ZDMtZjdiZDEyMTc5OGQ4XkEyXkFqcGc._V1_FMjpg_UX1800__vjw29b.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BNDdjZDYxYjUtZDg3Zi00ZGFlLTlmMGUtMGJjMTQwOTA2NmZiXkEyXkFqcGc._V1_FMjpg_UX2160__l3jn9i.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNTMxMDE0ZWQtMDdhYi00MWQ2LThjN2YtYTg1YjY1Nzk0OTU3XkEyXkFqcGc._V1_FMjpg_UX2160__sdqhj2.jpg","caption":""},{"type":"video","youtubeId":"OpThntO9ixc","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694805/Screenshot_2026-09-29_at_11.13.05_onaf6x.png","caption":""}];
+  window._galleryImagesRaw = [];
+</script>
+
+<!-- ── VIDEO LIGHTBOX OVERLAY ── -->
+<div id="lightbox-overlay" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:1000; align-items:center; justify-content:center;"></div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1); event.stopPropagation()">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1); event.stopPropagation()">&#8250;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
 </div>
+
+
+
+<div class="profile-hero">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg" alt="Zach Cregger">
+  <div class="profile-hero-gradient"></div>
+  <div class="profile-hero-content">
+    <p class="profile-eyebrow">Director</p>
+    <h1 class="profile-name">Zach Cregger</h1>
+    <div class="profile-tags">
+      <span class="tag">Comedy / Horror</span>
+      <span class="tag">American</span>
+      <span class="tag">1981</span>
+    </div>
+  </div>
+
+  <button class="profile-save-btn" id="profileSaveBtn" data-master-id="zach-cregger" aria-label="Save this master">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3h12v18l-6-4.5L6 21V3z"></path>
+    </svg>
+  </button>
+</div>
+
+<div class="profile-body">
+  <div class="profile-gallery-hero">
+    <div class="profile-gallery">
+      
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/ROM3I1P8_vcslql.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BZmNmZWQ4YjMtZjUzOC00OGNkLTgxNWEtZWE2NTY1OTEwZDA3XkEyXkFqcGc._V1_FMjpg_UX2000__rimvx1.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/AEHEB9VY_ydcoo9.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MQ8OXVAQ_smhnp6.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BZDk2MzE1ZDEtZmZkNi00MDY5LWEzMzYtOGU1YTFkYTMzOGRjXkEyXkFqcGc._V1_FMjpg_UX2160__ussdyk.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNDFiZjYwMjUtY2U3OC00OTBjLWI1ZDMtZjdiZDEyMTc5OGQ4XkEyXkFqcGc._V1_FMjpg_UX1800__vjw29b.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BNDdjZDYxYjUtZDg3Zi00ZGFlLTlmMGUtMGJjMTQwOTA2NmZiXkEyXkFqcGc._V1_FMjpg_UX2160__l3jn9i.jpg" alt="Zach Cregger">
+          
+        
+          
+          <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNTMxMDE0ZWQtMDdhYi00MWQ2LThjN2YtYTg1YjY1Nzk0OTU3XkEyXkFqcGc._V1_FMjpg_UX2160__sdqhj2.jpg" alt="Zach Cregger">
+          
+        
+          
+        
+      
+    </div>
+
+    
+    <div id="p-video-bookend">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <div class="video-bookend" onclick="openVideoLightbox('OpThntO9ixc', '')">
+          <div class="video-bookend-thumb">
+            <img src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694805/Screenshot_2026-09-29_at_11.13.05_onaf6x.png" alt="Zach Cregger video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/OpThntO9ixc/hqdefault.jpg'">
+            <div class="video-bookend-overlay">
+              <div class="video-bookend-play">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      
+    </div>
+    
+  </div>
+
+  <div class="profile-more-content">
+    <p class="profile-bio">Zach Cregger came up in sketch comedy as a founding member of The Whitest Kids U&#39; Know, and it shows in how he builds a scare: he teaches the audience the rules of the room, then pulls the floor out. Barbarian took a double-booked rental, a premise built for a cringe comedy, and marched it into a basement the film refused to stay inside, swapping protagonists and decades halfway through. Weapons handed each chapter to a different character, so one night of missing children gets reassembled from several angles, each account rewriting the last. Resident Evil carried the same instincts to franchise scale, trading the legacy hero for an everyday medical courier and letting gore and punchlines share the frame. He is the rare horror director whose audiences laugh out loud and then pay for it thirty seconds later.</p>
+    
+    <a class="work-link profile-view-link" href="https://en.wikipedia.org/wiki/Zach_Cregger" target="_blank" rel="noopener noreferrer">Learn More →</a>
+    
+
+    <div class="profile-section profile-section--traits">
+      <p class="profile-section-label">Signature Traits</p>
+      <ul class="profile-traits">
+        
+        <li>A laugh planted seconds before the scare, so the audience&#39;s guard is down exactly when it matters.</li>
+        
+        <li>Structural pivots mid-film. Protagonist, timeline, or point of view swaps once the audience has settled in.</li>
+        
+        <li>One event rebuilt chapter by chapter through different characters&#39; eyes, each account changing the last.</li>
+        
+        <li>Ordinary settings and ordinary leads: a double-booked rental, a suburban street, a hospital, a medical courier.</li>
+        
+        <li>Practical, physical creature work over digital polish, even at franchise scale.</li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-main">
+    
+    <div class="profile-section profile-section--works">
+      <p class="profile-section-label">Major Works</p>
+      <ul class="profile-works">
+        
+        <li>
+          <p class="work-title">Barbarian (2022)</p>
+          <p class="work-desc">A double-booked Detroit rental, a basement door that should have stayed shut, and a hard cut to a different protagonist and a different decade. The trapdoor is the structure itself.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/barbarian" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Weapons (2025)</p>
+          <p class="work-desc">Seventeen children from one classroom run into the dark at 2:17 a.m., arms out, and every chapter that follows belongs to a different character. The mystery gets solved by assembly, not by a detective.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/weapons-2026" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+          
+        </li>
+        
+        <li>
+          <p class="work-title">Resident Evil (2026)</p>
+          <p class="work-desc">Raccoon City&#39;s outbreak seen through Bryan, an everyday medical courier instead of a returning hero, with the gore and the punchlines sharing one frame. Cregger himself voices the hospital intercom.</p>
+          
+          <div class="work-links">
+            
+            
+            <a class="work-link work-link--watch" href="https://www.justwatch.com/us/movie/resident-evil-2026" target="_blank" rel="noopener noreferrer">▶ Watch</a>
+            
+          </div>
+          
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+<div class="related-masters">
+  <p class="related-masters-label">If you like Zach Cregger, you will like these masters</p>
+  <div class="related-masters-grid">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <a class="related-card" href="/masters/jordan-peele/">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780068295/image_zjkajf.jpg" alt="Jordan Peele">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Jordan Peele</p>
+          </div>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <a class="related-card" href="/masters/gregory-crewdson/">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782405074/rbPSM6qCGfZr_4800x4800_sd96fq.jpg" alt="Gregory Crewdson">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Photographer</p>
+            <p class="related-card-name">Gregory Crewdson</p>
+          </div>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <a class="related-card" href="/masters/guillermo-del-toro/">
+          <img class="related-card-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779301769/elordi-creature_qlor0t.avif" alt="Guillermo del Toro">
+          <div class="related-card-info">
+            <p class="related-card-discipline">Director</p>
+            <p class="related-card-name">Guillermo del Toro</p>
+          </div>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  </div>
+</div>
+
+<script>
+(function () {
+  var navName = document.querySelector('.nav-profile-name');
+  var navLogo = document.querySelector('.nav-logo');
+  var hero = document.querySelector('.profile-hero');
+
+  var handleScroll = function () {
+    var threshold = hero ? hero.getBoundingClientRect().bottom + window.scrollY - 64 : 300;
+    var visible = window.scrollY > threshold;
+    navName.classList.toggle('is-visible', visible);
+    navLogo.classList.toggle('nav-logo--hidden', visible);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
+</script>
+
+<script>
+(function () {
+  var mediaItems = [];
+  if (window._galleryMediaRaw && window._galleryMediaRaw.length) {
+    mediaItems = window._galleryMediaRaw.filter(function (m) {
+      if (m.type === 'image' || m.type === 'gif') return m.src && m.src.trim() !== '';
+      if (m.type === 'video') return m.youtubeId && m.youtubeId.trim() !== '';
+      return false;
+    });
+  } else {
+    var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
+    mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  window._lightboxMedia = mediaItems;
+
+  var _lbIndex = 0;
+
+  window.openVideoLightbox = function (youtubeId, vimeoId) {
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'flex';
+    var videoEmbed;
+    if (vimeoId) {
+      videoEmbed = '<iframe src="https://player.vimeo.com/video/' + vimeoId + '?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"></iframe>';
+    } else {
+      videoEmbed = '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>';
+    }
+    overlay.innerHTML =
+      '<div class="lightbox-video-wrap" onclick="event.stopPropagation()">' +
+        videoEmbed +
+        '<button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>' +
+      '</div>';
+    document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') closeLightbox(); }, { once: true });
+  };
+
+  window.openLightbox = function (index) {
+    var media = window._lightboxMedia || [];
+    if (!media.length) return;
+    _lbIndex = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  function updateLightbox() {
+    var media = window._lightboxMedia || [];
+    var item = media[_lbIndex];
+    var lb = document.getElementById('lightbox');
+
+    var existing = lb.querySelector('.lightbox-img, .lightbox-iframe-wrap');
+    if (existing) existing.remove();
+
+    var closeBtn = lb.querySelector('.lightbox-close');
+
+    if (item.type === 'video') {
+      var wrap = document.createElement('div');
+      wrap.className = 'lightbox-iframe-wrap';
+      if (item.vimeoId) {
+        wrap.innerHTML = '<iframe src="https://player.vimeo.com/video/' + item.vimeoId + '?autoplay=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+      } else {
+        wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + item.youtubeId + '?autoplay=1&mute=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      }
+      closeBtn.after(wrap);
+    } else {
+      var img = document.createElement('img');
+      img.className = 'lightbox-img';
+      img.id = 'lightbox-img';
+      img.src = item.src;
+      img.style.transform = 'scale(0.96)';
+      setTimeout(function () { img.style.transform = ''; }, 10);
+      closeBtn.after(img);
+    }
+
+    document.getElementById('lightbox-counter').textContent = (_lbIndex + 1) + ' / ' + media.length;
+    document.querySelector('.lightbox-prev').style.opacity = media.length > 1 ? '1' : '0';
+    document.querySelector('.lightbox-next').style.opacity = media.length > 1 ? '1' : '0';
+  }
+
+window.lightboxNav = function (dir) {
+    var media = window._lightboxMedia || [];
+    _lbIndex = (_lbIndex + dir + media.length) % media.length;
+    updateLightbox();
+  };
+
+  window.closeLightbox = function (e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('lightbox-close') && !e.target.classList.contains('lightbox-close-btn')) return;
+    document.getElementById('lightbox').classList.remove('active');
+    var overlay = document.getElementById('lightbox-overlay');
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.profile-gallery img').forEach(function (img, i) {
+      img.dataset.index = i;
+      img.addEventListener('click', function () { openLightbox(i); });
+    });
+  });
+})();
+</script>
 
 
 <script type="module">
