@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1790705671171">
-<link rel="stylesheet" href="/assets/homepage.css?v=1790705671171">
+<link rel="stylesheet" href="/assets/profile.css?v=1790708028058">
+<link rel="stylesheet" href="/assets/homepage.css?v=1790708028058">
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
   window.supabase = createClient(
@@ -2759,10 +2759,31 @@
     "Who directed Aliens?"
   ];
 
-  var LEADING_PHRASES = [
-    "who shot", "who directed", "who made", "who created", "who filmed",
-    "who photographed", "who edited", "who cut", "who graded", "who colored",
-    "who designed", "who is behind", "whos behind", "who was behind"
+  var PHRASE_TABLE = [
+    { phrase: 'who shot', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'shot' },
+    { phrase: 'who directed', mode: 'title', disciplines: ['Director'], verbWord: 'directed' },
+    { phrase: 'who made', mode: 'title', disciplines: ['Dream Makers', 'Dream Maker', 'Designer'], verbWord: 'made' },
+    { phrase: 'who created', mode: 'title', disciplines: ['Dream Makers', 'Dream Maker', 'Designer'], verbWord: 'created' },
+    { phrase: 'who filmed', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'filmed' },
+    { phrase: 'who photographed', mode: 'title', disciplines: ['Cinematographer', 'Photographer'], verbWord: 'photographed' },
+    { phrase: 'who edited', mode: 'title', disciplines: ['Editor'], verbWord: 'edited' },
+    { phrase: 'who cut', mode: 'title', disciplines: ['Editor'], verbWord: 'cut' },
+    { phrase: 'who graded', mode: 'title', disciplines: ['Colorist'], verbWord: 'graded' },
+    { phrase: 'who colored', mode: 'title', disciplines: ['Colorist'], verbWord: 'colored' },
+    { phrase: 'who designed', mode: 'title', disciplines: ['Dream Makers', 'Dream Maker', 'Designer'], verbWord: 'designed' },
+    { phrase: 'who did', mode: 'title', disciplines: null, verbWord: null },
+    { phrase: 'who is behind', mode: 'title', disciplines: null, verbWord: null },
+    { phrase: 'whos behind', mode: 'title', disciplines: null, verbWord: null },
+    { phrase: 'who was behind', mode: 'title', disciplines: null, verbWord: null },
+    { phrase: 'who is', mode: 'name', disciplines: null, verbWord: null },
+    { phrase: 'whos', mode: 'name', disciplines: null, verbWord: null }
+  ].sort(function (a, b) { return b.phrase.length - a.phrase.length; });
+
+  var FILLER_PHRASES = [
+    'the opening credits for', 'the cinematography for', 'the title sequence for', 'the opening titles for',
+    'the title sequence of', 'the cinematography of', 'the photography for', 'the credits for',
+    'the posters for', 'the key art for', 'the titles for', 'the poster for', 'the colour for',
+    'the grade for', 'the color for', 'the titles of', 'the edit for', 'the edit of'
   ].sort(function (a, b) { return b.length - a.length; });
 
   function stripYear(title) {
@@ -2777,24 +2798,78 @@
     return s;
   }
 
+  function normalizeName(str) {
+    return normalizeCore(str);
+  }
+
   function stripLeadingThe(s) {
     return s.indexOf('the ') === 0 ? s.slice(4).trim() : s;
   }
 
-  function stripLeadingPhrase(s) {
-    for (var i = 0; i < LEADING_PHRASES.length; i++) {
-      var p = LEADING_PHRASES[i];
+  function matchLeadingEntry(core) {
+    for (var i = 0; i < PHRASE_TABLE.length; i++) {
+      var e = PHRASE_TABLE[i];
+      if (core === e.phrase) return { entry: e, remainder: '' };
+      if (core.indexOf(e.phrase + ' ') === 0) return { entry: e, remainder: core.slice(e.phrase.length).trim() };
+    }
+    return null;
+  }
+
+  function stripLeadingFillerPhrase(s) {
+    for (var i = 0; i < FILLER_PHRASES.length; i++) {
+      var p = FILLER_PHRASES[i];
       if (s === p) return '';
       if (s.indexOf(p + ' ') === 0) return s.slice(p.length).trim();
     }
     return s;
   }
 
+  function detectFillerDiscipline(core) {
+    if (core.indexOf('title sequence') !== -1 || core.indexOf('opening credits') !== -1 || core.indexOf('titles') !== -1) {
+      return { disciplines: ['Designer'], verbWord: 'designed the titles for' };
+    }
+    if (core.indexOf('key art') !== -1) {
+      return { disciplines: ['Designer'], verbWord: 'designed the key art for' };
+    }
+    if (core.indexOf('poster') !== -1) {
+      return { disciplines: ['Designer'], verbWord: 'designed the poster for' };
+    }
+    return null;
+  }
+
+  function parseQuery(raw) {
+    var core = normalizeCore(raw);
+    var match = matchLeadingEntry(core);
+    var mode = 'title';
+    var disciplines = null;
+    var verbWord = null;
+    var remainder = core;
+
+    if (match) {
+      mode = match.entry.mode;
+      disciplines = match.entry.disciplines;
+      verbWord = match.entry.verbWord;
+      remainder = match.remainder;
+    }
+
+    if (mode === 'name') {
+      return { mode: 'name', cleaned: remainder, disciplines: null, verbWord: null };
+    }
+
+    var fillerDiscipline = detectFillerDiscipline(core);
+    if (fillerDiscipline) {
+      disciplines = fillerDiscipline.disciplines;
+      verbWord = fillerDiscipline.verbWord;
+    }
+
+    remainder = stripLeadingFillerPhrase(remainder);
+    remainder = stripLeadingThe(remainder);
+
+    return { mode: 'title', cleaned: remainder, disciplines: disciplines, verbWord: verbWord };
+  }
+
   function normalizeQuery(str) {
-    var s = normalizeCore(str);
-    s = stripLeadingPhrase(s);
-    s = stripLeadingThe(s);
-    return s;
+    return parseQuery(str).cleaned;
   }
 
   function normalizeTitle(str) {
@@ -2919,35 +2994,14 @@
   input.addEventListener('focus', updateGhostState);
   input.addEventListener('blur', updateGhostState);
 
-  var VERB_DISCIPLINE_MAP = [
-    { phrases: ['who shot', 'who filmed', 'who photographed'], disciplines: ['Cinematographer', 'Photographer'] },
-    { phrases: ['who directed'], disciplines: ['Director'] },
-    { phrases: ['who edited', 'who cut'], disciplines: ['Editor'] },
-    { phrases: ['who graded', 'who colored'], disciplines: ['Colorist'] },
-    { phrases: ['who created', 'who designed', 'who made'], disciplines: ['Dream Makers', 'Dream Maker', 'Designer'] }
-  ];
-
-  function getVerbDisciplines(raw) {
-    var core = normalizeCore(raw);
-    for (var i = 0; i < VERB_DISCIPLINE_MAP.length; i++) {
-      var entry = VERB_DISCIPLINE_MAP[i];
-      for (var j = 0; j < entry.phrases.length; j++) {
-        var p = entry.phrases[j];
-        if (core === p || core.indexOf(p + ' ') === 0) return entry.disciplines;
-      }
-    }
-    return null;
-  }
-
   function personMatchesVerb(discipline, verbDisciplines) {
     if (!verbDisciplines) return false;
     var list = Array.isArray(discipline) ? discipline : [discipline];
     return list.some(function (d) { return verbDisciplines.indexOf(d) !== -1; });
   }
 
-  function collectTitleMatches(cleaned) {
+  function collectExactMatches(cleaned) {
     if (!cleaned) return [];
-
     var exact = [];
     WORKS_INDEX.forEach(function (p) {
       (p.works || []).forEach(function (w) {
@@ -2957,10 +3011,11 @@
         if (normalizeTitle(title) === cleaned) exact.push({ person: p, title: title, desc: null, source: 'also' });
       });
     });
-    if (exact.length) return exact;
+    return exact;
+  }
 
-    if (cleaned.length < 3) return [];
-
+  function collectPrefixMatches(cleaned) {
+    if (!cleaned || cleaned.length < 3) return [];
     var prefix = [];
     WORKS_INDEX.forEach(function (p) {
       (p.works || []).forEach(function (w) {
@@ -2988,14 +3043,8 @@
     return order.map(function (id) { return byPerson[id]; });
   }
 
-  function findWorkMatches(cleaned, raw) {
-    var collected = collectTitleMatches(cleaned);
-    if (!collected.length) return [];
-
-    var deduped = dedupeKeepingWorks(collected);
-    var verbDisciplines = getVerbDisciplines(raw);
-
-    var ranked = deduped
+  function rankGroup(matches, verbDisciplines) {
+    return matches
       .map(function (m, i) { return { m: m, i: i }; })
       .sort(function (a, b) {
         var av = personMatchesVerb(a.m.person.discipline, verbDisciplines) ? 0 : 1;
@@ -3007,9 +3056,59 @@
         return a.i - b.i;
       })
       .map(function (x) { return x.m; });
+  }
 
-    return ranked.slice(0, 4).map(function (m) {
+  function toMatchShape(list) {
+    return list.slice(0, 4).map(function (m) {
       return { person: m.person, work: { title: m.title, desc: m.desc } };
+    });
+  }
+
+  function findWorkMatches(cleaned, verbDisciplines) {
+    var exact = collectExactMatches(cleaned);
+
+    if (exact.length) {
+      var exactHasVerb = !!verbDisciplines && exact.some(function (m) {
+        return personMatchesVerb(m.person.discipline, verbDisciplines);
+      });
+
+      if (!verbDisciplines || exactHasVerb) {
+        return toMatchShape(dedupeKeepingWorks(rankGroup(exact, verbDisciplines)));
+      }
+
+      var prefix = collectPrefixMatches(cleaned);
+      var prefixVerbMatches = prefix.filter(function (m) {
+        return personMatchesVerb(m.person.discipline, verbDisciplines);
+      });
+
+      if (prefixVerbMatches.length) {
+        var leadGroup = dedupeKeepingWorks(rankGroup(prefixVerbMatches, verbDisciplines));
+        var leadIds = {};
+        leadGroup.forEach(function (m) { leadIds[m.person.id] = true; });
+        var followGroup = dedupeKeepingWorks(rankGroup(exact, verbDisciplines)).filter(function (m) {
+          return !leadIds[m.person.id];
+        });
+        return toMatchShape(leadGroup.concat(followGroup));
+      }
+
+      return toMatchShape(dedupeKeepingWorks(rankGroup(exact, verbDisciplines)));
+    }
+
+    var prefixFallback = collectPrefixMatches(cleaned);
+    if (!prefixFallback.length) return [];
+    return toMatchShape(dedupeKeepingWorks(rankGroup(prefixFallback, verbDisciplines)));
+  }
+
+  function findNameMatches(remainder) {
+    if (!remainder) return [];
+    var pool = window.PEOPLE || [];
+    var exact = pool.filter(function (p) { return normalizeName(p.name) === remainder; });
+    if (exact.length) return exact;
+    if (remainder.length < 3) return [];
+    return pool.filter(function (p) {
+      var norm = normalizeName(p.name);
+      if (norm.indexOf(remainder) === 0) return true;
+      return norm.split(' ').some(function (w) { return w.indexOf(remainder) === 0; });
     });
   }
 
@@ -3019,7 +3118,7 @@
     });
   }
 
-  function renderResultPanel(matches) {
+  function dedupeByPersonId(matches) {
     var seen = {};
     var list = [];
     matches.forEach(function (m) {
@@ -3028,11 +3127,11 @@
         list.push(m);
       }
     });
+    return list;
+  }
 
-    var titleClean = stripYear(matches[0].work.title);
-    var eyebrow = 'The eye' + (list.length > 1 ? 's' : '') + ' behind ' + titleClean;
-
-    var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
+  function buildMasterBlocksHtml(list) {
+    var html = '';
     list.forEach(function (m) {
       var descLine = m.work.desc
         ? '<p class="kg-result-desc">' + escapeHtml(m.work.desc) + '</p>'
@@ -3044,19 +3143,68 @@
           descLine +
         '</div>';
     });
+    return html;
+  }
 
-    var related = (list[0].person.related || [])
+  function buildKeepGoingHtml(relatedIds) {
+    var related = (relatedIds || [])
       .map(function (id) { return WORKS_BY_ID[id]; })
       .filter(Boolean)
       .slice(0, 3);
+    if (!related.length) return '';
+    var html = '<div class="kg-result-keepgoing"><span class="kg-result-keepgoing-label">Follow the thread</span>';
+    related.forEach(function (r) {
+      html += '<a class="kg-result-keepgoing-link" href="' + window.SITE_BASE_URL + 'masters/' + r.id + '/">' + escapeHtml(r.name) + '</a>';
+    });
+    html += '</div>';
+    return html;
+  }
 
-    if (related.length) {
-      html += '<div class="kg-result-keepgoing"><span class="kg-result-keepgoing-label">Follow the thread</span>';
-      related.forEach(function (r) {
-        html += '<a class="kg-result-keepgoing-link" href="' + window.SITE_BASE_URL + 'masters/' + r.id + '/">' + escapeHtml(r.name) + '</a>';
-      });
-      html += '</div>';
-    }
+  function renderResultPanel(matches) {
+    var list = dedupeByPersonId(matches);
+    var titleClean = stripYear(matches[0].work.title);
+    var eyebrow = 'The eye' + (list.length > 1 ? 's' : '') + ' behind ' + titleClean;
+
+    var html = '<p class="kg-result-eyebrow">' + escapeHtml(eyebrow) + '</p>';
+    html += buildMasterBlocksHtml(list);
+    html += buildKeepGoingHtml(list[0].person.related);
+
+    resultEl.innerHTML = html;
+    resultEl.hidden = false;
+  }
+
+  function renderStrictRoleMissPanel(matches, verbWord) {
+    var list = dedupeByPersonId(matches);
+    var titleClean = stripYear(matches[0].work.title);
+    var message = 'Whoever ' + verbWord + ' ' + titleClean + " isn't in the archive yet.";
+
+    var html =
+      '<p class="kg-miss-title">' + escapeHtml(message) + '</p>' +
+      '<p class="kg-result-eyebrow">' + escapeHtml('These Masters worked on it') + '</p>';
+    html += buildMasterBlocksHtml(list);
+    html += buildKeepGoingHtml(list[0].person.related);
+
+    resultEl.innerHTML = html;
+    resultEl.hidden = false;
+  }
+
+  function firstSentence(text) {
+    var m = (text || '').match(/^[\s\S]*?[.!?](?=\s[A-Z]|\s*$)/);
+    return m ? m[0].trim() : (text || '').trim();
+  }
+
+  function renderNamePanel(people) {
+    var list = people.slice(0, 2);
+    var html = '<p class="kg-result-eyebrow">' + escapeHtml('Master Of Sight') + '</p>';
+    list.forEach(function (p) {
+      html +=
+        '<div class="kg-result-master">' +
+          '<a class="kg-result-name" href="' + window.SITE_BASE_URL + 'masters/' + p.id + '/">' + escapeHtml(p.name) + '</a>' +
+          '<p class="kg-result-discipline">' + escapeHtml(displayDiscipline(p.discipline)) + '</p>' +
+          '<p class="kg-result-desc">' + escapeHtml(firstSentence(p.bio)) + '</p>' +
+        '</div>';
+    });
+    html += buildKeepGoingHtml(list[0].related);
 
     resultEl.innerHTML = html;
     resultEl.hidden = false;
@@ -3141,6 +3289,21 @@
     people.forEach(function (p) { grid.appendChild(buildOverrideCard(p)); });
   }
 
+  function showMissOrHide(cleaned) {
+    hideResultPanel();
+    if (cleaned.length >= 3) {
+      var grid = document.getElementById('card-grid');
+      var gridEmpty = grid ? grid.children.length === 0 : false;
+      if (gridEmpty) {
+        renderMissPanel();
+      } else {
+        hideMissPanel();
+      }
+    } else {
+      hideMissPanel();
+    }
+  }
+
   function handleInput(raw, cleaned) {
     if (!cleaned) {
       hideResultPanel();
@@ -3149,24 +3312,35 @@
       return;
     }
 
-    var matches = findWorkMatches(cleaned, raw);
+    var parsed = parseQuery(raw);
+
+    if (parsed.mode === 'name') {
+      var nameMatches = findNameMatches(parsed.cleaned);
+      if (nameMatches.length) {
+        renderNamePanel(nameMatches);
+        hideMissPanel();
+        overrideGrid(nameMatches.map(function (p) { return { person: p }; }));
+      } else {
+        showMissOrHide(cleaned);
+      }
+      updateGhostState();
+      return;
+    }
+
+    var matches = findWorkMatches(cleaned, parsed.disciplines);
     if (matches.length) {
-      renderResultPanel(matches);
+      var hasVerbMatch = matches.some(function (m) {
+        return personMatchesVerb(m.person.discipline, parsed.disciplines);
+      });
+      if (parsed.disciplines && !hasVerbMatch) {
+        renderStrictRoleMissPanel(matches, parsed.verbWord);
+      } else {
+        renderResultPanel(matches);
+      }
       hideMissPanel();
       overrideGrid(matches);
     } else {
-      hideResultPanel();
-      if (cleaned.length >= 3) {
-        var grid = document.getElementById('card-grid');
-        var gridEmpty = grid ? grid.children.length === 0 : false;
-        if (gridEmpty) {
-          renderMissPanel();
-        } else {
-          hideMissPanel();
-        }
-      } else {
-        hideMissPanel();
-      }
+      showMissOrHide(cleaned);
     }
     updateGhostState();
   }
