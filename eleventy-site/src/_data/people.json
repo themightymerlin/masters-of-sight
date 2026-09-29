@@ -1845,6 +1845,115 @@
     ]
   },
   {
+    "id": "zach-cregger",
+    "related": [
+      "jordan-peele",
+      "gregory-crewdson",
+      "guillermo-del-toro"
+    ],
+    "added": "2026-09-29",
+    "name": "Zach Cregger",
+    "discipline": "Director",
+    "style": "Comedy / Horror",
+    "born": "1981",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/ROM3I1P8_vcslql.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BZmNmZWQ4YjMtZjUzOC00OGNkLTgxNWEtZWE2NTY1OTEwZDA3XkEyXkFqcGc._V1_FMjpg_UX2000__rimvx1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/AEHEB9VY_ydcoo9.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MQ8OXVAQ_smhnp6.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BZDk2MzE1ZDEtZmZkNi00MDY5LWEzMzYtOGU1YTFkYTMzOGRjXkEyXkFqcGc._V1_FMjpg_UX2160__ussdyk.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNDFiZjYwMjUtY2U3OC00OTBjLWI1ZDMtZjdiZDEyMTc5OGQ4XkEyXkFqcGc._V1_FMjpg_UX1800__vjw29b.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BNDdjZDYxYjUtZDg3Zi00ZGFlLTlmMGUtMGJjMTQwOTA2NmZiXkEyXkFqcGc._V1_FMjpg_UX2160__l3jn9i.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNTMxMDE0ZWQtMDdhYi00MWQ2LThjN2YtYTg1YjY1Nzk0OTU3XkEyXkFqcGc._V1_FMjpg_UX2160__sdqhj2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "OpThntO9ixc",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694805/Screenshot_2026-09-29_at_11.13.05_onaf6x.png",
+        "caption": ""
+      }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Zach_Cregger",
+    "bio": "Zach Cregger came up in sketch comedy as a founding member of The Whitest Kids U' Know, and it shows in how he builds a scare: he teaches the audience the rules of the room, then pulls the floor out. Barbarian took a double-booked rental, a premise built for a cringe comedy, and marched it into a basement the film refused to stay inside, swapping protagonists and decades halfway through. Weapons handed each chapter to a different character, so one night of missing children gets reassembled from several angles, each account rewriting the last. Resident Evil carried the same instincts to franchise scale, trading the legacy hero for an everyday medical courier and letting gore and punchlines share the frame. He is the rare horror director whose audiences laugh out loud and then pay for it thirty seconds later.",
+    "traits": [
+      "A laugh planted seconds before the scare, so the audience's guard is down exactly when it matters.",
+      "Structural pivots mid-film. Protagonist, timeline, or point of view swaps once the audience has settled in.",
+      "One event rebuilt chapter by chapter through different characters' eyes, each account changing the last.",
+      "Ordinary settings and ordinary leads: a double-booked rental, a suburban street, a hospital, a medical courier.",
+      "Practical, physical creature work over digital polish, even at franchise scale."
+    ],
+    "works": [
+      {
+        "title": "Barbarian (2022)",
+        "desc": "A double-booked Detroit rental, a basement door that should have stayed shut, and a hard cut to a different protagonist and a different decade. The trapdoor is the structure itself.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/barbarian"
+          }
+        ]
+      },
+      {
+        "title": "Weapons (2025)",
+        "desc": "Seventeen children from one classroom run into the dark at 2:17 a.m., arms out, and every chapter that follows belongs to a different character. The mystery gets solved by assembly, not by a detective.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/weapons-2026"
+          }
+        ]
+      },
+      {
+        "title": "Resident Evil (2026)",
+        "desc": "Raccoon City's outbreak seen through Bryan, an everyday medical courier instead of a returning hero, with the gore and the punchlines sharing one frame. Cregger himself voices the hospital intercom.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/resident-evil-2026"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "gregory-crewdson",
     "related": [
       "david-lynch",
