@@ -3616,6 +3616,78 @@
     ]
   },
   {
+    "id": "felix-hernandez",
+    "related": [
+      "tim-walker",
+      "guillermo-del-toro",
+      "michel-gondry"
+    ],
+    "added": "2026-09-29",
+    "name": "Felix Hernandez",
+    "discipline": "Photographer",
+    "style": "Miniature / Dreamlike",
+    "born": "1973",
+    "nationality": "Mexican",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697109/Art_Pinocho_1.jpg_pgh5kt.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697125/Water_2024.jpg_ws55gh.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696986/The_Journey_5.jpg_s8kh8r.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696992/Ent_Web2.jpg_mep2iv.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696989/Dreamphography_Miniature_Photography_Felix_Hernandez_0010_Aero_Dunas.jpg_2_iv0oxq.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696990/Bridge_to_the_Unknown.jpg_2_m1i3nn.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696988/Cork_Virtual_Exhibition_0003_Cork_Lilliput.jpg_pppqic.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696987/Dreamphography_Miniature_Photography_Felix_Hernandez_0008_Blossom.jpg_2_mnuvt0.webp",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696989/Cork_Virtual_Exhibition_0005_Cork_Wreck.jpg_m3cnsn.webp",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "ZH9oHj0_Aq4",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696969/Screenshot_2026-09-29_at_11.42.44_cienwm.png",
+        "caption": ""
+      }
+    ],
+    "url": "https://www.hernandezdreamphography.com/",
+    "bio": "Felix Hernandez builds his locations before he photographs them: scale models and dioramas assembled on a studio table in Cancun, then lit and shot as if they were full-size sets. Flour, icing sugar and cigarette smoke stand in for dunes, weather and haze, so the atmosphere in his frames is physical rather than rendered. After years of regular commercial work, he turned a passion for toys and scale models into a full-time practice he named Dreamphography, a hybrid of practical effects, camera craft and digital finishing. The scenes read as epic landscapes or film stills, and learning they fit on a table is half the pleasure. Audi, BMW, Gucci and Mattel have hired him to make their products look like they belong in that world.",
+    "traits": [
+      "Every location built by hand at table scale, from scale models and dioramas to handmade textures, then lit as if full size.",
+      "Atmosphere made physically: flour, icing sugar and cigarette smoke standing in for dunes, dust and haze.",
+      "Compositions that read as epic landscapes or film stills until the tabletop is revealed.",
+      "Small cars, toys and structures cast as the leads inside constructed weather and terrain.",
+      "Characters placed at center frame, the rule of thirds ignored so the story leads the composition."
+    ]
+  },
+  {
     "id": "jonathan-hoefler",
     "related": [
       "herb-lubalin",
