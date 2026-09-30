@@ -511,7 +511,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Supermarket Sweep (1991)", "Pi (1998)", "The Fountain (2006)", "Noah (2014)", "Mother! (2017)", "The Whale (2022)", "Postcard from Earth (2023)", "Caught Stealing (2025)"]
   },
   {
     "id": "richard-avedon",
@@ -667,7 +668,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Harsh Times (2006)", "Street Kings (2008)", "Sabotage (2014)", "Bright (2017)", "The Tax Collector (2020)", "The Beekeeper (2024)", "A Working Man (2025)", "Heart of the Beast (2026)"]
   },
   {
     "id": "saul-bass",
@@ -815,6 +817,7 @@
         ]
       }
     ],
+    "alsoWorkedOn": ["Do the Bartman (1990)", "Jack-Jack Attack (2005)", "Mission: Impossible – Ghost Protocol (2011)", "1906 (2012)", "Tomorrowland (2015)", "Incredibles 2 (2018)"],
     "related": [
       "saul-bass",
       "hayao-miyazaki",
@@ -1852,7 +1855,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Dementia 13 (1963)", "Apocalypse Now (1979)", "Rumble Fish (1983)", "The Outsiders (1983)", "The Cotton Club (1984)", "Captain EO (1986)", "Peggy Sue Got Married (1986)", "Tucker: The Man and His Dream (1988)", "New York Stories (1989)", "The Godfather Part III (1990)", "Bram Stoker's Dracula (1992)", "Jack (1996)", "The Rainmaker (1997)", "Twixt (2011)", "Megalopolis (2024)"]
   },
   {
     "id": "zach-cregger",
@@ -2844,7 +2848,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The End of the Innocence (1989)", "Vogue (1990)", "Alien 3 (1992)", "Seven (1995)", "6th Avenue Heartache (1996)", "The Game (1997)", "Panic Room (2002)", "Zodiac (2007)", "The Curious Case of Benjamin Button (2008)", "The Girl with the Dragon Tattoo (2011)", "Gone Girl (2014)", "Mank (2020)", "The Killer (2023)"]
   },
   {
     "id": "robert-frank",
@@ -3240,7 +3245,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["LOL (2006)", "Nights and Weekends (2008)"]
   },
   {
     "id": "moebius",
@@ -5644,7 +5650,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Look at Life (1965)", "1:42.08 (1966)", "Freiheit (1966)", "Herbie (1966)", "6-18-67 (1967)", "Anyone Lived in a Pretty How Town (1967)", "Electronic Labyrinth: THX 1138 4EB (1967)", "The Emperor (1967)", "Filmmaker (1968)", "Bald: The Making of THX 1138 (1971)", "Star Wars: Episode IV – A New Hope (1977)", "Star Wars: Episode I – The Phantom Menace (1999)", "Star Wars: Episode II – Attack of the Clones (2002)", "Star Wars: Episode III – Revenge of the Sith (2005)"]
   },
   {
     "id": "david-lynch",
@@ -5738,7 +5745,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Six Men Getting Sick (1967)", "Eraserhead (1977)", "The Elephant Man (1980)", "Dune (1984)", "Industrial Symphony No. 1 (1990)", "Pilot (1990)", "Wild at Heart (1990)", "Twin Peaks: Fire Walk with Me (1992)", "Lumière and Company (1995)", "Lost Highway (1997)", "The Straight Story (1999)", "DumbLand (2002)", "Rabbits (2002)", "Inland Empire (2006)", "To Each His Own Cinema (2007)"]
   },
   {
     "id": "szilveszter-mako",
@@ -6748,7 +6756,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Doodlebug (1997)", "Following (1998)", "Memento (2000)", "Insomnia (2002)", "Batman Begins (2005)", "The Prestige (2006)", "The Dark Knight Rises (2012)", "Quay (2015)", "Dunkirk (2017)", "Tenet (2020)", "Oppenheimer (2023)"]
   },
   {
     "id": "norman-parkinson",
@@ -9209,7 +9218,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Cosmos (1996)", "August 32nd on Earth (1998)", "Maelstrom (2000)", "Next Floor (2008)", "Polytechnique (2009)", "Incendies (2010)", "Enemy (2013)", "Prisoners (2013)", "Sicario (2015)", "Dune: Part Two (2024)"]
   },
   {
     "id": "the-wachowskis",
