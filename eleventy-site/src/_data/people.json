@@ -328,7 +328,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Bottle Rocket (1996)", "Rushmore (1998)", "The Life Aquatic with Steve Zissou (2004)", "Hotel Chevalier (2007)", "The Darjeeling Limited (2007)", "Moonrise Kingdom (2012)", "Castello Cavalcanti (2013)", "Isle of Dogs (2018)", "The French Dispatch (2021)", "Asteroid City (2023)", "Poison (2023)", "The Rat Catcher (2023)", "The Swan (2023)", "The Wonderful Story of Henry Sugar (2023)", "The Phoenician Scheme (2025)"]
   },
   {
     "id": "autumn-durald-arkapaw",
@@ -1216,7 +1217,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Batman (1989)", "Batman Returns (1992)", "Ed Wood (1994)", "Mars Attacks! (1996)", "Sleepy Hollow (1999)", "Planet of the Apes (2001)", "Charlie and the Chocolate Factory (2005)", "Sweeney Todd: The Demon Barber of Fleet Street (2007)", "Alice in Wonderland (2010)", "Dark Shadows (2012)", "Frankenweenie (2012)", "Big Eyes (2014)", "Miss Peregrine's Home for Peculiar Children (2016)", "Dumbo (2019)", "Beetlejuice Beetlejuice (2024)"]
   },
   {
     "id": "james-cameron",
@@ -1516,7 +1518,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Black Panther: Wakanda Forever (2022)"]
   },
   {
     "id": "kyle-cooper",
@@ -1739,7 +1742,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Lick the Star (1998)", "Somewhere (2010)", "The Bling Ring (2013)", "A Very Murray Christmas (2015)", "The Beguiled (2017)", "On the Rocks (2020)", "Priscilla (2023)"]
   },
   {
     "id": "francis-ford-coppola",
@@ -4158,7 +4162,8 @@
         "title": "Fatboy Slim, Weapon of Choice",
         "desc": "Christopher Walken dancing alone in a hotel. Joyful, weird, and utterly perfect."
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Mouse (1977)", "Video Days (1991)", "Amarillo by Morning (1997)", "How They Get There (1997)", "Adaptation (2002)", "Slow Century (2002)", "The Complete Master Works (2003)", "Yeah Right! (2003)", "Weezer – Video Capture Device: Treasures from the Vault 1991–2002 (2004)", "Fully Flared (2007)", "We Were Once a Fairytale (2009)", "Where the Wild Things Are (2009)", "I'm Here (2010)", "Aziz Ansari: Right Now (2019)", "Beastie Boys Story (2020)"]
   },
   {
     "id": "michael-kahn",
@@ -4767,7 +4772,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Day of the Fight (1951)", "Flying Padre (1951)", "Fear and Desire (1953)", "The Seafarers (1953)", "Killer's Kiss (1955)", "The Killing (1956)", "Paths of Glory (1957)", "Spartacus (1960)", "Lolita (1962)", "Dr. Strangelove (1964)", "A Clockwork Orange (1971)", "Barry Lyndon (1975)", "Eyes Wide Shut (1999)"]
   },
   {
     "id": "ellen-kuras",
@@ -5100,7 +5106,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Mo' Better Blues (1990)", "Jungle Fever (1991)", "Clockers (1995)", "Lumière and Company (1995)", "4 Little Girls (1997)", "He Got Game (1998)", "Summer of Sam (1999)", "Bamboozled (2000)", "All the Invisible Children (2005)", "Inside Man (2006)", "Miracle at St. Anna (2008)", "Oldboy (2013)", "BlacKkKlansman (2018)", "Da 5 Bloods (2020)", "Highest 2 Lowest (2025)"]
   },
   {
     "id": "natasha-leonnet",
@@ -8114,7 +8121,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Thelma & Louise (1991)", "1492 – Conquest of Paradise (1992)", "Black Hawk Down (2001)", "Hannibal (2001)", "Kingdom of Heaven (2005)", "A Good Year (2006)", "American Gangster (2007)", "Body of Lies (2008)", "Robin Hood (2010)", "Prometheus (2012)", "Exodus: Gods and Kings (2014)", "The Martian (2015)", "Alien: Covenant (2017)", "Napoleon (2023)", "Gladiator II (2024)"]
   },
   {
     "id": "tony-scott",
@@ -8203,7 +8211,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/domino" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["One of the Missing (1968)", "Loving Memory (1971)", "Beverly Hills Cop II (1987)", "Days of Thunder (1990)", "Revenge (1990)", "The Last Boy Scout (1991)", "Crimson Tide (1995)", "The Fan (1996)", "Enemy of the State (1998)", "Spy Game (2001)", "The Hire: Beat the Devil (2002)", "Agent Orange (2004)", "Déjà Vu (2006)", "The Taking of Pelham 123 (2009)", "Unstoppable (2010)"]
   },
   {
     "id": "dana-scruggs",
@@ -8675,7 +8684,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Jaws (1975)", "E.T. the Extra-Terrestrial (1982)", "Indiana Jones and the Temple of Doom (1984)", "Indiana Jones and the Last Crusade (1989)", "The Lost World: Jurassic Park (1997)", "Saving Private Ryan (1998)", "A.I. Artificial Intelligence (2001)", "Catch Me If You Can (2002)", "The Terminal (2004)", "Munich (2005)", "War of the Worlds (2005)", "Indiana Jones and the Kingdom of the Crystal Skull (2008)", "The Adventures of Tintin (2011)", "Lincoln (2012)", "Bridge of Spies (2015)"]
   },
   {
     "id": "vittorio-storaro",
