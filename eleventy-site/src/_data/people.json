@@ -106,7 +106,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Pilot (2004)", "Mission: Impossible III (2006)", "Star Trek Into Darkness (2013)", "Star Wars: Episode VII – The Force Awakens (2015)", "Star Wars: Episode IX – The Rise of Skywalker (2019)"]
   },
   {
     "id": "ansel-adams",
@@ -1322,7 +1323,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Xenogenesis (1978)", "Piranha II: The Spawning (1981)", "The Abyss (1989)", "True Lies (1994)", "T2-3D: Battle Across Time (1996)", "Expedition: Bismarck (2002)", "Ghosts of the Abyss (2003)", "Aliens of the Deep (2005)", "The Dive (2010)", "Titanic 3D (2012)", "Avatar: The Way of Water (2022)", "Avatar: Fire and Ash (2025)"]
   },
   {
     "id": "jimmy-chin",
@@ -1415,7 +1417,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Rescue (2021)", "Return to Space (2022)", "Nyad (2023)", "Lost in the Amazon (2024)", "Love+War (2025)"]
   },
   {
     "id": "ryan-coogler",
@@ -3448,7 +3451,8 @@
         "title": "Hyperballad (Bjork, 1997)",
         "desc": "A woman drops household objects, and eventually a mannequin double of herself, off a cliff before waking her partner each morning. Regularly named among the greatest music videos ever made."
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Human Nature (2001)", "Pecan Pie (2003)", "Dave Chappelle's Block Party (2005)", "The Science of Sleep (2006)", "Tokyo! (2008)", "Michel Gondry 2: More Videos (Before and After DVD 1) (2009)", "The Thorn in the Heart (2009)", "The Green Hornet (2011)", "The We and the I (2012)", "Mood Indigo (2013)", "Is the Man Who Is Tall Happy? (2014)", "Microbe & Gasoline (2015)", "The Book of Solutions (2023)", "Maya, Give Me a Title (2024)", "Maya, Give Me Another Title (2025)"]
   },
   {
     "id": "benjamin-hardman",
@@ -4096,7 +4100,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Valley (1976)", "Bad Taste (1987)", "Meet the Feebles (1989)", "Braindead (1992)", "Forgotten Silver (1995)", "The Frighteners (1996)", "The Lord of the Rings: The Fellowship of the Ring (2001)", "The Lord of the Rings: The Two Towers (2002)", "The Lord of the Rings: The Return of the King (2003)", "King Kong (2005)", "The Lovely Bones (2009)", "The Hobbit: An Unexpected Journey (2012)", "The Hobbit: The Desolation of Smaug (2013)", "The Hobbit: The Battle of the Five Armies (2014)", "The Beatles: Get Back (2021)"]
   },
   {
     "id": "spike-jonze",
@@ -4668,7 +4673,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Only the Brave (2017)", "Spiderhead (2022)", "F1 (2025)"]
   },
   {
     "id": "stanley-kubrick",
@@ -6243,7 +6249,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Castle of Cagliostro (1979)", "Nausicaä of the Valley of the Wind (1984)", "Castle in the Sky (1986)", "Kiki's Delivery Service (1989)", "Porco Rosso (1992)", "On Your Mark (1995)", "Kujiratori (2001)", "Kūsō no Sora Tobu Kikaitachi (2002)", "Mei and the Kitten Bus (2002)", "Howl's Moving Castle (2004)", "Mizugumo Monmon (2006)", "Ponyo (2008)", "The Wind Rises (2013)", "Boro the Caterpillar (2018)", "The Boy and the Heron (2023)"]
   },
   {
     "id": "hidetaka-miyazaki",
@@ -8860,7 +8867,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["My Best Friend's Birthday (1987)", "Reservoir Dogs (1992)", "Four Rooms (1995)", "Jackie Brown (1997)", "Kill Bill: The Whole Bloody Affair (2004)", "Kill Bill: Volume 2 (2004)", "Sin City (2005)", "Death Proof (2007)", "Grindhouse (2007)", "Django Unchained (2012)", "The Hateful Eight (2015)", "Once Upon a Time in Hollywood (2019)"]
   },
   {
     "id": "guillermo-del-toro",
@@ -8958,7 +8966,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Doña Lupe (1985)", "Geometria (1987)", "Cronos (1992)", "Mimic (1997)", "The Devil's Backbone (2001)", "Blade II (2002)", "Hellboy (2004)", "Hellboy II: The Golden Army (2008)", "Pacific Rim (2013)", "Nightmare Alley (2021)", "Guillermo del Toro's Pinocchio (2022)"]
   },
   {
     "id": "alex-trochut",
@@ -9462,7 +9471,8 @@
         "title": "Jay-Z & UGK, Big Pimpin (2000)",
         "desc": "Caribbean sun, boats, and a visual ambition that made the song feel even larger than it already was."
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Belly (1998)", "No Scrubs (1999)", "Stay Down (2008)"]
   },
   {
     "id": "gordon-willis",
