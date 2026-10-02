@@ -420,7 +420,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Palo Alto (2013)", "Teen Spirit (2018)", "Untogether (2018)", "The Good Time Girls (2018)", "Aziz Ansari: Right Now (2019)", "The Sun Is Also a Star (2019)", "SZA, The Weeknd & Travis Scott: Power Is Power (2019)", "Mainstream (2020)", "Beastie Boys Story (2020)", "Nike: Play New (2021)", "Rihanna: Lift Me Up (2022)", "The Last Showgirl (2024)"]
   },
   {
     "id": "darren-aronofsky",
@@ -2156,7 +2157,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["1984 (1984)", "Barton Fink (1991)", "Dead Man Walking (1995)", "Fargo (1996)", "The Big Lebowski (1998)", "O Brother, Where Art Thou? (2000)", "A Beautiful Mind (2001)", "The Assassination of Jesse James by the Coward Robert Ford (2007)", "True Grit (2010)", "Skyfall (2012)", "Prisoners (2013)", "Sicario (2015)", "Hail, Caesar! (2016)", "Blade Runner 2049 (2017)", "Empire of Light (2022)"]
   },
   {
     "id": "peter-deming",
@@ -2244,7 +2246,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-menu-2022" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["House Party (1990)", "My Cousin Vinny (1992)", "Scream 2 (1997)", "Lost Highway (1997)", "Austin Powers: International Man of Mystery (1997)", "Scream 3 (2000)", "From Hell (2001)", "Austin Powers in Goldmember (2002)", "I Heart Huckabees (2004)", "The Jacket (2005)", "Scream 4 (2011)", "Twin Peaks (2017)", "The Residence (2025)", "The Whisper Man (2026)", "Spider-Noir (2026)"]
   },
   {
     "id": "naughty-dog",
@@ -2602,7 +2605,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Hard Eight (1996)", "Tomorrow Never Dies (1997)", "Magnolia (1999)", "Punch-Drunk Love (2002)", "Good Night, and Good Luck. (2005)", "Syriana (2005)", "Michael Clayton (2007)", "The Town (2010)", "Salt (2010)", "Mission: Impossible: Ghost Protocol (2011)", "The Bourne Legacy (2012)", "Mission: Impossible: Rogue Nation (2015)", "The King of Staten Island (2020)", "King Richard (2021)", "Ripley (2024)"]
   },
   {
     "id": "shepard-fairey",
@@ -3044,7 +3048,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Out of the Blue (2006)", "The Water Diary (2006)", "Caterpillar Wish (2006)", "Stranded (2006)", "Bright Star (2009)", "The Boys Are Back (2009)", "Last Ride (2009)", "Let Me In (2010)", "Zero Dark Thirty (2012)", "Killing Them Softly (2012)", "Snow White and the Huntsman (2012)", "Rogue One: A Star Wars Story (2016)", "Vice (2018)", "The Mandalorian (2019)", "The Batman (2022)"]
   },
   {
     "id": "rockstar-games",
@@ -3970,7 +3975,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Lasermannen (2005)", "How Soon Is Now? (2007)", "Let the Right One In (2008)", "The Girl (2009)", "Doktor Glas (2009)", "The Fighter (2010)", "Tinker Tailor Soldier Spy (2011)", "Call Girl (2012)", "Her (2013)", "Spectre (2015)", "Kenzo World (2016)", "Dunkirk (2017)", "Welcome Home (2018)", "Ad Astra (2019)", "Tenet (2020)"]
   },
   {
     "id": "jony-ive",
