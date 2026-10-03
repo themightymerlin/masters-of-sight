@@ -2109,13 +2109,48 @@
     "born": "1949",
     "nationality": "British",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978169/image_gjfk2c.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978217/image_d0wlun.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978186/image_zkmvcq.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978414/image_tr0k8h.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978201/image_byilal.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790192964/N8FASV1F_iphage.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193003/4YFGYQJH_iglf9f.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978217/image_d0wlun.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978186/image_zkmvcq.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978414/image_tr0k8h.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779978201/image_byilal.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790192964/N8FASV1F_iphage.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193003/4YFGYQJH_iglf9f.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029437/1KJH2NQF_fhanir.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029537/6EPH5J8I_bijcpp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029500/ZDLLNHU8_yvjhfb.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "A0oNrgumrlE",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029372/Screenshot_2026-10-03_at_08.09.04_q6hkeb.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Roger_Deakins",
     "bio": "Roger Deakins is the cinematographer's cinematographer, the person other people who shoot films cite when asked who they admire. Fourteen Oscar nominations before his first win for Blade Runner 2049 became a running industry joke about the inexplicability of awards. His work spans thirty years of Coen Brothers collaborations, Shawshank Redemption, Skyfall, and 1917, a range that demonstrates the defining quality of his talent: total stylistic subordination to the story. He has no signature look. He has a signature quality: every frame is exactly as it should be.",
@@ -2194,6 +2229,18 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878040/RBD7FGIB_ehpbo2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878045/RMPMWOIF_yecm4s.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788878038/GJOH0W5B_wyw2ld.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029767/4ARK3JYP_wz3bci.jpg"
       },
       {
         "type": "video",
@@ -2557,13 +2604,36 @@
     "born": "1950",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010257/US0HOSSA_dmdxy4.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010264/O1HOB68E_h4fq8d.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010381/D0MUZVJN_euqs8z.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010320/XNO91QZR_dgwwob.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010262/FOB03REF_iv0fqg.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193715/WOTAV6FD_mvjyi1.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193732/351D3ENT_gngcgi.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010264/O1HOB68E_h4fq8d.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010381/D0MUZVJN_euqs8z.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010320/XNO91QZR_dgwwob.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781010262/FOB03REF_iv0fqg.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193715/WOTAV6FD_mvjyi1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790193732/351D3ENT_gngcgi.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "0FIm5ATyAY0",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791028760/Screenshot_2026-10-03_at_07.59.01_pctdam.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Robert_Elswit",
     "bio": "Robert Elswit shoots like a journalist who studied painting. His frames have the immediacy of someone who earned access to the room and the compositional intelligence of someone who knew exactly what to do once inside it. A decades-long collaborator with Paul Thomas Anderson, he built the visual language of Boogie Nights, Magnolia, and There Will Be Blood, three films that look nothing alike and all look exactly like him. His work has a specific texture, grain, handheld urgency, practical sources pushed past comfort, that feels lived in rather than designed. Nightcrawler alone would be enough, that sickly Los Angeles amber, the city as a predator's hunting ground, lit to make everything look simultaneously beautiful and wrong.",
@@ -4949,6 +5019,18 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123795/OYF2I51E_zkuj2g.jpg"
       },
       {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123795/CIEWJQ9F_es0a2i.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123856/WL59CJ5W_apjuvn.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030176/8HIHE4UZ_d0zwnb.jpg"
+      },
+      {
         "type": "video",
         "youtubeId": "8aulMPhE12g",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788123867/Screenshot_2026-08-30_at_17.04.12_nammxk.png"
@@ -5544,6 +5626,12 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353767/GX5L34BV_smqtrf.jpg",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "uJfLoE6hanc",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030338/Screenshot_2026-10-03_at_08.24.55_ksybf6.png",
         "caption": ""
       }
     ],
@@ -7780,10 +7868,40 @@
     "born": "1955",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551708/L4GRGN2V_rpr6do.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551708/UY8PWMBE_uxgglr.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551709/CQG8XVIL_tn2flp.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551708/04Q5TB5M_cs3xcn.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551708/UY8PWMBE_uxgglr.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551709/CQG8XVIL_tn2flp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781551708/04Q5TB5M_cs3xcn.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029065/LTOPI8HD_txrhar.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029078/OGJ65DB5_ukqknp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029151/8FC3BSY5_uunbni.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029175/7VHWNPEY_egzpsj.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "qRYDNWXuip8",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791029004/Screenshot_2026-10-03_at_08.02.58_ciubdn.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Robert_Richardson_(cinematographer)",
     "bio": "Robert Richardson has shot for Oliver Stone, Martin Scorsese, and Quentin Tarantino, three of the most visually demanding directors alive, and somehow developed a distinct voice inside each of those relationships. Three Oscars. A visual range that spans the hellish green swamps of Platoon to the blown-out California sun of Kill Bill to the velvet darkness of The Aviator. He doesn't have one look. He has one standard: total commitment to the emotional truth of the frame, whatever that requires.",
@@ -8332,12 +8450,39 @@
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/E05Q69L3_mv7blm.jpg",
     "galleryMedia": [
-      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/9D7ZYSK3_hmzskr.jpg" },
-      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/39PZUP7S_ukrqqb.jpg" },
-      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/ZN69ZUY3_irhem5.jpg" },
-      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/8OCKS5LR_hsidpu.jpg" },
-      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448330/CGLPSPHN_jzq5p0.jpg" },
-      { "type": "video", "youtubeId": "KBiOF3y1W0Y", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448652/Screenshot_2026-09-03_at_11.17.11_brxdtu.png" }
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/9D7ZYSK3_hmzskr.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/39PZUP7S_ukrqqb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/ZN69ZUY3_irhem5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/8OCKS5LR_hsidpu.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448330/CGLPSPHN_jzq5p0.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030431/0CMOE8VM_mtwdpv.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030489/Z4GT1PYN_pi6ef0.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "KBiOF3y1W0Y",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448652/Screenshot_2026-09-03_at_11.17.11_brxdtu.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Newton_Thomas_Sigel",
     "bio": "Newton Thomas Sigel spent the 1990s remaking what a studio thriller could look like, then spent the next three decades refusing to repeat himself. His camera runs hot and precise at once, capable of the bleach bypassed sunburn he invented for Three Kings and the glacial control he brought to Drive's Los Angeles nights. He shot four X-Men films without ever settling into a house style, then pivoted into music biopic spectacle with Bohemian Rhapsody, Netflix scale kinetics with Extraction, and a five-part psychological freefall with Cherry. Few working cinematographers move this fluidly between genre extremes and come out the other side with a signature intact.",
@@ -8709,10 +8854,40 @@
     "nationality": "Italian",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069862/image_s0fnjn.jpg",
     "coverImagePosition": "80% center",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069921/image_hzoxka.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069963/image_qyfbdv.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069823/image_e3gyvi.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069921/image_hzoxka.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069963/image_qyfbdv.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069823/image_e3gyvi.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030819/N3XWXLBF_nedpqq.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030599/P46XG710_wp7xpw.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030866/JOUDKEMS_v7zlxk.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030938/RL5YILBB_quds8h.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "9l-ViOOFH-s",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030779/Screenshot_2026-10-03_at_08.32.32_ihnphm.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Vittorio_Storaro",
     "bio": "Vittorio Storaro doesn't light films, he writes them in colour. Working from a deeply studied philosophy rooted in Jung, Goethe, and the Italian Renaissance, he treats every hue as a psychological instrument, warm against cold, shadow against revelation, chaos against order. His decades-long collaboration with Bernardo Bertolucci produced some of the most visually orchestrated cinema ever committed to celluloid. He called his work 'writing with light' before that phrase became a cliche.",
@@ -9506,10 +9681,40 @@
     "died": "2014",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070534/image_lxuefs.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070571/image_ztvngp.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070649/image_sldan0.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070613/image_jply4c.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070571/image_ztvngp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070649/image_sldan0.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780070613/image_jply4c.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031059/SSKAX2Y3_yqozal.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031117/RE9S8SL3_tq5t0s.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031140/WAVER4VY_m9jysc.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031391/096DT1ZI_cxtngo.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "UaVTIH8mujA",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031288/Screenshot_2026-10-03_at_08.41.12_t1xo0c.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Gordon_Willis",
     "bio": "Gordon Willis was called the Prince of Darkness and he wore it like a crown. In an era when Hollywood cinematography meant bright, legible, safe, Willis did the opposite: he buried Marlon Brando's eyes in shadow, underexposed entire scenes, let faces disappear into black. The studios hated it, audiences were transfixed. His work with Francis Ford Coppola on The Godfather trilogy and with Woody Allen across a decade of New York films produced two completely distinct visual languages, both masterclasses.",
@@ -9659,10 +9864,44 @@
     "born": "1977",
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009848/UYLDWU43_jglie0.jpg",
-    "galleryImages": [
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009726/HA3AXJH2_zexfcd.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009722/ZDTRMWJC_hggsgz.jpg",
-      "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009730/L87IB2QM_bxebt6.jpg"
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009726/HA3AXJH2_zexfcd.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009722/ZDTRMWJC_hggsgz.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781009730/L87IB2QM_bxebt6.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031603/FPTULAZM_rva9qs.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031620/3N1I3353_j1srwn.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031635/Z1JUI6GA_b5a9yk.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031685/KD99TD3C_p5x4go.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031750/12V9OO0S_ce2hcn.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "tFMo3UJ4B4g",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791031496/Screenshot_2026-10-03_at_08.44.27_beri2e.png"
+      }
     ],
     "url": "https://en.wikipedia.org/wiki/Bradford_Young",
     "bio": "Bradford Young shoots darkness the way most cinematographers shoot light. Where others fight shadow, he builds with it, finding luminosity inside the deepest parts of the frame in a way that feels less like technique and more like a philosophical position. He came up through independent film, shooting Pariah and Middle of Nowhere with Ava DuVernay, before Denis Villeneuve handed him Arrival and the world caught up to what independent cinema already knew. His work has a specific quality that is almost impossible to manufacture, the camera doesn't observe the room, it belongs in it. His light treats Black skin with a tenderness and specificity that represents a genuine correction to a century of cinematography that never figured out how.",
