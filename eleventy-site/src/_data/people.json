@@ -4897,7 +4897,8 @@
       { "title": "Blow (2001)", "desc": "Ted Demme's decades-spanning drug trade drama, its warm saturated tones curdling colder and harder as the American dream collapses.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/blow" }] },
       { "title": "Summer of Sam (1999)", "desc": "Spike Lee's 1977 heatwave thriller, shot with the same handheld immediacy she brought to documentary work, panic rendered as sweat-soaked texture.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/summer-of-sam" }] },
       { "title": "Be Kind Rewind (2008)", "desc": "Michel Gondry's homemade movie-reshoot comedy, DIY analog texture built to feel like it was shot on a VHS camcorder budget.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/be-kind-rewind" }] }
-    ]
+    ],
+    "alsoWorkedOn": ["I Shot Andy Warhol (1996)", "Personal Velocity (2002)", "Dave Chappelle's Block Party (2005)", "The Ballad of Jack and Rose (2005)", "Neil Young: Heart of Gold (2006)", "Lou Reed: Berlin (2007)", "Away We Go (2009)", "A Little Chaos (2014)", "The 50 Year Argument (2014)", "Jane (2017)", "Wormwood (2017)", "Rolling Thunder Revue: A Bob Dylan Story by Martin Scorsese (2019)", "David Byrne's American Utopia (2020)", "Pretend It's a City (2021)", "Beatles '64 (2024)"]
   },
   {
     "id": "david-lachapelle",
@@ -5096,7 +5097,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Boys from St. Petri (1991)", "Mimic (1997)", "Nightwatch (1997)", "Brotherhood of the Wolf (2001)", "I Am Dina (2002)", "The League of Extraordinary Gentlemen (2003)", "Silent Hill (2006)", "Just Another Love Story (2007)", "Solomon Kane (2009)", "Deliver Us from Evil (2009)", "The Possession (2012)", "John Wick: Chapter 2 (2017)", "John Wick: Chapter 3 - Parabellum (2019)", "Nightmare Alley (2021)", "The Color Purple (2023)"]
   },
   {
     "id": "spike-lee",
@@ -5259,7 +5261,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/mulan-2020" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Once Upon a Time in Mexico (2003)", "The Life Aquatic with Steve Zissou (2004)", "Sin City (2005)", "Blood Diamond (2006)", "Juno (2007)", "Be Kind Rewind (2008)", "La La Land (2016)", "Hidden Figures (2016)", "First Man (2018)", "Tully (2018)", "Good Boys (2019)", "The Mitchells vs. the Machines (2021)", "Candyman (2021)", "Back to Black (2024)", "KPop Demon Hunters (2025)"]
   },
   {
     "id": "annie-liebovitz",
@@ -5675,7 +5678,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Like Water for Chocolate (1992)", "Reality Bites (1994)", "A Little Princess (1995)", "The Birdcage (1996)", "Great Expectations (1998)", "Meet Joe Black (1998)", "Sleepy Hollow (1999)", "Y tu mamá también (2001)", "Ali (2001)", "A Series of Unfortunate Events (2004)", "The New World (2005)", "Burn After Reading (2008)", "Gravity (2013)", "The Revenant (2015)", "Amsterdam (2022)"]
   },
   {
     "id": "george-lucas",
@@ -6530,7 +6534,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-talented-mr-ripley" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Julia (1977)", "The Unbearable Lightness of Being (1988)", "The Godfather Part III (1990)", "Ghost (1990)", "Romeo Is Bleeding (1993)", "First Knight (1995)", "K-19: The Widowmaker (2002)", "Cold Mountain (2003)", "Jarhead (2005)", "Youth Without Youth (2007)", "Tetro (2009)", "The Wolfman (2010)", "Particle Fever (2013)", "Tomorrowland (2015)", "Coup 53 (2019)"]
   },
   {
     "id": "gmunk",
@@ -7474,7 +7479,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/scott-pilgrim-vs-the-world" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Army of Darkness (1992)", "Fire in the Sky (1993)", "Clueless (1995)", "Bound (1996)", "Gridlock'd (1997)", "Zero Effect (1998)", "Freaks and Geeks (1999)", "Bedazzled (2000)", "Team America: World Police (2004)", "Fur: An Imaginary Portrait of Diane Arbus (2006)", "Spider-Man 3 (2007)", "Men in Black 3 (2012)", "The World's End (2013)", "The Jungle Book (2016)", "Baby Driver (2017)"]
   },
   {
     "id": "tom-poole",
@@ -7540,7 +7546,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/blackkklansman" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Compliance (2012)", "Rihanna: Ride (2012)", "Oldboy (2013)", "Paterno (2018)", "The Invisible Man (2020)", "Cruella (2021)", "The White Lotus (2021)", "Blue Bayou (2021)", "Past Lives (2023)", "Origin (2023)", "MaXXXine (2024)", "Blitz (2024)", "The Order (2024)", "Rez Ball (2024)", "Julie Keeps Quiet (2024)"]
   },
   {
     "id": "dieter-rams",
@@ -7953,7 +7960,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Salvador (1986)", "Wall Street (1987)", "Born on the Fourth of July (1989)", "The Doors (1991)", "A Few Good Men (1992)", "Natural Born Killers (1994)", "Casino (1995)", "Nixon (1995)", "Wag the Dog (1997)", "Kill Bill: Vol. 1 (2003)", "Kill Bill: Vol. 2 (2004)", "Shutter Island (2010)", "Django Unchained (2012)", "The Hateful Eight (2015)", "Once Upon a Time in... Hollywood (2019)"]
   },
   {
     "id": "stefan-sagmeister",
@@ -8171,7 +8179,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/the-departed" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["After Hours (1985)", "The Last Temptation of Christ (1988)", "New York Stories (1989)", "Cape Fear (1991)", "The Age of Innocence (1993)", "Casino (1995)", "Kundun (1997)", "Bringing Out the Dead (1999)", "Gangs of New York (2002)", "Shutter Island (2010)", "Hugo (2011)", "The Wolf of Wall Street (2013)", "Silence (2016)", "The Irishman (2019)", "Killers of the Flower Moon (2023)"]
   },
   {
     "id": "ridley-scott",
@@ -8524,7 +8533,8 @@
         "desc": "Five distinct visual registers, one per chapter of the character's collapse, aspect ratio and color science shifting as his mental state does.",
         "links": [ { "type": "watch", "url": "https://www.justwatch.com/us/movie/cherry-2021" } ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Fallen (1998)", "Apt Pupil (1998)", "Brokedown Palace (1999)", "X-Men (2000)", "Confessions of a Dangerous Mind (2002)", "X2: X-Men United (2003)", "The Brothers Grimm (2005)", "Superman Returns (2006)", "Valkyrie (2008)", "The Conspirator (2010)", "Crouching Tiger, Hidden Dragon: Sword of Destiny (2016)", "Marshall (2017)", "Da 5 Bloods (2020)", "Dog (2022)", "Candy Cane Lane (2023)"]
   },
   {
     "id": "margaret-sixel",
@@ -8586,7 +8596,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/les-petits-pieds-du-bonheur" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Mary: The Mary MacKillop Story (1994)", "Century of Cinema (1996)", "Babe: Pig in the City (1998)", "Blindman's Bluff (2000)", "The Big House (2001)"]
   },
   {
     "id": "zack-snyder",
@@ -8751,7 +8762,8 @@
           { "type": "watch", "url": "https://www.justwatch.com/us/movie/black-hawk-down" }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Cell (2000)", "Pirates of the Caribbean: The Curse of the Black Pearl (2003)", "Man on Fire (2004)", "War of the Worlds (2005)", "300 (2006)", "Mission: Impossible III (2006)", "Miami Vice (2006)", "Transformers (2007)", "Into the Wild (2007)", "Nightcrawler (2014)", "The Suicide Squad (2021)", "The White Lotus (2021)", "Maestro (2023)", "Ferrari (2023)"]
   },
   {
     "id": "steven-spielberg",
@@ -8929,7 +8941,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["The Bird with the Crystal Plumage (1970)", "The Spider's Stratagem (1970)", "Last Tango in Paris (1972)", "1900 (1976)", "Reds (1981)", "One from the Heart (1981)", "Ladyhawke (1985)", "Tucker: The Man and His Dream (1988)", "New York Stories (1989)", "Dick Tracy (1990)", "The Sheltering Sky (1990)", "Little Buddha (1993)", "Bulworth (1998)", "Tango (1998)", "Goya in Bordeaux (1999)"]
   },
   {
     "id": "hiroshi-sugimoto",
@@ -9756,7 +9769,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Klute (1971)", "Bad Company (1972)", "The Parallax View (1974)", "The Godfather Part II (1974)", "Annie Hall (1977)", "Interiors (1978)", "Stardust Memories (1980)", "A Midsummer Night's Sex Comedy (1982)", "Zelig (1983)", "Broadway Danny Rose (1984)", "The Purple Rose of Cairo (1985)", "The Money Pit (1986)", "Presumed Innocent (1990)", "Malice (1993)", "The Devil's Own (1997)"]
   },
   {
     "id": "reuben-wu",
@@ -9943,7 +9957,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Mississippi Damned (2009)", "Pariah (2011)", "Restless City (2011)", "Middle of Nowhere (2012)", "Ain't Them Bodies Saints (2013)", "Mother of George (2013)", "A Most Violent Year (2014)", "Pawn Sacrifice (2014)", "I Called Him Morgan (2016)", "Where Is Kyra? (2017)", "Solo: A Star Wars Story (2018)", "When They See Us (2019)", "2073 (2024)", "Number One on the Call Sheet (2025)", "BLKNWS: Terms & Conditions (2025)"]
   },
   {
     "id": "danny-yount",
