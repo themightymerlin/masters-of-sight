@@ -9589,6 +9589,26 @@
         "caption": ""
       },
       {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791149033/4E6MUC2U_odqnsa.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148928/0M4IJ4SL_jkr3gf.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148954/VNGAYX2Q_erdqdj.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791149019/9JZT44HV_tpas4w.jpg",
+        "caption": ""
+      },
+      {
         "type": "video",
         "youtubeId": "nUEQNVV3Gfs",
         "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784646128/Screenshot_2026-07-21_at_11.00.05_gahjcs.png",
@@ -9635,7 +9655,8 @@
           }
         ]
       }
-    ]
+    ],
+    "alsoWorkedOn": ["Bound (1996)", "Speed Racer (2008)", "Antony and the Johnsons: Epilepsy Is Dancing (2009)", "Cloud Atlas (2012)", "Jupiter Ascending (2015)", "Sense8 (2015)", "Sense8: Creating the World (2015)", "The Matrix Resurrections (2021)"]
   },
   {
     "id": "tim-walker",
