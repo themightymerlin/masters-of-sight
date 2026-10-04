@@ -3237,6 +3237,128 @@
     ]
   },
   {
+    "id": "supergiant-games",
+    "related": [
+      "moebius",
+      "yoji-shinkawa",
+      "hayao-miyazaki",
+      "guillermo-del-toro"
+    ],
+    "added": "2026-10-04",
+    "name": "Supergiant Games",
+    "discipline": "Dream Makers",
+    "entityType": "studio",
+    "style": "Isometric / Hand Painted",
+    "born": "Founded 2009",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146152/Hades_Wallpaper_01_ff8qnm.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146323/maxresdefault_rjbdnv.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146307/3840x2160_v1.0_KeyArt_iwqin5.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146366/MV5BNTFhN2ViZmMtMDRjYi00YjRjLWJmODQtNTIxMGZkZjZlODkyXkEyXkFqcGc._V1_FMjpg_UX1000__grtiph.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146461/MV5BNWZjMjY4MGMtYzMwNC00NDRmLTlmY2YtMjVjNzE5YjdkNjk2XkEyXkFqcGc._V1__ifzu5i.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146388/MV5BMjQ3N2E5YTgtMmMzMy00OGQwLTgxN2QtZGIzOWI1OWI4MjgzXkEyXkFqcGc._V1__mv78rf.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146172/hades_09-dec-2019_01_bkjwxl.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146693/hades2_apr30_01_auarks.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146787/Pyre_May-2017_02_kno6xy.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146420/1407982466399_Transistor_28-aug-2013_01_vzxhn9.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146405/1408083058104_Bastion_PC_0004_mkvxor.jpg"
+      },
+      {
+        "type": "video",
+        "youtubeId": "91t0ha9x0AE",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791147000/Screenshot_2026-10-04_at_16.49.36_t5slxq.png"
+      }
+    ],
+    "url": "https://www.supergiantgames.com/",
+    "bio": "Supergiant Games began in 2009, when Amir Rao and Gavin Simon quit Electronic Arts, moved into the same house, and started making Bastion. Everything the studio ships is painted by hand, with art director Jen Zee's saturated, high-contrast illustration sitting under a fixed, angled camera. Bastion's narrator reacts to each move the player makes, which made the voice part of the picture instead of a layer on top of it. Five games in, the genre keeps changing and the hand never does. Hades, the breakout, is a roguelite where dying advances the story instead of stopping it, and Hades II arrived in 2025 as the studio's first sequel.",
+    "traits": [
+      "Hand-painted art direction, with every environment and character built to look drawn rather than rendered.",
+      "A fixed, angled camera that frames each room as a composed illustration.",
+      "Saturated color pushed hard against dark backgrounds, so the palette reads as the light source.",
+      "Large, graphic character portraits that take center stage during dialogue.",
+      "Reactive narration and dialogue wired into play, so the world answers what the player just did."
+    ],
+    "works": [
+      {
+        "title": "Bastion (2011)",
+        "desc": "A narrator describes the player's moves aloud as they happen, while the floor assembles itself under the Kid's feet.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP2125-CUSA02052_00-BASTIONGAME00000" },
+          { "name": "Xbox", "url": "https://www.xbox.com/en-US/games/store/bastion/BVVP3LXMLP85" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/107100/Bastion/" },
+          { "name": "Switch", "url": "https://www.nintendo.com/us/store/products/bastion-switch/" }
+        ]
+      },
+      {
+        "title": "Transistor (2014)",
+        "desc": "Red, a singer whose voice has been stolen, carries a talking sword through a neon city painted in isometric frames.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP2125-CUSA00502_00-TRANSISTORGAME00" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/237930/Transistor/" },
+          { "name": "Switch", "url": "https://www.nintendo.com/us/store/products/transistor-switch/" }
+        ]
+      },
+      {
+        "title": "Pyre (2017)",
+        "desc": "Rites are played as a fantasy sport between wandering exiles, and the story keeps branching whether the player wins or loses.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://www.playstation.com/en-us/games/pyre/" },
+          { "name": "Steam", "url": "http://store.steampowered.com/app/462770/Pyre/" }
+        ]
+      },
+      {
+        "title": "Hades (2020)",
+        "desc": "Zagreus fights out of the underworld again and again, and every death sends him back to a house full of characters with new lines.",
+        "platforms": [
+          { "name": "PS4/PS5", "url": "https://store.playstation.com/en-us/product/UP2125-PPSA03355_00-3466019145463410" },
+          { "name": "Xbox", "url": "https://www.xbox.com/en-us/games/store/hades/9P8DL6W0JBB8" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/1145360/Hades/" },
+          { "name": "Switch", "url": "https://www.nintendo.com/us/store/products/hades-switch/" }
+        ]
+      },
+      {
+        "title": "Hades II (2025)",
+        "desc": "Melinoë, Zagreus's sister, fights toward the Titan of Time, and the studio's painted camera leaves the underworld for the surface.",
+        "platforms": [
+          { "name": "PS5", "url": "https://store.playstation.com/en-us/concept/10018449" },
+          { "name": "Xbox", "url": "https://www.xbox.com/en-US/games/store/hades-ii/9PCR3Z2MSM4T/" },
+          { "name": "Steam", "url": "https://store.steampowered.com/app/1145350/Hades_II/" },
+          { "name": "Switch 2", "url": "https://www.nintendo.com/us/store/products/hades-ii-nintendo-switch-2-edition-switch-2/" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "greta-gerwig",
     "related": [
       "sofia-coppola",
