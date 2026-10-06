@@ -4909,12 +4909,6 @@
         "caption": ""
       },
       {
-        "type": "video",
-        "youtubeId": "oR_e9y-bka0",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780273055/image_pxpn8f.jpg",
-        "caption": ""
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351534/R0OKMMXD_gj8yt4.jpg",
         "caption": ""
@@ -4927,6 +4921,12 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351494/B4M2BISX_thtt5p.jpg",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "oR_e9y-bka0",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780273055/image_pxpn8f.jpg",
         "caption": ""
       }
     ],
@@ -4987,7 +4987,6 @@
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460991/G79DG1DY_wwhgjm.jpg", "caption": "" },
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460992/0006ILGM_kxkgkw.jpg", "caption": "" },
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460991/ZK4AEACJ_nlkdjq.jpg", "caption": "" },
-      { "type": "video", "youtubeId": "StfoiYS0JaE", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786461531/Screenshot_2026-08-11_at_11.18.17_crwh9m.png", "caption": "" },
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786460992/DHPLF8V7_fexvfo.jpg",
@@ -5002,7 +5001,8 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790351820/TNEL3EBL_whiasf.jpg",
         "caption": ""
-      }
+      },
+      { "type": "video", "youtubeId": "StfoiYS0JaE", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786461531/Screenshot_2026-08-11_at_11.18.17_crwh9m.png", "caption": "" }
     ],
     "url": "https://en.wikipedia.org/wiki/Ellen_Kuras",
     "bio": "Ellen Kuras built her reputation as a bold stylist who visualizes a character's psychology through light alone, sliding between blown out white and near total dark inside a single scene until the imagery becomes the story's memory. She came up through documentary, shooting Samsara: Death and Rebirth in Cambodia and 4 Little Girls before crossing into narrative feature with Tom Kalin's Swoon, and she has carried that verite instinct into everything since, whether lighting Spike Lee's Summer of Sam or Michel Gondry's dissolving Eternal Sunshine of the Spotless Mind. In 2022 she became the first woman to receive the ASC Lifetime Achievement Award. She has since stepped fully into directing, helming the Oscar-nominated documentary The Betrayal and the 2023 narrative feature Lee.",
@@ -5248,11 +5248,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780064729/image_kqbwc6.jpg"
       },
       {
-        "type": "video",
-        "youtubeId": "yVAD4fYRcvA",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065065/image_tfjmth.jpg"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790352069/LP8S8PWR_gtaolv.jpg",
         "caption": ""
@@ -5276,6 +5271,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790352183/I4LD6D6T_wbgocb.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "yVAD4fYRcvA",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780065065/image_tfjmth.jpg"
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Spike_Lee",
@@ -5507,11 +5507,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780076437/image_bt5imx.jpg"
       },
       {
-        "type": "video",
-        "youtubeId": "rrqfPG4ZcAA",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780076596/image_alwflo.png"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353173/MV5BNWY4Y2Y5N2UtZWIzYy00MWE0LWI0ZTctZTY0OGU4NDBlOWQxXkEyXkFqcGc._V1_QL75_UX776__euqhom.jpg",
         "caption": ""
@@ -5545,6 +5540,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790353361/MV5BMjZiOTc2MDYtNGNkMC00MGRkLTljNzEtYWU2NTY5YmQxZjZkXkEyXkFqcGc._V1_FMjpg_UX1920__glrpzj.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "rrqfPG4ZcAA",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780076596/image_alwflo.png"
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Ken_Levine_(video_game_developer)",
@@ -6222,12 +6222,6 @@
         "caption": ""
       },
       {
-        "type": "video",
-        "youtubeId": "m08TxIsFTRI",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167352/Screenshot_2026-07-27_at_11.48.50_ieascp.png",
-        "caption": ""
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167352/Screenshot_2026-07-27_at_11.48.50_ieascp.png",
         "caption": ""
@@ -6250,6 +6244,12 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165705/K590QSKS_lcwx46.jpg",
+        "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "m08TxIsFTRI",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167352/Screenshot_2026-07-27_at_11.48.50_ieascp.png",
         "caption": ""
       }
     ],
@@ -6322,11 +6322,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780066801/image_wexavi.jpg"
       },
       {
-        "type": "video",
-        "youtubeId": "_NElFLzgdUs",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067075/image_hmixwe.png"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067075/image_hmixwe.png",
         "caption": ""
@@ -6340,6 +6335,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354424/7BcRqGC4MNKgn2GSNkJEtP_dixupk.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "_NElFLzgdUs",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067075/image_hmixwe.png"
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Shigeru_Miyamoto",
@@ -6411,11 +6411,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067325/image_ufq4g1.jpg"
       },
       {
-        "type": "video",
-        "youtubeId": "ByXuk9QqQkk",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067541/image_zxotxs.jpg"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067272/image_ddwlng.jpg",
         "caption": ""
@@ -6434,6 +6429,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354591/5QYEUAJQ_pwr5yc.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "ByXuk9QqQkk",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067541/image_zxotxs.jpg"
       }
     ],
     "url": "https://www.studioghibli.jp",
@@ -6506,11 +6506,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780076956/image_omjygn.png"
       },
       {
-        "type": "video",
-        "youtubeId": "rrqfPG4ZcAA",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077031/image_hcijb2.png"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354897/MV5BMjI4NTZjODMtZTEyNi00NmRmLTllYzYtMGY2MzI1ODM1Y2RjXkEyXkFqcGc._V1_FMjpg_UX2160__a9p3tz.jpg",
         "caption": ""
@@ -6534,6 +6529,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354963/MV5BMTExODUyZWItMzAyZi00OWMzLWIyNmMtMzQ1NjZkNzYyNDJkXkEyXkFqcGc._V1_FMjpg_UX2160__w2sh7o.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "rrqfPG4ZcAA",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077031/image_hcijb2.png"
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Hidetaka_Miyazaki",
@@ -6911,11 +6911,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067922/image_xs3nuq.png"
       },
       {
-        "type": "video",
-        "youtubeId": "Mzw2ttJD2qQ",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784393523/Screenshot_2026-07-18_at_12.50.53_rmgqx4.png"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780067808/image_giczqi.jpg",
         "caption": ""
@@ -6939,6 +6934,11 @@
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790355795/V3ONLYK1_inuiml.jpg",
         "caption": ""
+      },
+      {
+        "type": "video",
+        "youtubeId": "Mzw2ttJD2qQ",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1784393523/Screenshot_2026-07-18_at_12.50.53_rmgqx4.png"
       }
     ],
     "url": "https://en.wikipedia.org/wiki/Christopher_Nolan",
@@ -7817,11 +7817,6 @@
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786121938/witcher3-1638987659679_grnxak.jpg"
       },
       {
-        "type": "video",
-        "youtubeId": "UnA7tepsc7s",
-        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786122275/Screenshot_2026-08-07_at_13.04.23_a4ddkn.png"
-      },
-      {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1786122178/Screenshot_2026-08-07_at_13.02.39_uktwmu.png"
       },
@@ -7848,6 +7843,11 @@
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/v1790516327/TW3RE_Gamescom_Geralt_on_a_Horseback_FIN_PC_16x9_EN_zsysmy.png"
+      },
+      {
+        "type": "video",
+        "youtubeId": "UnA7tepsc7s",
+        "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1786122275/Screenshot_2026-08-07_at_13.04.23_a4ddkn.png"
       }
     ],
     "url": "https://www.cdprojektred.com/en",
