@@ -42,4 +42,9 @@ Pushing inside `eleventy-site/` triggers an automatic deploy via GitHub Actions.
    itself) do not trigger a deploy and follow the Git sequence normally.
 
 ### Secrets
-Never read, print, or commit .env files or any API key or secret.
+Never open, print, quote, or commit .env files or any API key or secret.
+Never print any value from them or any part of a value, including its length.
+The only permitted check of a .env file is a script that reports, per
+variable name, "present and non-empty" or "missing or empty" and prints
+nothing else. Scripts that Benny runs himself may load .env into memory at
+runtime, but they must never print, log, or write any value.
