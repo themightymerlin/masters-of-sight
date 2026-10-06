@@ -2,3 +2,8 @@
 .DS_Store
 mos-admin.html
 _local_backup_icons/
+
+# Secrets
+.env
+.env.*
+!.env.example
