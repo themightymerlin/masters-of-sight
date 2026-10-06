@@ -48,3 +48,8 @@ The only permitted check of a .env file is a script that reports, per
 variable name, "present and non-empty" or "missing or empty" and prints
 nothing else. Scripts that Benny runs himself may load .env into memory at
 runtime, but they must never print, log, or write any value.
+Claude Code may run eleventy-site/scripts/ingest-masters.js when Benny asks,
+because the script loads .env into memory itself and prints no values. Claude
+Code must still never open, read, or print .env directly, and must never pass
+a key or secret as a command-line argument or paste one into a prompt, a
+file, or a commit message.
