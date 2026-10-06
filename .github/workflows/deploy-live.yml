@@ -33,6 +33,10 @@ jobs:
         working-directory: eleventy-site
         run: npm ci
 
+      - name: Validate people.json
+        run: npm run validate
+        working-directory: eleventy-site
+
       - name: Build site
         working-directory: eleventy-site
         run: npm run build
