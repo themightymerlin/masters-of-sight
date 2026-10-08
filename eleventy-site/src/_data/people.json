@@ -2033,6 +2033,48 @@
     ]
   },
   {
+    "id": "nia-dacosta",
+    "related": [
+      "autumn-durald-arkapaw",
+      "ryan-coogler",
+      "jordan-peele",
+      "greta-gerwig"
+    ],
+    "name": "Nia DaCosta",
+    "added": "2026-10-08",
+    "discipline": "Director",
+    "style": "Genre Fluid / Humanist",
+    "born": "1989",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462595/image_rhdqef.jpg",
+    "galleryMedia": [
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462218/image_ozqhsw.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791461884/image_wcrwbk.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462007/image_epgiwb.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462281/image_efbgj9.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791461838/image_zptpl3.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462030/image_suwqf5.jpg", "caption": ""},
+      {"type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462510/image_seaztq.jpg", "caption": ""},
+      {"type": "video", "youtubeId": "EOwTdTZA8D8", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791463446/Screenshot_2026-10-08_at_8.42.11_AM_nfzwrv.jpg", "caption": ""}
+    ],
+    "url": "https://en.wikipedia.org/wiki/Nia_DaCosta",
+    "bio": "Nia DaCosta has moved from a North Dakota oil-patch drama to a Chicago slasher sequel, a Marvel tentpole and an Ibsen adaptation without changing her subject, which is the person at the center of the frame. She treats genre as a door rather than a destination, using horror and spectacle to get close to grief, class and the stories a community tells to survive. Her camera favors faces and bodies in tight, controlled compositions, and each film is built around one formal idea, like the shadow-puppet flashbacks in Candyman. The emotional temperature stays steady even when the scale around it swells.",
+    "traits": [
+      "Genre as a way into character, never a costume.",
+      "Tight, face-first framing that keeps big productions human-sized.",
+      "One formal device carried through each film, such as shadow puppetry or a single-night structure.",
+      "Women under pressure at the center of the story.",
+      "An even tonal register across wildly different budgets."
+    ],
+    "works": [
+      {"title": "Little Woods (2018)", "desc": "Two sisters in a North Dakota oil boom town, shot with a patient, lived-in realism that made a first feature feel like a veteran's.", "links": [{"type": "watch", "url": "https://www.justwatch.com/us/movie/little-woods"}]},
+      {"title": "Candyman (2021)", "desc": "A sequel that tells its backstory through shadow-puppet sequences, turning Cabrini-Green's history into something you watch rather than are told.", "links": [{"type": "watch", "url": "https://www.justwatch.com/us/movie/candyman-2020"}]},
+      {"title": "Hedda (2025)", "desc": "Ibsen's Hedda Gabler compressed into one party and one night, with the camera circling a woman who has run out of exits.", "links": [{"type": "watch", "url": "https://www.justwatch.com/us/movie/hedda"}]},
+      {"title": "28 Years Later: The Bone Temple (2026)", "desc": "A zombie sequel that slows down to follow Ralph Fiennes' Dr. Kelson and his bone-lined temple of the dead.", "links": [{"type": "watch", "url": "https://www.justwatch.com/us/movie/28-years-later-the-bone-temple"}]}
+    ],
+    "alsoWorkedOn": ["The Marvels (2023)", "Top Boy (2019)", "Night and Day (2013)", "Verizon: Look Behind You (2026)"]
+  },
+  {
     "id": "the-daniels",
     "related": [
       "spike-jonze",
