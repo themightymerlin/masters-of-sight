@@ -949,7 +949,7 @@
   .profile-gallery img:first-child {
     flex: 1 0 100%;
     aspect-ratio: 16/9;
-    object-position: center top;
+    object-position: center center;
   }
 
   /* ── VIDEO BOOKEND ── */
@@ -1337,7 +1337,7 @@
       flex: 1 1 calc(50% - 1.5px);
       aspect-ratio: 3 / 2;
       max-height: 85vh;
-      object-position: center top;
+      object-position: center center;
     }
 
     .profile-gallery img:nth-child(n+3) {
