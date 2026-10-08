@@ -12,6 +12,7 @@ eleventyComputed:
 <script>
   window._galleryMediaRaw = {{ (person.galleryMedia or []) | dump | safe }};
   window._galleryImagesRaw = {{ (person.galleryImages or []) | dump | safe }};
+  window._heroSrc = {{ (person.heroImage or person.coverImage or '') | dump | safe }};
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -197,6 +198,11 @@ eleventyComputed:
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 
