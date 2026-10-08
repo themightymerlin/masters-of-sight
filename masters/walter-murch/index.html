@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018943/VL3UUI42_jvwqn0.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018898/AA8IRDOS_ztuhfq.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018686/D412SIEA_b0iifu.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019388/23R2MPKY_rijgxa.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018588/UUMMMDMG_dmexzg.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018571/YGTNSF21_c8ee3l.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019351/3YURKF8H_q1jzlb.jpg"}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018514/WJFZ4LM2_lfocyq.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018514/WJFZ4LM2_lfocyq.jpg" alt="Walter Murch">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790018514/WJFZ4LM2_lfocyq.jpg" alt="Walter Murch" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Editor</p>
@@ -1299,6 +1300,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

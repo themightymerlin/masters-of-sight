@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972527/image_llbjo0.png","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972559/image_c9dzj6.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972588/image_bntbar.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787155796/image_rxc61l.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787155760/image_quan8h.jpg","caption":""},{"type":"video","youtubeId":"1Fg5iWmQjwk","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779975616/image_yr0wtk.jpg","caption":""}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972513/image_drh1u3.png";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972513/image_drh1u3.png" alt="Wes Anderson">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779972513/image_drh1u3.png" alt="Wes Anderson" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Director</p>
@@ -1291,6 +1292,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019942/HHI4GE0P_zjpcii.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019994/4SQ21PA9_uovmgy.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020002/KROZ855A_x8sdsi.png"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020064/KGPLUKOY_j9gorv.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020086/FKYGBASJ_fuxzju.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020107/PRP0Z6JU_mz1fmo.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020134/3Y6M6TAL_rokgs6.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020166/D6FD7LH4_zbgjg7.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790020207/9GTGU5E2_ukwx7j.jpg"}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019949/I4OI8XSH_obz3zd.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019949/I4OI8XSH_obz3zd.jpg" alt="Michael Kahn">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790019949/I4OI8XSH_obz3zd.jpg" alt="Michael Kahn" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Editor</p>
@@ -1325,6 +1326,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

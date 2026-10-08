@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152992/2285f4765518db34c8bcd155964e2ac52698869e-3034x2000.jpg_nwmgdv.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152994/d44631859b6161fd5cd669ed6441675b0fd4ce40-2994x2000.jpg_mknq5t.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152990/71014374e5e2029243fa7a2152f6c9e3c27c55d0-2997x2000.jpg_rqffsl.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/c704cf7074bfdcce4700bb60db1fd8fa3c6983b8-3004x2000.jpg_zbj129.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152993/9458f96e9a92eef6c987b39befaf64abc1faa38b-3014x2000.jpg_ntgcpb.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152991/7e7d074b862faeff7fdc0b13a1e87c9b4683b7f5-3001x2000.jpg_vmd2yn.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152990/22bedbf0a8f7163d9227e006016214a07b95eb5f-3064x2000.jpg_qac7tk.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152995/c8b86f42616e5788680f697814bddfd57d42b809-3000x2000.jpg_elqjul.avif"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/a5f568f914967ab2b507d36d784715eac7b8457a-3046x2000.jpg_wqtuza.avif";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/a5f568f914967ab2b507d36d784715eac7b8457a-3046x2000.jpg_wqtuza.avif" alt="Alex Webb">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1787152989/a5f568f914967ab2b507d36d784715eac7b8457a-3046x2000.jpg_wqtuza.avif" alt="Alex Webb" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Photographer</p>
@@ -1250,6 +1251,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

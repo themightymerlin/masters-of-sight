@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/9D7ZYSK3_hmzskr.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/39PZUP7S_ukrqqb.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/ZN69ZUY3_irhem5.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447965/8OCKS5LR_hsidpu.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448330/CGLPSPHN_jzq5p0.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030431/0CMOE8VM_mtwdpv.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791030489/Z4GT1PYN_pi6ef0.jpg"},{"type":"video","youtubeId":"KBiOF3y1W0Y","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788448652/Screenshot_2026-09-03_at_11.17.11_brxdtu.png"}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/E05Q69L3_mv7blm.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/E05Q69L3_mv7blm.jpg" alt="Newton Thomas Sigel">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1788447966/E05Q69L3_mv7blm.jpg" alt="Newton Thomas Sigel" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Cinematographer</p>
@@ -1345,6 +1346,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

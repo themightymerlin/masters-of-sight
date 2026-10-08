@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779979929/image_ksuqwl.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779979973/image_lju4yc.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779979992/image_bhwztp.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790197771/copy-of-mg-the-cook-book-cover-1965-1593538911.jpg_vva212.webp","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790197791/big-nudes-sva-exhibition-poster-1966-1593537958.jpg_omx5d2.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790197811/tomato-something-unusual-1978-1593537447.jpg_fno9a9.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790197830/knoll-sottsass-1982-web-1593539244.jpg_ztrkf6.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790197849/brooklyn-brewery-logo-1987-1593536836.jpg_zhreke.avif"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779980092/image_idqkxt.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779980092/image_idqkxt.jpg" alt="Milton Glaser">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1779980092/image_idqkxt.jpg" alt="Milton Glaser" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Designer</p>
@@ -1243,6 +1244,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

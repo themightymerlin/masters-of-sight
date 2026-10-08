@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352802/AP_Alex_Trochut_paris_2x_gs9yzy.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352816/AP_Alex_Trochut_BU_ASTERISK_BLACK_2x_rtm6re.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352783/AP_Alex_Trochut_Tipo_1_2x_ude5is.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641421/g2_cover_grad-480x630_yzgwwr.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352809/AP_Alex_Trochut_phenoms_2x_fsacqn.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641431/TEASER_s-768x909_fu9a9b.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641443/oldiscool-480x543_l59zwa.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641475/type-480x480_vvubbv.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641459/mosquito_acid_valley-480x636_pzc4xk.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790641482/alextrochut_goforit-480x672_hkmszb.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352796/AP_Alex_Trochut_BD_2x-scaled_htrshs.jpg"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352789/AP_Alex_Trochut_LOREMIPSUM_4_2x_jucikm.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352789/AP_Alex_Trochut_LOREMIPSUM_4_2x_jucikm.jpg" alt="Alex Trochut">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781352789/AP_Alex_Trochut_LOREMIPSUM_4_2x_jucikm.jpg" alt="Alex Trochut" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Designer</p>
@@ -1235,6 +1236,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

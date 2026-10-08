@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697125/Water_2024.jpg_ws55gh.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696986/The_Journey_5.jpg_s8kh8r.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696992/Ent_Web2.jpg_mep2iv.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696989/Dreamphography_Miniature_Photography_Felix_Hernandez_0010_Aero_Dunas.jpg_2_iv0oxq.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696990/Bridge_to_the_Unknown.jpg_2_m1i3nn.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696988/Cork_Virtual_Exhibition_0003_Cork_Lilliput.jpg_pppqic.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696987/Dreamphography_Miniature_Photography_Felix_Hernandez_0008_Blossom.jpg_2_mnuvt0.webp","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696989/Cork_Virtual_Exhibition_0005_Cork_Wreck.jpg_m3cnsn.webp","caption":""},{"type":"video","youtubeId":"ZH9oHj0_Aq4","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790696969/Screenshot_2026-09-29_at_11.42.44_cienwm.png","caption":""}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697109/Art_Pinocho_1.jpg_pgh5kt.webp";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697109/Art_Pinocho_1.jpg_pgh5kt.webp" alt="Felix Hernandez">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790697109/Art_Pinocho_1.jpg_pgh5kt.webp" alt="Felix Hernandez" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Photographer</p>
@@ -1255,6 +1256,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

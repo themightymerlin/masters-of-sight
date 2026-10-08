@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069109/image_bfyac7.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069139/image_dkxpl8.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780069079/image_eq23io.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790515102/d12937ea5c94a9610f3a15412e81f8b26ea67dce-1300x868.jpg_eujtsi.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790515111/7381ed0ee5fe2393d51f9eba49b94485b68a20b4-1300x1014.jpg_kuigqf.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790515121/585e7e1484f1589a9b8dfb08c0d23ea3cf62cdb3-1300x863.jpg_yrzeql.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790515128/b18db84062c895f1823bcb5232181905059ad5b2-1300x873.jpg_lylfje.avif","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790515132/4667bf62ade8c14a30c9e92521a52bdd90f8cfc3-786x1300.jpg_netkgl.avif"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780326277/dieter-rams-5-scaled.jpg_lvpwkn.webp";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780326277/dieter-rams-5-scaled.jpg_lvpwkn.webp" alt="Dieter Rams">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780326277/dieter-rams-5-scaled.jpg_lvpwkn.webp" alt="Dieter Rams" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Designer</p>
@@ -1243,6 +1244,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

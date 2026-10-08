@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144226/Screenshot_2026-06-22_at_12.01.44_qv2fsu.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144382/e3ef3b44491873.56077882b0553_eclopd.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144607/Screenshot_2026-06-22_at_12.03.04_iy0g4i.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144632/Screenshot_2026-06-22_at_12.09.27_g0oe8o.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790190179/dd6fb6bc-8a2a-4948-b938-b35976214c9f_740x521_e7yw28.webp","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790190298/a-collection-of-saul-bass-poster-designs-for-the-shining-v0-xE73JeIMDHHQpbTSqIBKTku2ZIZJ0JtK8B0bfyPAEuU.jpeg_tplxfv.webp"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144227/Screenshot_2026-06-22_at_12.00.15_blfjym.png";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144227/Screenshot_2026-06-22_at_12.00.15_blfjym.png" alt="Saul Bass">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1782144227/Screenshot_2026-06-22_at_12.00.15_blfjym.png" alt="Saul Bass" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Designer</p>
@@ -1239,6 +1240,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

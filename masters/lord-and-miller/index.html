@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167157/L4DQ6AEY_yie8i8.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165557/95JFQ2HO_rr8adn.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167074/848088_doc63.0101_LM_v3_WM_e70cmi.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167352/Screenshot_2026-07-27_at_11.48.50_ieascp.png","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354063/D2MYXBY2_aytnlz.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354191/MV5BMTMxODUxNzc3Ml5BMl5BanBnXkFtZTcwNTI5MjE4Mg._V1_FMjpg_UX700__rfawxi.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790354234/MV5BMzkyMjA1ODQzMV5BMl5BanBnXkFtZTgwMTQ2NzMyMzE._V1_QL75_UY563_CR177_0_1000_563__xzgfb6.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165705/K590QSKS_lcwx46.jpg","caption":""},{"type":"video","youtubeId":"m08TxIsFTRI","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785167352/Screenshot_2026-07-27_at_11.48.50_ieascp.png","caption":""}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165559/G4RJISQ7_fpw92h.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165559/G4RJISQ7_fpw92h.jpg" alt="Lord and Miller">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1785165559/G4RJISQ7_fpw92h.jpg" alt="Lord and Miller" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Directors</p>
@@ -1304,6 +1305,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969135/home_07_qoao4u.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969136/Semear_01-1200x1200_sc0c5l.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969135/The-river-embraced-me_31-1200x1200_dekjdk.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969135/utatane_02_L_l6k1ss.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790199505/Cui-Cui-cover-2000x2000_rkjvao.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790199526/AILA_cover-2000x2000_aecjhy.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790199547/Utatane_cover-2000x2000_p1qoku.jpg"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969183/EE51-1200x1200_ouxv4n.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969183/EE51-1200x1200_ouxv4n.jpg" alt="Rinko Kawauchi">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1783969183/EE51-1200x1200_ouxv4n.jpg" alt="Rinko Kawauchi" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Photographer</p>
@@ -1234,6 +1235,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

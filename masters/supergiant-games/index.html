@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146323/maxresdefault_rjbdnv.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146307/3840x2160_v1.0_KeyArt_iwqin5.png"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146366/MV5BNTFhN2ViZmMtMDRjYi00YjRjLWJmODQtNTIxMGZkZjZlODkyXkEyXkFqcGc._V1_FMjpg_UX1000__grtiph.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146461/MV5BNWZjMjY4MGMtYzMwNC00NDRmLTlmY2YtMjVjNzE5YjdkNjk2XkEyXkFqcGc._V1__ifzu5i.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146388/MV5BMjQ3N2E5YTgtMmMzMy00OGQwLTgxN2QtZGIzOWI1OWI4MjgzXkEyXkFqcGc._V1__mv78rf.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146172/hades_09-dec-2019_01_bkjwxl.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146693/hades2_apr30_01_auarks.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146787/Pyre_May-2017_02_kno6xy.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146420/1407982466399_Transistor_28-aug-2013_01_vzxhn9.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146405/1408083058104_Bastion_PC_0004_mkvxor.jpg"},{"type":"video","youtubeId":"91t0ha9x0AE","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791147000/Screenshot_2026-10-04_at_16.49.36_t5slxq.png"}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146152/Hades_Wallpaper_01_ff8qnm.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146152/Hades_Wallpaper_01_ff8qnm.jpg" alt="Supergiant Games">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791146152/Hades_Wallpaper_01_ff8qnm.jpg" alt="Supergiant Games" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Dream Maker</p>
@@ -1363,6 +1364,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

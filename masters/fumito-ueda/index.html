@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077715/image_zkfnj8.png"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077670/image_fz4twz.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077760/image_ihije7.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239111/MV5BM2IwMzBlYzYtNDVhZC00YzdlLWEwZGEtNGY5MTkyMTE1Nzc4XkEyXkFqcGc._V1_FMjpg_UX1920__b2wzuu.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239113/MV5BMTVkOTIzMzAtMDNmMy00ZDcxLWI4MjItOGJiM2QxYWQ3MzJiXkEyXkFqcGc._V1_FMjpg_UX2160__d38jhj.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239113/MV5BYjNkYjQzMTAtMjJlMy00NDNmLTk4ZjAtYWIzNzJlOTc1MzNlXkEyXkFqcGc._V1_FMjpg_UX1920__bx2zwy.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239111/MV5BMjAxYzg3YjItY2M3MS00MmE4LWI2ODMtZDNhZTJjM2MwNGY0XkEyXkFqcGc._V1_FMjpg_UX1200__kwmv7p.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239112/MV5BOWE4NDNkNDgtOWZhYi00Y2E2LWE0YWYtMTc0ODgzZmUxZGNhXkEyXkFqcGc._V1_FMjpg_UX1200__wx4gfl.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239111/MV5BN2QyNWJkNDctYjdhZC00ZmU0LTgyOGItNDQxOTE1OTQwYjNhXkEyXkFqcGc._V1_FMjpg_UX1280__ogaduw.jpg"},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791239111/MV5BMTk5NTNhNmItMGVjNC00MDUwLWIzNzQtY2QyMGQzMGI4NDU2XkEyXkFqcGc._V1_FMjpg_UX1280__pwwnnx.jpg"},{"type":"video","youtubeId":"pdZQ98mWeto","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077933/image_qjvu5k.png"}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077597/image_ilm0uf.png";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077597/image_ilm0uf.png" alt="Fumito Ueda">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1780077597/image_ilm0uf.png" alt="Fumito Ueda" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Dream Maker</p>
@@ -1307,6 +1308,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

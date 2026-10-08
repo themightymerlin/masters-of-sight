@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/ROM3I1P8_vcslql.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BZmNmZWQ4YjMtZjUzOC00OGNkLTgxNWEtZWE2NTY1OTEwZDA3XkEyXkFqcGc._V1_FMjpg_UX2000__rimvx1.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/AEHEB9VY_ydcoo9.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MQ8OXVAQ_smhnp6.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BZDk2MzE1ZDEtZmZkNi00MDY5LWEzMzYtOGU1YTFkYTMzOGRjXkEyXkFqcGc._V1_FMjpg_UX2160__ussdyk.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNDFiZjYwMjUtY2U3OC00OTBjLWI1ZDMtZjdiZDEyMTc5OGQ4XkEyXkFqcGc._V1_FMjpg_UX1800__vjw29b.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694404/MV5BNDdjZDYxYjUtZDg3Zi00ZGFlLTlmMGUtMGJjMTQwOTA2NmZiXkEyXkFqcGc._V1_FMjpg_UX2160__l3jn9i.jpg","caption":""},{"type":"image","src":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694403/MV5BNTMxMDE0ZWQtMDdhYi00MWQ2LThjN2YtYTg1YjY1Nzk0OTU3XkEyXkFqcGc._V1_FMjpg_UX2160__sdqhj2.jpg","caption":""},{"type":"video","youtubeId":"OpThntO9ixc","thumb":"https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694805/Screenshot_2026-09-29_at_11.13.05_onaf6x.png","caption":""}];
   window._galleryImagesRaw = [];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg" alt="Zach Cregger">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1790694405/SYWU8ZGW_xid7r9.jpg" alt="Zach Cregger" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Director</p>
@@ -1315,6 +1316,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 

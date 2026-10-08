@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1791466740040">
+<link rel="stylesheet" href="/assets/profile.css?v=1791467343628">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -285,6 +285,7 @@
 <script>
   window._galleryMediaRaw = [];
   window._galleryImagesRaw = ["https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534967/image-5_j3mx2e.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148602/timwalker-1250-h810-q95-rz3-b75_aglrvn.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148439/timwalker-1003-h810-q95-rz3-b75_jjucst.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148484/timwalker-279-h810-q95-rz3-b75_iyz4gp.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534970/image_am0r2t.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534969/image-2_imonhw.png","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534966/Tim_20Walker_tqitbw.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791148474/timwalker-294-h810-q95-rz3-b75_wc604y.jpg","https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534968/image-3_itutuo.png"];
+  window._heroSrc = "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534969/image-4_cumdmy.png";
 </script>
 
 <!-- ── VIDEO LIGHTBOX OVERLAY ── -->
@@ -302,7 +303,7 @@
 
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534969/image-4_cumdmy.png" alt="Tim Walker">
+  <img class="profile-hero-img" src="https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778534969/image-4_cumdmy.png" alt="Tim Walker" style="object-position: center center">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">Photographer</p>
@@ -1238,6 +1239,11 @@
   } else {
     var imgs = (window._galleryImagesRaw || []).filter(function (src) { return src && src.trim() !== ''; });
     mediaItems = imgs.map(function (src) { return { type: 'image', src: src }; });
+  }
+  var heroSrc = window._heroSrc;
+  if (heroSrc && !mediaItems.some(function (m) { return m.src === heroSrc; })) {
+    var firstVideo = mediaItems.findIndex(function (m) { return m.type === 'video'; });
+    mediaItems.splice(firstVideo === -1 ? mediaItems.length : firstVideo, 0, { type: 'image', src: heroSrc });
   }
   window._lightboxMedia = mediaItems;
 
