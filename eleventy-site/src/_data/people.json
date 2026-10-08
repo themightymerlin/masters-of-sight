@@ -5445,6 +5445,7 @@
     "nationality": "American",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1778523565/Annie_20Liebovitz_dmqkog.jpg",
     "coverImagePosition": "center top",
+    "heroImagePosition": "center top",
     "galleryMedia": [
       {
         "type": "image",
