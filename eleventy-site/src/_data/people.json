@@ -4212,6 +4212,95 @@
     "alsoWorkedOn": ["Lasermannen (2005)", "How Soon Is Now? (2007)", "Let the Right One In (2008)", "The Girl (2009)", "Doktor Glas (2009)", "The Fighter (2010)", "Tinker Tailor Soldier Spy (2011)", "Call Girl (2012)", "Her (2013)", "Spectre (2015)", "Kenzo World (2016)", "Dunkirk (2017)", "Welcome Home (2018)", "Ad Astra (2019)", "Tenet (2020)"]
   },
   {
+    "id": "abdi-ibrahim",
+    "related": [
+      "dana-scruggs",
+      "hype-williams",
+      "jordan-peele"
+    ],
+    "added": "2026-10-10",
+    "name": "Abdi Ibrahim",
+    "discipline": "Photographer",
+    "style": "Visceral / Storytelling",
+    "born": "1996",
+    "nationality": "Somali-American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646892/ElsaWideSelects-168_q1sboj.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646891/delarevolucion-7201-b75-h1080-q80-rz3-sm0_wsmdor.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646896/Personal_Zakaria2022-06-09-at-7.42.59-PM-6_piewjz.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646896/Screenshot-2026-03-13-at-4.47.20PM_jvu8jl.png"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646895/Personal_Lihem-2022-06-09-at-7.30.21-PM-50-copy_zuxuuk.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646893/Look-5C_gjgypl.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646891/delarevolucion-4863-b75-h1080-q80-rz3-sm0_hbirfs.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646890/delarevolucion-796-b75-h1440-q80-rz3-sm0_nu5sqy.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646886/delarevolucion-346-b75-h1080-q80-rz3-sm0_tmx9y3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646885/_D2A0321-2_jjc3cp.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646891/delarevolucion-4864-b75-h1080-q80-rz3-sm0_x8xzwm.jpg"
+      },
+      { "type": "video", "vimeoId": "512776212", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791647986/Screenshot_2026-10-10_at_11.59.10_AM_brryfi.png", "caption": "" }
+    ],
+    "url": "https://abdibrahim.com/",
+    "bio": "Abdi Ibrahim picked up a small film camera at fifteen and pointed it at his brother, sister and cousins in Seattle, self-taught from the first frame. He photographs Black and Brown subjects in their most natural states, then tilts the scene a few degrees toward the surreal, so documentary instinct and constructed idea share one picture. Stills come first for him, often shot for films he hasn't made yet, which is why his portraits for Billboard, SSENSE and Paper carry a director's sense of scene. That habit carried him from editorial and fashion into directing, where he works with Jonathan Salmon as the duo KENTEN on Vince Staples videos and Lacoste campaign films. A commissioned image for The New Yorker, Police Attack, shows how much weight the surreal edge can hold.",
+    "traits": [
+      "Subjects, mostly Black and Brown, caught at ease in their most natural state rather than posed for the lens.",
+      "A documentary frame with one surreal tilt, the scene plausible until a single element goes off-script.",
+      "Pictures built like stills from films not yet made, with a director's sense of staging and blocking.",
+      "Family, friends and neighborhood as recurring cast and setting, his Seattle-area roots still visible in the frame.",
+      "Personal work organized into titled series, each its own world: Bizarro World, Drivers License, After School, Coming to America."
+    ],
+    "works": [
+      {
+        "title": "Police Attack",
+        "desc": "A commissioned image for The New Yorker that also took Bronze at the International Photography Awards."
+      },
+      {
+        "title": "Coming to America",
+        "desc": "A personal photo series that won Gold at the London Photography Awards."
+      },
+      {
+        "title": "Lacoste x Venus Williams (2022)",
+        "desc": "Fall/Winter 2022 campaign film, directed with Jonathan Salmon as KENTEN, in which a forgotten white jacket sparks a dance battle between Venus Williams and Saniyya Sidney."
+      },
+      {
+        "title": "Nourishment & Resilience (2021)",
+        "desc": "Short documentary on wellness practices in South Seattle's Black community and their ties to the outdoors, centered on Nyema Clark and Nurturing Roots. His directing debut, made for Apple Music and co-directed with Jonathan Salmon."
+      },
+      {
+        "title": "Vince Staples: Magic feat. Mustard (2022)",
+        "desc": "Surreal video for the Ramona Park Broke My Heart single, directed with Jonathan Salmon as KENTEN."
+      }
+    ]
+  },
+  {
     "id": "jony-ive",
     "related": [
       "dieter-rams",
