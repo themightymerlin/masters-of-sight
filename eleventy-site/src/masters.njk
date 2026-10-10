@@ -37,7 +37,7 @@ eleventyComputed:
 } %}
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="{{ person.heroImage or person.coverImage }}" alt="{{ person.name }}" style="object-position: {{ person.heroImagePosition or 'center center' }}">
+  <img class="profile-hero-img" src="{{ person.heroImage or person.coverImage }}" alt="{{ person.name }}" style="object-position: {{ person.heroImagePosition or 'center top' }}">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">{{ person.discipline | displayDiscipline(person.entityType) }}</p>
