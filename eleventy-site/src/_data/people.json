@@ -921,6 +921,148 @@
     ]
   },
   {
+    "id": "jill-bogdanowicz",
+    "related": [
+      "wes-anderson",
+      "stefan-sonnenfeld",
+      "tom-poole"
+    ],
+    "added": "2026-10-13",
+    "name": "Jill Bogdanowicz",
+    "discipline": "Colorist",
+    "style": "Near-monochrome to neon",
+    "born": "19XX",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917021/UAOCKEIH_f4gd3v.jpg",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917019/GDLDH9B8_q0rafk.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917020/PWTHS02W_cvsyne.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917019/PMW428LZ_gk83ru.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791918517/MV5BMTMyNjgwMDA2Ml5BMl5BanBnXkFtZTcwODY3OTIxNA._V1_FMjpg_UX2048__qhdmrd.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917020/PWIWHQC0_xhurgb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917019/D5E59NUQ_brfrwc.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917018/0ER5JL78_flffq5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791462510/image_seaztq.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917019/NQTA2E9E_otabvi.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791646886/delarevolucion-346-b75-h1080-q80-rz3-sm0_tmx9y3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917021/V04O1L8R_akyb0k.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1791917966/0P6BWYLC_b0eydc.jpg"
+      }
+    ],
+    "bio": "Jill Bogdanowicz is co-head of features color at Company 3 in Santa Monica, with a career that began at Cinesite in the early days of digital grading. She moved through Cinesite, Technicolor and Modern VideoFilm before landing at Company 3, and the filmography she built along the way refuses to sit still. The near-monochrome of Letters from Iwo Jima, the candy pastels of The Grand Budapest Hotel, the bruised greens and ochres of Joker and the neon of John Wick all carry her fingerprints, a strange claim to make about someone whose job is to be invisible. Her credits run from Ray and The Exorcism of Emily Rose to Ballerina, a filmography where the common thread is the colorist rather than the genre.",
+    "traits": [
+      "Moves between near-monochrome and full neon without either looking borrowed",
+      "Sets saturation by film, pulling it almost out of Letters from Iwo Jima and pushing it hard in John Wick",
+      "Grades franchise spectacle and small dramas with equal care, from Black Widow to The Life of Chuck",
+      "Long working run on Clint Eastwood's films, from Letters from Iwo Jima through Gran Torino and Invictus",
+      "Co-leads features color at a major facility while still grading hands-on"
+    ],
+    "works": [
+      {
+        "title": "Wicked (2024)",
+        "desc": "The Emerald City's saturated greens sit against the dusty, lived-in palette of Shiz, so the color shift marks where the fantasy takes over.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/wicked-2021-0"
+          }
+        ]
+      },
+      {
+        "title": "The Grand Budapest Hotel (2014)",
+        "desc": "The 1932 timeline glows in candy pink and plum while the later eras drain toward ochre and brown.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/the-grand-budapest-hotel"
+          }
+        ]
+      },
+      {
+        "title": "Joker (2019)",
+        "desc": "Arthur Fleck's red suit and the Bronx stairs hold against a Gotham of sickly greens and ochre interiors.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/joker-2019"
+          }
+        ]
+      },
+      {
+        "title": "John Wick: Chapter 3 - Parabellum (2019)",
+        "desc": "Rain-slicked Manhattan nights lit in neon magenta and teal, then a hard turn to desert gold in Casablanca.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/john-wick-chapter-3-parabellum"
+          }
+        ]
+      },
+      {
+        "title": "Letters from Iwo Jima (2006)",
+        "desc": "A war film drained to near-monochrome, leaving only steel, ash and the dull green of the island.",
+        "links": [
+          {
+            "type": "watch",
+            "url": "https://www.justwatch.com/us/movie/letters-from-iwo-jima"
+          }
+        ]
+      }
+    ],
+    "alsoWorkedOn": [
+      "Ray (2004)",
+      "The Exorcism of Emily Rose (2005)",
+      "Changeling (2008)",
+      "Gran Torino (2008)",
+      "Invictus (2009)",
+      "Source Code (2011)",
+      "Stoker (2013)",
+      "Ghostbusters (2016)",
+      "War Dogs (2016)",
+      "John Wick: Chapter 2 (2017)",
+      "Black Widow (2021)",
+      "Spider-Man: No Way Home (2021)",
+      "Black Adam (2022)",
+      "The Life of Chuck (2024)",
+      "Ballerina (2025)"
+    ]
+  },
+  {
     "id": "guy-bourdin",
     "related": [
       "helmut-newton",
