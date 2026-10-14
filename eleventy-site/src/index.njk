@@ -5,6 +5,7 @@ homepageCss: true
 ---
 
 <script>
+  function cld(url, w) { return typeof url === 'string' ? url.replace('/upload/f_auto,q_auto/', '/upload/f_auto,q_auto,w_' + w + ',c_limit/') : url; }
   window.PEOPLE = {{ people | dump | safe }};
   window.SITE_BASE_URL = "{{ '/' | url }}";
 </script>
@@ -188,7 +189,7 @@ homepageCss: true
   <a class="card" href="{{ ('/masters/' ~ person.id ~ '/') | url }}" data-id="{{ person.id }}" data-discipline="{{ person.discipline }}">
     {% set hasImage = person.coverImage and person.coverImage | trim != "" %}
     {% if hasImage %}
-    <img class="card-img" src="{{ person.coverImage }}" alt="{{ person.name }}" loading="lazy" style="object-position: {{ person.coverImagePosition or 'center center' }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
+    <img class="card-img" src="{{ person.coverImage | cld(900) }}" alt="{{ person.name }}" loading="lazy" style="object-position: {{ person.coverImagePosition or 'center center' }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='none'; this.parentElement.querySelector('.card-placeholder').style.display='flex';">
     <div class="card-overlay"></div>
     {% else %}
     <div class="card-overlay" style="display:none;"></div>
@@ -259,7 +260,7 @@ homepageCss: true
     card.innerHTML =
       (isNew ? '<span class="card-new-badge">New</span>' : '') +
       (hasImage
-        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'none\'; this.parentElement.querySelector(\'.card-placeholder\').style.display=\'flex\';">' +
+        ? '<img class="card-img" src="' + cld(person.coverImage, 900) + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'none\'; this.parentElement.querySelector(\'.card-placeholder\').style.display=\'flex\';">' +
           '<div class="card-overlay"></div>'
         : '<div class="card-overlay" style="display:none;"></div>') +
       '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +
@@ -1029,7 +1030,7 @@ homepageCss: true
 
     card.innerHTML =
       (hasImage
-        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
+        ? '<img class="card-img" src="' + cld(person.coverImage, 900) + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
           '<div class="card-overlay"></div>'
         : '<div class="card-overlay" style="display:none;"></div>') +
       '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +

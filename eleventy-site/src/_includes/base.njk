@@ -272,6 +272,10 @@
   </div>
 </div>
 
+<script>
+window.cld = window.cld || function cld(url, w) { return typeof url === 'string' ? url.replace('/upload/f_auto,q_auto/', '/upload/f_auto,q_auto,w_' + w + ',c_limit/') : url; }
+</script>
+
 {% if person %}
 <a class="profile-back" id="profile-back-link">← Back</a>
 <script>
@@ -381,7 +385,7 @@
 
     card.innerHTML =
       (hasImage
-        ? '<img class="card-img" src="' + person.coverImage + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
+        ? '<img class="card-img" src="' + cld(person.coverImage, 900) + '" alt="' + person.name + '" loading="lazy" style="object-position: ' + (person.coverImagePosition || 'center center') + '">' +
           '<div class="card-overlay"></div>'
         : '<div class="card-overlay" style="display:none;"></div>') +
       '<div class="card-placeholder" style="display:' + (hasImage ? 'none' : 'flex') + '; position:absolute; inset:0;">' +

@@ -37,7 +37,7 @@ eleventyComputed:
 } %}
 
 <div class="profile-hero">
-  <img class="profile-hero-img" src="{{ person.heroImage or person.coverImage }}" alt="{{ person.name }}" style="object-position: {{ person.heroImagePosition or 'center top' }}">
+  <img class="profile-hero-img" src="{{ (person.heroImage or person.coverImage) | cld(2400) }}" alt="{{ person.name }}" style="object-position: {{ person.heroImagePosition or 'center top' }}">
   <div class="profile-hero-gradient"></div>
   <div class="profile-hero-content">
     <p class="profile-eyebrow">{{ person.discipline | displayDiscipline(person.entityType) }}</p>
@@ -62,12 +62,12 @@ eleventyComputed:
       {% if person.galleryMedia and person.galleryMedia.length %}
         {% for item in person.galleryMedia %}
           {% if item.type == "image" or item.type == "gif" %}
-          <img src="{{ item.src }}" alt="{{ person.name }}">
+          <img src="{{ item.src | cld(2000) }}" alt="{{ person.name }}"{% if loop.index0 >= 2 %} loading="lazy"{% endif %}>
           {% endif %}
         {% endfor %}
       {% else %}
         {% for src in person.galleryImages %}
-        <img src="{{ src }}" alt="{{ person.name }}">
+        <img src="{{ src | cld(2000) }}" alt="{{ person.name }}"{% if loop.index0 >= 2 %} loading="lazy"{% endif %}>
         {% endfor %}
       {% endif %}
     </div>
@@ -157,7 +157,7 @@ eleventyComputed:
       {% for candidate in people %}
         {% if candidate.id == relatedId %}
         <a class="related-card" href="{{ ('/masters/' ~ candidate.id ~ '/') | url }}">
-          <img class="related-card-img" src="{{ candidate.coverImage }}" alt="{{ candidate.name }}">
+          <img class="related-card-img" src="{{ candidate.coverImage | cld(600) }}" alt="{{ candidate.name }}">
           <div class="related-card-info">
             <p class="related-card-discipline">{{ candidate.discipline | displayDiscipline(candidate.entityType) }}</p>
             <p class="related-card-name">{{ candidate.name }}</p>
