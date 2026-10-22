@@ -8546,6 +8546,7 @@
     "nationality": "Italian",
     "added": "2026-10-22",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679517/UPDATEDSALIS17_farosv.jpg",
+    "galleryImagePosition": "center top",
     "galleryMedia": [
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679512/SALISSIMG_3412_ycljj1.jpg" },
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679511/SALISSIMG_3410_ucqc5k.jpg" },
@@ -8559,18 +8560,24 @@
       { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679518/UPDATEDSALIS21_x21ud7.jpg" }
     ],
     "url": "https://fedesalis.com",
-    "bio": "Federico Salis is a Sardinian-born illustrator working out of Milan, trained in 3D effects for performance and fashion at London College of Fashion rather than in illustration, a detour he took partly so nobody could measure him against anyone else. His subject is the glossy, voluptuous woman who turns away from the viewer or ignores being watched, painted in saturated color with the finish of vintage advertising and tattoo flash. Pin-up convention gets bent from the inside: a face melts into curves, a woman becomes a fish, and the sea keeps surfacing as a setting. Music sets the pace, with some pieces imagined alongside a soundtrack that ends up as the title. He illustrated the Supernova Tarot for Lo Scarabeo, carrying the Rider-Waite-Smith structure into a cast dressed in extravagant contemporary clothes.",
+    "bio": "Federico Salis is a Sardinian-born illustrator working out of Milan, trained in 3D effects for performance and fashion at London College of Fashion rather than in illustration, a detour he took partly so nobody could measure him against anyone else. His subject is the glossy, voluptuous figure, often cropped at the thigh or torso so the frame becomes a study of volume, painted in saturated color with the finish of vintage advertising and tattoo flash. Pin-up convention gets bent from the inside: a face melts into curves, a woman becomes a fish, and the sea keeps surfacing as a setting. Music sets the pace, with some pieces imagined alongside a soundtrack that ends up as the title. With author Alice Mastroleo he has made two tarot decks, Supernova and Super Extra Gravity, the second redrawing the Rider-Waite-Smith archetypes as Botero-like bodies.",
     "traits": [
       "Saturated color in bold, flat fields, finished with a high-gloss sheen on skin, hair and fabric",
-      "Figures who turn away, look off frame or ignore the viewer, so the audience is the one being watched",
+      "Bodies cropped hard at the thigh or torso, faces left out so the frame becomes a study of form and fabric",
+      "Volume pushed past anatomy, rounded Botero-like figures with weight and a visible pull toward the ground",
       "Vintage advertising and tattoo flash finish, with pin-up pose and proportion as the base language",
-      "Surreal edits to the body, a face melting into curves, a woman becoming a fish",
-      "Water, especially the sea, recurring as setting and motif, held in a suspended, unhurried moment"
+      "Surreal and mythic transformations, merfolk, a face melting into curves, a dragon and its rider, rendered with the same gloss as the pin-ups"
     ],
     "works": [
       {
-        "title": "Supernova Tarot",
-        "desc": "A tarot deck for Lo Scarabeo that keeps the Rider-Waite-Smith symbolism intact while redrawing every figure with sharp lines, hard contrast and extravagant contemporary dress."
+        "title": "Supernova Tarot (2024)",
+        "desc": "A 78-card deck with a 128-page guidebook that keeps the Rider-Waite-Smith symbolism intact while redrawing every figure in sharp linework, hard contrast and extravagant contemporary dress.",
+        "links": [ { "type": "book", "url": "https://www.llewellyn.com/product.php?ean=9780738778693" } ]
+      },
+      {
+        "title": "Super Extra Gravity Tarot (2026)",
+        "desc": "A 78-card deck of Botero-like archetypes, with figures that push against conventional beauty norms across a range of body shapes and skin tones.",
+        "links": [ { "type": "book", "url": "https://www.llewellyn.com/product.php?ean=9780738785455" } ]
       }
     ]
   },
