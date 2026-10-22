@@ -1336,9 +1336,10 @@
     .profile-gallery img:first-child,
     .profile-gallery img:nth-child(2) {
       flex: 1 1 calc(50% - 1.5px);
-      aspect-ratio: 3 / 2;
-      max-height: 85vh;
-      object-position: center center;
+      aspect-ratio: auto;
+      max-height: min(85vh, calc(50vw - 1.5px));
+      object-fit: cover;
+      object-position: center top;
     }
 
     .profile-gallery img:nth-child(n+3) {
