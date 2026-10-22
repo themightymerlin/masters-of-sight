@@ -8537,6 +8537,44 @@
     ]
   },
   {
+    "id": "federico-salis",
+    "related": ["carlos-fama", "david-lachapelle", "tim-walker"],
+    "name": "Federico Salis",
+    "discipline": "Designer",
+    "style": "Bold / Glossy",
+    "born": "19XX",
+    "nationality": "Italian",
+    "added": "2026-10-22",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679517/UPDATEDSALIS17_farosv.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679512/SALISSIMG_3412_ycljj1.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679511/SALISSIMG_3410_ucqc5k.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679513/UPDATEDSALIS01_luhaay.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679515/UPDATEDSALIS07_mkiw2w.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679521/UPDATEDSALIS55_a9kd3w.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679523/UPDATEDSALIS72_xbyp9r.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679523/UPDATEDSALIS69_jyqr6h.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679520/UPDATEDSALIS43_wnsv77.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679516/UPDATEDSALIS10_h8nvhs.jpg" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792679518/UPDATEDSALIS21_x21ud7.jpg" }
+    ],
+    "url": "https://fedesalis.com",
+    "bio": "Federico Salis is a Sardinian-born illustrator working out of Milan, trained in 3D effects for performance and fashion at London College of Fashion rather than in illustration, a detour he took partly so nobody could measure him against anyone else. His subject is the glossy, voluptuous woman who turns away from the viewer or ignores being watched, painted in saturated color with the finish of vintage advertising and tattoo flash. Pin-up convention gets bent from the inside: a face melts into curves, a woman becomes a fish, and the sea keeps surfacing as a setting. Music sets the pace, with some pieces imagined alongside a soundtrack that ends up as the title. He illustrated the Supernova Tarot for Lo Scarabeo, carrying the Rider-Waite-Smith structure into a cast dressed in extravagant contemporary clothes.",
+    "traits": [
+      "Saturated color in bold, flat fields, finished with a high-gloss sheen on skin, hair and fabric",
+      "Figures who turn away, look off frame or ignore the viewer, so the audience is the one being watched",
+      "Vintage advertising and tattoo flash finish, with pin-up pose and proportion as the base language",
+      "Surreal edits to the body, a face melting into curves, a woman becoming a fish",
+      "Water, especially the sea, recurring as setting and motif, held in a suspended, unhurried moment"
+    ],
+    "works": [
+      {
+        "title": "Supernova Tarot",
+        "desc": "A tarot deck for Lo Scarabeo that keeps the Rider-Waite-Smith symbolism intact while redrawing every figure with sharp lines, hard contrast and extravagant contemporary dress."
+      }
+    ]
+  },
+  {
     "id": "thelma-schoonmaker",
     "related": [
       "robert-richardson",
