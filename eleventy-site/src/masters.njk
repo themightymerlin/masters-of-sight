@@ -257,7 +257,7 @@ eleventyComputed:
       var img = document.createElement('img');
       img.className = 'lightbox-img';
       img.id = 'lightbox-img';
-      img.src = item.src;
+      img.src = (item.type === 'image' && typeof window.cld === 'function' && !/\.gif($|\?)/i.test(item.src)) ? window.cld(item.src, 2400) : item.src;
       img.style.transform = 'scale(0.96)';
       setTimeout(function () { img.style.transform = ''; }, 10);
       closeBtn.after(img);
