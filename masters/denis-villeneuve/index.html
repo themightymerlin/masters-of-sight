@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/profile.css?v=1792682231014">
+<link rel="stylesheet" href="/assets/profile.css?v=1792854562103">
 
 <script type="module">
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
@@ -1379,7 +1379,7 @@ window.cld = window.cld || function cld(url, w) { return typeof url === 'string'
       var img = document.createElement('img');
       img.className = 'lightbox-img';
       img.id = 'lightbox-img';
-      img.src = item.src;
+      img.src = (item.type === 'image' && typeof window.cld === 'function' && !/\.gif($|\?)/i.test(item.src)) ? window.cld(item.src, 2400) : item.src;
       img.style.transform = 'scale(0.96)';
       setTimeout(function () { img.style.transform = ''; }, 10);
       closeBtn.after(img);
