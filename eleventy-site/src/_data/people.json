@@ -3766,6 +3766,94 @@
     ]
   },
   {
+    "id": "zach-gold",
+    "related": [
+      "david-lachapelle",
+      "hype-williams",
+      "gmunk"
+    ],
+    "name": "Zach Gold",
+    "added": "2026-10-25",
+    "discipline": "Photographer",
+    "style": "Hyperreal / Fashion",
+    "born": "1972",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792972595/7B3A0358.jpg_jzlpyl.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971522/goldrips.jpg_xsgpfu.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971532/Disco.jpg_mzjz7s.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971507/unnamed.JPG_x1kswr.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792972600/Shot_10_357_1.jpg_seytfz.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971499/2up.jpg_mtv1ky.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971497/01_ZG_170622_Lampoon_0063.jpg_pmq89t.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971527/N3I4913.png_ujyyae.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971576/MadisonBeer_ZachGold5.png_g6tfsl.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971516/Collectorwater6994_v2.jpg_vgn2mv.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971882/174A2635z.jpg_xqmrti.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971891/RedPoster2up.jpg_hroxfg.webp"
+      }
+    ],
+    "url": "https://www.zachgold.com/",
+    "bio": "Zach Gold came out of Parsons in the early days of digital compositing and treated the computer as a second lens, fusing camera work and software into figures so saturated they read as more real than the people who posed for them. The International Center of Photography named him Young Photographer of the Year, and the Art Directors Club listed him among New York's top 100 artists under 35, but the sharper credit is that two copies of Playground 1, the collective he founded, sit in the permanent collection of the Met's Costume Institute. His frames run on fluorescent and incandescent color, theatrical poses, and the borrowed grammar of music videos, for a client list that includes David Bowie, Iggy Pop, Nike, and Issey Miyake. He now works from Los Angeles, where the stills have loosened into fashion films that have played the Pompidou and the Rotterdam Film Festival.",
+    "traits": [
+      "Fluorescent and incandescent color pushed past naturalism until skin and fabric glow like neon signage.",
+      "Theatrical, choreographed poses lifted from pop culture and music video staging.",
+      "Photographed bodies fused with illustrated and digital passages so forms and color merge into the figure without a visible seam.",
+      "High-contrast, glossy finishing that reads as hyperreal on a magazine page or an album sleeve alike.",
+      "Fluency in motion, with fashion films built in the same saturated, staged language as the stills."
+    ],
+    "works": [
+      {
+        "title": "Killer Heels",
+        "desc": "Worked with curator Lisa Small on the Brooklyn Museum exhibition, where fashion films sat alongside shoes from Chanel, Alexander McQueen, and Louboutin."
+      },
+      {
+        "title": "PLAYGROUND",
+        "desc": "Founded and co-curates the independent collective linking fashion and art, with shows hosted by Colette in Paris, Selfridges in London, and MOCA in Los Angeles."
+      },
+      {
+        "title": "The Massacre (2005)",
+        "desc": "Shot the cover of 50 Cent's second studio album."
+      },
+      {
+        "title": "Principe di Savoia exhibition (2026)",
+        "desc": "A self-curated photography show in the hotel's Il Salotto space in Milan."
+      }
+    ]
+  },
+  {
     "id": "michel-gondry",
     "related": [
       "spike-jonze",
