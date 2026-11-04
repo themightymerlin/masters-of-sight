@@ -8471,6 +8471,60 @@
     "alsoWorkedOn": ["Salvador (1986)", "Wall Street (1987)", "Born on the Fourth of July (1989)", "The Doors (1991)", "A Few Good Men (1992)", "Natural Born Killers (1994)", "Casino (1995)", "Nixon (1995)", "Wag the Dog (1997)", "Kill Bill: Vol. 1 (2003)", "Kill Bill: Vol. 2 (2004)", "Shutter Island (2010)", "Django Unchained (2012)", "The Hateful Eight (2015)", "Once Upon a Time in... Hollywood (2019)"]
   },
   {
+    "id": "the-russo-brothers",
+    "related": ["newton-thomas-sigel", "jack-kirby", "lord-and-miller"],
+    "name": "The Russo Brothers",
+    "added": "2026-11-03",
+    "discipline": "Director",
+    "entityType": "duo",
+    "style": "Grounded / Kinetic",
+    "born": "1997",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763961/191BLEKD_unn8gv.jpg",
+    "galleryMedia": [
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763961/5WMKVD6L_ohurlw.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763961/7JNXVU73_x2pcwx.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763961/EKF4GAUH_pei8ol.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763962/OLYZDTK0_jvxgts.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763962/EM5FHU52_zgog0a.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763963/MV5BYmZlNTM3ZTEtNmVkNS00NWI5LTkwYmYtMmZlOGEyZGRmYjMwXkEyXkFqcGc._V1_FMjpg_UX2160__md0sst.jpg", "caption": "" },
+      { "type": "image", "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1792971891/RedPoster2up.jpg_hroxfg.webp", "caption": "" },
+      { "type": "video", "youtubeId": "TcMBFSGVi1c", "thumb": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1793763963/Screenshot_2026-11-03_at_10.22.59_PM_yxdngr.png", "caption": "" }
+    ],
+    "url": "https://en.wikipedia.org/wiki/Russo_brothers",
+    "bio": "Anthony and Joe Russo came up in Cleveland, debuted with the 1997 indie Pieces, and developed a talent for staging chaos that got them hired to direct Arrested Development and then Community, where a paintball two-parter turned a network sitcom into a full-scale action homage. Marvel handed them that instinct at blockbuster scale: The Winter Soldier traded cosmic gloss for 1970s paranoia-thriller grammar and a handheld elevator brawl, then Civil War fit a dozen powers into one daylight airport and kept every face readable. Infinity War and Endgame closed a decade of shared-universe storytelling across two films, giving the villain the protagonist's arc and the audience a snap they still argue about. Through their own studio AGBO they have kept swinging outside the franchise, from Cherry's chaptered portrait of addiction to the globe-hopping The Gray Man.",
+    "traits": [
+      "Handheld, close-quarters fight choreography cut for legibility, with the Winter Soldier elevator brawl as the template.",
+      "Ensemble blocking that holds a dozen heroes in one wide frame without losing track of a single face.",
+      "1970s conspiracy-thriller grammar, long lenses, institutional corridors, muted palettes, grafted onto superhero material.",
+      "Sitcom-trained comic timing, a quip or a flinch landing in the middle of a set piece instead of between them.",
+      "Long-lens, shallow-focus coverage held steady across four franchise films, so a whole universe reads as one continuous look."
+    ],
+    "works": [
+      { "title": "Captain America: The Winter Soldier (2014)", "desc": "A superhero film staged like a 1970s paranoia thriller. The elevator fight, a sealed box, handheld and brutal, is the scene that told Marvel what these two could do.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/captain-america-the-winter-soldier" }] },
+      { "title": "Captain America: Civil War (2016)", "desc": "The airport battle puts twelve costumed heroes on one daylight tarmac and keeps every face readable, then lets Ant-Man grow to building size as the punchline.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/captain-america-civil-war" }] },
+      { "title": "Avengers: Infinity War (2018)", "desc": "Thanos gets the protagonist's arc and the film has the nerve to let him win, ending on a field of drifting ash.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/avengers-infinity-war" }] },
+      { "title": "Avengers: Endgame (2019)", "desc": "A time heist that doubles as a victory lap through the franchise's own back catalog, climaxing with every surviving hero stepping out of portals onto one battlefield.", "links": [{ "type": "watch", "url": "https://www.justwatch.com/us/movie/avengers-endgame" }] },
+      { "title": "Cherry (2021)", "desc": "Tom Holland as a veteran sliding into addiction, told in chapters, with the visual style mutating from boot camp to bank robbery to withdrawal." }
+    ],
+    "alsoWorkedOn": [
+      "The Electric State (2025)",
+      "The Gray Man (2022)",
+      "Community (2009)",
+      "Arrested Development (2003)",
+      "You, Me and Dupree (2006)",
+      "Welcome to Collinwood (2002)",
+      "Happy Endings (2011)",
+      "Animal Practice (2012)",
+      "Pieces (1997)",
+      "Carpoolers (2007)",
+      "Lucky (2003)",
+      "Running Wilde (2010)",
+      "LAX (2004)",
+      "Tuesdays and Fridays (2025)"
+    ]
+  },
+  {
     "id": "stefan-sagmeister",
     "related": [
       "david-lachapelle",
