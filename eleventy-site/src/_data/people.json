@@ -6000,6 +6000,90 @@
     ]
   },
   {
+    "id": "meg-loeks",
+    "related": [
+      "rinko-kawauchi",
+      "greta-gerwig",
+      "hayao-miyazaki"
+    ],
+    "name": "Meg Loeks",
+    "added": "2026-11-09",
+    "discipline": "Photographer",
+    "style": "Storytelling / Nostalgia",
+    "born": "19XX",
+    "nationality": "American",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256036/DSC02199-Edit-Edit.jpg_wfsiqa.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256039/megloeks-pressingmattersseries.jpg_piutv2.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256045/megloeksthanksgiving.jpg_jqb16q.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256043/megloekspressingmatters.JPG_uu8cil.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256038/megloeks-pressingmatters-series.jpg_etwbku.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256034/8K6A1270-Enhanced-NR-Edit-Edit.jpg_qkrjz0.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256033/8K6A1125-Edit-Edit.jpg_qeomwu.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256035/DSC01196-Edit-Edit.jpg_o6fjux.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256040/megloeks50mm1.2-10.jpg_uz0wvi.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256042/megloekscheckingmail.jpg_yznxjl.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1794256032/8K6A0571-Edit-Edit.jpg_k9bf5r.webp"
+      }
+    ],
+    "url": "https://www.megloeks.com/",
+    "bio": "Meg Loeks photographs childhood in Michigan's Upper Peninsula, where her own children and the woods, chickens, and sunflower fields around her home supply nearly every frame. She started on film as a teenager, developing prints in her high school darkroom, set the camera down through college, and came back mostly self-taught once her kids arrived. Her light comes from the Dutch Masters: low, directional, and rich in tone, often a continuous light parked in a window behind white translucent curtains so an ordinary room reads like a painter's studio. The work moves between carefully styled setups and candid moments, held together by a warm, cozy palette and a steady interest in the in-between stretches of a day. She has scaled back client work to photograph mostly family and friends, which points the nostalgia at the present, a childhood being remembered while it is still happening.",
+    "traits": [
+      "Low, directional window light softened by white translucent curtains, with tones borrowed from Dutch Masters painting.",
+      "A warm, cozy palette held steady across styled and candid frames.",
+      "Her own children as the recurring cast, caught in outdoor risk-taking play and ordinary domestic scenes.",
+      "Rural Upper Peninsula settings and props, chickens, sunflower fields, woods, stacks of pancakes, doing the work of a set.",
+      "Children's portraiture folded into nature and environmental work, with styled tableaux and unposed candids finished to the same polish."
+    ],
+    "works": [
+      {
+        "title": "Pressing Matters",
+        "desc": "A portrait series whose digitally enhanced image Steamrolled placed second in its category in 2026 and was also a finalist for illustrative portrait."
+      },
+      {
+        "title": "The Pecking Order",
+        "desc": "A self-portrait that took first place in its category in 2025 and went on to a jury top five selection."
+      },
+      {
+        "title": "The Order of Things",
+        "desc": "A conceptual series that drew honorable mentions in 2026 from two separate international competitions."
+      },
+      {
+        "title": "The Dishes Won't Do Themselves",
+        "desc": "A 2025 jury top five selection, one of two of her images to make that cut in the same year."
+      }
+    ]
+  },
+  {
     "id": "herb-lubalin",
     "related": [
       "richard-avedon",
