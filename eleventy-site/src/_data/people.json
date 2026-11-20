@@ -7935,6 +7935,7 @@
     "born": "19XX",
     "nationality": "French",
     "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183870/FW24_BRAND_CH2FOOTBALL_DEMBELE_CONTEXTUAL_RGB_LR.jpg_zh7avv.webp",
+    "coverImagePosition": "72% center",
     "galleryMedia": [
       {
         "type": "image",
