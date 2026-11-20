@@ -7922,6 +7922,86 @@
     ]
   },
   {
+    "id": "florence-pernet",
+    "related": [
+      "dana-scruggs",
+      "jimmy-chin",
+      "emmanuel-lubezki"
+    ],
+    "name": "Florence Pernet",
+    "added": "2026-11-20",
+    "discipline": "Photographer",
+    "style": "Narrative / Timeless",
+    "born": "19XX",
+    "nationality": "French",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183870/FW24_BRAND_CH2FOOTBALL_DEMBELE_CONTEXTUAL_RGB_LR.jpg_zh7avv.webp",
+    "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183845/Flo_Pernet-3.jpg_ffvtoo.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183872/MICO26_20260212_SBD-W_HALFPIPE_FP_LIVIGNO_113175_11zon-scaled-uai-1376x2064_wecwju.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183845/Flo_Pernet-2.jpg_rodoi0.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183871/MICO26_20260207_FRS-F_QLFY_FP_LIVIGNO_028271_RE.JPG_dduhdj.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183844/Flo_Pernet-1-2.jpg_zbcaaq.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183852/Flo_Pernet-7.jpg_3_r8qaxx.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183878/Flo_Pernet-57-uai-1129x1694_koiee4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183872/MICO26_20260210_FRS-M_MOGULS_FP_LIVIGNO_082294_RE.JPG_hpu8k6.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183925/Flo_Pernet-8.jpg_qf5oxl.webp"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795183873/MICO26_20260220_FRS-M_AERIALS_FP_LIVIGNO_224811RE.JPG_jwcz6u.webp"
+      }
+    ],
+    "url": "https://flopernet.com/",
+    "bio": "Florence Pernet grew up in Paris football culture, started out photographing music, and earned her press credentials at the Parc des Princes by shooting the French YouTubers who covered the game. Her portfolio now runs from the Paris 2024 Olympics and the Milano Cortina Winter Games to Roland-Garros, the ATP Finals, and projects for adidas, Nike, Lacoste, and Hoka. She points the lens at what the highlight reel cuts: the pause after the point, the posture between plays, the athlete at the margin of the frame. That patience turns sport into something closer to portraiture, and she says a missed decisive moment is often what frees her to find the better picture. She is based in Paris and represented by Lucky Losers.",
+    "traits": [
+      "Frames the pause, the posture, and the gesture between the decisive moments instead of the celebration.",
+      "Less obvious angles that pull the eye toward the margins of the highlight.",
+      "Winter Olympic freestyle skiing and snowboarding caught mid-air and mid-turn against Alpine snow.",
+      "One consistent register across football, tennis, rugby, cycling, and running.",
+      "Images built to read as timeless rather than tied to a scoreline or a season."
+    ],
+    "works": [
+      {
+        "title": "OPEN Tennis Vol. 3",
+        "desc": "Shot the cover photograph for The Second Serve's tennis culture and art magazine, made during the US Open's new Mixed Doubles Invitational."
+      },
+      {
+        "title": "Milano Cortina 2026 Winter Olympics",
+        "desc": "Photographed the freestyle events in Livigno, from moguls to aerials to the snowboard halfpipe, and says several of the frames went viral on social media."
+      },
+      {
+        "title": "Paris 2024 Olympics",
+        "desc": "Covered the Games in her home city, including the French basketball team and the US Dream Team."
+      }
+    ]
+  },
+  {
     "id": "jason-m-peterson",
     "related": [
       "hiroshi-sugimoto",
