@@ -3338,8 +3338,16 @@
     "style": "Open World / Cinematic",
     "born": "Founded 1998",
     "nationality": "New York, NY",
-    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781014243/49c7d29293f89dfef95969fde62f5c27e7cc780c_hkqrva.avif",
+    "coverImage": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795218358/Jason_and_Lucia_03_sxqk2z.jpg",
     "galleryMedia": [
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781014243/49c7d29293f89dfef95969fde62f5c27e7cc780c_hkqrva.avif"
+      },
+      {
+        "type": "image",
+        "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1795218359/Lucia_Caminos_11_jndhz6.jpg"
+      },
       {
         "type": "image",
         "src": "https://res.cloudinary.com/dx8kswwgb/image/upload/f_auto,q_auto/v1781014240/BqMCMwDWqRbXKvPGZbWJqF_xptep5.jpg"
@@ -3371,7 +3379,7 @@
       }
     ],
     "url": "https://www.rockstargames.com",
-    "bio": "Rockstar Games builds worlds that feel like they were already there before you arrived. Founded in New York in 1998 and responsible for some of the most culturally significant interactive experiences ever made, they have spent twenty five years perfecting a singular obsession: the open world as total cinema. Their games are not levels. They are places. Liberty City hums with the specific anxiety of a city that wants something from you. The Mojave bakes under a sun that feels personal. And the frontier of Red Dead Redemption 2 is so completely realized, its weather systems, its wildlife, its passage of time, that players have reported genuine grief when it ends. No studio has pushed the boundaries of world-building as a visual and narrative art form further or more consistently. They are the Kubrick of interactive media. Meticulous, uncompromising, and completely unwilling to ship something that isn't ready.",
+    "bio": "Rockstar Games builds worlds that feel like they were already there before you arrived. Founded in New York in 1998, they have spent nearly three decades chasing a singular obsession: the open world as total cinema. Their games are not levels. They are places. Liberty City hums with the specific anxiety of a city that wants something from you. Blaine County bakes under a sun that feels personal. And the frontier of Red Dead Redemption 2 is so completely realized, its weather systems, its wildlife, its passage of time, that players have reported genuine grief when it ends. Then, thirteen years after Grand Theft Auto V, came Grand Theft Auto VI: a Florida-soaked Vice City and two leads, Jason and Lucia, in a story that plays like a feature film you happen to be standing inside. No studio has pushed world-building as a visual and narrative art form further or more consistently. They are the Kubrick of interactive media. Meticulous, uncompromising, and completely unwilling to ship something that isn't ready.",
     "traits": [
       "World-building as the primary creative act, every street corner, radio station, and ambient conversation serving the larger fiction.",
       "Cinematic direction applied to interactive media, cutscenes shot with the compositional rigor of prestige film.",
@@ -3380,6 +3388,20 @@
       "The long game, development cycles measured in years because the alternative is releasing something that isn't completely alive yet."
     ],
     "works": [
+      {
+        "title": "Grand Theft Auto VI (2026)",
+        "desc": "Two playable leads, Jason Duval and Lucia Caminos, carry a Florida-inspired crime story across the state of Leonida, a map built around Vice City.",
+        "platforms": [
+          {
+            "name": "PS5",
+            "url": "https://www.playstation.com/en-us/games/grand-theft-auto-vi/"
+          },
+          {
+            "name": "Xbox",
+            "url": "https://www.xbox.com/en-US/games/store/p/9pn8dw2wtff8/0010"
+          }
+        ]
+      },
       {
         "title": "Grand Theft Auto V (2013)",
         "desc": "Three protagonists, one sprawling Los Santos, and a satire of contemporary America so precise it still feels current. The most financially successful entertainment product in human history.",
